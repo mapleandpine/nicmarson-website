@@ -1,0 +1,18 @@
+.page-flex {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.page-first {
+  order: -1;
+}
+
+.flex-item {
+  @extend %transition-fast;
+}
+
+.page-content {
+  flex: 1 1 0;
+  order: -1;
+}

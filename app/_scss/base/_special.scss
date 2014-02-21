@@ -1,0 +1,26 @@
+/*------------------------------------*\
+    #SPECIAL
+\*------------------------------------*/
+
+
+%small-text {
+  font-size: 0.85em;
+}
+
+%large-text {
+  font-size: 1.2em;
+}
+
+small,
+.u-smaller {
+  @extend %small-text;
+}
+
+big,
+.u-bigger {
+  @extend %large-text;
+}
+
+.meta {
+  color: $color-muted;
+}

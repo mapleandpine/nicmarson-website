@@ -1,0 +1,93 @@
+.header {
+  background-color: hsl(248, 5%, 20%);
+  box-shadow: 0 -1px 0 rgba(0,0,0, .24) inset, 0 1px 0 rgba(255,255,255, .12) inset;
+  color: #CECECE;
+  font-size: 16px;
+  height: 50px;
+  line-height: 32px;
+  padding-top: 8px;
+  position: relative;
+  z-index: 100;
+
+  @include breakpoint("medium") {
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+  }
+
+  .site-name {
+    color: #FFF;
+    display: inline-block;
+    font-weight: 300;
+    margin: 0 10px 0 5px;
+    padding: 0 10px 0 18px;
+  }
+
+  a.site-name {
+    background-image: url("../img/back-button-dark.svg");
+    background-repeat: no-repeat;
+    border-right: 1px #504F54 solid;
+  }
+
+  .page-title {
+    color: #FFF;
+    display: inline-block;
+    font-size: inherit;
+    font-weight: 300;
+    margin: 0 70px 0 0;
+  }
+
+  .site-nav-toggle {
+    border-right: 1px solid rgba(0,0,0, .3);
+    box-shadow: 1px 0 0 rgba(255,255,255, .12);
+    float: left;
+  }
+
+  .page-nav-toggle {
+    border-left: 1px solid rgba(255,255,255, .12);
+    box-shadow: -1px 0 0 rgba(0,0,0, .3);
+  }
+}
+
+.site-nav-closed .header .site-nav-header label {
+  display: none;
+}
+
+.page-header {
+  background-color: $color-babyblue;
+  height: 90px;
+  padding: 15px 20px 0;
+
+  @include breakpoint("medium") {
+    text-align: right;
+    padding: 15px 40px 0;
+  }
+
+  .toggle-button {
+    position: relative;
+    float: right;
+    padding: 17px 10px;
+
+    @include breakpoint("medium") {
+      display: none;
+    }
+
+    // Bars
+    .icon-bar {
+      background-color: #000;
+      height: 6px;
+      width: 35px;
+    }
+
+    .icon-bar + .icon-bar {
+      margin-top: 6px;
+    }
+  }
+}
+
+.home .header {
+  @include breakpoint("medium") {
+    display: none;
+  }
+}

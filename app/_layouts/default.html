@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include head.html %}
+  </head>
+  <body class="{{ page.slug }} site-nav-closed">
+    {% include header.html %}
+    <div class="page-flex page-2-col">
+      <main class="page-second flex-item main">
+        {{ content }}
+      </main>
+      {% include navigation.html %}
+    </div>
+    {% include footer.html %}
+  </body>
+  {% include tail.html %}
+  </body>
+</html>

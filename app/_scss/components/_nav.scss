@@ -1,0 +1,16 @@
+.nav,
+.nav ul {
+  margin: 0;
+}
+
+.nav {
+
+  a {
+    display: block;
+    @extend %transition-fast;
+  }
+
+  .active a {
+    cursor: default;
+  }
+}

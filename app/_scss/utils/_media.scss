@@ -1,0 +1,115 @@
+@mixin sizes($name: "") {
+  $sep: "-";
+  @if $name == "" {
+    $sep: "";
+  }
+  .u-#{$name}#{$sep}full {
+    width: 100% !important;
+    flex: none !important;
+  }
+  .u-#{$name}#{$sep}1of2 {
+    width: 50% !important;
+    flex: none !important;
+  }
+  .u-#{$name}#{$sep}1of3 {
+    width: 33.3333% !important;
+    flex: none !important;
+  }
+  .u-#{$name}#{$sep}2of3 {
+    width: 66.6667% !important;
+    flex: none !important;
+  }
+  .u-#{$name}#{$sep}1of4 {
+    width: 25% !important;
+    flex: none !important;
+  }
+  .u-#{$name}#{$sep}3of4 {
+    width: 75% !important;
+    flex: none !important;
+  }
+};
+
+// create global sizes
+@include sizes();
+
+// create sizes for each breakpoint
+@each $breakpoint in $breakpoints {
+  $name: nth($breakpoint, 2);
+  @include breakpoint($name) {
+    @include sizes($name);
+  }
+}
+
+
+
+.divider {
+  font-size: .85em;
+  margin: 0 1em;
+}
+
+
+// For Affix plugin
+// -------------------------
+
+.affix {
+  @include breakpoint("large") {
+    position: fixed;
+  }
+}
+
+
+.disable-hover,
+.disable-hover * {
+  pointer-events: none !important;
+}
+
+
+.Aligner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // height is needed for IE10-11 for this bug
+  // http://bit.ly/16b1Xhx
+  height: 24em;
+  // other browsers use min-height
+  @supports not (-ms-flex: 1) {
+    height: auto;
+    min-height: 24em;
+  }
+}
+
+.Aligner-item {
+  max-width: 50%;
+}
+
+.Aligner-item--top {
+  align-self: flex-start;
+}
+
+.Aligner-item--bottom {
+  align-self: flex-end;
+}
+
+
+
+/**
+ * Print styles.
+ *
+ * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+ */
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important;
+  -ms-filter: none !important; } /* Black prints faster: sanbeiji.com/archives/953 */
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3{ page-break-after: avoid; }
+}

@@ -1,0 +1,60 @@
+.content {
+  padding: 20px;
+}
+
+.content-list {
+  padding: 0;
+}
+
+.main > .content {
+  @include breakpoint("medium") {
+    margin: auto;
+    max-width: 55rem;
+    padding-bottom: 30px;
+    padding-top: 50px;
+  }
+}
+
+.about .content {
+  ul {
+    margin-left: 0;
+  }
+}
+
+#background {
+
+}
+
+#history {
+
+  h2 {
+    @include typecsset-font-size($typecsset-h5-size);
+    font-weight: 700;
+  }
+
+  .meta {
+    background-color: $color-babyblue;
+    color: $color-gray;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+  }
+}
+
+#tidbits {
+  flex: 0 0 auto;
+  width: 200px;
+}
+
+#resources {
+  background-color: $color-babyblue;
+  padding: 20px;
+
+  h3 {
+    @include typecsset-font-size($typecsset-h5-size);
+    font-weight: 700;
+  }
+
+  h4 {
+    @include typecsset-font-size($typecsset-h6-size);
+  }
+}

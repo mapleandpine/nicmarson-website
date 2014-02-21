@@ -1,0 +1,71 @@
+// font-family: 'Lato', sans-serif;
+// font-family: 'Playfair Display', serif;
+// font-family: 'Rokkitt', serif;
+// font-family: 'Source Code Pro', sans-serif;
+
+$color-gray: hsl(0,0%,50%);
+$color-gray-dark: hsl(0,0%,25%);
+$color-gray-light: hsl(0,0%,75%);
+
+$color-babyblue: #EBEFF0;
+$color-blue: #3497DB;
+$color-midnight: #2B3D4F;
+$color-midnight-light: #64809B;
+$color-orange: #F60;
+
+$color-tan: #9B7536;
+$color-brown: #4F422B;
+
+$color-text: $color-gray-dark;
+$color-muted: #999;
+
+$bg-color: #EBEFF0;
+
+$font-family-serif: 'Playfair Display', serif;
+$font-family-sans-serif: 'Lato', sans-serif;
+$font-family-code: 'Source Code Pro', monospace;
+
+$font-family-base: $font-family-sans-serif;
+$font-family-heading: $font-family-serif;
+
+$link-color: #2880B8;
+$link-hover-color: $color-midnight;
+$link-visited-color: $color-midnight;
+
+
+// Horizontal forms & lists
+$component-offset-horizontal: 180px !default;
+
+
+//------------------------------------\\
+    // SETTINGS
+//------------------------------------\\
+// Typecsset needs some variables setting before it can get started. Some of
+// these variables can be overriden by developers, others need to remain
+// untouched because Typecsset will assign them automatically based on what
+// you’ve told it.
+
+// What would you like your base font-size to be? Define in pixels; the library
+// will convert measurements to the most appropriate units (rems or unitless).
+$typecsset-base-font-size:      16px !default;
+$typecsset-base-line-height:    24px !default;
+$typecsset-show-baseline:       false;
+
+// Heading sizes
+$typecsset-h1-size:             48px !default;
+$typecsset-h2-size:             36px !default;
+$typecsset-h3-size:             30px !default;
+$typecsset-h4-size:             24px !default;
+$typecsset-h5-size:             20px !default;
+$typecsset-h6-size:             18px !default;
+
+// Would you like indented (rather than spaced) paragraph delimiting?
+$typecsset-indented-paragraphs: false !default;
+
+// Would you like to show a baseline grid? This is handy during development.
+$typecsset-show-baseline:       false !default;
+
+// Do not modify these variables; they are internal settings upon which the
+// library depends.
+$typecsset-magic-number:        $typecsset-base-line-height;
+$typecsset-magic-ratio:         $typecsset-base-line-height / $typecsset-base-font-size;

@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<article class="banner banner-portfolio" id="{{ page.name }}" {% if page.color-dark %}style="background-color: #{{ page.color-dark }};"{% endif %}>
+  <header class="content banner-header">
+    <h1 class="banner-title" data-shadow-text="{{ page.title }}"><a href="{{ page.url }}" class="page__open">{{ page.title }}</a></h1>
+    <p class="banner-subtitle">{{ page.date | date: "%Y" }} {% if page.website %}<span class="divider">•</span> <a href="http://{{ page.website }}" class="external" role="link">{{ page.website }}</a>{% endif %} {% if page.client %}<span class="divider">•</span> {{ page.client }}{% endif %}</p>
+  </header>
+  {% if post.img-ext %}
+  <div class="banner-image">
+    <img src="{{ site.url }}/img/portfolio/{{ page.name }}/{{ page.name }}-01.{{ page.img-ext }}" alt="{{ page.thumbalt }}" class="img-responsive">
+  </div>
+  {% endif %}
+  {{ content }}
+</article>

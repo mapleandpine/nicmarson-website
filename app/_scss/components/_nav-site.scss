@@ -1,0 +1,141 @@
+$site-nav-width: 12rem;
+$site-nav-item-height: 40px;
+
+.site-nav {
+  background-color: hsl(248, 5%, 20%);
+  @extend %transition-fast;
+
+  @include breakpoint("medium") {
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: $site-nav-width;
+    z-index: 99;
+
+    > .nav:first-child {
+      margin-top: 50px;
+    }
+  }
+
+  h3 {
+    color: $color-gray;
+    font-size: 14px;
+    font-weight: 300;
+    margin: 24px 0 6px 15px;
+    opacity: 1;
+    text-transform: uppercase;
+    transition: opacity 0.28s ease-in-out 0s;
+  }
+
+  .nav {
+    border-bottom: 1px solid rgba(255,255,255, .08);
+    color: #FFF;
+
+    @include breakpoint("medium") {
+
+      // tooltips
+      .tooltip-right {
+
+        .tooltip {
+          display: none;
+          left: $site-nav-width;
+          top: 5px;
+        }
+
+        &:hover .tooltip {
+          display: block;
+        }
+      }
+    }
+
+    a {
+      box-shadow: 0 -1px 0 rgba(0,0,0, .15) inset, 0 1px 0 rgba(255,255,255, .05) inset;
+      color: #FFF;
+      display: block;
+      font-size: 16px;
+      font-weight: 200;
+      height: $site-nav-item-height;
+      line-height: $site-nav-item-height;
+      padding-left: 50px;
+      position: relative;
+      width: auto;
+
+      &:hover {
+        background-color: hsl(248, 5%, 15%);
+        color: #FFF;
+      }
+
+      span {
+        transition: opacity 0.28s ease-in-out 0s;
+      }
+    }
+
+    li {
+
+      &:hover {
+        border-right: 3px solid #FFF;
+      }
+
+      &.active {
+        border-right: 3px solid $color-blue;
+
+        a {
+          color: #FFF;
+        }
+
+        .typcn {
+          color: $color-blue;
+          text-shadow: 0 0 1px rgba(0,0,0, .5), 0 0 10px rgba(52,151,219, .5);
+        }
+      }
+    }
+
+    .typcn {
+      color: $color-gray;
+      font-size: 20px;
+      left: 14px;
+      line-height: 1;
+      position: absolute;
+      top: 8px;
+    }
+  }
+
+  &.in {
+
+    @include breakpoint("medium") {
+
+    }
+
+    .active a {
+      border-right-color: $color-blue;
+    }
+  }
+}
+
+// conditional styles
+.home .site-nav .nav {
+
+  @include breakpoint("medium") {
+    padding-top: 0;
+  }
+}
+
+.site-nav-closed .site-nav {
+
+  @include breakpoint("medium") {
+    width: 50px;
+
+    h3 {
+      opacity: 0;
+    }
+
+    .nav a {
+      width: 50px;
+
+      span {
+        opacity: 0;
+      }
+    }
+  }
+}

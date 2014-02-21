@@ -1,0 +1,43 @@
+.js__target {
+  background: #FFF;
+  display: block;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+}
+
+.js__target .content {
+  opacity: 0;
+  transition:all 200ms ease-in-out;
+}
+
+.js__target.move {
+  transition:all 400ms ease-in-out; /* this should not be greater than the setTimeout milliseconds parameter */
+}
+
+.js__target.open {
+  opacity: 1; /* adjust this if you want your modal slightly opaque */
+  z-index: 99999;
+}
+
+.js__target.expand {
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+.js__target.expand .content, .js__target.expand .js__close {
+  opacity: 1;
+}
+
+.js__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  opacity: 0; /* stops the element being shown immediately */
+  transition:all 200ms ease-in;
+}

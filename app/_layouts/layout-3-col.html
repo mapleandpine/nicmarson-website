@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include head.html %}
+  </head>
+  <body class="site-nav-closed">
+    {% include header.html %}
+    <div class="page-flex page-3-col">
+      <main class="page-second main">
+        {{ content }}
+      </main>
+      <div class="page-third page-navigation hidden-print" role="complementary">
+        <nav class="collapse in navbar-collapse page-nav" id="page-nav-collapse">
+          <ul class="nav">{% if page.slug == "portfolio" %}{% include nav-portfolio.html %}{% endif %}</ul>
+        </nav>
+      </div>
+      {% include navigation.html %}
+    </div>
+    {% include footer.html %}
+  </body>
+  {% include tail.html %}
+  </body>
+</html>

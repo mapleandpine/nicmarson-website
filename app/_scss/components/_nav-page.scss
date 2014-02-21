@@ -1,0 +1,45 @@
+.page-nav {
+
+  @include breakpoint("medium") {
+    height: 100%;
+    right: 0;
+    top: 0;
+    z-index: 99;
+  }
+
+  .nav {
+
+    a {
+      border-bottom: 1px solid rgba(1,1,1, .1);
+      color: #222;
+      padding: 4px 10px 5px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      @include breakpoint("medium") {
+        padding: 7px 15px 8px;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: rgba(1,1,1, .05);
+      }
+    }
+  }
+
+  &.in {
+
+    .page-nav {
+      position: relative;
+    }
+  }
+}
+
+.page-nav-closed .page-nav {
+
+  @include breakpoint("medium") {
+    position: absolute;
+    width: 100%;
+  }
+}
