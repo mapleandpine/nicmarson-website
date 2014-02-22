@@ -29,14 +29,14 @@ $i: 0;
 // }
 
 ul[data-pie-id] {
-  list-style: none;
-  padding: 10px;
-}
+  margin: 0;
+  padding: 0;
 
-.pizza-pie {
+  li {
+    cursor: default;
 
-}
-
-.pizza-toppings {
-  
+    &:hover {
+      color: #FFF;
+    }
+  }
 }

@@ -1,7 +1,7 @@
 ---
 layout: portfolio_entry
-name: regence
-title: Regence
+name: climateclean
+title: Climate Clean
 categories:
 - portfolio
 tags: [Coding, Content Management, CSS, CSS3, Design, HTML, HTML5, Java, jQuery, PHP, Responsive, SASS/SCSS, Web Design, Wordpress]

@@ -1,4 +1,4 @@
-.header {
+.site-header {
   background-color: hsl(248, 5%, 20%);
   box-shadow: 0 -1px 0 rgba(0,0,0, .24) inset, 0 1px 0 rgba(255,255,255, .12) inset;
   color: #CECECE;
@@ -86,8 +86,8 @@
   }
 }
 
-.home .header {
-  @include breakpoint("medium") {
+@include breakpoint("medium") {
+  .home .site-header {
     display: none;
   }
 }

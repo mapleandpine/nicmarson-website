@@ -15,10 +15,6 @@ ul.posts {
 
 /* standard */
 .post {
-  border-bottom: 1px solid $color-gray-light;
-  margin: 0 auto 2rem;
-  max-width: 80%;
-  width: 40em;
 
   h1,
   h2,
@@ -27,19 +23,11 @@ ul.posts {
   }
 
   header {
-    margin-bottom: $typecsset-magic-number*2;
-  }
-
-  footer {
-    padding-top: $typecsset-magic-number/2;    
-  }
-
-  .meta {
-    border-bottom: 1px solid $color-gray-light;
+    margin-bottom: 1.5rem;
   }
 
   .excerpt {
-    color: #555;
+    color: $color-gray;
     font-size: 1.5rem;
   }
 

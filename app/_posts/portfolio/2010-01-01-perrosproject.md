@@ -1,7 +1,7 @@
 ---
 layout: portfolio_entry
-name: regence
-title: Regence
+name: perrosproject
+title: Perros Project
 categories:
 - portfolio
 tags: [Coding, Content Management, CSS, CSS3, Design, HTML, HTML5, Java, jQuery, PHP, Responsive, SASS/SCSS, Web Design, Wordpress]

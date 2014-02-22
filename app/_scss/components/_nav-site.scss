@@ -1,4 +1,4 @@
-$site-nav-width: 12rem;
+$site-nav-width: 150px;
 $site-nav-item-height: 40px;
 
 .site-nav {
@@ -19,13 +19,60 @@ $site-nav-item-height: 40px;
   }
 
   h3 {
+    @extend %transition-medium;
     color: $color-gray;
     font-size: 14px;
     font-weight: 300;
     margin: 24px 0 6px 15px;
     opacity: 1;
     text-transform: uppercase;
-    transition: opacity 0.28s ease-in-out 0s;
+  }
+
+  li {
+
+    &:hover {
+      border-right: 3px solid #FFF;
+    }
+
+    &.active {
+      border-right: 3px solid $color-blue;
+
+      a {
+        color: #FFF;
+      }
+
+      .typcn {
+        color: $color-blue;
+        text-shadow: 0 0 1px rgba(0,0,0, .5), 0 0 10px rgba(52,151,219, .5);
+      }
+    }
+
+    a {
+      @extend %transition-fast;
+      box-shadow: 0 -1px 0 rgba(0,0,0, .15) inset, 0 1px 0 rgba(255,255,255, .05) inset;
+      color: #FFF;
+      display: block;
+      font-size: 16px;
+      font-weight: 200;
+      height: $site-nav-item-height;
+      line-height: $site-nav-item-height;
+      padding-left: 50px;
+      position: relative;
+      width: $site-nav-width;
+
+      &:hover {
+        background-color: hsl(248, 5%, 15%);
+        color: #FFF;
+      }
+
+      span {
+        @extend %transition-medium;
+      }
+    }
+  }
+
+  small {
+    color: $color-gray;
   }
 
   .nav {
@@ -38,6 +85,7 @@ $site-nav-item-height: 40px;
       .tooltip-right {
 
         .tooltip {
+          color: #FFF;
           display: none;
           left: $site-nav-width;
           top: 5px;
@@ -48,94 +96,43 @@ $site-nav-item-height: 40px;
         }
       }
     }
-
-    a {
-      box-shadow: 0 -1px 0 rgba(0,0,0, .15) inset, 0 1px 0 rgba(255,255,255, .05) inset;
-      color: #FFF;
-      display: block;
-      font-size: 16px;
-      font-weight: 200;
-      height: $site-nav-item-height;
-      line-height: $site-nav-item-height;
-      padding-left: 50px;
-      position: relative;
-      width: auto;
-
-      &:hover {
-        background-color: hsl(248, 5%, 15%);
-        color: #FFF;
-      }
-
-      span {
-        transition: opacity 0.28s ease-in-out 0s;
-      }
-    }
-
-    li {
-
-      &:hover {
-        border-right: 3px solid #FFF;
-      }
-
-      &.active {
-        border-right: 3px solid $color-blue;
-
-        a {
-          color: #FFF;
-        }
-
-        .typcn {
-          color: $color-blue;
-          text-shadow: 0 0 1px rgba(0,0,0, .5), 0 0 10px rgba(52,151,219, .5);
-        }
-      }
-    }
-
-    .typcn {
-      color: $color-gray;
-      font-size: 20px;
-      left: 14px;
-      line-height: 1;
-      position: absolute;
-      top: 8px;
-    }
   }
 
-  &.in {
-
-    @include breakpoint("medium") {
-
-    }
-
-    .active a {
-      border-right-color: $color-blue;
-    }
+  .typcn {
+    color: $color-gray;
+    font-size: 20px;
+    left: 14px;
+    line-height: 1;
+    position: absolute;
+    top: 8px;
   }
+}
+
+.js .site-nav {
+  display: none;
+  @include breakpoint("medium") {
+    display: block;
+  }
+}
+
+.js .site-nav.in {
+  display: block;
 }
 
 // conditional styles
-.home .site-nav .nav {
+@include breakpoint("medium") {
 
-  @include breakpoint("medium") {
-    padding-top: 0;
-  }
-}
-
-.site-nav-closed .site-nav {
-
-  @include breakpoint("medium") {
+  .site-nav-closed .site-nav {
     width: 50px;
 
-    h3 {
+    h3,
+    a span {
       opacity: 0;
     }
 
-    .nav a {
-      width: 50px;
-
-      span {
-        opacity: 0;
-      }
+    a {
+      overflow: hidden;
+      width: 50px; // width required for overflow hidden
     }
   }
 }

@@ -21,6 +21,7 @@ big,
   @extend %large-text;
 }
 
-.meta {
+.meta,
+.muted {
   color: $color-muted;
 }
