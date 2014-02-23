@@ -8,7 +8,7 @@ tags: [Coding, Content Management, CSS, CSS3, Design, HTML, HTML5, Java, jQuery,
 website: regence.com
 excerpt: Regence (Blue Cross and Blue Shield) provides health care plans for Oregon, Utah, and Idaho. The web site provides resources for all visitors and allows members to administer their plans.
 
-thumbalt: image description
+thumb-ext: jpg
 img-ext: jpg
 image01alt: Regence home page
 ---

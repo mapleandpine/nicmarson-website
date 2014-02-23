@@ -1,6 +1,10 @@
 @include breakpoint("medium") {
 
   .page-3-col {
+    flex-direction: row;
+
+    /* stupid IE10 tweener syntax */
+    -ms-flex-preferred-size: auto;
 
     > .page-first {
       flex: 0 1 150px;
@@ -12,6 +16,7 @@
     }
 
     > .page-third {
+      border-left: 1px solid $color-gray-light;
       flex: 0 1 200px;
       order: 3;
     }
@@ -19,14 +24,5 @@
 
   .site-nav-closed .page-3-col > .page-first {
     flex: 0 1 50px;
-  }
-}
-
-@include breakpoint("large") {
-  .page-3-col {
-    flex-direction: row;
-
-    /* stupid IE10 tweener syntax */
-    -ms-flex-preferred-size: auto;
   }
 }

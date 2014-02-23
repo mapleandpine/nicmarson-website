@@ -23,7 +23,7 @@
 
 html,
 body {
-  background-color: #FFF;
+  background-color: $bg-color;
   color: $color-text;
   font-family: $font-family-base;
   font-size: $typecsset-base-font-size / 16px + em; /* [1] */
@@ -54,6 +54,7 @@ main {
 }
 
 a {
+  color: $link-color;
   text-decoration: none;
 }
 

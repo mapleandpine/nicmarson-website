@@ -1,15 +1,18 @@
 .footer {
   background: $color-gray-dark;
-  color: #FFF;
+  color: $bg-color;
   font-family: $font-family-sans-serif;
   text-align: center;
 
   a {
-    color: #CECECE;
+    color: #FFF;
+    opacity: .8;
+    @extend %transition-fast;
 
     &:hover,
     &:focus {
-      color: #FFF;
+      color: $color-yellow;
+      opacity: 1;
     }
   }
 
@@ -17,8 +20,8 @@
     padding: 3rem;
   }
 
-  .flex-second {
-    background-color: #000;
+  .divider {
+    color: $color-yellow;
   }
 
   .footer-nav {
@@ -27,28 +30,30 @@
 }
 
 .footer-logo {
-  @include typecsset-font-size($typecsset-h1-size);
-  font-weight: 300;
+  font-size: 4rem;
+  font-weight: 200;
   margin-bottom: 15px;
+
+  b {
+    font-weight: 700;
+  }
 }
 
 .footer-tagline {
-  color: #DDD;
-  font-family: $font-family-serif;
-  @include typecsset-font-size($typecsset-h5-size);
-  font-weight: 300;
+  color: $color-gray-light;
+  font-size: 1.2rem;
   letter-spacing: 0.1em;
 }
 
 .footer-nav {
-  border-bottom: 1px solid #303030;
-  border-top: 1px solid #303030;
+  border-bottom: 1px solid $color-yellow;
+  border-top: 1px solid $color-yellow;
   display: inline-block;
   padding: 1rem 0;
 
   li {
     display: block;
-    @include typecsset-font-size($typecsset-h5-size);
+    font-size: 1.25rem;
     font-weight: 300;
     letter-spacing: 0.2em;
     margin-bottom: .5em;
@@ -74,9 +79,10 @@
 }
 
 .footer-credit {
-  color: #909090;
+  color: $color-yellow;
   display: block;
   font-size: 0.85em;
+  font-weight: 200;
   margin: 0;
   padding: 20px;
 

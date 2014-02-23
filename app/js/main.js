@@ -41,15 +41,6 @@
       $("body").addClass("site-nav-closed");
     });
 
-    $body.scrollspy({
-      target: '#site-nav-collapse',
-      // offset: navHeight
-    }).addClass('document-ready');
-
-    $window.on('load', function () {
-      $body.scrollspy('refresh')
-    })
-
     function site_nav_toggle() {
       $(site_nav_button).toggleClass('active');
       $("body").toggleClass("site-nav-closed");
@@ -62,25 +53,13 @@
       $('#page-nav-collapse').toggleClass('in');
     }
 
-    // back to top
-    setTimeout(function () {
-      var $sideBar = $('#site-nav-collapse')
-
-      $sideBar.affix({
-        offset: {
-          top: function () {
-            var offsetTop      = $sideBar.offset().top
-            var sideBarMargin  = parseInt($sideBar.children(0).css('margin-top'), 10)
-            var navOuterHeight = $('.bs-docs-nav').height()
-
-            return (this.top = offsetTop - navOuterHeight - sideBarMargin)
-          },
-          bottom: function () {
-            return (this.bottom = $('.bs-docs-footer').outerHeight(true))
-          }
-        }
-      })
-    }, 100)
+    $('#page-nav-collapse a').hover(function() {
+      var target = $(this).attr("href").split('#')[1];
+      $('#' + target).addClass('hover');
+    }, function() {
+      var target = $(this).attr("href").split('#')[1];
+      $('#' + target).removeClass('hover')
+    });
 
     // Execute on load
     checkWidth();

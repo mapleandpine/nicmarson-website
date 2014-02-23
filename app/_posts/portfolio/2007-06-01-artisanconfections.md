@@ -9,7 +9,7 @@ tags: [Agency, ASP, Coding, CSS, Design, Ecommerce, Graphic Design, HTML, McInty
 website: artisanconfection.com
 excerpt: Artisan Confections website.
 
-thumbalt: image description
+thumb-ext: jpg
 img-ext: png
 image01alt: Artisan Confections home page
 ---

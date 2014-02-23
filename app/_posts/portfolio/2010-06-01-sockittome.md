@@ -1,4 +1,4 @@
----
+﻿---
 layout: portfolio_entry
 name: sockittome
 title: Sock It To Me
@@ -8,7 +8,7 @@ tags: [Coding, Consultation, Content Management, CS-Cart, CSS, CSS3, Design, Eco
 website: sockittome.com
 excerpt: Sock It to Me sells fun, funky socks—socks with tacos, cupcakes, ninjas, mustaches, unicorns and other things magical.
 
-thumbalt: image description
+thumb-ext: jpg
 img-ext: png
 image01alt: Sock It To Me home page
 ---

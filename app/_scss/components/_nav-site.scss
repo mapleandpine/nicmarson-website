@@ -18,32 +18,32 @@ $site-nav-item-height: 40px;
     }
   }
 
+  a span,
   h3 {
-    @extend %transition-medium;
+    opacity: 1;
+    transition: opacity 0.25s ease-in-out 0s;
+  }
+
+  h3 {
     color: $color-gray;
     font-size: 14px;
     font-weight: 300;
     margin: 24px 0 6px 15px;
-    opacity: 1;
     text-transform: uppercase;
   }
 
   li {
 
-    &:hover {
-      border-right: 3px solid #FFF;
-    }
-
     &.active {
-      border-right: 3px solid $color-blue;
+      border-right: 3px solid $color-teal-light;
 
       a {
         color: #FFF;
       }
 
       .typcn {
-        color: $color-blue;
-        text-shadow: 0 0 1px rgba(0,0,0, .5), 0 0 10px rgba(52,151,219, .5);
+        color: $color-teal-light;
+        text-shadow: 0 0 1px rgba(0,0,0, .5);
       }
     }
 
@@ -58,15 +58,11 @@ $site-nav-item-height: 40px;
       line-height: $site-nav-item-height;
       padding-left: 50px;
       position: relative;
-      width: $site-nav-width;
+      width: $site-nav-width - 3px;
 
       &:hover {
         background-color: hsl(248, 5%, 15%);
         color: #FFF;
-      }
-
-      span {
-        @extend %transition-medium;
       }
     }
   }

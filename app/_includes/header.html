@@ -5,6 +5,9 @@
   {% endif %}
   {% if page.slug != "home" %}
   <a href="/" class="site-name">Nic Marson</a>
+  {% if page.parent %}
+  <a href="/{{ page.parent }}.html">{{ page.parent }}</a>
+  {% endif %}
   <h1 class="page-title">{{ page.title }}</h1>
   <button type="button" class="nav-toggle page-nav-toggle"><span class="sr-only">Toggle navigation</span></button>
   {% endif %}

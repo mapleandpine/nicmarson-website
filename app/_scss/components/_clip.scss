@@ -1,0 +1,99 @@
+.clip-grid {
+  padding: 20px 20px 20px 40px;
+}
+
+.clip {
+  background-color: #FFF;
+  border: 1px solid rgba(1,1,1, .2);
+  border-radius: 4px;
+  color: $color-gray-dark;
+  height: 232px;
+  margin: 0 17px 20px 0;
+  opacity: .65;
+  overflow: hidden;
+  position: relative;
+  @extend %transition-fast;
+  width: 90%;
+
+  &:hover,
+  &.hover {
+    box-shadow: 0 0 8px rgba(1,1,1, .2);
+    opacity: 1;
+
+    .description {
+      white-space: normal;
+    }
+  }
+
+  .img-cover {
+    background-position: center top;
+    height: 200px;
+  }
+
+  a {
+    color: inherit;
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    @extend %transition-medium;
+    width: 100%;
+  }
+
+  .description {
+    background-color: #FFF;
+    display: block;
+    font-size: 16px;
+    font-weight: 200;
+    height: 32px;
+    padding: 4px 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    right: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    b {
+      font-weight: 700;
+    }
+  }
+}
+
+.no-flexbox {
+  .clip {
+    float: left;
+  }
+}
+
+@media (max-width: 1800px) and (min-width: 1400px) {
+  .clip {
+    width: 23.4%;
+  }
+}
+
+@media (max-width: 1000px) and (min-width: 768px) {
+  .clip {
+  width: 46%;
+  }
+}
+
+@media (max-width: 1400px) and (min-width: 1000px) {
+  .clip {
+  width: 31%;
+  }
+}
+
+@media (max-width: 1800px) and (min-width: 1400px) {
+  .clip {
+  width: 23.4%;
+  }
+}
+
+@media (max-width: 2200px) and (min-width: 1800px) {
+  .clip {
+  width: 18.7%;
+  }
+}

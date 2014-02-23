@@ -139,6 +139,9 @@
   }
 }
 
+$color-site-tan: #9B7966;
+$color-site-brown: #44434B;
+
 .banner-site {
 
   .title {
@@ -175,7 +178,7 @@
   }
 
   .typcn {
-    background-color: #9B7966;
+    background-color: $color-site-tan;
     border-radius: 100%;
     color: #FFF;
     content: "";
@@ -216,7 +219,7 @@
   }
 
   .meta {
-    background-color: #44434B;
+    background-color: $color-site-brown;
     padding: 30px;
     text-align: center;
 

@@ -1,14 +1,6 @@
-<section id="{{ post.name }}" class="feature feature-portfolio">
-  <header>
-    <h2 class="feature-title">{{ post.title }}</h2>
-    <p class="feature-meta">{{ post.date | date: "%Y" }} {% if post.website %}<span class="divider">•</span> <a href="http://{{ post.website }}" class="external" role="link">{{ post.website }}</a>{% endif %} {% if post.client %}<span class="divider">•</span> {{ post.client }}{% endif %}</p>
-  </header>
-  <div class="feature-content">
-    {% if post.img-ext %}
-    <figure class="feature-figure">
-      <a href="{{ post.url }}" class="page__open" role="link"><img src="{{ site.url }}/img/portfolio/{{ post.name }}/{{ post.name }}-01.{{ post.img-ext }}" alt="{{ post.thumbalt }}" class="feature-image"></a>
-    </figure>
-    {% endif %}
-    <p class="feature-description"></p>
-  </div>
+<section id="{{ post.name }}" class="clip grid-cell">
+  <a href="{{ post.url }}">
+    {% if post.thumb-ext %}<div class="img-cover" style="background-image: url(img/portfolio/{{ post.name }}/thumb.{{ post.thumb-ext }});"></div>{% endif %}
+    <span class="description">{{ post.date | date: "%Y" }} <b>{{ post.title }}</b></span>
+  </a>
 </section>

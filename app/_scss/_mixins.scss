@@ -31,6 +31,15 @@
   &:-moz-placeholder { color:$color; }
 }
 
+
+@mixin imageReplace($width) {
+  background-repeat: no-repeat;
+  width: $width;
+  height: auto;
+  overflow: hidden;
+  padding-left: $width;
+}
+
 /*
  * Mixin for basic CSS triangles
 */

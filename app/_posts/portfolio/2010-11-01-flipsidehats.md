@@ -8,7 +8,7 @@ tags: [Coding, Consultation, Content Management, CSS, CSS3, Design, Ecommerce, G
 website: flipsidehats.com
 excerpt: Flipside Hats transforms consumer excess into hip handmade hats for everyone.
 
-thumbalt: image description
+thumb-ext: jpg
 img-ext: png
 image01alt: Flipside Hats home page
 ---
