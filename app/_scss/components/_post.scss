@@ -42,3 +42,27 @@ ul.posts {
     background-color: #333;
   }
 }
+
+.post-excerpt {
+
+  footer {
+    border-right: 1px solid $color-gray-light;
+    margin-right: 4.5rem;
+    order: -1;
+    padding-right: 1.5rem;
+    text-align: center;
+    width: 7.5rem;
+
+    .day {
+      line-height: .8;
+    }
+
+    .month {
+      font-weight: 700;
+    }
+
+    .year {
+      line-height: 1;
+    }
+  }
+}

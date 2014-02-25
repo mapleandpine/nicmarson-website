@@ -31,10 +31,14 @@ img {
 }
 
 .img-fade {
+  color: $color-gray;
   display: inline-block;
-  opacity: .5;
+  font-size: 13px;
+  font-style: italic;
+  opacity: .75;
   position: relative;
   @extend %transition-fast;
+  white-space: nowrap;
 
   span {
     display: block;
@@ -56,29 +60,45 @@ img {
 }
 
 .linkedin {
-  padding-right: 60px;
+  padding-right: 62px;
 
   span {
-    @include imageReplace(52px);
+    @include imageReplace(54px);
     background-image: url("../img/LinkedIn_Logo.svg");
-    background-size: 52px auto;
+    background-position: 0 1px;
+    background-size: 54px auto;
+  }
+}
+
+.kippt {
+  padding-right: 40px;
+
+  span {
+    @include imageReplace(32px);
+    background-image: url("../img/kippt-logo.png");
+    background-position: 0 2px;
+    background-size: 32px auto;
   }
 }
 
 .twitter {
+  padding-right: 60px;
 
   span {
+    @include imageReplace(52px);
+    background-image: url("../img/Twitter_logo.svg");
     background-position: 0 3px;
-    background-size: auto 1em;
-
-    img {
-      margin-bottom: 2px;
-    }
+    background-size: 52px auto;
   }
+}
 
-  &:hover {
-    span {
-      background-image: url("../img/Twitter_logo.svg");
-    }
+.github {
+  padding-right: 48px;
+
+  span {
+    @include imageReplace(40px);
+    background-image: url("../img/GitHub_logo_2013.svg");
+    background-position: 0 3px;
+    background-size: 40px auto;
   }
 }

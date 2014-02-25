@@ -5,8 +5,10 @@ parent: portfolio
 
 <article class="banner banner-portfolio" {% if page.color-dark %}style="background-color: #{{ page.color-dark }};"{% endif %}>
   <header class="header light-bg" {% if page.color-light %}style="border-bottom: 7px solid #{{ page.color-light }};"{% endif %}>
-    <h1 class="title" data-shadow-text="{{ page.title }}"><a href="{{ page.url }}" class="page__open">{{ page.title }}</a></h1>
-    <p class="subtitle">{{ page.date | date: "%Y" }} {% if page.website %}<span class="divider">•</span> <a href="http://{{ page.website }}" class="external" role="link">{{ page.website }}</a>{% endif %} {% if page.client %}<span class="divider">•</span> {{ page.client }}{% endif %}</p>
+    <div class="content">
+      <h1 class="title" data-shadow-text="{{ page.title }}"><a href="{{ page.url }}" class="page__open">{{ page.title }}</a></h1>
+      <p class="subtitle">{{ page.date | date: "%Y" }} {% if page.website %}<span class="divider">•</span> <a href="http://{{ page.website }}" class="external" role="link">{{ page.website }}</a>{% endif %} {% if page.client %}<span class="divider">•</span> {{ page.client }}{% endif %}</p>
+    </div>
   </header>
   <div class="image">
     <img src="{{ site.url }}/img/portfolio/{{ page.name }}/{{ page.name }}-01.{{ page.img-ext }}" alt="{{ page.title }} home page" class="img-responsive">

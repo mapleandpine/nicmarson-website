@@ -25,5 +25,7 @@ http://thanpol.as/jekyll/jekyll-and-livereload-flow/
 http://erjjones.github.io/blog/Part-two-how-I-built-my-blog/
 
 Google Fonts - Lato, Playfair Display, and Source Code Pro
+http://letteringjs.com/
+http://freqdec.github.io/slabText/
 
 Image by By Jonas Nilsson Lee and downloaded from unsplash.com - http://bit.ly/1epgtU4

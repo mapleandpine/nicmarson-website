@@ -20,6 +20,10 @@
 #background {
   border-bottom: 7px solid $color-gray-dark;
   margin-bottom: 20px;
+
+  h2 {
+    font-family: $font-family-serif;
+  }
 }
 
 #history {
@@ -32,11 +36,9 @@
   }
 
   tfoot a {
-    color: inherit;
     margin-right: 1em;
-    white-space: nowrap;
 
-    &:hover .typcn {
+    &:hover .icon {
       color: $color-blue;
     }
   }
@@ -121,6 +123,7 @@
   }
 
   h4 {
+    font-family: $font-family-serif;
     @include typecsset-font-size($typecsset-h6-size);
     font-weight: 700;
     margin-bottom: 1rem;

@@ -41,7 +41,8 @@ $site-nav-item-height: 40px;
         color: #FFF;
       }
 
-      .typcn {
+      .typcn,
+      [class^="st-icon-"] {
         color: $color-teal-light;
         text-shadow: 0 0 1px rgba(0,0,0, .5);
       }
@@ -94,7 +95,8 @@ $site-nav-item-height: 40px;
     }
   }
 
-  .typcn {
+  .typcn,
+  [class^="st-icon-"] {
     color: $color-gray;
     font-size: 20px;
     left: 14px;

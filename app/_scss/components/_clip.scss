@@ -3,22 +3,28 @@
 }
 
 .clip {
+  animation-name: bounce;
   background-color: #FFF;
-  border: 1px solid rgba(1,1,1, .2);
-  border-radius: 4px;
+  border-bottom: 0 solid $color-teal;
+  border-top: 7px solid $bg-color;
   color: $color-gray-dark;
   height: 232px;
-  margin: 0 17px 20px 0;
-  opacity: .65;
+  margin: 0 10px 20px 0;
   overflow: hidden;
   position: relative;
-  @extend %transition-fast;
+  transition: border .15s;
+  transition: transform .2s cubic-bezier(.17,.67,.83,.67) 0s;
   width: 90%;
 
   &:hover,
   &.hover {
-    box-shadow: 0 0 8px rgba(1,1,1, .2);
-    opacity: 1;
+    border-bottom-width: 7px;
+    border-top-width: 0;
+    transform: translateY(-8px);
+
+    .img-cover {
+      opacity: 1;
+    }
 
     .description {
       white-space: normal;
@@ -28,6 +34,7 @@
   .img-cover {
     background-position: center top;
     height: 200px;
+    opacity: .65;
   }
 
   a {
@@ -96,4 +103,10 @@
   .clip {
   width: 18.7%;
   }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+  40% {transform: translateY(-30px);}
+  60% {transform: translateY(-15px);}
 }

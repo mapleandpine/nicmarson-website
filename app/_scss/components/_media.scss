@@ -1,27 +1,31 @@
-.Media {
+.media,
+.post-excerpt {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 1em;
+  margin-bottom: 1.5rem;
 }
 
-.Media-figure {
-  margin-right: 1em;
+.media-figure,
+.post-footer {
+  margin-right: 1.5rem;
 }
 
-.Media-body {
+.media-body,
+.post-content {
   flex: 1 0 0;
+
   &, & :last-child {
     margin-bottom: 0;
   }
 }
 
-.Media--center {
+.media--center {
   align-items: center;
 }
 
-.Media--reverse {
-  & > .Media-figure {
+.media--reverse {
+  & > .media-figure {
     order: 1;
-    margin: 0 0 0 1em;
+    margin: 0 0 0 1.5rem;
   }
 }

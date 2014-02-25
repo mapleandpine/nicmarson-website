@@ -5,12 +5,15 @@ slug: home
 ---
 
 <section class="banner banner-site">
-  <header class="image dark-bg">
+  <div class="image dark-bg">
     <div class="content">
-      <h1 class="title">Nic Marson</h1>
-      <p class="subtitle">Front-end developer &amp; UI designer</p>
+      <header>
+        <h1 class="title">Nic Marson</h1>
+        <p class="subtitle">Front-end developer &amp; UI designer</p>
+      </header>
+      <p class="more"><a href="about.html">More about me <span class="gravatar"><img src="https://secure.gravatar.com/avatar/8d6e9c07171508fa435faa35ae8a0ebc?s=64"></span></a></p>
     </div>
-  </header>
+  </div>
   <div class="meta dark-bg">
     <div class="grid grid--gutters u-textCenter">
       <div class="grid-cell grid--center">
@@ -41,8 +44,10 @@ slug: home
 {% for post in site.categories['portfolio'] limit: 1 %}
 <section class="banner banner-portfolio" style="background-color: #{{ post.color-dark }};">
   <header class="header light-bg" style="border-bottom: 7px solid #{{ post.color-light }};">
-    <h1 class="title" data-shadow-text="{{ post.title }}"><a href="{{ post.url }}" class="page__open">{{ post.title }}</a></h1>
-    <p class="subtitle">{{ post.date | date: "%Y" }} {% if post.website %}<span class="divider">•</span> <a href="http://{{ post.website }}" class="external" role="link">{{ post.website }}</a>{% endif %} {% if post.client %}<span class="divider">•</span> {{ post.client }}{% endif %}</p>
+    <div class="content">
+      <h1 class="title" data-shadow-text="{{ post.title }}"><a href="{{ post.url }}" class="page__open">{{ post.title }}</a></h1>
+      <p class="subtitle">{{ post.date | date: "%Y" }} {% if post.website %}<span class="divider">•</span> <a href="http://{{ post.website }}" class="external" role="link">{{ post.website }}</a>{% endif %} {% if post.client %}<span class="divider">•</span> {{ post.client }}{% endif %}</p>
+    </div>
   </header>
   <div class="image">
     <img src="{{ site.url }}/img/portfolio/{{ post.name }}/{{ post.name }}-01.{{ post.img-ext }}" alt="{{ post.thumbalt }}" class="img-responsive">
@@ -103,12 +108,18 @@ slug: home
 {% endfor %}
 
 {% for post in site.categories['blog'] limit: 1 %}
-<section class="content post">
-  <header class="header">
-    <h1 class="title"><a href="{{ site.url }}/portfolio/{{ post.name }}.html" role="link">{{ post.title }}</a></h1>
-    <p class="subtitle">{{ post.date | date: "%-d %B %Y" }}</p>
-  </header>
-  {{ post.excerpt }}
+<section class="content post post-excerpt">
+  <div class="post-content">
+    <header>
+      <h1 class="title"><a href="{{ site.url }}/portfolio/{{ post.name }}.html" role="link">{{ post.title }}</a></h1>
+    </header>
+    {{ post.excerpt }}
+  </div>
+  <footer class="post-footer">
+    <span class="day slabtext">{{ post.date | date: "%-d" }}</span>
+    <span class="month slabtext">{{ post.date | date: "%B" }}</span>
+    <span class="year slabtext">{{ post.date | date: "%Y" }}</span>
+  </footer>
 </section>
 {% endfor %}
 
