@@ -1,11 +1,22 @@
+.background-size-full {
+  background-color: #191918;
+  background-position: center center;
+  height: 100%;
+  margin-bottom: 60px;
+  margin-top: 0;
+  max-height: 900px;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
 .content {
   padding: 20px;
 
   @include breakpoint("medium") {
     margin: auto;
     max-width: 55rem;
-    padding-bottom: 30px;
-    padding-top: 50px;
+    padding: 50px 0 30px;
   }
 }
 
@@ -17,23 +28,35 @@
   margin-left: 0;
 }
 
-#background {
+.article {
+  width:500px;
+  height: 2000px;
+}
+
+.section-title {
+  font-family: $font-family-sans-serif;
+  @include typecsset-font-size($typecsset-h5-size);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+#intro {
   border-bottom: 7px solid $color-gray-dark;
   margin-bottom: 20px;
+  padding-bottom: 20px;
 
-  h2 {
-    font-family: $font-family-serif;
+  .image {
+    @include breakpoint("medium") {
+      flex: none;
+      width: 33.3333%;
+    }
   }
 }
 
 #history {
-
-  h2 {
-    @include typecsset-font-size($typecsset-h5-size);
-    font-weight: 700;
-    margin-bottom: 0;
-    text-transform: uppercase;
-  }
+  border-bottom: 7px solid $color-gray-dark;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
 
   tfoot a {
     margin-right: 1em;
@@ -52,15 +75,11 @@
   font-size: 14px;
   font-weight: 700;
 
-  a {
-    color: $color-blue;
-  }
-
   @include breakpoint("medium") {
     border-left: 1px solid $color-gray-light;
-    flex: 0 0 auto;
+    flex: none;
     padding-left: 20px;
-    width: 220px;
+    width: 33.3333%;
   }
 
   .tinyhouse {
@@ -113,19 +132,9 @@
 }
 
 #resources {
-  border-left: 1px solid $color-gray-light;
-  padding-left: 20px;
-
-  h3 {
-    @include typecsset-font-size($typecsset-h5-size);
-    font-weight: 700;
-    text-transform: uppercase;
-  }
 
   h4 {
-    font-family: $font-family-serif;
     @include typecsset-font-size($typecsset-h6-size);
     font-weight: 700;
-    margin-bottom: 1rem;
   }
 }

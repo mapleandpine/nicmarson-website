@@ -20,16 +20,6 @@ img {
   width: 100%;
 }
 
-.img-bg {
-  height: 100%;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: -1;
-}
-
 .img-fade {
   color: $color-gray;
   display: inline-block;
@@ -100,5 +90,40 @@ img {
     background-image: url("../img/GitHub_logo_2013.svg");
     background-position: 0 3px;
     background-size: 40px auto;
+  }
+}
+
+// svg path {
+//   fill: rgba(255,255,255,.75);
+// }
+
+.img-src {
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.img-blurred { opacity: 0; }
+
+.img-bg {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.img-bg-content {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+
+  > .content {
+    padding: 80px 0;
+    position: relative;
   }
 }

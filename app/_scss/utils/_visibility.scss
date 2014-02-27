@@ -41,3 +41,40 @@
   display: none !important;
   visibility: hidden !important;
 }
+
+.light-bg {
+  background-color: #FFF;
+  color: $color-gray-dark;
+}
+
+.dark-bg {
+  color: #FFF;
+
+  a {
+    color: hsl(204, 70%, 95%);
+    text-shadow: 1px 1px 0 rgba(0,0,0, .2);
+
+    &:hover,
+    &:focus {
+      color: #FFF;
+      text-shadow: none;
+    }
+
+    &:visited {
+      color: #FFF;
+    }
+  }
+
+  a[role="link"] {
+    border-bottom-color: hsl(204, 70%, 95%);
+
+    &:hover,
+    &:focus {
+      border-bottom-color: #FFF;
+    }
+
+    &:visited {
+      border-bottom-color: #FFF;
+    }
+  }
+}

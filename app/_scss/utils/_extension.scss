@@ -18,13 +18,13 @@
 
 
 %transition-slow {
-  transition: all .75s ease-in-out 0s;
+  transition: all .75s cubic-bezier(.17,.67,.83,.67) 0s;
 }
 
 %transition-medium {
-  transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s cubic-bezier(.17,.67,.83,.67) 0s;
 }
 
 %transition-fast {
-  transition: all 0.25s ease-in-out 0s;
+  transition: all 0.25s cubic-bezier(.17,.67,.83,.67) 0s;
 }

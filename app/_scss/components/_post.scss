@@ -16,16 +16,6 @@ ul.posts {
 /* standard */
 .post {
 
-  h1,
-  h2,
-  h3 {
-    font-family: $font-family-sans-serif;
-  }
-
-  header {
-    margin-bottom: 1.5rem;
-  }
-
   .excerpt {
     color: $color-gray;
     font-size: 1.5rem;
@@ -45,13 +35,22 @@ ul.posts {
 
 .post-excerpt {
 
+  .post-content {
+    @extend %large-text;
+  }
+
   footer {
     border-right: 1px solid $color-gray-light;
-    margin-right: 4.5rem;
+    color: $color-gray;
+    margin-right: 4rem;
     order: -1;
-    padding-right: 1.5rem;
+    padding-right: 2rem;
     text-align: center;
-    width: 7.5rem;
+    width: 5em;
+
+    span {
+      display: block;
+    }
 
     .day {
       line-height: .8;
@@ -63,6 +62,66 @@ ul.posts {
 
     .year {
       line-height: 1;
+    }
+  }
+}
+
+.post-full {
+  height: 100vh;
+  width: 100%;
+}
+
+.post-portfolio {
+
+  p.lead {
+    font-size: 2rem;
+  }
+
+  .img-bg-content {
+    background-color: #FFF;
+  }
+
+  .meta {
+
+    p {
+      border-bottom: 2px solid #FFF;
+      padding-bottom: 1.5em;
+    }
+
+    .grid {
+      margin-bottom: 1.5rem;
+    }
+
+    .pizza-pie {
+      margin-left: -3rem;
+      margin-top: -3rem;
+    }
+
+    .intro .pizza-toppings {
+      font-size: 1.5rem;
+      text-align: right;
+    }
+
+    .breakdown {
+
+      h3 {
+        font-family: $font-family-sans-serif;
+        font-weight: 200;
+
+        b {
+          font-weight: 700;
+        }
+      }
+
+      .grid-cell {
+        position: relative;
+      }
+    }
+
+    .pie-chart {
+      float: left;
+      margin-right: 40px;
+      width: 50%;
     }
   }
 }

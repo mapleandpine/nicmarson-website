@@ -5,126 +5,112 @@ slug: home
 ---
 
 <section class="banner banner-site">
-  <div class="image dark-bg">
-    <div class="content">
-      <header>
-        <h1 class="title">Nic Marson</h1>
-        <p class="subtitle">Front-end developer &amp; UI designer</p>
-      </header>
-      <p class="more"><a href="about.html">More about me <span class="gravatar"><img src="https://secure.gravatar.com/avatar/8d6e9c07171508fa435faa35ae8a0ebc?s=64"></span></a></p>
-    </div>
-  </div>
-  <div class="meta dark-bg">
-    <div class="grid grid--gutters u-textCenter">
-      <div class="grid-cell grid--center">
-        <section class="developer">
-          <span class="typcn typcn-code-outline"></span>
-          <h2>Developer</h2>
-          <p>I write adaptive code for dynamic environments.</p>
-        </section>
-      </div>
-      <div class="grid-cell grid--center">
-        <section class="designer">
-          <span class="typcn typcn-pencil"></span>
-          <h2>Designer</h2>
-          <p>I design UI interfaces based on user research.</p>
-        </section>
-      </div>
-      <div class="grid-cell grid--center">
-        <section class="automator">
-          <span class="typcn typcn-cog-outline"></span>
-          <h2>Automator</h2>
-          <p>I improve workplace efficiency and shape design patterns.</p>
-        </section>
+  <div class="image img-bg dark-bg">
+    <div class="img-src" style="background-image:url('img/lumber.jpg')"></div>
+    <div class="img-src img-blurred" style="background-image:url('img/lumber-blur.jpg')"></div>
+    <div class="img-bg-content">
+      <div class="content">
+        <header>
+          <h1 class="title"><span>Nic</span> <span>Marson</span></h1>
+          <p class="byline"><span>Front-end developer</span> <span><b>&amp;</b> UI designer</span></p>
+        </header>
+        <p class="more"><a href="about.html">More about me <span class="gravatar"><img src="https://secure.gravatar.com/avatar/8d6e9c07171508fa435faa35ae8a0ebc?s=64"></span></a></p>
       </div>
     </div>
   </div>
 </section>
-
-{% for post in site.categories['portfolio'] limit: 1 %}
-<section class="banner banner-portfolio" style="background-color: #{{ post.color-dark }};">
-  <header class="header light-bg" style="border-bottom: 7px solid #{{ post.color-light }};">
-    <div class="content">
-      <h1 class="title" data-shadow-text="{{ post.title }}"><a href="{{ post.url }}" class="page__open">{{ post.title }}</a></h1>
-      <p class="subtitle">{{ post.date | date: "%Y" }} {% if post.website %}<span class="divider">•</span> <a href="http://{{ post.website }}" class="external" role="link">{{ post.website }}</a>{% endif %} {% if post.client %}<span class="divider">•</span> {{ post.client }}{% endif %}</p>
-    </div>
-  </header>
-  <div class="image">
-    <img src="{{ site.url }}/img/portfolio/{{ post.name }}/{{ post.name }}-01.{{ post.img-ext }}" alt="{{ post.thumbalt }}" class="img-responsive">
-  </div>
-  <div class="content dark-bg">
-    <p>{{ post.excerpt }}</p>
-  </div>
-  <div class="meta dark-bg">
-    <div class="content">
-      <div class="grid grid--gutters3x">
-        <div class="intro grid-cell">
-          <h2>As a UX Developer</h2>
-          <p>I built user-interfaces from images and wireframes. I had ownership of the portal theme, templates, and styleguide. I used Sublime Text to code and Grunt to build. I designed directly in the browser using the Twitter Bootstrap framework and SCSS. I encouraged responsive design, accessibility, and more efficient coding practices.</p>
-          <ul class="pizza-toppings" data-pie-id="pie__tasks" data-options='{"donut": "true"}'>
-            <li data-value="30">30% Design</li>
-            <li data-value="70">70% Development</li>
-          </ul>
-        </div>
-        <div class="grid-cell">
-          <div class="pizza-pie" id="pie__tasks"></div>
-        </div>
-      </div>
-      <div class="grid grid--gutters3x breakdown">
-        <div class="design grid-cell">
-          <h3><b>Design</b> breakdown</h3>
-          <div class="pie-chart">
-            <div class="pizza-pie" id="pie__design"></div>
-          </div>
-          <div class="pie-list">
-            <ul class="pizza-toppings" data-pie-id="pie__design" data-options='{"donut": "true"}'>
-              <li data-value="50">50% Styleguide</li>
-              <li data-value="25">25% Theme</li>
-              <li data-value="15">15% Template</li>
-              <li data-value="10">10% Responsive</li>
-            </ul>
-          </div>
-        </div>
-        <div class="coding grid-cell">
-          <h3><b>Development</b> breakdown</h3>
-          <div class="pie-chart">
-            <div class="pizza-pie" id="pie__coding"></div>
-          </div>
-          <div class="pie-list">
-            <ul class="pizza-toppings" data-pie-id="pie__coding" data-options='{"donut": "true"}'>
-              <li data-value="35">40% SCSS</li>
-              <li data-value="30">35% HTML</li>
-              <li data-value="15">15% Grunt</li>
-              <li data-value="10">10% Velocity</li>
-              <li data-value="8"> 8% JavaScript</li>
-              <li data-value="2"> 2% Java</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-{% endfor %}
 
 {% for post in site.categories['blog'] limit: 1 %}
-<section class="content post post-excerpt">
-  <div class="post-content">
-    <header>
-      <h1 class="title"><a href="{{ site.url }}/portfolio/{{ post.name }}.html" role="link">{{ post.title }}</a></h1>
-    </header>
-    {{ post.excerpt }}
+<section class="post post-excerpt">
+  <div class="post-full aligner">
+    <div class="content aligner-item">
+      <header>
+        <h1 class="title"><a href="{{ site.url }}/portfolio/{{ post.name }}.html" role="link">{{ post.title }}</a></h1>
+      </header>
+      <div class="media media--center">
+        <div class="post-content media-body">
+          {{ post.excerpt }}
+        </div>
+        <footer class="post-footer">
+          <span class="day slabtext">{{ post.date | date: "%-d" }}</span>
+          <span class="month slabtext">{{ post.date | date: "%B" }}</span>
+          <span class="year slabtext">{{ post.date | date: "%Y" }}</span>
+        </footer>
+      </div>
+    </div>
   </div>
-  <footer class="post-footer">
-    <span class="day slabtext">{{ post.date | date: "%-d" }}</span>
-    <span class="month slabtext">{{ post.date | date: "%B" }}</span>
-    <span class="year slabtext">{{ post.date | date: "%Y" }}</span>
-  </footer>
 </section>
 {% endfor %}
+
+{% for post in site.categories['portfolio'] limit: 1 %}
+<section class="post post-portfolio" style="background-color: #{{ post.color-dark }};">
+  <div class="image img-bg">
+    <div class="img-src" style="background-image:url('{{ site.url }}/img/portfolio/{{ post.name }}/{{ post.name }}-01.jpg')"></div>
+    <div class="img-src img-blurred" style="background-image:url('{{ site.url }}/img/portfolio/{{ post.name }}/{{ post.name }}-01-blur.jpg')"></div>
+    <div class="img-bg-content">
+      <div class="content">
+        <h1 class="title" data-shadow-text="{{ post.title }}"><a href="{{ post.url }}" class="page__open">{{ post.title }}</a></h1>
+        <p class="lead">{{ post.excerpt }}</p>
+      </div>
+    </div>
+  </div>
+  <footer class="dark-bg">
+    <div class="content">
+      <p class="meta">{{ post.date | date: "%Y" }} {% if post.website %}<span class="divider">•</span> <a href="http://{{ post.website }}" class="external" role="link">{{ post.website }}</a>{% endif %} {% if post.client %}<span class="divider">•</span> {{ post.client }}{% endif %}</p>
+      <div class="meta">
+        <div class="grid grid--gutters3x">
+          <div class="intro grid-cell">
+            <h2>As a UX Developer</h2>
+            <p>I built user-interfaces from images and wireframes. I had ownership of the portal theme, templates, and styleguide. I used Sublime Text to code and Grunt to build. I designed directly in the browser using the Twitter Bootstrap framework and SCSS. I encouraged responsive design, accessibility, and more efficient coding practices.</p>
+            <ul class="pizza-toppings" data-pie-id="pie__tasks" data-options='{"donut": "true"}'>
+              <li data-value="30">30% Design</li>
+              <li data-value="70">70% Development</li>
+            </ul>
+          </div>
+          <div class="grid-cell">
+            <div class="pizza-pie" id="pie__tasks"></div>
+          </div>
+        </div>
+        <div class="grid grid--gutters3x breakdown">
+          <div class="design grid-cell">
+            <h3><b>Design</b> breakdown</h3>
+            <div class="pie-chart">
+              <div class="pizza-pie" id="pie__design"></div>
+            </div>
+            <div class="pie-list">
+              <ul class="pizza-toppings" data-pie-id="pie__design" data-options='{"donut": "true"}'>
+                <li data-value="50">50% Styleguide</li>
+                <li data-value="25">25% Theme</li>
+                <li data-value="15">15% Template</li>
+                <li data-value="10">10% Responsive</li>
+              </ul>
+            </div>
+          </div>
+          <div class="coding grid-cell">
+            <h3><b>Development</b> breakdown</h3>
+            <div class="pie-chart">
+              <div class="pizza-pie" id="pie__coding"></div>
+            </div>
+            <div class="pie-list">
+              <ul class="pizza-toppings" data-pie-id="pie__coding" data-options='{"donut": "true"}'>
+                <li data-value="35">40% SCSS</li>
+                <li data-value="30">35% HTML</li>
+                <li data-value="15">15% Grunt</li>
+                <li data-value="10">10% Velocity</li>
+                <li data-value="8"> 8% JavaScript</li>
+                <li data-value="2"> 2% Java</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</section>
 
 <script>
   $(window).load(function() {
     Pizza.init();
   })
 </script>
+{% endfor %}
