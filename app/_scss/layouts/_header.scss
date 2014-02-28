@@ -10,6 +10,10 @@
   position: relative;
   z-index: 100;
 
+  * {
+    white-space: nowrap;
+  }
+
   @include breakpoint("medium") {
     left: 0;
     position: fixed;
@@ -17,20 +21,20 @@
     top: 0;
   }
 
-  a {
-    background-image: url("../img/back-button-dark.svg");
-    background-repeat: no-repeat;
-    border-right: 1px #504F54 solid;
-    text-transform: capitalize;
-  }
-
   a,
   .name {
     color: #FFF;
     display: inline-block;
     font-weight: 300;
-    margin-right: 5px;
+    margin-left: 5px;
     padding: 0 10px 0 18px;
+  }
+
+  a {
+    background-image: url("../img/back-button-dark.svg");
+    background-repeat: no-repeat;
+    border-right: 1px #504F54 solid;
+    text-transform: capitalize;
   }
 
   .page-title {
@@ -60,6 +64,15 @@
 }
 
 @include breakpoint("medium") {
+
+  .site-header {
+    a,
+    .name {
+      margin-left: 0;
+      margin-right: 5px;
+    }
+  }
+
   .home .site-header {
     display: none;
   }

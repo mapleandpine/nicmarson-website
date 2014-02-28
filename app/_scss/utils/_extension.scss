@@ -23,11 +23,11 @@
 }
 
 %transition-medium {
-  transition: all 0.5s cubic-bezier(.17,.67,.83,.67) 0s;
+  transition: all .5s cubic-bezier(.17,.67,.83,.67) 0s;
 }
 
 %transition-fast {
-  transition: all 0.25s cubic-bezier(.17,.67,.83,.67) 0s;
+  transition: all .25s cubic-bezier(.17,.67,.83,.67) 0s;
 }
 
 %small-text {

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html dir="ltr" lang="en-US">
   <head>
     {% include head.html %}
   </head>
-  <body class="site-nav-closed">
+  <body class="{{ page.slug }} site-nav-closed page-nav-closed">
     {% include header.html %}
     <div class="page-flex page-3-col">
-      <main class="page-second main">
+      <main class="page-second flex-item main">
         {{ content }}
       </main>
-      <div class="page-third page-navigation hidden-print" role="complementary">
+      <div class="page-third flex-item page-navigation hidden-print" role="complementary">
         <nav class="collapse in navbar-collapse page-nav" id="page-nav-collapse">
           <ul class="nav">{% if page.slug == "portfolio" %}{% include nav-portfolio.html %}{% endif %}</ul>
         </nav>

@@ -1,3 +1,18 @@
+.page-3-col {
+
+  > .page-first {
+    order: 1;
+  }
+
+  > .page-second {
+    order: 3;
+  }
+
+  > .page-third {
+    order: 2;
+  }
+}
+
 @include breakpoint("medium") {
 
   .page-3-col {

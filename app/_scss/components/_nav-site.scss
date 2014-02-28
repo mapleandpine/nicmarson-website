@@ -1,8 +1,12 @@
-$site-nav-width: 150px;
+$site-nav-bg-color: hsl(248, 5%, 20%);
+$site-nav-link-color: #FFF;
+$site-nav-link-color-hover: $color-teal-light;
+$site-nav-width-open: 150px;
+$site-nav-width-closed: 50px;
 $site-nav-item-height: 40px;
 
 .site-nav {
-  background-color: hsl(248, 5%, 20%);
+  background-color: $site-nav-bg-color;
   @extend %transition-fast;
 
   @include breakpoint("medium") {
@@ -10,26 +14,28 @@ $site-nav-item-height: 40px;
     left: 0;
     position: fixed;
     top: 0;
-    width: $site-nav-width;
+    width: $site-nav-width-open;
     z-index: 99;
 
     > .nav:first-child {
-      margin-top: 50px;
+      margin-top: $site-nav-width-closed;
     }
   }
 
-  a span,
-  h3 {
-    opacity: 1;
-    transition: opacity 0.25s ease-in-out 0s;
+  * {
+    white-space: nowrap;
   }
 
   h3 {
     color: $color-gray;
+    font-family: $font-family-sans-serif;
     font-size: 14px;
     font-weight: 300;
-    margin: 24px 0 6px 15px;
+    margin: 0;
+    opacity: 1;
+    padding: 24px 0 6px 15px;
     text-transform: uppercase;
+    transition: opacity .3s ease-in-out 0s;
   }
 
   li {
@@ -38,11 +44,11 @@ $site-nav-item-height: 40px;
       border-right: 3px solid $color-teal-light;
 
       a {
-        color: #FFF;
+        color: $site-nav-link-color-hover;
       }
 
       .icon {
-        color: $color-teal-light;
+        color: $site-nav-link-color-hover;
         text-shadow: 0 0 1px rgba(0,0,0, .5);
       }
     }
@@ -50,20 +56,35 @@ $site-nav-item-height: 40px;
     a {
       @extend %transition-fast;
       box-shadow: 0 -1px 0 rgba(0,0,0, .15) inset, 0 1px 0 rgba(255,255,255, .05) inset;
-      color: #FFF;
+      color: $site-nav-link-color;
       display: block;
       font-size: 16px;
       font-weight: 200;
       height: $site-nav-item-height;
       line-height: $site-nav-item-height;
-      padding-left: 50px;
+      padding-left: $site-nav-width-closed;
       position: relative;
-      width: $site-nav-width - 3px;
 
       &:hover {
-        background-color: hsl(248, 5%, 15%);
-        color: #FFF;
+        color: $site-nav-link-color-hover;
+
+        .icon {
+          color: $site-nav-link-color-hover;
+        }
       }
+    }
+
+    span {
+      display: block;
+      height: $site-nav-item-height;
+      left: $site-nav-width-closed;
+      line-height: $site-nav-item-height;
+      margin-left: 0;
+      opacity: 1;
+      position: absolute;
+      top: 0;
+      transition: left .25s cubic-bezier(.17,.67,.83,.67) 0s, opacity .3s ease-in-out 0s;
+      width: $site-nav-width-open - $site-nav-width-closed;
     }
   }
 
@@ -73,7 +94,6 @@ $site-nav-item-height: 40px;
 
   .nav {
     border-bottom: 1px solid rgba(255,255,255, .08);
-    color: #FFF;
 
     @include breakpoint("medium") {
 
@@ -81,9 +101,9 @@ $site-nav-item-height: 40px;
       .tooltip-right {
 
         .tooltip {
-          color: #FFF;
+          color: $site-nav-link-color;
           display: none;
-          left: $site-nav-width;
+          left: $site-nav-width-open - $site-nav-width-closed;
           top: 5px;
         }
 
@@ -95,12 +115,16 @@ $site-nav-item-height: 40px;
   }
 
   .icon {
+    background-color: $site-nav-bg-color;
     color: $color-gray;
     font-size: 20px;
-    left: 14px;
-    line-height: 1;
+    height: $site-nav-item-height;
+    left: 0;
+    line-height: $site-nav-item-height;
     position: absolute;
-    top: 8px;
+    text-align: center;
+    top: 0;
+    width: $site-nav-width-closed;
   }
 }
 
@@ -118,17 +142,32 @@ $site-nav-item-height: 40px;
 // conditional styles
 @include breakpoint("medium") {
 
+  .site-nav {
+
+    li {
+
+      a {
+        width: $site-nav-width-open - 3px;
+      }
+    }
+  }
+
   .site-nav-closed .site-nav {
-    width: 50px;
+    width: $site-nav-width-closed;
 
     h3,
     a span {
       opacity: 0;
     }
 
-    a {
-      overflow: hidden;
-      width: 50px; // width required for overflow hidden
+    li {
+      a {
+        overflow: hidden;
+        width: $site-nav-width-closed; // width required for overflow hidden
+      }
+      span {
+        left: -$site-nav-width-open;
+      }
     }
   }
 }

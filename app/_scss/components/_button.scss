@@ -46,6 +46,7 @@ a[role="button"] {
   cursor: pointer;
   display: block;
   height: 32px;
+  position: relative;
   width: 50px;
 
   @include breakpoint("medium") {
