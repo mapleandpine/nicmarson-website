@@ -60,7 +60,7 @@
       $('#page-nav-collapse').toggleClass('in');
     }
 
-    // Smooth scrolling plugin by Chris Coiyer - not needed for Fluidbox functionality
+    // Smooth scrolling plugin by Chris Coiyer
     // Source: http://css-tricks.com/snippets/jquery/smooth-scrolling/
     $('a[href*=#]:not([href=#])').click(function() {
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -79,15 +79,12 @@
       $('html').addClass('screen-scroll');
       // Get scroll position
       var wst = $(window).scrollTop();
-      console.log(wst + ' window scroll top')
 
       $( "div.img-bg" ).each(function( i ) {
         var $this = $(this);
         var offset = $this.offset();
-        if (offset.top <= wst) {
-          console.log(offset.top + ' inside scroll top')
+        if (offset.top <= wst) { // if object is scrolled to
           var st = wst - offset.top;
-          console.log(st + ' window scroll top - inside scroll top')
           var img = $this.find('div.img-src')
           var blur = $this.find('div.img-blurred')
           var content = $this.find('div.img-bg-content')
@@ -121,6 +118,6 @@ function webFontsLoaded() {
     $('html.wf-active section.post-excerpt footer').slabText();
 
     // fix kerning on home page banner
-    $('section.banner-site h1.title span:last-child').lettering();
+    $('section.banner-site h1.name span:last-child').lettering();
   }(jQuery)
 }

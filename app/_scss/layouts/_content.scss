@@ -1,22 +1,15 @@
-.background-size-full {
-  background-color: #191918;
-  background-position: center center;
-  height: 100%;
-  margin-bottom: 60px;
-  margin-top: 0;
-  max-height: 900px;
-  max-width: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
 .content {
   padding: 20px;
 
   @include breakpoint("medium") {
     margin: auto;
-    max-width: 55rem;
+    max-width: 40rem;
     padding: 50px 0 30px;
+  }
+
+  @include breakpoint("large") {
+    max-width: 55rem;
+    padding: 70px 0 50px;
   }
 }
 
@@ -24,20 +17,9 @@
   padding: 0;
 }
 
-.about .content ul {
-  margin-left: 0;
-}
-
 .article {
   width:500px;
   height: 2000px;
-}
-
-.section-title {
-  font-family: $font-family-sans-serif;
-  @include typecsset-font-size($typecsset-h5-size);
-  font-weight: 700;
-  text-transform: uppercase;
 }
 
 #intro {
@@ -82,53 +64,57 @@
     width: 33.3333%;
   }
 
-  .tinyhouse {
-    border-bottom: 1px solid $color-gray-light;
-    padding: 105px 30px 20px 10px;
-    position: relative;
+  ul {
+    margin-left: 0;
+  }
+}
 
-    span {
-      display: block;
-      font-size: 20px;
-      font-weight: 200;
-      text-transform: uppercase;
-    }
+.tinyhouse {
+  border-bottom: 1px solid $color-gray-light;
+  padding: 105px 30px 20px 10px;
+  position: relative;
 
-    .year {
-      color: $color-blue;
-      font-size: 30px;
-      font-weight: 900;
-      left: 10px;
-      line-height: 1.2;
-      position: absolute;
-      top: 30px;
-      width: 80px;
-    }
-
-    .typcn-home {
-      font-size: 100px;
-      line-height: 1;
-      position: absolute;
-      right: 5px;
-      top: 0;
-    }
-
-    .typcn-home-outline {
-      color: $color-blue;
-      position: absolute;
-      right: 48px;
-      top: 88px;
-    }
+  span {
+    display: block;
+    font-size: 20px;
+    font-weight: 200;
+    text-transform: uppercase;
   }
 
-  .bridgecity {
-    background-image: url("../img/bridge.svg");
-    background-position: 20px -20px;
-    background-repeat: no-repeat;
-    background-size: 160px auto;
-    padding: 110px 10px 20px;
-    text-align: center;
+  .year {
+    color: $color-blue;
+    font-size: 30px;
+    font-weight: 900;
+    left: 10px;
+    line-height: 1.2;
+    position: absolute;
+    top: 30px;
+    width: 80px;
   }
+
+  .typcn-home {
+    font-size: 100px;
+    line-height: 1;
+    position: absolute;
+    right: 5px;
+    top: 0;
+  }
+
+  .typcn-home-outline {
+    color: $color-blue;
+    position: absolute;
+    right: 48px;
+    top: 88px;
+  }
+}
+
+.bridgecity {
+  background-image: url("../img/bridge.svg");
+  background-position: center -20px;
+  background-repeat: no-repeat;
+  background-size: 160px auto;
+  padding: 110px 10px 20px;
+  text-align: center;
 }
 
 #resources {
@@ -136,5 +122,15 @@
   h4 {
     @include typecsset-font-size($typecsset-h6-size);
     font-weight: 700;
+  }
+
+  ul {
+    margin-left: 0;
+  }
+
+  .grid-cell {
+    @include breakpoint("medium") {
+      text-align: right;
+    }
   }
 }

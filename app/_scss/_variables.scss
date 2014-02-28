@@ -25,6 +25,9 @@ $color-muted: #999;
 
 $bg-color: #EDEFF0;
 
+$small-caps-color: gray !default;
+$small-caps-weight: 600 !default;
+
 $font-family-serif: 'Playfair Display', serif;
 $font-family-sans-serif: 'Lato', sans-serif;
 $font-family-code: 'Source Code Pro', monospace;
@@ -73,3 +76,6 @@ $typecsset-show-baseline:       false !default;
 // library depends.
 $typecsset-magic-number:        $typecsset-base-line-height;
 $typecsset-magic-ratio:         $typecsset-base-line-height / $typecsset-base-font-size;
+
+$font-size-small: 65% !default;
+$font-size-large: 150% !default;

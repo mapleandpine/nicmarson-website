@@ -91,7 +91,7 @@
   }
   .#{$name}#{$sep}grid--gutters {
     & > .grid-cell {
-      margin-left: 1em;
+      margin-left: 1rem;
 
       &:first-child {
         margin-left: 0;
@@ -100,7 +100,7 @@
   }
   .#{$name}#{$sep}grid--guttersLarge {
     & > .grid-cell {
-      margin-left: 1.5em;
+      margin-left: 1.5rem;
 
       &:first-child {
         margin-left: 0;
@@ -109,7 +109,7 @@
   }
   .#{$name}#{$sep}grid--gutters2x {
     & > .grid-cell {
-      margin-left: 2em;
+      margin-left: 2rem;
 
       &:first-child {
         margin-left: 0;
@@ -118,7 +118,7 @@
   }
   .#{$name}#{$sep}grid--gutters3x {
     & > .grid-cell {
-      margin-left: 3em;
+      margin-left: 3rem;
 
       &:first-child {
         margin-left: 0;
@@ -128,7 +128,9 @@
 }
 
 // create the default grid-gutters modifiers
-@include grid-gutters();
+@include breakpoint("medium") {
+  @include grid-gutters();
+}
 
 // create grid-gutters modifiers for each breakpoint
 @each $breakpoint in $breakpoints {

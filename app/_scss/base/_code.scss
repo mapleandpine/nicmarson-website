@@ -2,7 +2,7 @@
     #CODE
 \*------------------------------------*/
 pre {
-    @extend %typecsset-vertical-rhythm;
+  @extend %typecsset-vertical-rhythm;
 }
 
 /**
@@ -13,7 +13,7 @@ code,
 kbd,
 pre,
 samp {
-    font-family: $font-family-code; /* [1] */
+  font-family: $font-family-code; /* [1] */
 }
 
 code {

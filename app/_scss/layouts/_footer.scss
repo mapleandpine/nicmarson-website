@@ -5,8 +5,6 @@
   text-align: center;
 
   a {
-    color: #FFF;
-    opacity: .8;
     @extend %transition-fast;
 
     &:hover,
@@ -16,86 +14,60 @@
     }
   }
 
-  .content {
-    padding: 3rem;
+  aside {
+    color: $color-gray-light;
+
+    @include breakpoint("medium") {
+      border-left: 1px solid;
+      text-align: left;
+    }
+
+    h6 {
+      @include typecsset-font-size($typecsset-h3-size);
+      font-family: inherit;
+      margin-bottom: 0;
+    }
+
+    ul {
+      margin-left: 2rem;
+    }
   }
 
   .name {
-    font-size: 4rem;
+    border-bottom: 2px solid;
+    font-size: 2.6rem;
     font-weight: 200;
+    padding-bottom: 30px;
+
+    @include breakpoint("large") {
+      font-size: 3.8rem;
+    }
 
     b {
       font-weight: 700;
     }
   }
 
-  .byline {
-    color: $color-gray-light;
-    font-size: 1.2rem;
-    padding: 1rem 0;
+  .social {
+    margin-bottom: 2em;
 
-    h6 {
-      font-size: 2rem;
+    a {
+      display: inline-block;
+      font-size: 3em;
+      margin: 0 .5em;
     }
   }
 
-  .icon {
-    background-color: $color-yellow;
-    border-radius: 100%;
-    color: #FFF;
-    content: "";
-    display: inline-block;
-    font-size: 52px;
-    height: 80px;
-    margin-bottom: 10px;
-    position: relative;
-    width: 80px;
-
-    @include breakpoint("large") {
-      font-size: 72px;
-      height: 100px;
-      width: 100px;
-    }
-
-    &:before {
-      left: 14px;
-      position: absolute;
-      top: 0;
-
-      @include breakpoint("large") {
-        left: 15px;
-        position: absolute;
-        top: -6px;
-      }
-    }
-  }
-
-  .automator .icon:before {
-    left: 14px;
-    top: 0;
-
-    @include breakpoint("large") {
-      left: 13px;
-      top: -4px;
-    }
-  }
-
-  .social a {
-    display: inline-block;
-    font-size: 3em;
-    margin: 0 .5em;
-  }
-
-  .credit {
+  .copyright {
     color: $color-yellow;
-    display: block;
-    font-size: 0.85em;
+    font-size: .85em;
     font-weight: 200;
-    margin: 0;
+    margin-top: 2em;
     padding: 20px;
 
-    @include breakpoint("large") {
-      padding: 1.5rem 30px;
+    @include breakpoint("medium") {
+      padding: 1.5rem 0;
+      text-align: right;
     }
   }
 }

@@ -39,6 +39,9 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  // Ala Trent Walton
+  // http://trentwalton.com/2011/09/07/css-hyphenation
+  @include hyphens(auto);
 
   @include breakpoint("medium") {
     padding-top: 50px;
@@ -80,5 +83,29 @@ a[role="link"] {
 
   &:visited {
     border-bottom-color: $link-visited-color;
+  }
+}
+
+abbr,
+acronym,
+blockquote,
+code,
+dir,
+kbd,
+listing,
+plaintext,
+q,
+samp,
+tt,
+var,
+xmp {
+  // http://meyerweb.com/eric/thoughts/2012/12/17/where-to-avoid-css-hyphenation
+  @include hyphens(none);
+}
+
+abbr {
+  @include smallcaps($small-caps-color, $small-caps-weight);
+  &:hover {
+    cursor: help;
   }
 }

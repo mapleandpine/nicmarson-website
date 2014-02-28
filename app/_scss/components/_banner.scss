@@ -16,8 +16,7 @@ $color-site-brown: #44434B;
     text-align: center;
   }
 
-  .title {
-    font-family: $font-family-sans-serif;
+  .name {
     font-size: 4rem;
     font-weight: 900;
     text-shadow: 0 0 20px rgba(1,1,1, .2);
@@ -58,8 +57,7 @@ $color-site-brown: #44434B;
     color: #FFF;
   }
 
-  .title {
-    text-transform: uppercase;
+  .name {
 
     > span {
       display: block;
@@ -83,9 +81,11 @@ $color-site-brown: #44434B;
     // Fix some kerning issues
     .char2,
     .char3,
-    .char4,
     .char5 {
       margin-left: .02em;
+    }
+    .char4 {
+      margin-left: .03em;
     }
 
     @include breakpoint("medium") {

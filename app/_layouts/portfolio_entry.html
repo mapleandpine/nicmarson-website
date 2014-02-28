@@ -3,21 +3,26 @@ layout: default
 parent: portfolio
 ---
 
-<article class="post post-portfolio dark-bg" {% if page.color-dark %}style="background-color: #{{ page.color-dark }};"{% endif %}>
+<article class="post post-portfolio" {% if page.color-dark %}style="background-color: #{{ page.color-dark }};"{% endif %}>
+  <header class="lead dark-bg">
+    <div class="content">
+      <h1>{{ page.title }}</h1>
+      {% if page.website %}<p>The <a href="http://{{ page.website }}" class="external" role="link">{{ page.title }}</a> website was built in {{ page.date | date: "%Y" }} {% if page.client %} and produced by {{ page.client }}{% endif %}.</p>{% endif %}
+    </div>
+  </header>
   <div class="image img-bg">
-    <div class="img-src" style="background-image:url('{{ site.url }}/img/portfolio/{{ post.name }}/{{ post.name }}-01.{{ page.img-ext }}')"></div>
-    <div class="img-src img-blurred" style="background-image:url('{{ site.url }}/img/portfolio/{{ post.name }}/{{ post.name }}-01-blur.{{ page.img-ext }}')"></div>
-    <div class="img-bg-content" {% if page.color-light %}style="border-bottom: 7px solid #{{ page.color-light }};"{% endif %}>
+    <div class="img-src" style="background-image:url('{{ site.url }}/img/portfolio/{{ page.name }}/{{ page.name }}-01.jpg')"></div>
+    <div class="img-src img-blurred" style="background-image:url('{{ site.url }}/img/portfolio/{{ page.name }}/{{ page.name }}-01-blur.jpg')"></div>
+    <div class="img-bg-content" {% if page.color-light %}style="background-color: #{{ page.color-light }};"{% endif %}>
       <div class="content">
-        <h1 class="title" data-shadow-text="{{ page.title }}"><a href="{{ page.url }}" class="page__open">{{ page.title }}</a></h1>
         <p class="lead">{{ page.excerpt }}</p>
       </div>
     </div>
   </div>
-  <footer>
+  <section class="role dark-bg">
+    <span class="section-title">My role</span>
     <div class="content">
-      <p class="meta">{{ page.date | date: "%Y" }} {% if page.website %}<span class="divider">•</span> <a href="http://{{ page.website }}" class="external" role="link">{{ page.website }}</a>{% endif %} {% if page.client %}<span class="divider">•</span> {{ page.client }}{% endif %}</p>
       {{ content }}
     </div>
-  </footer>
+  </section>
 </article>

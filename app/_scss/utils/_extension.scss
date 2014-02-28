@@ -1,19 +1,20 @@
 /*------------------------------------*\
     #SHARED
 \*------------------------------------*/
+
 /**
  * A lot of elements in Typecsset need to share some declarations (mainly for
  * vertical rhythm), so we `@extend` some silent classes.
  */
 %typecsset-reset {
-    margin:  0;
-    padding: 0;
+  margin:  0;
+  padding: 0;
 }
 
 %typecsset-vertical-rhythm {
-    @extend %typecsset-reset;
-    margin-bottom: $typecsset-magic-number;
-    margin-bottom: $typecsset-magic-ratio + rem;
+  @extend %typecsset-reset;
+  margin-bottom: $typecsset-magic-number;
+  margin-bottom: $typecsset-magic-ratio + rem;
 }
 
 
@@ -27,4 +28,12 @@
 
 %transition-fast {
   transition: all 0.25s cubic-bezier(.17,.67,.83,.67) 0s;
+}
+
+%small-text {
+  font-size: $font-size-small;
+}
+
+%large-text {
+  font-size: $font-size-large;
 }

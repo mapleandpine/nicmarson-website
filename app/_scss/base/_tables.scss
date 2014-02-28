@@ -14,10 +14,9 @@
 
 .table {
   @extend %typecsset-vertical-rhythm;
-  @extend %small-text;
   border-collapse: collapse;
   border-spacing: 0;
-  width: 100%;
+  font-size: 85%;
 
   // Cells
   > thead,
@@ -26,21 +25,38 @@
     > tr {
       > th,
       > td {
-        padding: $typecsset-base-line-height/2 $typecsset-base-line-height/2 $typecsset-base-line-height/2 0;
+        padding: .5rem .5em .5rem 0;
       }
       > td {
         vertical-align: top;
-        border-top: 1px solid $color-gray-bg;
       }
     }
   }
 
   // Bottom align for column headings
   > thead > tr > th {
-    color: $color-muted;
     font-weight: 700;
+    letter-spacing: .07em;
     text-transform: uppercase;
     vertical-align: bottom;
+  }
+
+  // Nesting
+  .table {
+    background-color: #FFF;
+  }
+}
+
+.table-border {
+  width: 100%;
+
+  // Cells
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr > td {
+      border-top: 1px solid $color-gray-bg;
+    }
   }
 
   // Remove top border from thead by default
@@ -55,13 +71,31 @@
     }
   }
 
-  // Account for multiple tbody instances
-  > tbody + tbody {
-    border-top: 2px solid $color-gray-light;
+  > thead > tr > th {
+    color: $color-muted;
   }
 
-  // Nesting
-  .table {
-    background-color: #FFF;
+  // Account for multiple tbody instances
+  > tbody + tbody {
+    border-top: 1px solid $color-gray-light;
+  }
+}
+
+.table-info {
+
+  // Cells
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: .25rem 50px .25rem 0;
+      }
+    }
+  }
+
+  td {
+    font-size: 2em;
   }
 }

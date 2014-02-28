@@ -56,3 +56,28 @@ h6 {
     }
   }
 }
+
+.article-title,
+.section-title {
+  font-family: $font-family-sans-serif;
+  @include typecsset-font-size($typecsset-h5-size);
+  font-weight: 700;
+  letter-spacing: .06em;
+  margin-left: 20px;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  @include breakpoint("medium") {
+    margin-left: 2rem;
+  }
+}
+
+.content .section-title,
+.content .article-title {
+  margin-left: 0;
+}
+
+.name {
+  font-family: $font-family-sans-serif;
+  text-transform: uppercase;
+}
