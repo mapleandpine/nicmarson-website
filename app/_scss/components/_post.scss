@@ -90,15 +90,15 @@ ul.posts {
   .section-title {
     margin-bottom: 20px;
     margin-top: 20px;
-
-    @include breakpoint("medium") {
-      position: absolute;
-      top: 0;
-    }
   }
 
   .role {
     padding-top: 2rem;
+
+    h2,
+    h3 {
+      font-family: $font-family-sans-serif;
+    }
 
     .table-info td {
       border-bottom: 2px solid #FFF;
@@ -127,7 +127,6 @@ ul.posts {
     .breakdown {
 
       h3 {
-        font-family: $font-family-sans-serif;
         font-weight: 200;
 
         b {

@@ -1,14 +1,26 @@
 ---
 layout: post
-title:  "About this site"
+title:  "Building a personal site is hard"
 date:   2014-01-31 14:55:06
 categories:
 - blog
 - bootstrap
 ---
-Building myself a website is easily the hardest thing I've ever done in my career. It's not because I lack the skills in design or coding, it's because I have trouble deciding on visual styles and techniques. With so much inspiration from around the world, and a vast collection of code snippets to choose from, the hardest thing for a designer is to have too much freedom. The only thing to do, is to decide on what's most important to you, and what represents you the best.
+Design, particularly web design, is about communication. When I design a website for a client I have a clear idea of the message. However, the website I design for myself <b>is</b> the message. From the colors to the indents in my code, every aspect communicates who I am as a designer. I've always had a hard time promoting myself, which makes it harder to communicate who I am, and therefore hard to build a personal site.
 
 <!--more-->
+
+There is a lot of visual inspiration and a vast collection of code snippets from around the world. The hardest thing about designing is to have too much freedom. When building a website for a client I relish having constraints. I don't find it limiting to have a solid brand identity, or a mission statment, or to know the audience. When building a personal website, decide on what's most important to you, and what represents you the best. Create your own brand identity, write a mission statment, and know your audience.
+
+This isn't my first personal website, by far. My first portfolio was built using Flash in 1999. It was grungy, animated, with lots of artistic elements and creativity. Although it was visually appealing it would have made for a horrible user experience. While I still appreaciate the grunge look, my tastes have turned to the minimal. This is how I want others to view me, and my work. I even live minimally.
+
+My girlfriend and I built a tiny house last year, and I've found many similarities with building a house and building a web site. Living in 240 square feet forces you to live minimally. Therefore our design embraces this. We use appliances that can be put away, we have lots of creative storage spaces, and we have a trundle king-sized bed that turns into a daybed. When building a website, think about your content, then decide on how much space it needs.
+
+Too often people build houses and websites that are too robust for their content and lifestyle. They buy the biggest one they can afford and spend a lifetime trying to fill it up. Soon, they find out that it's more trouble to maintain then it's worth, or they're not happy because it doesn't fit their needs.
+
+I've made this same mistake on previous iterations of personal websites. I would build myself a website, then struggle with filling it up with content. We do this because we're comparing ourselves to others. Inspiration is a great thing, but be careful about applying it to yourself. You may think a pool would look great in your back yard, but 
+
+I don't Tweet my daily activities, or photograph great food and drink. What I want to do is contribute to my professional community.
 
 This site takes inspiration from around the web. It grew from a basic idea and has evolved as I've worked on it. I wanted to keep it simple, so I took a mobile first approach, then added enhancements for the desktop.
 
