@@ -16,6 +16,7 @@
 
   aside {
     color: $color-gray-light;
+    padding-top: 1.5rem;
 
     @include breakpoint("medium") {
       border-left: 1px solid;
@@ -23,13 +24,19 @@
     }
 
     h6 {
-      @include typecsset-font-size($typecsset-h3-size);
+      color: $color-yellow;
+      @include typecsset-font-size($typecsset-h5-size);
       font-family: inherit;
       margin-bottom: 0;
+      text-transform: uppercase;
     }
 
     ul {
-      margin-left: 2rem;
+      margin-left: 0;
+
+      @include breakpoint("medium") {
+        margin-left: 2rem;
+      }
     }
   }
 
@@ -48,11 +55,16 @@
     }
   }
 
-  .social {
-    margin-bottom: 2em;
+  .social a {
+    display: inline-block;
+    font-size: 2.5em;
+    margin: 0 .375em;
 
-    a {
-      display: inline-block;
+    @include breakpoint("medium") {
+      margin: 0 .3em;
+    }
+
+    @include breakpoint("large") {
       font-size: 3em;
       margin: 0 .5em;
     }
@@ -62,12 +74,9 @@
     color: $color-yellow;
     font-size: .85em;
     font-weight: 200;
-    margin-top: 2em;
-    padding: 20px;
 
     @include breakpoint("medium") {
-      padding: 1.5rem 0;
-      text-align: right;
+      margin-left: 2rem;
     }
   }
 }
