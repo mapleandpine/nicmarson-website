@@ -55,7 +55,6 @@ $site-nav-item-height: 40px;
 
     a {
       @extend %transition-fast;
-      box-shadow: 0 -1px 0 rgba(0,0,0, .15) inset, 0 1px 0 rgba(255,255,255, .05) inset;
       color: $site-nav-link-color;
       display: block;
       font-size: 16px;
@@ -118,13 +117,13 @@ $site-nav-item-height: 40px;
     background-color: $site-nav-bg-color;
     color: $color-gray;
     font-size: 20px;
-    height: $site-nav-item-height;
+    height: $site-nav-item-height - 2px;
     left: 0;
-    line-height: $site-nav-item-height;
+    line-height: $site-nav-item-height - 2px;
     position: absolute;
     text-align: center;
     top: 0;
-    width: $site-nav-width-closed;
+    width: $site-nav-width-closed - 3px;
   }
 }
 

@@ -32,10 +32,17 @@ ul.posts {
   }
 }
 
+.post-entry {
+  @include breakpoint("medium") {
+    p {
+      max-width: 30em;
+    }
+  }
+}
+
 .post-content {
   color: #505050;
   font-size: 1.375em;
-  max-width: 30em;
 
   p:first-child {
     font-size: 1.2em;
