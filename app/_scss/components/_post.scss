@@ -115,13 +115,44 @@ ul.posts {
 
 .post-portfolio {
 
+  header {
+    border-bottom: 2px solid #FFF;
+  }
+
   section {
     position: relative;
+  }
+
+  .img-bg {
+    max-height: 450px;
+
+    @include breakpoint("medium") {
+      max-height: 400px;
+    }
+
+    @include breakpoint("large") {
+      max-height: 550px;
+    }
   }
 
   .img-bg-content {
     background-color: #FFF;
     opacity: 1 !important; // need to override scrolling opacity in JS
+
+    @include breakpoint("medium") {
+      border-radius: 6px;
+      bottom: 20%;
+      padding: 40px;
+
+      p {
+        margin: 0;
+      }
+    }
+
+    @include breakpoint("large") {
+      border-radius: 10px;
+      bottom: 33.333%;
+    }
   }
 
   .section-title {

@@ -70,6 +70,7 @@ $color-site-brown: #44434B;
 
     @include breakpoint("medium") {
       bottom: 0;
+      padding: 80px 0;
     }
   }
 
@@ -119,7 +120,7 @@ $color-site-brown: #44434B;
     @include breakpoint("medium") {
       left: 18.5rem;
       position: absolute;
-      top: 128px;
+      top: 92px;
     }
 
     @include breakpoint("large") {

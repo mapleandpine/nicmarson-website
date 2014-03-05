@@ -34,7 +34,7 @@ body {
   text-rendering: optimizelegibility;
 
   @include breakpoint("medium") {
-    font-size: .85em;
+    font-size: 13px;
   }
 
   @include breakpoint("large") {

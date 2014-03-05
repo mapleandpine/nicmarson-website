@@ -29,7 +29,6 @@ slug: home
       </header>
       <div class="media">
         <div class="post-content media-body">
-          <!-- http://melandri.net/2013/11/24/manage-posts-excerpt-in-jekyll/ -->
           {% if post.content contains '<!--more-->' %}
             {{ post.content | split:'<!--more-->' | first }}
             <p><a href="{{ post.url }}">Continue reading</a></p>
@@ -50,19 +49,17 @@ slug: home
 
 {% for post in site.categories['portfolio'] limit: 1 %}
 <article class="post post-portfolio" {% if post.color-dark %}style="background-color: #{{ post.color-dark }};"{% endif %}>
-  <header class="lead dark-bg">
+  <header class="dark-bg">
     <div class="content">
       <span class="article-title">My latest project</span>
-      {% if post.website %}<p>The <a href="http://{{ post.website }}" class="external" role="link">{{ post.title }}</a> website was built in {{ post.date | date: "%Y" }} {% if post.client %} and produced by {{ post.client }}{% endif %}.</p>{% endif %}
+      {% if post.website %}<p class="lead">The <a href="http://{{ post.website }}" class="external" role="link">{{ post.title }}</a> website was built in {{ post.date | date: "%Y" }} {% if post.client %} and produced by {{ post.client }}{% endif %}.</p>{% endif %}
     </div>
   </header>
   <div class="image img-bg">
-    <div class="img-src" style="background-image:url('{{ site.url }}/img/portfolio/{{ post.name }}/{{ post.name }}-01.jpg')"></div>
-    <div class="img-src img-blurred" style="background-image:url('{{ site.url }}/img/portfolio/{{ post.name }}/{{ post.name }}-01-blur.jpg')"></div>
-    <div class="img-bg-content" {% if post.color-light %}style="background-color: #{{ post.color-light }};"{% endif %}>
-      <div class="content">
-        <p class="lead">{{ post.excerpt }}</p>
-      </div>
+    <div class="img-src" style="background-image:url('{{ site.url }}/img/portfolio/{{ post.name }}/{{ post.name }}-cover.jpg')"></div>
+    <div class="img-src img-blurred" style="background-image:url('{{ site.url }}/img/portfolio/{{ post.name }}/{{ post.name }}-cover-blur.jpg')"></div>
+    <div class="img-bg-content content">
+      <p class="lead">{{ post.excerpt }}</p>
     </div>
   </div>
   <section class="role dark-bg">

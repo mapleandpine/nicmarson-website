@@ -123,12 +123,10 @@ img {
   left: 0;
   position: absolute;
   right: 0;
-
-  > .content {
-    position: relative;
-
-    @include breakpoint("medium") {
-      padding: 80px 0;
+  
+  @include breakpoint("medium") {
+    > .content {
+      position: relative;
     }
   }
 }
