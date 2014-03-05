@@ -29,8 +29,11 @@ $i: 0;
 // }
 
 ul[data-pie-id] {
-  margin: 0;
   padding: 0;
+
+  @include breakpoint("medium") {
+    margin: 0;
+  }
 
   li {
     cursor: default;

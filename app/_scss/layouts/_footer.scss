@@ -58,7 +58,7 @@
   .social a {
     display: inline-block;
     font-size: 2.5em;
-    margin: 0 .375em;
+    margin: 0 .25em;
 
     @include breakpoint("medium") {
       margin: 0 .3em;

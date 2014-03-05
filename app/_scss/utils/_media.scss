@@ -7,10 +7,15 @@
   }
 }
 
-
 .disable-hover,
 .disable-hover * {
   pointer-events: none !important;
+}
+
+@media (max-width: 740px) {
+  .hide-small {
+    display: none;
+  }
 }
 
 

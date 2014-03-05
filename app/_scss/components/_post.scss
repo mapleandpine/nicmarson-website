@@ -15,8 +15,10 @@ ul.posts {
 
 /* standard */
 .post {
-  color: #505050;
-  @extend %large-text;
+
+  .byline {
+    font-style: italic;
+  }
 
   /* terminal */
   pre.terminal {
@@ -27,6 +29,16 @@ ul.posts {
 
   pre.terminal code {
     background-color: #333;
+  }
+}
+
+.post-content {
+  color: #505050;
+  font-size: 1.375em;
+  max-width: 30em;
+
+  p:first-child {
+    font-size: 1.2em;
   }
 }
 
@@ -61,30 +73,36 @@ ul.posts {
 
   footer {
     color: rgba(0,0,0, .4);
-    order: -1;
-    width: 3em;
 
     @include breakpoint("medium") {
       margin-right: 1.5rem;
+      order: -1;
       text-align: center;
       width: 4em;
-    }
 
-    span {
-      display: block;
-    }
+      span {
+        display: block;
+      }
 
-    .day {
-      line-height: .95;
-    }
+      .day {
+        line-height: .95;
+      }
 
-    .month {
-      font-weight: 700;
-    }
+      .month {
+        font-weight: 700;
+      }
 
-    .year {
-      line-height: 1;
+      .year {
+        line-height: 1;
+      }
     }
+  }
+}
+
+@media (max-width: 740px) {
+  .post .slabtextdone .slabtext {
+    display: inline;
+    font-size: 1em !important;
   }
 }
 
