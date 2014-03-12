@@ -6,14 +6,14 @@ slug: home
 
 <section class="banner banner-site">
   <div class="image img-bg dark-bg">
-    <div class="img-src" style="background-image:url('img/lumber.jpg')"></div>
-    <div class="img-src img-blurred" style="background-image:url('img/lumber-blur.jpg')"></div>
+    <div class="img-src" style="background-image:url('img/night-shoot.jpg')"></div>
+    <div class="img-src img-blurred" style="background-image:url('img/night-shoot-blur.jpg')"></div>
     <div class="img-bg-content">
       <div class="content">
-        <header>
+        <div class="frame">
           <h1 class="name"><span>Nic</span> <span>Marson</span></h1>
           <p class="byline"><span>Front-end Developer</span> <span><b>&amp;</b> UI Designer</span></p>
-        </header>
+        </div>
         <p class="more"><a href="about.html">More about me <span class="gravatar"><img src="https://secure.gravatar.com/avatar/8d6e9c07171508fa435faa35ae8a0ebc?s=64"></span></a></p>
       </div>
     </div>
@@ -48,23 +48,30 @@ slug: home
 {% endfor %}
 
 {% for post in site.categories['portfolio'] limit: 1 %}
-<article class="post post-portfolio" {% if post.color-dark %}style="background-color: #{{ post.color-dark }};"{% endif %}>
-  <header class="dark-bg">
-    <div class="content">
-      <span class="article-title">My latest project</span>
-      {% if post.website %}<p class="lead">The <a href="http://{{ post.website }}" class="external" role="link">{{ post.title }}</a> website was built in {{ post.date | date: "%Y" }} {% if post.client %} and produced by {{ post.client }}{% endif %}.</p>{% endif %}
-    </div>
-  </header>
+<section class="post post-portfolio">
   <div class="image img-bg">
     <div class="img-src" style="background-image:url('{{ site.url }}/img/portfolio/{{ post.name }}/{{ post.name }}-cover.jpg')"></div>
     <div class="img-src img-blurred" style="background-image:url('{{ site.url }}/img/portfolio/{{ post.name }}/{{ post.name }}-cover-blur.jpg')"></div>
-    <div class="img-bg-content content">
-      <p class="lead">{{ post.excerpt }}</p>
+    <div class="img-bg-content">
+      <div class="content">
+        <div class="frame">
+          <h1 class="title">Regence (BlueCross BlueShield) Web Portal</h1>
+        </div>
+      </div>
     </div>
   </div>
-  <section class="role dark-bg">
+  <div class="cf">
     <div class="content">
-      <span class="section-title">My role</span>
+      <span class="section-title"><b>Project</b> information</span>
+      <div class="grid grid--gutters3x">
+        <div class="grid-cell">
+          {% if post.website %}<p class="lead">The <a href="http://{{ post.website }}" class="external" role="link">{{ post.title }}</a> website was built in {{ post.date | date: "%Y" }} {% if post.client %} and produced by {{ post.client }}{% endif %}.</p>{% endif %}
+        </div>
+        <div class="grid-cell">
+          <p>{{ post.excerpt }}</p>
+        </div>
+      </div>
+      <span class="section-title"><b>Role</b> information</span>
       <div class="grid grid--gutters3x">
         <div class="intro grid-cell">
           <h2>As a UX Developer</h2>
@@ -110,9 +117,32 @@ slug: home
           </div>
         </div>
       </div>
+      <div class="cf">
+        <span class="section-title"><b>Screen</b> captures</span>
+        <div class="grid grid--guttersLarge grid-wrap thumb-grid">
+          <div class="thumb grid-cell">
+            <div class="img-cover" style="background-image: url(/img/portfolio/{{ post.name }}/{{ post.name }}-01.{{ post.img-ext }});"></div>
+          </div>
+          <div class="thumb grid-cell">
+            <div class="img-cover" style="background-image: url(/img/portfolio/{{ post.name }}/{{ post.name }}-02.{{ post.img-ext }});"></div>
+          </div>
+          <div class="thumb grid-cell">
+            <div class="img-cover" style="background-image: url(/img/portfolio/{{ post.name }}/{{ post.name }}-03.{{ post.img-ext }});"></div>
+          </div>
+          <div class="thumb grid-cell">
+            <div class="img-cover" style="background-image: url(/img/portfolio/{{ post.name }}/{{ post.name }}-04.{{ post.img-ext }});"></div>
+          </div>
+          <div class="thumb grid-cell">
+            <div class="img-cover" style="background-image: url(/img/portfolio/{{ post.name }}/{{ post.name }}-05.{{ post.img-ext }});"></div>
+          </div>
+          <div class="thumb grid-cell">
+            <div class="img-cover" style="background-image: url(/img/portfolio/{{ post.name }}/{{ post.name }}-06.{{ post.img-ext }});"></div>
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
-</article>
+  </div>
+</section>
 
 <script>
   $(window).load(function() {

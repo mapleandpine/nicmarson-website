@@ -1,3 +1,7 @@
+.cf {
+  @include clearfix();
+}
+
 .grid {
   display: flex;
   flex-direction: column;

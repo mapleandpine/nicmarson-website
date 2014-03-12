@@ -10,7 +10,7 @@ Design, particularly web design, is about communication. When you design a websi
 
 <!--more-->
 
-## Make yourself a client
+## Treat yourself like a client
 
 There is a lot of visual inspiration and a vast collection of code snippets from around the world. As a designer you never want to have too much freedom. I relish having constraints. I don't find it limiting to have a solid brand identity, or a mission statment, or to know the audience. When building my personal website, I had to decide on what's most important to me, and what represents me the best. I had to create my own brand identity.
 
@@ -57,7 +57,7 @@ This site takes inspiration from around the web. It grew from a basic idea and h
 
 #### Graphics
 - [Zurb Pizza Pie Charts][pizza_pie]
-- [Cover image by By Jonas Nilsson Lee][http://bit.ly/1epgtU4]
+- Cover image by Natalie Perrin
 
 #### Notable mentions
 - [Advanced Jekyll Features][adv_jekyll]

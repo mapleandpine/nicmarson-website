@@ -14,14 +14,38 @@
     }
   }
 
+  .name {
+    font-size: 3.5rem;
+
+    @include breakpoint("large") {
+      font-size: 5rem;
+    }
+  }
+
+  .social {
+    margin-bottom: 2rem;
+
+    a {
+      display: inline-block;
+      font-size: 2.5em;
+      margin-left: .25em;
+      margin-right: .25em;
+
+      @include breakpoint("medium") {
+        margin-left: .3em;
+        margin-right: .3em;
+      }
+
+      @include breakpoint("large") {
+        font-size: 3em;
+        margin-left: .5em;
+        margin-right: .5em;
+      }
+    }
+  }
+
   aside {
     color: $color-gray-light;
-    padding-top: 1.5rem;
-
-    @include breakpoint("medium") {
-      border-left: 1px solid rgba(255,255,255, .1);
-      text-align: left;
-    }
 
     h6 {
       color: $color-yellow;
@@ -32,41 +56,8 @@
     }
 
     ul {
+      margin-bottom: 3.5rem;
       margin-left: 0;
-
-      @include breakpoint("medium") {
-        margin-left: 2rem;
-      }
-    }
-  }
-
-  .name {
-    border-bottom: 2px solid rgba(255,255,255, .4);
-    font-size: 2.6rem;
-    font-weight: 200;
-    padding-bottom: 30px;
-
-    @include breakpoint("large") {
-      font-size: 3.8rem;
-    }
-
-    b {
-      font-weight: 700;
-    }
-  }
-
-  .social a {
-    display: inline-block;
-    font-size: 2.5em;
-    margin: 0 .25em;
-
-    @include breakpoint("medium") {
-      margin: 0 .3em;
-    }
-
-    @include breakpoint("large") {
-      font-size: 3em;
-      margin: 0 .5em;
     }
   }
 
@@ -74,9 +65,5 @@
     color: $color-yellow;
     font-size: .85em;
     font-weight: 200;
-
-    @include breakpoint("medium") {
-      margin-left: 2rem;
-    }
   }
 }

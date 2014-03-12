@@ -59,9 +59,14 @@ ul.posts {
   .post-content {
 
     @include breakpoint("medium") {
-      border-left: 1px solid $color-gray-light;
-      padding-left: 4.5rem;
+      border-left: 10px solid $color-gray-light;
+      padding-left: 4rem;
       @extend %large-text;
+    }
+
+    @include breakpoint("large") {
+      border-left-width: 15px;
+      padding-left: 5rem;
     }
   }
 
@@ -115,12 +120,19 @@ ul.posts {
 
 .post-portfolio {
 
-  header {
-    border-bottom: 2px solid #FFF;
+  h1,
+  h2,
+  h3 {
+    font-family: $font-family-sans-serif;
   }
 
   section {
     position: relative;
+  }
+
+  .title {
+    font-family: $font-family-sans-serif;
+    line-height: 1.3;
   }
 
   .img-bg {
@@ -135,102 +147,73 @@ ul.posts {
     }
   }
 
-  .img-bg-content {
-    background-color: #FFF;
-    opacity: 1 !important; // need to override scrolling opacity in JS
-
-    @include breakpoint("medium") {
-      border-radius: 6px;
-      bottom: 20%;
-      padding: 40px;
-
-      p {
-        margin: 0;
-      }
-    }
+  .frame {
+    margin-bottom: 2rem;
+    padding: 2rem 3rem 1rem;
 
     @include breakpoint("large") {
-      border-radius: 10px;
-      bottom: 33.333%;
+      margin-bottom: 3rem;
     }
   }
 
-  .section-title {
-    margin-bottom: 20px;
-    margin-top: 20px;
+  .table-info td {
+    border-bottom: 8px solid $color-gray-light;
+    padding-bottom: 2rem;
   }
 
-  .role {
-    padding-top: 2rem;
+  .grid {
+    margin-bottom: 2rem;
 
-    h2,
+    @include breakpoint("large") {
+      margin-bottom: 3rem;
+    }
+  }
+
+  .pizza-pie {
+    margin-left: -3rem;
+    margin-top: -3rem;
+  }
+
+  .intro .pizza-toppings {
+    text-align: right;
+
+    @include breakpoint("large") {
+      font-size: 1.5em;
+    }
+  }
+
+  .breakdown {
+
     h3 {
-      font-family: $font-family-sans-serif;
-    }
+      border-bottom: 4px solid $color-gray-light;
+      @extend %fat-skinny;
 
-    .table-info td {
-      border-bottom: 2px solid #FFF;
-      padding-bottom: 2rem;
-    }
-
-    .content p {
-      border-bottom: 2px solid #FFF;
-      padding-bottom: 2rem;
-    }
-
-    .grid {
-      margin-bottom: 2rem;
-    }
-
-    .pizza-pie {
-      margin-left: -3rem;
-      margin-top: -3rem;
-    }
-
-    .intro .pizza-toppings {
-      text-align: right;
+      @include breakpoint("medium") {
+        @include typecsset-font-size($typecsset-h4-size);
+      }
 
       @include breakpoint("large") {
-        font-size: 1.5em;
+        @include typecsset-font-size($typecsset-h3-size);
       }
     }
 
-    .breakdown {
-
-      h3 {
-        font-weight: 200;
-
-        @include breakpoint("medium") {
-          @include typecsset-font-size($typecsset-h4-size);
-        }
-
-        @include breakpoint("large") {
-          @include typecsset-font-size($typecsset-h3-size);
-        }
-
-        b {
-          font-weight: 700;
-        }
-      }
-
-      .grid-cell {
-        position: relative;
-      }
-
-      .pizza-toppings {
-        @include breakpoint("medium") {
-          font-size: .85em;
-        }
-        @include breakpoint("large") {
-          font-size: 1em;
-        }
-      }
+    .grid-cell {
+      position: relative;
     }
 
-    .pie-chart {
-      float: left;
-      margin-right: 40px;
-      width: 50%;
+    .pizza-toppings {
+      @include breakpoint("medium") {
+        font-size: .85em;
+      }
+      @include breakpoint("large") {
+        font-size: 1em;
+      }
     }
+  }
+
+  .pie-chart {
+    float: left;
+    margin-right: 40px;
+    width: 50%;
   }
 }

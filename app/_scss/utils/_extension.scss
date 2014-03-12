@@ -37,3 +37,11 @@
 %large-text {
   font-size: $font-size-large;
 }
+
+%fat-skinny {
+  font-weight: 200;
+
+  b {
+    font-weight: 700;
+  }
+}

@@ -1,116 +1,116 @@
 .clip-grid {
   padding: 20px 20px 20px 40px;
-}
 
-.clip {
-  animation-name: bounce;
-  background-color: #FFF;
-  border-bottom: 0 solid $color-teal;
-  border-top: 7px solid $bg-color;
-  color: $color-gray-dark;
-  height: 232px;
-  margin: 0 10px 20px 0;
-  overflow: hidden;
-  position: relative;
-  transition: border .15s;
-  transition: transform .2s cubic-bezier(.17,.67,.83,.67) 0s;
-  width: 90%;
+  .clip {
+    animation-name: bounce;
+    background-color: #FFF;
+    border-bottom: 0 solid $color-teal;
+    border-top: 7px solid $bg-color;
+    color: $color-gray-dark;
+    height: 232px;
+    margin: 0 10px 20px 0;
+    overflow: hidden;
+    position: relative;
+    transition: border .15s;
+    transition: transform .2s cubic-bezier(.17,.67,.83,.67) 0s;
+    width: 90%;
 
-  @include breakpoint("medium") {
-    margin-bottom: 15px;
-    margin-right: 15px;
-  }
+    @include breakpoint("medium") {
+      margin-bottom: 15px;
+      margin-right: 15px;
+    }
 
-  @include breakpoint("large") {
-    margin-bottom: 20px;
-    margin-right: 20px;
-  }
+    @include breakpoint("large") {
+      margin-bottom: 20px;
+      margin-right: 20px;
+    }
 
-  &:hover,
-  &.hover {
-    border-bottom-width: 7px;
-    border-top-width: 0;
-    transform: translateY(-8px);
+    &:hover,
+    &.hover {
+      border-bottom-width: 7px;
+      border-top-width: 0;
+      transform: translateY(-8px);
+
+      .img-cover {
+        opacity: 1;
+      }
+
+      .description {
+        white-space: normal;
+      }
+    }
 
     .img-cover {
-      opacity: 1;
+      background-position: center top;
+      height: 200px;
+      opacity: .65;
+    }
+
+    a {
+      color: inherit;
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      @extend %transition-medium;
+      width: 100%;
     }
 
     .description {
-      white-space: normal;
-    }
-  }
+      background-color: #FFF;
+      display: block;
+      font-size: 16px;
+      font-weight: 200;
+      height: 32px;
+      padding: 4px 10px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      overflow: hidden;
+      right: 0;
+      text-overflow: ellipsis;
+      white-space: nowrap;
 
-  .img-cover {
-    background-position: center top;
-    height: 200px;
-    opacity: .65;
-  }
-
-  a {
-    color: inherit;
-    display: block;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    @extend %transition-medium;
-    width: 100%;
-  }
-
-  .description {
-    background-color: #FFF;
-    display: block;
-    font-size: 16px;
-    font-weight: 200;
-    height: 32px;
-    padding: 4px 10px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-    right: 0;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-
-    b {
-      font-weight: 700;
+      b {
+        font-weight: 700;
+      }
     }
   }
 }
 
 .no-flexbox {
-  .clip {
+  .clip-grid .clip {
     float: left;
   }
 }
 
 @media (max-width: 1800px) and (min-width: 1400px) {
-  .clip {
+  .clip-grid .clip {
     width: 23.4%;
   }
 }
 
 @media (max-width: 1000px) and (min-width: 768px) {
-  .clip {
+  .clip-grid .clip {
   width: 46%;
   }
 }
 
 @media (max-width: 1400px) and (min-width: 1000px) {
-  .clip {
+  .clip-grid .clip {
   width: 31%;
   }
 }
 
 @media (max-width: 1800px) and (min-width: 1400px) {
-  .clip {
+  .clip-grid .clip {
   width: 23.4%;
   }
 }
 
 @media (max-width: 2200px) and (min-width: 1800px) {
-  .clip {
+  .clip-grid .clip {
   width: 18.7%;
   }
 }

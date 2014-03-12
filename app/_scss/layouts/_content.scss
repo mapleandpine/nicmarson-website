@@ -4,12 +4,12 @@
   @include breakpoint("medium") {
     margin: auto;
     max-width: 40rem;
-    padding: 50px 0 30px;
+    padding: 3rem 0 4rem;
   }
 
   @include breakpoint("large") {
     max-width: 55rem;
-    padding: 70px 0 50px;
+    padding: 4rem 0 6rem;
   }
 }
 
@@ -23,12 +23,12 @@
 }
 
 #intro {
-  border-bottom: 7px solid $color-gray-dark;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+  margin-bottom: 2rem;
 
-  .image {
-    @include breakpoint("medium") {
+  @include breakpoint("medium") {
+    margin-bottom: 3rem;
+
+    .image {
       flex: none;
       width: 33.3333%;
     }
@@ -36,9 +36,11 @@
 }
 
 #history {
-  border-bottom: 7px solid $color-gray-dark;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+  margin-bottom: 2rem;
+
+  @include breakpoint("medium") {
+    margin-bottom: 3rem;
+  }
 
   tfoot a {
     margin-right: 1em;
@@ -58,7 +60,6 @@
   font-weight: 700;
 
   @include breakpoint("medium") {
-    border-left: 1px solid $color-gray-light;
     flex: none;
     padding-left: 20px;
     width: 33.3333%;
