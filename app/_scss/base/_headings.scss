@@ -69,3 +69,15 @@ h6 {
   text-transform: uppercase;
   white-space: nowrap;
 }
+
+.breakdown-title {
+  border-bottom: 4px solid $color-gray-light;
+  @extend %fat-skinny;
+  display: block;
+  font-family: $font-family-sans-serif;
+  letter-spacing: .06em;
+  margin-bottom: 1em;
+  padding-bottom: .1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}

@@ -10,7 +10,7 @@ parent: portfolio
     <div class="img-bg-content">
       <div class="content">
         <div class="frame">
-          <h1 class="title">Regence (BlueCross BlueShield) Web Portal</h1>
+          <h1 class="title">{% if page.project %}{{ page.project }}{% else %}{{ page.title }}{% endif %}</h1>
         </div>
       </div>
     </div>

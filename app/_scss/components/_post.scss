@@ -184,9 +184,7 @@ ul.posts {
 
   .breakdown {
 
-    h3 {
-      border-bottom: 4px solid $color-gray-light;
-      @extend %fat-skinny;
+    .breakdown-title {
 
       @include breakpoint("medium") {
         @include typecsset-font-size($typecsset-h4-size);

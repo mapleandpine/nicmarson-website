@@ -26,19 +26,25 @@ $site-nav-item-height: 40px;
     white-space: nowrap;
   }
 
-  h3 {
+  .nav-header {
     color: $color-gray;
     font-family: $font-family-sans-serif;
     font-size: 14px;
     font-weight: 300;
+    line-height: 22px;
     margin: 0;
     opacity: 1;
-    padding: 24px 0 6px 15px;
+    padding: 24px 0 4px 15px;
     text-transform: uppercase;
     transition: opacity .3s ease-in-out 0s;
   }
 
   li {
+    border-bottom: 1px solid rgba(255,255,255, .04);
+
+    &:last-child {
+      border-bottom: none;
+    }
 
     &.active {
       border-right: 3px solid $color-teal-light;
@@ -93,6 +99,7 @@ $site-nav-item-height: 40px;
 
   .nav {
     border-bottom: 1px solid rgba(255,255,255, .08);
+    border-top: 1px solid rgba(255,255,255, .08);
 
     @include breakpoint("medium") {
 
