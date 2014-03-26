@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Why it's difficult building for yourself"
+title:  "Building your own website"
 date:   2014-01-31 14:55:06
 categories:
 - blog
@@ -23,6 +23,10 @@ My girlfriend and I built a tiny house last year, and I've found many similariti
 Too often people build houses and websites that are too robust for their content and lifestyle. They buy the biggest one they can afford and spend a lifetime trying to fill it up. Soon, they find out that it's more trouble to maintain then it's worth, or they're not happy because it doesn't fit their needs. I've made this same mistake on previous iterations of personal websites. I would build myself a website, then struggle with filling it up with content. We do this because we're comparing ourselves to others. Inspiration is a great thing, but be careful about applying it to yourself. You may think a pool would look great in your back yard, but if you don't swim it's probably a waste of space.
 
 When building a website, think about your content, then decide how much space you need for it. I'm not much of a writer, so it doesn't make sense for me to build my website on a blogging platform like Wordpress. Yet, I did for the last several years. At the time it's what I wanted because everyone else had one. I wished I had kept it simple. Even a single page would have presented who I was more accurately. Building something personal, like a website, is very exhibisionist. Musicians write songs, painters create portraits, and web designers make websites. Every aspect of the site tells the visitor something about the designer. Why did they choose that image, those colors, or those words? As a designer we constantly scrutinize our work.
+
+## Your work is never done
+
+The key to building your own site is to build it fast. Before you can change your mind. Once you have something up you can continue to improve on it.
 
 ## The technicals
 
@@ -58,6 +62,7 @@ This site takes inspiration from around the web. It grew from a basic idea and h
 #### Graphics
 - [Zurb Pizza Pie Charts][pizza_pie]
 - Cover image by Natalie Perrin
+- [Browser frame inspiration][chrome-frame]
 
 #### Notable mentions
 - [Advanced Jekyll Features][adv_jekyll]
@@ -92,3 +97,4 @@ Check out the [Jekyll docs][jekyll] for more info on how to get the most out of 
 [jekyll-flow]:  http://thanpol.as/jekyll/jekyll-and-livereload-flow/
 [how-jekyll]:   http://erjjones.github.io/blog/Part-two-how-I-built-my-blog/
 [exc-jekyll]:   http://melandri.net/2013/11/24/manage-posts-excerpt-in-jekyll/
+[chrome-frame]: http://dribbble.com/shots/986009-Flat-Vector-Chrome-Frame

@@ -1,12 +1,6 @@
-// Pie Chart Variables
-$pie-color: $color-orange;
-
-// number of items in your list
-$items-in-list: 6;
-
 //Adjusts the Saturation.
-@function -modify-color($color, $counter, $depth: ($items-in-list + 1)) {
-  @return lighten($pie-color, $i * ($items-in-list + 1));
+@function -modify-color($color, $counter, $depth: ($pie-items-in-list + 1)) {
+  @return lighten($pie-color, $i * ($pie-items-in-list + 1));
 }
 
 //Adjusts the Saturation.
@@ -16,7 +10,7 @@ $items-in-list: 6;
 
 // The loop that steps through the li's and assigns them a different color
 $i: 0;
-@while $i < ($items-in-list + 1) {
+@while $i < ($pie-items-in-list + 1) {
   [data-pie-id] li:nth-child(#{$i}) {
     color: -modify-color($pie-color, $i);
   }

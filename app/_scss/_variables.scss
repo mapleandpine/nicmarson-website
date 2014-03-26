@@ -13,6 +13,7 @@ $color-blue: #3497DB;
 $color-midnight: #2B3D4F;
 $color-midnight-light: #64809B;
 $color-orange: #F60;
+$color-red: #E64B3B;
 $color-green: hsl(150, 45%, 50%);
 $color-yellow: #CFCA4C;
 $color-cream: #FCF5BF;
@@ -79,3 +80,28 @@ $typecsset-magic-ratio:         $typecsset-base-line-height / $typecsset-base-fo
 
 $font-size-small: 65% !default;
 $font-size-large: 150% !default;
+
+
+
+//== Pie chart
+//
+//##
+
+// Pie Chart Variables
+$pie-color: $color-red;
+
+// number of items in your list
+$pie-items-in-list: 6;
+
+
+//== Progress bars
+//
+//##
+
+//** Background color of the whole progress component
+$progress-bg:                 #FFF !default;
+//** Progress bar text color
+$progress-bar-color:          #FFF !default;
+
+//** Default progress bar color
+$progress-bar-bg:             $color-red !default;

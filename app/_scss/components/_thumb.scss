@@ -1,9 +1,8 @@
 .thumb-grid .thumb {
   background-color: #FFF;
   color: $color-gray-dark;
-  height: 232px;
+  height: 200px;
   margin: 20px 10px 20px 0;
-  overflow: hidden;
   position: relative;
   transition: transform .2s cubic-bezier(.17,.67,.83,.67) 0s;
   width: 90%;
@@ -12,7 +11,8 @@
   &.hover {
     transform: translateY(-8px);
 
-    .img-cover {
+    .browser-chrome {
+      box-shadow: 0 8px 5px rgba(0, 0, 0, .18);
       opacity: 1;
     }
 
@@ -21,10 +21,15 @@
     }
   }
 
+  .browser-chrome {
+    box-shadow: 0 0 0 rgba(0, 0, 0, .05);
+    opacity: .65;
+    transition: box-shadow .2s cubic-bezier(.17,.67,.83,.67) 0s;
+  }
+
   .img-cover {
     background-position: center top;
-    height: 200px;
-    opacity: .65;
+    height: 180px;
   }
 }
 

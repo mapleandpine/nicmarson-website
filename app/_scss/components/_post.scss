@@ -56,17 +56,21 @@ ul.posts {
     height: 100vh;
   }
 
-  .post-content {
+  .content {
+    position: relative;
 
     @include breakpoint("medium") {
-      border-left: 10px solid $color-gray-light;
-      padding-left: 4rem;
-      @extend %large-text;
     }
 
     @include breakpoint("large") {
-      border-left-width: 15px;
-      padding-left: 5rem;
+    }
+  }
+
+  .post-content {
+    font-family: $font-family-serif;
+
+    @include breakpoint("medium") {
+      @extend %large-text;
     }
   }
 
@@ -76,10 +80,12 @@ ul.posts {
     @include breakpoint("medium") {
       @include typecsset-font-size($typecsset-h1-size);
       margin-bottom: 3rem;
+      margin-left: -5rem;
     }
 
     @include breakpoint("large") {
       font-size: 4em;
+      margin-left: -10rem;
     }
   }
 
@@ -87,8 +93,8 @@ ul.posts {
     color: rgba(0,0,0, .4);
 
     @include breakpoint("medium") {
-      margin-right: 1.5rem;
-      order: -1;
+      left: 0;
+      position: absolute;
       text-align: center;
       width: 4em;
 
@@ -102,6 +108,7 @@ ul.posts {
 
       .month {
         font-weight: 700;
+        text-transform: uppercase;
       }
 
       .year {
@@ -120,31 +127,12 @@ ul.posts {
 
 .post-portfolio {
 
-  h1,
-  h2,
-  h3 {
-    font-family: $font-family-sans-serif;
-  }
-
   section {
     position: relative;
   }
 
   .title {
-    font-family: $font-family-sans-serif;
     line-height: 1.3;
-  }
-
-  .img-bg {
-    max-height: 450px;
-
-    @include breakpoint("medium") {
-      max-height: 400px;
-    }
-
-    @include breakpoint("large") {
-      max-height: 550px;
-    }
   }
 
   .frame {
@@ -183,17 +171,6 @@ ul.posts {
   }
 
   .breakdown {
-
-    .breakdown-title {
-
-      @include breakpoint("medium") {
-        @include typecsset-font-size($typecsset-h4-size);
-      }
-
-      @include breakpoint("large") {
-        @include typecsset-font-size($typecsset-h3-size);
-      }
-    }
 
     .grid-cell {
       position: relative;

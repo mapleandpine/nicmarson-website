@@ -8,20 +8,7 @@
     <div class="page-flex page-2-col">
       <main class="page-second flex-item main">
         {{ content }}
-        <aside role="complementary">
-          <div class="content">
-            <ul class="grid grid--gutters3x breakdown">
-              <li class="grid-cell">
-                <h6 class="breakdown-title">Developer</h6>
-                <p>I write adaptive code for dynamic environments.</p>
-              </li>
-              <li class="grid-cell">
-                <h6 class="breakdown-title">Designer</h6>
-                <p>I design UI interfaces based on user research.</p>
-              </li>
-            </ul>
-          </div>
-        </aside>
+        {% include aside.html %}
       </main>
       {% include navigation.html %}
     </div>

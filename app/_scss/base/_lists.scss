@@ -24,9 +24,14 @@ dd {
   list-style: square;
   margin: 0 0 1em;
   padding: 0 0 0 1.5em;
+
   li {
     margin-bottom: 0.2em;
   }
+}
+
+.list-unstyled {
+  margin-left: 0;
 }
 
 @include breakpoint("medium") {

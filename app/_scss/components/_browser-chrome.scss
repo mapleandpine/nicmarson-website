@@ -1,0 +1,76 @@
+$browser-bar-bg: #CCC;
+$browser-window-bar-bg: #E6E6E6;
+
+.browser-chrome {
+  background-color: $browser-bar-bg;
+  border-radius: 4px;
+  overflow: hidden;
+  padding-top: 6px;
+}
+
+.browser-header {
+  height: 14px;
+}
+
+.browser-buttons {
+  float: left;
+  margin: 0 0 0 5px;
+
+  li {
+    border-radius: 100%;
+    float: left;
+    height: 9px;
+    margin-right: 4px;
+    width: 9px;
+  }
+
+  li:nth-child(1) {
+    background-color: #DF7065;
+  }
+
+  li:nth-child(2) {
+    background-color: #E6C646;
+  }
+
+  li:nth-child(3) {
+    background-color: #5BCC8B;
+  }
+}
+
+.browser-tab {
+  background-color: $browser-window-bar-bg;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  float: left;
+  height: 14px;
+  margin-left: 14px;
+  position: relative;
+  width: 64px;
+
+  &:before,
+  &:after {
+    position: absolute;
+    bottom: -8px;
+    width: 20px;
+    height: 20px;
+    content: " ";
+  }
+
+  &:before {
+    border-bottom-right-radius: 20px;
+    border-width: 0 1px 1px 0;
+    box-shadow: 2px 2px 0 $browser-window-bar-bg;
+    left: -20px;
+  }
+
+  &:after {
+    border-bottom-left-radius: 20px;
+    border-width: 0 0 1px 1px;
+    box-shadow: -2px 2px 0 $browser-window-bar-bg;
+    right: -20px;
+  }
+}
+
+.browser-window {
+  border-top: 20px solid $browser-window-bar-bg;
+}

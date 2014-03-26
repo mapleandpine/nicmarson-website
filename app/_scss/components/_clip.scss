@@ -31,7 +31,7 @@
       border-top-width: 0;
       transform: translateY(-8px);
 
-      .img-cover {
+      .browser-chrome {
         opacity: 1;
       }
 
@@ -40,10 +40,13 @@
       }
     }
 
+    .browser-chrome {
+      opacity: .65;
+    }
+
     .img-cover {
       background-position: center top;
       height: 200px;
-      opacity: .65;
     }
 
     a {

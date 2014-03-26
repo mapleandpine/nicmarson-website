@@ -1,12 +1,3 @@
-// For Affix plugin
-// -------------------------
-
-.affix {
-  @include breakpoint("large") {
-    position: fixed;
-  }
-}
-
 .disable-hover,
 .disable-hover * {
   pointer-events: none !important;

@@ -3,13 +3,13 @@
 
   @include breakpoint("medium") {
     margin: auto;
-    max-width: 40rem;
-    padding: 3rem 0 4rem;
+    max-width: 45rem;
+    padding: 3rem 0 4rem 5rem;
   }
 
   @include breakpoint("large") {
-    max-width: 55rem;
-    padding: 4rem 0 6rem;
+    max-width: 65rem;
+    padding: 4rem 0 6rem 10rem;
   }
 }
 
@@ -132,22 +132,4 @@
   background-size: 160px auto;
   padding: 110px 10px 20px;
   text-align: center;
-}
-
-#resources {
-
-  h4 {
-    @include typecsset-font-size($typecsset-h6-size);
-    font-weight: 700;
-  }
-
-  ul {
-    margin-left: 0;
-  }
-
-  .grid-cell {
-    @include breakpoint("medium") {
-      text-align: right;
-    }
-  }
 }
