@@ -3,25 +3,24 @@ $browser-window-bar-bg: #E6E6E6;
 
 .browser-chrome {
   background-color: $browser-bar-bg;
-  border-radius: 4px;
   overflow: hidden;
-  padding-top: 6px;
+  padding-top: 10px;
 }
 
 .browser-header {
-  height: 14px;
+  height: 30px;
 }
 
 .browser-buttons {
   float: left;
-  margin: 0 0 0 5px;
+  margin: 2px 0 0 10px;
 
   li {
     border-radius: 100%;
     float: left;
-    height: 9px;
-    margin-right: 4px;
-    width: 9px;
+    height: 16px;
+    margin-right: 8px;
+    width: 16px;
   }
 
   li:nth-child(1) {
@@ -39,38 +38,113 @@ $browser-window-bar-bg: #E6E6E6;
 
 .browser-tab {
   background-color: $browser-window-bar-bg;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  display: inline-block;
   float: left;
-  height: 14px;
-  margin-left: 14px;
+  height: 26px;
+  margin-left: 24px;
+  margin-top: 4px;
+  padding: 6px 40px 0 8px;
   position: relative;
-  width: 64px;
+  z-index: 1;
 
   &:before,
   &:after {
+    border-style: solid;
+    border-width: 0 10px 24px 10px;
+    border-color: transparent transparent $browser-window-bar-bg transparent;
+    bottom: 0;
+    content: "";
+    height: 0;
     position: absolute;
-    bottom: -8px;
-    width: 20px;
-    height: 20px;
-    content: " ";
+    width: 0;
+    z-index: -1;
   }
 
   &:before {
-    border-bottom-right-radius: 20px;
-    border-width: 0 1px 1px 0;
-    box-shadow: 2px 2px 0 $browser-window-bar-bg;
-    left: -20px;
+    left: -9px;
   }
 
   &:after {
-    border-bottom-left-radius: 20px;
-    border-width: 0 0 1px 1px;
-    box-shadow: -2px 2px 0 $browser-window-bar-bg;
-    right: -20px;
+    right: -9px;
+  }
+
+  img {
+    display: inline-block;
+    float: left;
+    height: 16px;
+    margin-right: 3px;
+    width: 16px;
+  }
+
+  span {
+    display: inline-block;
+    float: left;
+    font-size: 12px;
+    height: 16px;
+    line-height: 16px;
+  }
+
+  .close {
+    color: #555;
+    font-size: 16px;
+    font-weight: 700;
+    position: absolute;
+    right: 8px;
+    top: 6px;
   }
 }
 
 .browser-window {
-  border-top: 20px solid $browser-window-bar-bg;
+  background-color: #FFF;
+  border-top: 30px solid $browser-window-bar-bg;
+  height: 100%;
+  position: relative;
+}
+
+.browser-chrome-small {
+  border-radius: 4px;
+  padding-top: 6px;
+
+  .browser-header {
+    height: 14px;
+  }
+
+  .browser-buttons {
+    margin-left: 5px;
+    margin-top: 0;
+
+    li {
+      height: 9px;
+      margin-right: 4px;
+      width: 9px;
+    }
+  }
+
+  .browser-tab {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    height: 12px;
+    margin-left: 14px;
+    margin-top: 2px;
+    width: 64px;
+
+    &:before,
+    &:after {
+      border-width: 0 6px 12px 6px;
+    }
+
+    &:before {
+      left: -4px;
+    }
+
+    &:after {
+      right: -4px;
+    }
+  }
+
+  .browser-window {
+    border-top-width: 20px;
+  }
 }

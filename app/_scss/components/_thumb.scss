@@ -4,15 +4,13 @@
   height: 200px;
   margin: 20px 10px 20px 0;
   position: relative;
-  transition: transform .2s cubic-bezier(.17,.67,.83,.67) 0s;
   width: 90%;
 
   &:hover,
   &.hover {
-    transform: translateY(-8px);
 
     .browser-chrome {
-      box-shadow: 0 8px 5px rgba(0, 0, 0, .18);
+      box-shadow: 0 5px 8px rgba(0, 0, 0, .2);
       opacity: 1;
     }
 
