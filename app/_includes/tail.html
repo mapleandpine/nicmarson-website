@@ -4,11 +4,14 @@
 </section>
 
 <!-- build:js({app,.tmp}) /js/scripts.js -->
-<script src="/_bower_components/bootstrap/dist/js/bootstrap.js"></script>
-<script src="/js/snap.svg.js"></script>
-<script src="/js/lettering.js"></script>
-<script src="/js/slabtext.js"></script>
-<script src="/js/pizza.js"></script>
-<script src="/js/visible.js"></script>
+<!-- script src="/_bower_components/bootstrap/dist/js/bootstrap.js"></script -->
+<script src="/_bower_components/eventEmitter/EventEmitter.js"></script> <!-- required for imagesLoaded  -->
+<script src="/_bower_components/imagesloaded/imagesloaded.js"></script> <!-- required for fluidbox  -->
+<script src="/js/snap.svg.js"></script> <!-- required for pie charts -->
+<script src="/js/lettering.js"></script> <!-- wraps individual letters in spans -->
+<script src="/js/slabtext.js"></script> <!-- fits text to width of container -->
+<script src="/js/pizza.js"></script> <!-- pie charts -->
+<script src="/js/visible.js"></script> <!-- is an element is in the viewport? -->
+<script src="/js/fluidbox.js"></script> <!-- lightbox module seen on Medium with fluid transitions -->
 <script src="/js/main.js"></script>
 <!-- endbuild -->

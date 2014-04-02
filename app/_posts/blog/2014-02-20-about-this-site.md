@@ -52,6 +52,7 @@ This site takes inspiration from around the web. It grew from a basic idea and h
 - [lettering.js][lettering]
 - [SlabText][slabtext]
 - [typecsset][typecsset]
+- [CSSCV][csscv]
 
 #### Inspiration
 - [Medium][medium]
@@ -98,3 +99,4 @@ Check out the [Jekyll docs][jekyll] for more info on how to get the most out of 
 [how-jekyll]:   http://erjjones.github.io/blog/Part-two-how-I-built-my-blog/
 [exc-jekyll]:   http://melandri.net/2013/11/24/manage-posts-excerpt-in-jekyll/
 [chrome-frame]: http://dribbble.com/shots/986009-Flat-Vector-Chrome-Frame
+[csscv]:        https://github.com/csswizardry/csscv

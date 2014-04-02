@@ -1,9 +1,5 @@
 .thumb-grid .thumb {
-  background-color: #FFF;
-  color: $color-gray-dark;
-  height: 200px;
   margin: 20px 10px 20px 0;
-  position: relative;
   width: 90%;
 
   &:hover,
@@ -11,7 +7,6 @@
 
     .browser-chrome {
       box-shadow: 0 5px 8px rgba(0, 0, 0, .2);
-      opacity: 1;
     }
 
     .description {
@@ -21,8 +16,8 @@
 
   .browser-chrome {
     box-shadow: 0 0 0 rgba(0, 0, 0, .05);
-    opacity: .65;
     transition: box-shadow .2s cubic-bezier(.17,.67,.83,.67) 0s;
+    width: 100%;
   }
 
   .img-cover {

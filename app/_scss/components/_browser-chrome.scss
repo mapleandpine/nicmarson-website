@@ -3,7 +3,7 @@ $browser-window-bar-bg: #E6E6E6;
 
 .browser-chrome {
   background-color: $browser-bar-bg;
-  overflow: hidden;
+  display: block;
   padding-top: 10px;
 }
 
@@ -84,6 +84,7 @@ $browser-window-bar-bg: #E6E6E6;
     font-size: 12px;
     height: 16px;
     line-height: 16px;
+    white-space: nowrap;
   }
 
   .close {
@@ -96,7 +97,7 @@ $browser-window-bar-bg: #E6E6E6;
   }
 }
 
-.browser-window {
+div.browser-window {
   background-color: #FFF;
   border-top: 30px solid $browser-window-bar-bg;
   height: 100%;

@@ -3,13 +3,13 @@
   // Document Ready
   $(function () {
 
-    var $window = $(window)
-    var $body   = $(document.body)
-    var navHeight = 50
-    var windowSmall = 740;
-    var site_nav_button = $( "button.site-nav-toggle" );
-    var page_nav_button = $( "button.page-nav-toggle" );
-    var nav_link_span = "nav.site-nav a span";
+    var $window = $(window),
+        $body   = $(document.body),
+        navHeight = 50,
+        windowSmall = 740,
+        site_nav_button = $( "button.site-nav-toggle" ),
+        page_nav_button = $( "button.page-nav-toggle" ),
+        nav_link_span = "nav.site-nav a span";
 
     // Toggle site nav
     site_nav_button.on("click", function() {
@@ -46,6 +46,14 @@
       }
     });
 
+    // activate fluidbox, a lightbox module seen on Medium with fluid transitions
+    $('a.fluidbox').fluidbox({
+      closeTrigger: [
+        { selector: '#fluidbox-overlay', event: 'click'  }, // close fluidbox when overlay is clicked
+        { selector: 'window',            event: 'resize' } // close fluidbox on window resize
+      ]
+    }).before('<div class="browser-chrome browser-chrome-small"><div class="browser-header"><ul class="browser-buttons"><li></li><li></li><li></li></ul><div class="browser-tab"></div></div></div>');
+
     // toggle site nav visibility
     function site_nav_toggle() {
       $(site_nav_button).toggleClass('active');
@@ -75,12 +83,14 @@
       }
     });
 
+
+    // Medium-like image blur effect
     $(window).scroll(function() {
       $('html').addClass('screen-scroll');
       // Get scroll position
       var wst = $(window).scrollTop();
 
-      $( "div.img-bg" ).each(function( i ) {
+      $('div.img-bg').each(function(i) {
         var $this = $(this);
         var offset = $this.offset();
         if (offset.top <= wst) { // if object is scrolled to
@@ -109,12 +119,17 @@
       });
     });
   })
+
   // End Document Ready
 
 }(jQuery)
 
+
+// After web fonts are loaded
 function webFontsLoaded() {
   !function ($) {
+
+    // run after web fonts are loaded to get correct width
     $('html.wf-active section.post-excerpt footer').slabText();
 
     // fix kerning on home page banner
