@@ -20,10 +20,10 @@ slug: home
   </div>
 </section>
 
-{% for post in site.categories['blog'] limit: 1 %}
 <section class="post post-excerpt">
   <div class="post-full aligner">
     <div class="content aligner-item">
+      {% for post in site.categories['blog'] limit: 1 %}
       <header>
         <h1 class="title"><a href="{{ post.url }}" role="link">{{ post.title }}</a></h1>
       </header>
@@ -42,25 +42,92 @@ slug: home
           <span class="year slabtext">{{ post.date | date: "%Y" }}</span>
         </footer>
       </div>
+      {% endfor %}
     </div>
   </div>
 </section>
-{% endfor %}
+
+<section class="post post-portfolio">
+  <div class="content">
+    <span class="section-title"><b>Further</b> reading</span>
+    <ul class="posts">{% for post in site.categories['blog'] offset:1 limit:4 %}
+      <li><a href="{{ post.url }}" class="media">
+        <img alt="Kitten" src="http://philipwalton.github.io/solved-by-flexbox/images/kitten.jpg" class="media-figure image">
+        <div class="media-body">
+          <strong>{{ post.title }}</strong> &mdash; {{ post.tagline }}<br><span>{{ post.date | date: "%-d %B %Y" }}</span>
+        </div>
+      </a></li>
+    {% endfor %}</ul>
+  </div>
+</section>
 
 {% for post in site.categories['portfolio'] limit: 1 %}
-<section class="post post-portfolio">
-  <div class="browser-chrome image img-bg">
+<section class="post post-banner">
+  <div class="browser-chrome">
     <div class="browser-header">
       <ul class="browser-buttons">
         <li></li><li></li><li></li>
       </ul>
       <div class="browser-tab"><img src="{{ site.url }}/img/portfolio/{{ post.name }}/favicon.ico"><span>{{ post.img-alt }}</span><i class="close">&times;</i></div>
     </div>
-    <div class="browser-window">
-      <div class="img-src" style="background-image:url('{{ site.url }}/img/portfolio/{{ post.name }}/{{ post.name }}-cover.jpg')"></div>
-      <div class="img-src img-blurred" style="background-image:url('{{ site.url }}/img/portfolio/{{ post.name }}/{{ post.name }}-cover-blur.jpg')"></div>
+    <div class="browser-window dark-bg" style="background-color: #{{ post.color-dark }}">
+      <div class="content">
+        <h1 class="title">{{ post.project }}</h1>
+        <small>{{ post.tags | array_to_sentence_string }}</small>
+      </div>
+      <div class="service-graphic sg2">
+        <div class="screen monitor">
+          <div class="glass">
+            <div class="browser-chrome browser-chrome-mini">
+              <div class="browser-header"><ul class="browser-buttons"><li></li><li></li><li></li></ul><div class="browser-tab"></div></div>
+              <div class="browser-window">
+                <div class="img-src" style="background-image:url('/img/portfolio/regence/regence-browser.jpg')"></div>
+              </div>
+            </div>
+          </div>
+          <div class="base">
+            <div class="grey-shadow"></div>
+            <div class="foot top"></div>
+            <div class="foot bottom"></div>
+          </div>
+        </div>
+
+        <div class="laptop">
+          <div class="screen">
+            <div class="glass">
+              <div class="image">
+                <div class="img-src" style="background-image:url('/img/portfolio/regence/regence-browser.jpg')"></div>
+              </div>
+            </div>
+          </div>
+          <div class="btm"></div>
+        </div>
+
+        <div class="phone">
+          <div class="screen">
+            <div class="glass">
+              <div class="image">
+                <div class="img-src" style="background-image:url('/img/portfolio/regence/regence-mobile.jpg')"></div>
+              </div>
+            </div>
+          </div>
+        <div class="shadow"></div>
+        </div>
+
+        <div class="ipad">
+          <div class="screen">
+            <div class="glass">
+              <div class="image">
+                <div class="img-src" style="background-image:url('/img/portfolio/regence/regence-mobile.jpg')"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+</section>
+<section class="post post-portfolio">
   <div class="cf">
     <div class="content">
       <span class="section-title"><b>Project</b> information</span>
@@ -90,60 +157,55 @@ slug: home
         <div class="design grid-cell">
           <h3 class="breakdown-title"><b>Design</b> skills</h3>
           <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+            <div class="progress-bar show-me animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
               Styleguide
             </div>
           </div>
           <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;">
+            <div class="progress-bar show-me animated" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;">
               Responsive, Adaptive, Progressive
             </div>
           </div>
           <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;">
+            <div class="progress-bar show-me animated" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;">
               Theme, User Interface
             </div>
           </div>
           <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
+            <div class="progress-bar show-me animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
               User Experience
-            </div>
-          </div>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
-              Animation
             </div>
           </div>
         </div>
         <div class="coding grid-cell">
           <h3 class="breakdown-title"><b>Development</b> skills</h3>
           <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+            <div class="progress-bar show-me animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
               CSS, SCSS
             </div>
           </div>
           <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+            <div class="progress-bar show-me animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
               HTML
             </div>
           </div>
           <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 65%;">
+            <div class="progress-bar show-me animated" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 65%;">
               Templates, Velocity &amp; XML
             </div>
           </div>
           <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style="width: 35%;">
+            <div class="progress-bar show-me animated" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style="width: 35%;">
               JavaScript
             </div>
           </div>
           <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
+            <div class="progress-bar show-me animated" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
               Grunt
             </div>
           </div>
           <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%;">
+            <div class="progress-bar show-me animated" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%;">
               Java
             </div>
           </div>

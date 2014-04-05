@@ -45,3 +45,5 @@ markdown: redcarpet
 
 # Use Pygments to highlight code blocks
 pygments: false
+
+paginate: 5

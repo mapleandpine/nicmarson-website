@@ -149,3 +149,49 @@ div.browser-window {
     border-top-width: 20px;
   }
 }
+
+.browser-chrome-mini {
+  border-radius: 4px;
+  padding-top: 4px;
+
+  .browser-header {
+    height: 10px;
+  }
+
+  .browser-buttons {
+    margin-left: 4px;
+    margin-top: 0;
+
+    li {
+      height: 5px;
+      margin-right: 2px;
+      width: 5px;
+    }
+  }
+
+  .browser-tab {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    height: 8px;
+    margin-left: 10px;
+    margin-top: 2px;
+    width: 64px;
+
+    &:before,
+    &:after {
+      border-width: 0 6px 8px 6px;
+    }
+
+    &:before {
+      left: -4px;
+    }
+
+    &:after {
+      right: -4px;
+    }
+  }
+
+  .browser-window {
+    border-top-width: 12px;
+  }
+}

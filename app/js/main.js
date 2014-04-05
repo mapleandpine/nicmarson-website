@@ -46,13 +46,15 @@
       }
     });
 
+    $('div.thumb a.fluidbox').before('<div class="browser-chrome browser-chrome-small"><div class="browser-header"><ul class="browser-buttons"><li></li><li></li><li></li></ul><div class="browser-tab"></div></div></div>');
+
     // activate fluidbox, a lightbox module seen on Medium with fluid transitions
-    $('a.fluidbox').fluidbox({
+    $('a.fluidbox, [data-fluidbox]').fluidbox({
       closeTrigger: [
         { selector: '#fluidbox-overlay', event: 'click'  }, // close fluidbox when overlay is clicked
         { selector: 'window',            event: 'resize' } // close fluidbox on window resize
       ]
-    }).before('<div class="browser-chrome browser-chrome-small"><div class="browser-header"><ul class="browser-buttons"><li></li><li></li><li></li></ul><div class="browser-tab"></div></div></div>');
+    });
 
     // toggle site nav visibility
     function site_nav_toggle() {

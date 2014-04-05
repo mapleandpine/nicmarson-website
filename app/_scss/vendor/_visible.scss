@@ -2,20 +2,28 @@
 .clip-grid {
 
   .come-in {
-    transform: translateY(150px);
-    animation: come-in 1s ease forwards;
+    animation: come-in-margin-top 1.5s ease forwards;
+    margin-top: 150px;
   }
 
+  // stagger the animation
   .come-in:nth-child(odd) {
     animation-duration: 0.75s;
   }
 }
 
-.already-visible {
-  transform: translateY(0);
-  animation: none;
+.progress {
+
+  .come-in {
+    animation: come-in-margin-left 1.25s ease forwards;
+    margin-left: -100%;
+  }
 }
 
-@keyframes come-in {
-  to { transform: translateY(0); }
+@keyframes come-in-margin-top {
+  to { margin-top: 0; }
+}
+
+@keyframes come-in-margin-left {
+  to { margin-left: 0; }
 }

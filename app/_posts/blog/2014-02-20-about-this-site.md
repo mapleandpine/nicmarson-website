@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Building your own website"
-date:   2014-01-31 14:55:06
+title:  Building your own website
+tagline: Treat yourself like a client
+date:   2014-02-20 14:55:06
 categories:
 - blog
-- bootstrap
 ---
 Design, particularly web design, is about communication. When you design a website for a client you have a clear idea of their message. However, when you build something for yourself, the product itself is the message. Every detail communicates who you are as a designer. And if you have a hard time talking about yourself, then you'll have a harder time building something for yourself.
 
@@ -64,6 +64,7 @@ This site takes inspiration from around the web. It grew from a basic idea and h
 - [Zurb Pizza Pie Charts][pizza_pie]
 - Cover image by Natalie Perrin
 - [Browser frame inspiration][chrome-frame]
+- [CSS browser devices][cssdevices]
 
 #### Notable mentions
 - [Advanced Jekyll Features][adv_jekyll]
@@ -100,3 +101,4 @@ Check out the [Jekyll docs][jekyll] for more info on how to get the most out of 
 [exc-jekyll]:   http://melandri.net/2013/11/24/manage-posts-excerpt-in-jekyll/
 [chrome-frame]: http://dribbble.com/shots/986009-Flat-Vector-Chrome-Frame
 [csscv]:        https://github.com/csswizardry/csscv
+[cssdevices]:   http://codepen.io/nicholaspetersen/pen/BHjfk
