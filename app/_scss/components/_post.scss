@@ -180,10 +180,17 @@
   }
 
   .title {
-    font-size: 4rem;
-    line-height: 1.2;
-    margin-left: -10rem;
-    width: 12em;
+
+    @include breakpoint("medium") {
+      font-size: 4rem;
+      line-height: 1.2;
+      margin-left: -5rem;
+      width: 12em;
+    }
+
+    @include breakpoint("large") {
+      margin-left: -10rem;
+    }
 
     span {
       color: rgba(255,255,255, .5);
@@ -192,14 +199,13 @@
     }
   }
 
-  small {
-    display: block;
-    width: 30em;
-  }
+  p {
+    @include breakpoint("medium") {
+      width: 24em;
+    }
 
-  .service-graphic {
-    bottom: 8em;
-    position: absolute;
-    right: 10em;
+    @include breakpoint("large") {
+      width: 30%;
+    }
   }
 }

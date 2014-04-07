@@ -4,10 +4,10 @@
   .clip {
     animation-name: bounce;
     background-color: #FFF;
-    border-bottom: 0 solid $color-teal;
     border-top: 7px solid $bg-color;
     color: $color-gray-dark;
-    height: 232px;
+    font-size: 16px;
+    height: 12.75em;
     margin: 0 10px 20px 0;
     overflow: hidden;
     position: relative;
@@ -27,7 +27,6 @@
 
     &:hover,
     &.hover {
-      border-bottom-width: 7px;
       border-top-width: 0;
       transform: translateY(-8px);
 
@@ -36,7 +35,17 @@
       }
 
       .description {
+        border-top-width: .25em;
+        top: 0;
         white-space: normal;
+      }
+
+      .img-cover {
+        background-size: 380px auto;
+      }
+
+      .tags {
+        top: 2.75em;
       }
     }
 
@@ -45,8 +54,10 @@
     }
 
     .img-cover {
-      background-position: center top;
-      height: 200px;
+      background-position: top center;
+      background-size: 350px auto;
+      height: 100%;
+      transition: background-size .5s ease-in;
     }
 
     a {
@@ -62,22 +73,35 @@
 
     .description {
       background-color: #FFF;
+      border-top: 0 solid $color-teal;
       display: block;
-      font-size: 16px;
       font-weight: 200;
-      height: 32px;
-      padding: 4px 10px;
-      position: absolute;
-      bottom: 0;
+      height: 2.75em;
       left: 0;
+      line-height: 2em;
+      padding: .25em 1em;
+      position: absolute;
       overflow: hidden;
       right: 0;
       text-overflow: ellipsis;
+      top: 10em;
+      transition: top .2s cubic-bezier(.17,.67,.83,.67) 0s;
       white-space: nowrap;
 
       b {
         font-weight: 700;
       }
+    }
+
+    .tags {
+      background-color: rgba(255,255,255, .9);
+      display: block;
+      height: 100%;
+      padding: 1em;
+      position: absolute;
+      top: 10em;
+      transition: top .2s cubic-bezier(.17,.67,.83,.67) 0s;
+      width: 100%;
     }
   }
 }

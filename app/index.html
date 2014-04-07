@@ -73,7 +73,7 @@ slug: home
     <div class="browser-window dark-bg" style="background-color: #{{ post.color-dark }}">
       <div class="content">
         <h1 class="title">{{ post.project }}</h1>
-        <small>{{ post.tags | array_to_sentence_string }}</small>
+        <p>{{ post.tags | array_to_sentence_string }}</p>
       </div>
       <div class="service-graphic sg2">
         <div class="screen monitor">
@@ -81,52 +81,46 @@ slug: home
             <div class="browser-chrome browser-chrome-mini">
               <div class="browser-header"><ul class="browser-buttons"><li></li><li></li><li></li></ul><div class="browser-tab"></div></div>
               <div class="browser-window">
-                <div class="img-src" style="background-image:url('/img/portfolio/regence/regence-browser.jpg')"></div>
+                <div class="img-src" style="background-image:url('/img/portfolio/{{ post.name }}/{{ post.name }}-browser.jpg')"></div>
               </div>
             </div>
           </div>
-          <div class="base">
-            <div class="grey-shadow"></div>
-            <div class="foot top"></div>
-            <div class="foot bottom"></div>
-          </div>
+          <div class="base"><div class="grey-shadow"></div><div class="foot top"></div><div class="foot bottom"></div></div>
         </div>
-
         <div class="laptop">
           <div class="screen">
             <div class="glass">
               <div class="image">
-                <div class="img-src" style="background-image:url('/img/portfolio/regence/regence-browser.jpg')"></div>
+                <div class="img-src" style="background-image:url('/img/portfolio/{{ post.name }}/{{ post.name }}-browser.jpg')"></div>
               </div>
             </div>
           </div>
-          <div class="btm"></div>
+          <div class="keyboard"></div>
         </div>
-
-        <div class="phone">
-          <div class="screen">
-            <div class="glass">
-              <div class="image">
-                <div class="img-src" style="background-image:url('/img/portfolio/regence/regence-mobile.jpg')"></div>
-              </div>
-            </div>
-          </div>
-        <div class="shadow"></div>
-        </div>
-
         <div class="ipad">
           <div class="screen">
             <div class="glass">
               <div class="image">
-                <div class="img-src" style="background-image:url('/img/portfolio/regence/regence-mobile.jpg')"></div>
+                <div class="img-src" style="background-image:url('/img/portfolio/{{ post.name }}/{{ post.name }}-mobile.jpg')"></div>
               </div>
             </div>
           </div>
+        </div>
+        <div class="phone">
+          <div class="screen">
+            <div class="glass">
+              <div class="image">
+                <div class="img-src" style="background-image:url('/img/portfolio/{{ post.name }}/{{ post.name }}-mobile.jpg')"></div>
+              </div>
+            </div>
+          </div>
+          <div class="shadow"></div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 <section class="post post-portfolio">
   <div class="cf">
     <div class="content">
