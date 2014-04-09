@@ -29,14 +29,6 @@ a.fluidbox {
   cursor: -webkit-zoom-in;
   cursor: -moz-zoom-in;
 
-  img {
-    display: block;
-    margin: 0 auto;
-    opacity: 0;
-    max-width: 100%;
-    transition: all .25s ease-in-out;
-  }
-
   &.fluidbox-opened {
     cursor: -webkit-zoom-out;
     cursor: -moz-zoom-out;
