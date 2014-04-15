@@ -5,9 +5,17 @@
   z-index: 1;
 
   p {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-family: $font-family-serif;
     line-height: 1.1;
+
+    @include breakpoint("medium") {
+      font-size: 1.25rem;
+    }
+
+    @include breakpoint("large") {
+      font-size: 1.5rem;
+    }
   }
 
   .img-src {
@@ -35,12 +43,16 @@
     @include breakpoint("medium") {
       padding: 80px 0;
 
+      > .content {
+        padding-left: 0;
+      }
+
       .frame {
         border: 15px solid #FFF;
         margin-bottom: 20px;
         padding: 20px 30px 12px;
         position: relative;
-        width: 44.4rem;
+        width: 39.2rem;
       }
 
       > .content {
@@ -59,11 +71,17 @@
   }
 
   .name {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 900;
     text-shadow: 0 0 20px rgba(1,1,1, .2);
 
+    @include breakpoint("medium") {
+      font-size: 7rem;
+    }
+
     @include breakpoint("large") {
+      font-size: 8.5rem;
+      line-height: .85;
     }
 
     > span {
@@ -94,20 +112,12 @@
     .char4 {
       margin-left: .03em;
     }
-
-    @include breakpoint("medium") {
-      font-size: 7rem;
-    }
-
-    @include breakpoint("large") {
-      font-size: 8.5rem;
-      line-height: .85;
-    }
   }
 
   .byline {
 
     @include breakpoint("medium") {
+      font-size: 1.5em;
       position: absolute;
       right: 40px;
       text-align: right;
@@ -147,6 +157,11 @@
   }
 }
 
+.js .img-bg-content,
 .wf-loading .img-bg-content {
   opacity: 0;
+}
+
+.wf-active .img-bg-content {
+  opacity: 1;
 }

@@ -40,3 +40,13 @@
     }
   }
 }
+
+a.media {
+  @include breakpoint("small") {
+    display: block;
+
+    .media-figure {
+      margin-bottom: 1em;
+    }
+  }
+}

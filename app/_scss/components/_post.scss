@@ -28,7 +28,10 @@
 .post-content {
   color: #505050;
   font-family: $font-family-serif;
-  font-size: 1.375em;
+
+  @include breakpoint("medium") {
+    font-size: 1.375em;
+  }
 
   p {
     margin-bottom: 1.5em;
@@ -175,8 +178,11 @@
 
 .post-banner {
 
-  .content {
-    min-height: 550px;
+  @include breakpoint("medium") {
+
+    .content {
+      min-height: 550px;
+    }
   }
 
   .title {
@@ -206,6 +212,32 @@
 
     @include breakpoint("large") {
       width: 30%;
+    }
+  }
+}
+
+.posts {
+  list-style-type: none;
+  margin-left: 0;
+
+  li {
+    line-height: 1.75em;
+  }
+
+  span {
+    color: $color-muted;
+    font-family: $font-family-code;
+    font-size: 80%;
+    margin-right: 1em;
+  }
+
+  a.media {
+    background-color: rgba(255,255,255, .5);
+    padding: 1em;
+    transition: background-color .2s;
+
+    &:hover {
+      background-color: #FFF;
     }
   }
 }

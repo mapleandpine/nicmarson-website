@@ -3,16 +3,21 @@ a[role="button"] {
   transition: background-color 0.2s;
   display: inline-block;
   padding: 0.6em 1em;
-  background: hsla(31, 15%, 50%, 0.15);
+  background: $color-gray-light;
   color: inherit;
   border: 0;
   border-radius: 2px;
   cursor: pointer;
-  font-size: 0.8125em;
   font-weight: 300;
   line-height: normal;
+  overflow: hidden;
   text-decoration: none;
+  text-overflow: ellipsis;
   white-space: nowrap;
+
+  @include breakpoint("small") {
+    max-width: 16em;
+  }
 
   &:focus {
     outline: thin dotted #666;
@@ -21,23 +26,39 @@ a[role="button"] {
 
   &:hover, &:active, &:focus {
     border: 0;
-    background: hsla(31, 15%, 50%, 0.25);
+    background: lighten($color-gray-light, 10);
     text-decoration:none;
   }
-}
 
-.button--action,
-a[role="button"] {
-  background-color: hsl(150, 45%, 50%);
-  color: #fff;
-  &:hover, &:active, &:focus {
-    background-color: hsl(150, 45%, 40%);
+  &.button--primary {
+    background-color: $color-blue;
+    color: #fff;
+
+    &:hover, &:active, &:focus {
+      background-color: darken($color-blue, 10);
+    }
   }
-}
 
-.button--wide {
-  padding-right: 1.5em;
-  padding-left: 1.5em;
+  &.button--inverse {
+    background-color: rgba(255,255,255, .2);
+    border: 2px solid;
+    color: #fff;
+
+    &:hover, &:active, &:focus {
+      background-color: transparent;
+    }
+  }
+
+  &.button--wide {
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+  }
+
+  &.button--block {
+    display: block;
+    padding: 1em 1.5em;
+    text-align: center;
+  }
 }
 
 .nav-toggle {

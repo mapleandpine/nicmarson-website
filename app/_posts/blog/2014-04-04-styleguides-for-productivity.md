@@ -58,7 +58,7 @@ Let me share with you how I became more efficient by building a styleguide and i
 
 At my workplace it&rsquo;s really difficult to get something from an idea to production. The design process is pretty standard. We have a goal and some guidelines. We produce wireframes and design comps, but to take it any further we need our information technology department (IT) to step in.
 
-<img alt="" src="/img/post/styleguide_01.png" style="width: 624.00px; height: 390.67px;">
+<img alt="chart of workflow" src="/img/post/styleguide_01.png">
 
 We have a Java based environment and portal software. We use git for version control, a package manager, and several environments for publishing.
 
@@ -70,12 +70,7 @@ First we check that our changes made it into the build. If they haven&rsquo;t, w
 
 Let&rsquo;s say we modified a wrapper in the portal to have 20px of padding:
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
+{% highlight css %}
 .portal-wrapper {
   padding: 20px;
 }
@@ -83,13 +78,15 @@ print_hi('Tom')
 
 As we view it on the newly rendered page we see that it fixes the problem perfectly. However, a page with a special layout is completely broken. It&rsquo;s an easy fix, let&rsquo;s just remove the padding on the special layout:
 
+{% highlight css %}
 .special-layout .portal-wrapper {
   padding: 0;
 }
+{% endhighlight %}
 
 Now we need to get IT to do another build, but they can&rsquo;t. It&rsquo;s the end of the day and the administrator left to pick their child up from school. We&rsquo;ll have to wait until next week, since today&rsquo;s Friday. It might be an easy fix, but we have no control in fixing it.
 
-<img alt="" src="/img/post/styleguide02.gif" style="width: 400.00px; height: 225.00px;">
+<img alt="Ron Burgundy saying that doesn't make any sense" src="/img/post/styleguide03.gif">
 
 If only I had known about the unique page layout before committing the style. We do have a way of fixing it, but it feels dirty, like I need to take a shower afterwards. The change is part of a larger build that has to go out for the weekend. So, I log into the portal admin tool and add an inline style to the unique page. It works, but to our detriment, as it may create a problem later.
 
@@ -117,7 +114,7 @@ Whenever I wrote a styleguide there was a limited amount of time it was relevant
 
 Having a living document means that your styleguide updates automatically when you update your code. The HTML is constructed based on a template, and the generated examples even have syntax highlighting!
 
-<img alt="" src="/img/post/styleguide03.gif" style="width: 320.00px; height: 220.00px;">
+<img alt="shocked owl" src="/img/post/styleguide_04.gif">
 
 A good example of this is <a href="https://www.google.com/url?q=https%3A%2F%2Fgithub.com%2Fstyleguide%2Fcss&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNHh0DPKVs2PdtldtkR59aGjouTlaw">Github&rsquo;s styleguide</a>. They use a tool called KSS, or <a href="https://www.google.com/url?q=https%3A%2F%2Fgithub.com%2Fkneath%2Fkss&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNHcIf0mikc8m2eXzzuTOZhYUSGqVw">Knyle Style Sheets</a>, to automatically generate pages containing style definitions and examples. While KSS is awesome, it&rsquo;s only a small part of your factory.
 
@@ -144,7 +141,7 @@ In addition, because of Jekyll you have a factory at your fingertips to generate
 
 With these tools at your disposal you can mimic your production environment with as much detail as you want. Thereby eliminating the reliance on a third-party for accurate previews. Without being tied to an IDE, you can also use your favorite text editor to write code.
 
-<img alt="" src="/img/post/styleguide01.png" style="width: 624.00px; height: 374.67px;">
+<img alt="final workflow chart" src="/img/post/styleguide_02.png">
 
 In the following section you&rsquo;ll find links that will help you get started on building styleguides and working with Grunt. I&rsquo;ve also included a generator that that installs everything you need to get started.
 

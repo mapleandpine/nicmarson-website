@@ -1,7 +1,7 @@
 $breakpoints: (
-  "(min-width: 740px)" "small",
-  "(min-width: 741px)" "medium",
-  "(min-width: 80rem)" "large"
+  "(max-width: 768px)" "small",
+  "(min-width: 769px)" "medium",
+  "(min-width: 1200px)" "large"
 );
 
 @mixin breakpoint($point) {

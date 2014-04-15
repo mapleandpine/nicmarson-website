@@ -6,19 +6,20 @@ $grey: #e8ebf0;
 $grey-dark: #d8dbe1;
 
 .service-graphic {
-  bottom: 2em;
-  left: 2em;
-  position: absolute;
+  height: 240px;
+  margin-left: 20px;
+  position: relative;
+  width: 200px;
 
   .ipad {
-    bottom: 0;
+    bottom: 20px;
     left: 4.5em;
     position: absolute;
     z-index: 9;
   }
 
   .phone {
-    bottom: 0;
+    bottom: 20px;
     left: 0;
     position: absolute;
     z-index: 10;
@@ -26,9 +27,15 @@ $grey-dark: #d8dbe1;
 
   @include breakpoint("medium") {
     bottom: 4em;
+    height: auto;
+    left: 0;
+    margin: 0;
     right: 5em;
+    position: absolute;
+    width: auto;
 
     .ipad {
+      bottom: 0;
       left: 50%;
       margin-left: 2.5em;
     }

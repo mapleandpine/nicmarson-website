@@ -1,15 +1,20 @@
+$content-padding-left: 20px;
+$content-padding-left-medium: 5rem;
+$content-padding-left-large: 10rem;
+
+
 .content {
-  padding: 30px 20px;
+  padding: 30px $content-padding-left;
 
   @include breakpoint("medium") {
     margin: auto;
     max-width: 45rem;
-    padding: 3rem 0 4rem 5rem;
+    padding: 3rem 0 4rem $content-padding-left-medium;
   }
 
   @include breakpoint("large") {
     max-width: 65rem;
-    padding: 4rem 0 6rem 10rem;
+    padding: 4rem 0 6rem $content-padding-left-large;
   }
 }
 
