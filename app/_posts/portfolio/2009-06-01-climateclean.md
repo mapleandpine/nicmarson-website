@@ -4,12 +4,37 @@ name: climateclean
 title: Climate Clean
 categories:
 - portfolio
-tags: [Coding, Content Management, CSS, CSS3, Design, HTML, HTML5, Java, jQuery, PHP, Responsive, SASS/SCSS, Web Design, Wordpress]
-website: regence.com
-excerpt: Regence (Blue Cross and Blue Shield) provides health care plans for Oregon, Utah, and Idaho. The web site provides resources for all visitors and allows members to administer their plans.
+tags: [Coding, Content Management, CSS, CSS3, Design, Graphic Design, HTML, jQuery, PHP, Project Management, Web Design, Wordpress]
+website: climateclean.net
+project: Climate Clean <span>Website</span>
+excerpt: Climate Clean prides itself in providing high quality offsets sourced from real and verified projects that have a significant impact in reducing and eliminating the greenhouse gases that contribute to climate change.
 
 thumb-ext: jpg
+thumb-alt: Home &ndash; climateclean.net
 img-ext: png
-image01alt: Regence home page
+img-alt: Home &ndash; climateclean.net
+
+color-dark: 165324
 ---
-<p>Web design and development for application user-interfaces and marketing pages. Management of design and front-end development from pitch to deployment. Hand coding <abbr title="hyper text markup language">HTML</abbr>, <abbr title="cascading style sheets">CSS</abbr> using <abbr title="syntactic cascading style sheets">SCSS</abbr>, and jQuery in a Java environment. Featuring responsive design, HTML5, CSS3, speed and search engine optimization.</p>
+As Web Master for Climate Clean I was responsible for designing, building, and maintaining our corporate and satellite web sites. These sites were built to use WordPress as a management system with custom built and designed templates. In addition, I also designed the corporate identity systems, and kiosks for use in auto dealerships.
+
+<section class="cf">
+  <span class="section-title"><b>Screen</b> captures</span>
+  <div class="grid grid--guttersLarge grid-wrap thumb-grid">
+    <div class="thumb grid-cell show-me animated">
+      <a href="#" class="fluidbox">
+        <img src="/img/portfolio/{{ page.name }}/{{ page.name }}-01.{{ page.img-ext }}" alt="{{ page.thumb-alt }}" class="img-responsive">
+      </a>
+    </div>
+    <div class="thumb grid-cell show-me animated">
+      <a href="#" class="fluidbox">
+        <img src="/img/portfolio/{{ page.name }}/{{ page.name }}-02.{{ page.img-ext }}" alt="{{ page.thumb-alt }}" class="img-responsive">
+      </a>
+    </div>
+    <div class="thumb grid-cell show-me animated">
+      <a href="#" class="fluidbox">
+        <img src="/img/portfolio/{{ page.name }}/{{ page.name }}-03.{{ page.img-ext }}" alt="{{ page.thumb-alt }}" class="img-responsive">
+      </a>
+    </div>
+  </div>
+</section>

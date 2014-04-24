@@ -62,7 +62,7 @@
   .post-content {
 
     @include breakpoint("medium") {
-      @extend %large-text;
+      font-size: $font-size-large;
     }
   }
 

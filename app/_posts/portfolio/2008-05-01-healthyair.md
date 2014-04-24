@@ -4,12 +4,37 @@ name: healthyair
 title: Carrier Healthy Air
 categories:
 - portfolio
-tags: [Coding, Content Management, CSS, CSS3, Design, HTML, HTML5, Java, jQuery, PHP, Responsive, SASS/SCSS, Web Design, Wordpress]
-website: regence.com
-excerpt: Regence (Blue Cross and Blue Shield) provides health care plans for Oregon, Utah, and Idaho. The web site provides resources for all visitors and allows members to administer their plans.
+tags: [Agency, Coding, Content Management, CSS, HTML, jQuery, PHP, Pop Art, Wordpress]
+website: www.residential.carrier.com/index.shtml
+project: Carrier Healthy Air <span>Website</span>
+excerpt: The Healthy Air website sought to educate visitors on the health benefits of a cleaner home.
 
 thumb-ext: jpg
+thumb-alt: Carrier Healthy Air home page
 img-ext: jpg
-image01alt: Carrier Healthy Air home page
+img-alt: Carrier Healthy Air home page
+
+color-dark: 3398CC
 ---
-<p>Web design and development for application user-interfaces and marketing pages. Management of design and front-end development from pitch to deployment. Hand coding <abbr title="hyper text markup language">HTML</abbr>, <abbr title="cascading style sheets">CSS</abbr> using <abbr title="syntactic cascading style sheets">SCSS</abbr>, and jQuery in a Java environment. Featuring responsive design, HTML5, CSS3, speed and search engine optimization.</p>
+This was my first custom WordPress template. Pop Art provided the design, and I provided a custom theme and admin pages. The template build required a quick turnaround, 5 days, because of late design deliverables. Despite working until 5am a couple of nights, or maybe because of, I was able to deliver the product on time and finished.
+
+<section class="cf">
+  <span class="section-title"><b>Screen</b> captures</span>
+  <div class="grid grid--guttersLarge grid-wrap thumb-grid">
+    <div class="thumb grid-cell show-me animated">
+      <a href="#" class="fluidbox">
+        <img src="/img/portfolio/{{ page.name }}/{{ page.name }}-01.{{ page.img-ext }}" alt="{{ page.thumb-alt }}" class="img-responsive">
+      </a>
+    </div>
+    <div class="thumb grid-cell show-me animated">
+      <a href="#" class="fluidbox">
+        <img src="/img/portfolio/{{ page.name }}/{{ page.name }}-02.{{ page.img-ext }}" alt="{{ page.thumb-alt }}" class="img-responsive">
+      </a>
+    </div>
+    <div class="thumb grid-cell show-me animated">
+      <a href="#" class="fluidbox">
+        <img src="/img/portfolio/{{ page.name }}/{{ page.name }}-03.{{ page.img-ext }}" alt="{{ page.thumb-alt }}" class="img-responsive">
+      </a>
+    </div>
+  </div>
+</section>

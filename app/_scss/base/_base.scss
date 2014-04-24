@@ -64,6 +64,8 @@ body {
 
 main {
   flex: 1;
+  position: relative;
+  z-index: 1;
 }
 
 a {

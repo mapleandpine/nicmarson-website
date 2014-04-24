@@ -4,12 +4,37 @@ name: mcmenamins
 title: McMenamins
 categories:
 - portfolio
-tags: [Coding, Content Management, CSS, CSS3, Design, HTML, HTML5, Java, jQuery, PHP, Responsive, SASS/SCSS, Web Design, Wordpress]
-website: regence.com
-excerpt: Regence (Blue Cross and Blue Shield) provides health care plans for Oregon, Utah, and Idaho. The web site provides resources for all visitors and allows members to administer their plans.
+tags: [Agency, Coding, Copious, CSS, CSS3, HTML, jQuery, Ruby]
+website: mcmenamins.com
+project: McMenamins <span>Website</span>
+excerpt: McMenamins has been a neighborhood gathering spot throughout Oregon and Washington since 1983. They handcraft their own beer, wine, spirits and coffee. They offer an eclectic mix of pubs, historic hotels, movie theaters, concert venues, spas, and events.
 
 thumb-ext: jpg
-img-ext: png
-image01alt: Regence home page
+thumb-alt: Home &ndash; mcmenamins.com
+img-ext: jpg
+img-alt: Home &ndash; mcmenamins.com
+
+color-dark: F85F00
 ---
-<p>Web design and development for application user-interfaces and marketing pages. Management of design and front-end development from pitch to deployment. Hand coding <abbr title="hyper text markup language">HTML</abbr>, <abbr title="cascading style sheets">CSS</abbr> using <abbr title="syntactic cascading style sheets">SCSS</abbr>, and jQuery in a Java environment. Featuring responsive design, HTML5, CSS3, speed and search engine optimization.</p>
+Freelance contract front-end development through <a href="http://copio.us/">Copious</a> for the 2009 McMenamin’s redesign. My job involved writing HTML, CSS, and Javascript in a Ruby environment. My projects included all aspects of front-end development, including navigation, slideshows, and other dynamic interfaces throughout the site.
+
+<section class="cf">
+  <span class="section-title"><b>Screen</b> captures</span>
+  <div class="grid grid--guttersLarge grid-wrap thumb-grid">
+    <div class="thumb grid-cell show-me animated">
+      <a href="#" class="fluidbox">
+        <img src="/img/portfolio/{{ page.name }}/{{ page.name }}-01.{{ page.img-ext }}" alt="{{ page.thumb-alt }}" class="img-responsive">
+      </a>
+    </div>
+    <div class="thumb grid-cell show-me animated">
+      <a href="#" class="fluidbox">
+        <img src="/img/portfolio/{{ page.name }}/{{ page.name }}-02.{{ page.img-ext }}" alt="{{ page.thumb-alt }}" class="img-responsive">
+      </a>
+    </div>
+    <div class="thumb grid-cell show-me animated">
+      <a href="#" class="fluidbox">
+        <img src="/img/portfolio/{{ page.name }}/{{ page.name }}-03.{{ page.img-ext }}" alt="{{ page.thumb-alt }}" class="img-responsive">
+      </a>
+    </div>
+  </div>
+</section>

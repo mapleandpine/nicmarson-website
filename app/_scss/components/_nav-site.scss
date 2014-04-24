@@ -6,8 +6,9 @@ $site-nav-width-closed: 50px;
 $site-nav-item-height: 40px;
 
 .site-nav {
-  background-color: $site-nav-bg-color;
   @extend %transition-fast;
+  background-color: $site-nav-bg-color;
+  box-shadow: -4px 0 4px -4px rgba(0, 0, 0, 0.5) inset;
 
   @include breakpoint("medium") {
     height: 100%;
@@ -26,17 +27,25 @@ $site-nav-item-height: 40px;
     white-space: nowrap;
   }
 
+  .copyright,
   .nav-header {
-    color: $color-yellow;
-    font-family: $font-family-sans-serif;
-    font-size: 14px;
     font-weight: 300;
-    line-height: 22px;
-    margin: 0;
     opacity: 1;
     padding: 24px 0 4px 15px;
-    text-transform: uppercase;
     transition: opacity .3s ease-in-out 0s;
+  }
+
+  .copyright {
+    color: $color-gray-light;
+    font-size: 12px;
+  }
+
+  .nav-header {
+    color: $color-yellow;
+    font-size: 14px;
+    line-height: 22px;
+    margin: 0;
+    text-transform: uppercase;
   }
 
   li {
@@ -161,7 +170,8 @@ $site-nav-item-height: 40px;
   .site-nav-closed .site-nav {
     width: $site-nav-width-closed;
 
-    h3,
+    .copyright,
+    .nav-header,
     a span {
       opacity: 0;
     }
