@@ -1,18 +1,18 @@
-.button,
+[class^="btn__"],
 a[role="button"] {
-  transition: background-color 0.2s;
-  display: inline-block;
-  padding: 0.6em 1em;
-  background: $color-gray-light;
-  color: inherit;
-  border: 0;
+  background: $color-gray;
   border-radius: 2px;
+  color: inherit;
   cursor: pointer;
+  display: inline-block;
   font-weight: 300;
+  letter-spacing: .0125em;
   line-height: normal;
   overflow: hidden;
+  padding: 0.6em 1em;
   text-decoration: none;
   text-overflow: ellipsis;
+  transition: background-color 0.2s;
   white-space: nowrap;
 
   @include breakpoint("small") {
@@ -25,12 +25,11 @@ a[role="button"] {
   }
 
   &:hover, &:active, &:focus {
-    border: 0;
-    background: lighten($color-gray-light, 10);
+    background: lighten($color-gray, 10);
     text-decoration:none;
   }
 
-  &.button--primary {
+  &.btn__primary {
     background-color: $color-blue;
     color: #fff;
 
@@ -39,7 +38,7 @@ a[role="button"] {
     }
   }
 
-  &.button--inverse {
+  &.btn__inverse {
     background-color: rgba(255,255,255, .2);
     border: 2px solid;
     color: #fff;
@@ -49,12 +48,33 @@ a[role="button"] {
     }
   }
 
-  &.button--wide {
+  &.btn__link {
+    background-color: transparent;
+    color: #fff;
+    padding-left: .25em;
+    padding-right: .25em;
+
+    &:hover, &:active, &:focus {
+      background-color: transparent;
+    }
+  }
+
+  &.btn__danger {
+    background-color: darken($color-red, 15);
+    color: #fff;
+    font-weight: 700;
+
+    &:hover, &:active, &:focus {
+      background-color: darken($color-red, 25);
+    }
+  }
+
+  &.btn__wide {
     padding-right: 1.5em;
     padding-left: 1.5em;
   }
 
-  &.button--block {
+  &.btn__block {
     display: block;
     padding: 1em 1.5em;
     text-align: center;
@@ -62,48 +82,80 @@ a[role="button"] {
 }
 
 .nav-toggle {
+  @extend %transition-component;
   background-color: transparent;
-  border: 1px solid transparent;
+  border: 2px solid rgba(255,255,255,.75);
+  border-radius: 50%;
+  color: $color-gray;
   cursor: pointer;
   display: block;
-  height: 32px;
-  position: relative;
-  width: 50px;
+  height: 42px;
+  outline: none;
+  padding: 0;
+  position: absolute;
+  transition-property: background-color, opacity, transform;
+  width: 43px;
 
   @include breakpoint("medium") {
-    display: none;
+    opacity: .75;
+    transform: scale3d(.94, .94, 1);
+  }
+
+  &:after {
+    content: "menu";
+    font-family: $font-family-sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    left: 52px;
+    line-height: 31px;
+    position: absolute;
+    top: 0;
   }
 
   span {
-    background-color: #fff;
+    background-color: rgba(255,255,255,.8);
     display: block;
+    font-size: 0;
+    height: 4px;
+    left: 10px;
+    margin-top: -2px;
     position: absolute;
     top: 50%;
-    left: 13px;
-    width: 24px;
-    height: 3px;
-    margin-top: -2px;
-    font-size: 0px;
     user-select: none;
-    transition: background-color 0.3s;
+    width: 20px;
 
     &:before,
     &:after {
-      background: #fff;
+      background-color: rgba(255,255,255,.8);
       content: '';
       height: 100%;
       left: 0;
       position: absolute;
-      transition: transform 0.3s;
+      transition: transform .2s;
       width: 100%;
     }
 
     &:before {
-      transform: translateY(-280%);
+      transform: translateY(-200%);
     }
 
     &:after {
-      transform: translateY(280%);
+      transform: translateY(200%);
+    }
+  }
+
+  &:hover,
+  &.active {
+    background-color: $color-gray-dark;
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+
+    span:before {
+      transform: translateY(-220%);
+    }
+
+    span:after {
+      transform: translateY(220%);
     }
   }
 

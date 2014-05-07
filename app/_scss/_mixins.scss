@@ -2,6 +2,18 @@
 // Mixins
 // --------------------------------------------------
 
+@mixin eq($state) {
+  [data-eq-state="#{$state}"] & {
+    @content;
+  }
+}
+
+@mixin vertical-center($height) {
+  height: $height;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
 /*
  * @font-face mixin

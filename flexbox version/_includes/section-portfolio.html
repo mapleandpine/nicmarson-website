@@ -1,0 +1,9 @@
+<section id="{{ post.name }}" class="clip grid-cell">
+  <a href="{{ post.url }}">
+    {% if post.thumb-ext %}<div class="img"><img src="img/portfolio/{{ post.name }}/thumb.{{ post.thumb-ext }}" alt="{{ post.title }} thumbnail"></div>{% endif %}
+    <div class="meta" style="background-color: #{{ post.color-dark }}">
+      <span class="description">{{ post.date | date: "%Y" }} <b>{{ post.title }}</b></span>
+      <span class="tags">{{ post.tags | array_to_sentence_string }}</span>
+    </div>
+  </a>
+</section>

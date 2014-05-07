@@ -3,46 +3,60 @@
 // font-family: 'Rokkitt', serif;
 // font-family: 'Source Code Pro', sans-serif;
 
-$color-gray: hsl(0,0%,50%);
-$color-gray-dark: hsl(0,0%,25%);
-$color-gray-light: hsl(0,0%,75%);
-$color-gray-bg: hsl(0,0%,85%);
 
-$color-babyblue: #EBEFF0;
+// Neutrals
+$color-gray-dark: #292929;
+$color-gray: lighten($color-gray-dark, 25);
+$color-gray-light: lighten($color-gray-dark, 50);
+$color-gray-bg: lighten($color-gray-dark, 80);
+$color-brown: #412A22;
+$color-cream: #F2E6B6;
+$color-sand: #E6E2AF;
+$color-sand-wet: #A7A37E;
+$color-paper: #F7F7EB;
+$color-paper-wet: #E1E0C9;
+
+
+// Blues
 $color-blue: #3497DB;
+$color-grayblue: #5B7876;
+$color-grayblue-dark: #4F5E67;
+$color-grayblue-light: #8F9E8B;
 $color-midnight: #2B3D4F;
-$color-midnight-light: #64809B;
+
+
+// Accents
 $color-orange: #F60;
 $color-red: #E64B3B;
 $color-green: hsl(150, 45%, 50%);
 $color-yellow: #CFCA4C;
-$color-cream: #FCF5BF;
-$color-teal: #5EB299;
-$color-teal-light: #9FE5C2;
-$color-brown: #745A33;
 
+
+// Color assignments
 $color-text: $color-gray-dark;
 $color-muted: #999;
-
-$bg-color: #EDEFF0;
-
-$small-caps-color: gray !default;
-$small-caps-weight: 600 !default;
-
-$font-family-serif: 'Playfair Display', serif;
-$font-family-sans-serif: 'Lato', sans-serif;
-$font-family-code: 'Source Code Pro', monospace;
-
-$font-family-base: $font-family-sans-serif;
-$font-family-heading: $font-family-serif;
-
-$link-color: #2880B8;
+$bg-color: #EFECCA;
+$small-caps-color: $color-gray;
+$link-color: $color-blue;
 $link-hover-color: $color-midnight;
 $link-visited-color: $color-midnight;
 
 
+// Font families
+$font-family-serif: 'Playfair Display', serif;
+$font-family-sans-serif: 'Lato', sans-serif;
+$font-family-display: 'Bitter', serif;
+$font-family-code: 'Source Code Pro', monospace;
+
+
+// Font assignments
+$font-family-base: $font-family-sans-serif;
+$font-family-heading: $font-family-sans-serif;
+$small-caps-weight: 600;
+
+
 // Horizontal forms & lists
-$component-offset-horizontal: 180px !default;
+$component-offset-horizontal: 180px;
 
 
 //------------------------------------\\
@@ -80,6 +94,9 @@ $typecsset-magic-ratio:         $typecsset-base-line-height / $typecsset-base-fo
 
 $font-size-small: 65% !default;
 $font-size-large: 150% !default;
+
+
+$site-header-height: 80px;
 
 
 

@@ -69,7 +69,9 @@ parent: portfolio
       <span class="section-title"><b>Project</b> information</span>
       <div class="grid grid--gutters3x">
         <div class="grid-cell">
-          {% if page.website %}<p class="lead">The <a href="http://{{ page.website }}" class="external" role="link">{{ page.title }}</a> website was built in {{ page.date | date: "%Y" }} {% if page.client %} and produced by {{ page.client }}{% endif %}.</p>{% endif %}
+          {% if page.website %}
+          <p class="lead">The <a href="http://{{ page.website }}" class="external" role="link">{{ page.title }}</a> website was built in {{ page.date | date: "%Y" }} {% if page.client %} and produced by {{ page.client }}{% endif %}.</p>
+          {% endif %}
         </div>
         <div class="grid-cell">
           <p>{{ page.excerpt }}</p>

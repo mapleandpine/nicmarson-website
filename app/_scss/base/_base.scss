@@ -46,26 +46,10 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: calc(100vh - $site-header-height);
   // Ala Trent Walton
   // http://trentwalton.com/2011/09/07/css-hyphenation
   @include hyphens(auto);
-
-  @include breakpoint("medium") {
-    padding-top: 50px;
-  }
-}
-
-.home {
-  @include breakpoint("medium") {
-    padding-top: 0;
-  }
-}
-
-main {
-  flex: 1;
-  position: relative;
-  z-index: 1;
 }
 
 a {

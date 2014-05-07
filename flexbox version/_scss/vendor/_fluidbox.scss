@@ -1,0 +1,49 @@
+.fluidbox {
+  outline: none;
+}
+.fluidbox-overlay {
+  cursor: pointer;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transition: .25s ease-in-out;
+}
+.fluidbox-wrap {
+  background-position: center center;
+  background-size: cover;
+  margin: 0 auto;
+  position: relative;
+  transition: .25s ease-in-out;
+}
+.fluidbox-ghost {
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  transition: .25s ease-in-out;
+}
+
+a.fluidbox {
+  cursor: -webkit-zoom-in;
+  cursor: -moz-zoom-in;
+
+  &.fluidbox-opened {
+    cursor: -webkit-zoom-out;
+    cursor: -moz-zoom-out;
+  }
+}
+
+.gallery {
+  display: flex;
+  -webkit-flex-flow: row wrap; /* Fix for iOS */
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+  a {
+    margin-bottom: 1rem;
+  }
+    a.col-2 { width: 49%; }
+    a.col-3 { width: 32%; }
+ }

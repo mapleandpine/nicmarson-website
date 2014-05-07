@@ -1,0 +1,43 @@
+/*------------------------------------*\
+	#LISTS
+\*------------------------------------*/
+ul, ol {
+	@extend %typecsset-vertical-rhythm;
+	@include typecsset-space(margin-left);
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+}
+
+dl {
+  margin-bottom: $typecsset-base-line-height;
+}
+
+dd {
+  margin-left: 0; // Undo browser default
+  margin-bottom: $typecsset-base-line-height/2;
+}
+
+.list {
+  list-style: square;
+  margin: 0 0 1em;
+  padding: 0 0 0 1.5em;
+
+  li {
+    margin-bottom: 0.2em;
+  }
+}
+
+.list-unstyled {
+  margin-left: 0;
+}
+
+@include breakpoint("medium") {
+  .list--centered {
+    padding: 0;
+    text-align: center;
+    list-style-position: inside;
+  }
+}

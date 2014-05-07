@@ -17,7 +17,6 @@
   margin-bottom: $typecsset-magic-ratio + rem;
 }
 
-
 %transition-slow {
   transition: all .75s cubic-bezier(.17,.67,.83,.67) 0s;
 }
@@ -28,6 +27,11 @@
 
 %transition-fast {
   transition: all .25s cubic-bezier(.17,.67,.83,.67) 0s;
+}
+
+%transition-component {
+  transition-duration: .2s;
+  transition-timing-function: cubic-bezier(.17,.67,.83,.67);
 }
 
 %small-text {

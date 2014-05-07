@@ -1,11 +1,2 @@
 .page-1-col {
-  flex: 1;
-  width: 100%;
-
-  /* stupid IE10 tweener syntax */
-  -ms-flex-preferred-size: auto;
-
-  @include breakpoint("large") {
-    padding: 40px;
-  }
 }

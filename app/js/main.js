@@ -20,15 +20,6 @@ $(function() {
     page_nav_toggle();
   });
 
-  // Toggle menus on hover
-  $('#site-nav-collapse').hover(function() {
-    $(this).addClass('in');
-    $("body").removeClass("site-nav-closed");
-  }, function() {
-    $(this).removeClass('in');
-    $("body").addClass("site-nav-closed");
-  });
-
   // target portfolio thumbnails
   $('#page-nav-collapse a').hover(function() {
     var target = $(this).attr("data-target");

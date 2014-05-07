@@ -31,16 +31,14 @@
 @import "layouts/content";
 @import "layouts/grid";
 @import "layouts/header";
-@import "layouts/page-flex";
-@import "layouts/page-1-col";
-@import "layouts/page-2-col";
-@import "layouts/page-3-col";
+@import "layouts/footer";
+@import "layouts/section";
 
 // Components
 @import "components/banner";
 @import "components/browser-chrome";
 @import "components/button";
-@import "components/clip";
+@import "components/component";
 @import "components/device";
 @import "components/error";
 @import "components/icon";

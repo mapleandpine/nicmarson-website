@@ -1,0 +1,28 @@
+/*------------------------------------*\
+    #CODE
+\*------------------------------------*/
+pre {
+  @extend %typecsset-vertical-rhythm;
+}
+
+/**
+ * 1. Fix an odd quirk whereby, without this, code blocks are rendered at a
+ *    font-size smaller than 1em.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: $font-family-code; /* [1] */
+}
+
+code {
+  color: #000;
+  font-size: .9em;
+  font-weight: normal;
+}
+
+pre > code {
+  color: inherit;
+  font: inherit;
+}

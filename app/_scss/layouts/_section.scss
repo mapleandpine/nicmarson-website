@@ -1,0 +1,282 @@
+[class^="section__"] {
+
+  @include breakpoint("medium") {
+    min-height: 10rem;
+    padding-bottom: 120px;
+    position: relative;
+  }
+
+  @include breakpoint("large") {
+    height: 90vh;
+    padding-bottom: 150px;
+  }
+
+  header {
+
+    &.content {
+      @include breakpoint("medium") {
+        padding-top: 4rem;
+      }
+
+      @include breakpoint("large") {
+        padding-top: 6rem;
+      }
+    }
+
+    h1 {
+      font-size: 2em;
+      font-weight: 300;
+      text-align: center;
+    }
+  }
+
+  footer {
+    font-size: 1.25em;
+    text-align: center;
+
+    @include breakpoint("medium") {
+      box-shadow: 0 -4em 1em rgba(0,0,0,0) inset;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      transition: box-shadow .3s ease-in-out;
+      width: 100%;
+
+      &:hover,
+      &:active {
+        box-shadow: 0 -4em 1em -2em rgba(0,0,0,.05) inset;
+      }
+    }
+
+    @include breakpoint("large") {
+      font-size: 1.375em;
+    }
+
+    h2,
+    p {
+      font-size: inherit;
+      margin-bottom: 0;
+    }
+
+    .content {
+      padding: 0;
+
+      > a {
+        @extend %transition-component;
+        color: inherit;
+        display: block;
+        padding: 2em 0;
+        transition-property: padding;
+
+        &:hover,
+        &:active {
+          padding-bottom: 2.2em;
+        }
+
+        @include breakpoint("medium") {
+          &:before {
+            border-bottom: 20px solid;
+            border-left: 20px solid rgba(0, 0, 0, 0);
+            border-right: 20px solid rgba(0, 0, 0, 0);
+            content: "";
+            display: block;
+            height: 0;
+            left: calc(50% - 20px);
+            position: absolute;
+            top: -20px;
+            vertical-align: middle;
+            width: 0;
+          }
+        }
+
+        @include breakpoint("large") {
+          &:before {
+            border-bottom-width: 40px;
+            border-left-width: 40px;
+            border-right-width: 40px;
+            left: calc(50% - 40px);
+            top: -40px;
+          }
+        }
+      }
+    }
+
+    .unstick-footer {
+      background: url("/images/site/close-circle-dark.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+      cursor: pointer;
+      height: 19px;
+      position: absolute;
+      right: 10px;
+      top: 12px;
+      width: 19px;
+    }
+  }
+
+  .content {
+
+    @include breakpoint("medium") {
+      padding: 2rem 0;
+    }
+
+    @include breakpoint("large") {
+      padding: 3rem 0;
+    }
+  }
+}
+
+
+.section__about {
+  background-color: $color-grayblue;
+  color: #FFF;
+
+  @include breakpoint("medium") {
+    min-height: 40rem;
+  }
+
+  h1 {
+    font-family: $font-family-display;
+    font-size: 2em;
+    line-height: 1.25;
+    margin-top: 1em;
+    text-align: left;
+
+    span {
+      display: block;
+    }
+  }
+
+  a[role="button"] {
+    border: 2px solid transparent;
+    margin-right: 1.5em;
+
+    &.btn__danger {
+      border-color: #FFF;
+    }
+
+    &.btn__link {
+      &:hover {
+        border-bottom-color: #FFF;
+      }
+    }
+  }
+
+  > .content {
+    @include breakpoint("medium") {
+      @include vertical-center(364px);
+    }
+  }
+
+  .img-circle {
+    background-color: $color-red;
+    border: 10px solid #FFF;
+    box-shadow: 0 -3px 3px rgba(0,0,0,.06), 0 3px 3px rgba(255,255,255,1), 0 0 4px rgba(0,0,0,.04);
+    height: 300px;
+    width: 300px;
+
+    img {
+      margin-top: 15%;
+    }
+
+    @include breakpoint("medium") {
+      height: 300px;
+      width: 300px;
+    }
+
+    @include breakpoint("large") {
+      height: 300px;
+      width: 300px;
+    }
+  }
+
+  footer {
+    background-color: $color-grayblue-light;
+    color: $color-gray-dark;
+
+    h2 {
+      color: $color-midnight;
+    }
+
+    a:hover,
+    a:active {
+      h2 {
+        color: lighten($color-midnight, 10);
+      }
+    }
+
+    .content > a:before {
+      border-bottom-color: $color-grayblue-light;
+    }
+  }
+}
+
+.section__portfolio {
+  background-color: $color-paper;
+
+  footer {
+    background-color: $color-paper-wet;
+    color: $color-gray;
+
+    h2 {
+      color: $color-red;
+    }
+
+    a:hover,
+    a:active {
+      h2 {
+        color: lighten($color-red, 10);
+      }
+    }
+
+    .content > a:before {
+      border-bottom-color: $color-paper-wet;
+    }
+  }
+}
+
+.section__blog {
+  background-color: $color-midnight;
+
+  footer {
+    background-color: $color-grayblue-dark;
+    color: #fff;
+
+    h2 {
+      color: lighten($color-orange, 25);
+    }
+
+    a:hover,
+    a:active {
+      h2 {
+        color: lighten($color-orange, 15);
+      }
+    }
+
+    .content > a:before {
+      border-bottom-color: $color-grayblue-dark;
+    }
+  }
+}
+
+.section__inspiration {
+  background-color: $color-cream;
+
+  footer {
+    background-color: lighten($color-yellow, 5);
+    color: $color-gray-dark;
+
+    h2 {
+      color: $color-gray;
+    }
+
+    a:hover,
+    a:active {
+      h2 {
+        color: darken($color-gray, 10);
+      }
+    }
+
+    .content > a:before {
+      border-bottom-color: lighten($color-yellow, 5);
+    }
+  }
+}

@@ -1,0 +1,453 @@
+$black: #1f1f1f;
+$white: #f8f8f8;
+//$grey-light: #f3f5f7;
+$grey-light: #e8ebf0;
+$grey: #e8ebf0;
+$grey-dark: #d8dbe1;
+
+.service-graphic {
+  height: 240px;
+  margin-left: 20px;
+  position: relative;
+  width: 200px;
+
+  .ipad {
+    bottom: 20px;
+    left: 4.5em;
+    position: absolute;
+    z-index: 9;
+  }
+
+  .phone {
+    bottom: 20px;
+    left: 0;
+    position: absolute;
+    z-index: 10;
+  }
+
+  @include breakpoint("medium") {
+    bottom: 4em;
+    height: auto;
+    left: 0;
+    margin: 0;
+    right: 5em;
+    position: absolute;
+    width: auto;
+
+    .ipad {
+      bottom: 0;
+      left: 50%;
+      margin-left: 2.5em;
+    }
+
+    .laptop {
+      bottom: 0;
+      left: 50%;
+      margin-left: -19em;
+      position: absolute;
+      z-index: 6;
+    }
+
+    .phone {
+      bottom: 4em;
+      left: 50%;
+      margin-left: -2.5em;
+    }
+  }
+
+  @include breakpoint("large") {
+    bottom: 5em;
+    right: 8em;
+
+    .ipad {
+      bottom: 1em;
+      left: auto;
+      right: 35%;
+    }
+
+    .laptop {
+      left: auto;
+      right: 0;
+    }
+
+    .monitor {
+      bottom: 2em;
+      position: absolute;
+      right: 9%;
+      z-index: 5;
+    }
+
+    .phone {
+      bottom: -1.5em;
+      left: auto;
+      right: 44%;
+    }
+  }
+
+  .monitor,
+  .laptop {
+    display: none;
+  }
+
+  @include breakpoint("medium") {
+
+    .laptop {
+      background: $white;
+      border: 0.750em solid $black;
+      border-radius: 0.625em 0.625em 0 0;
+      display: block;
+      height: 9.688em;
+      width: 14.688em;
+
+      &:before {
+       top: -0.3em;
+      }
+
+      > div {
+        position: absolute;
+      }
+
+      > .screen {
+        background: #fff;
+        height: 8.188em;
+        left: 0;
+        margin-left: 0;
+        overflow: hidden;
+        width: 13.188em;
+      }
+    }
+
+    // laptop keyboard
+    .keyboard {
+      background: $grey;
+      border-radius: 0 0 20px 20px;
+      bottom: -1.188em;
+      height: 0.625em;
+      left: 50%;
+      margin-left: -9.250em;
+      width: 18.500em;
+      z-index: 1;
+
+      &:before {
+        background: $grey-dark;
+        border-radius: 0 0 0.313em 0.313em;
+        content: "";
+        position: absolute;
+        width: 2.625em;
+        height: 0.250em;
+        left: 50%;
+        top: 0;
+        margin-left: -1.313em;
+      }
+
+      &:after {
+        background: #bababa;
+        border-bottom-right-radius: 7.5rem 2.5rem;
+        border-bottom-left-radius: 7.5rem 2.5rem;
+        display: none;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 0.25rem;
+        top: .5rem;
+      }
+    }
+  }
+
+  @include breakpoint("large") {
+
+    .monitor {
+      background: $white;
+      border: 1.250em solid $black;
+      border-radius: 0.625em;
+      display: block;
+      height: 17.5em;
+      width: 28.750em;
+
+      > div {
+        position: absolute;
+      }
+
+      .glass {
+        width: 26.25em;
+        height: 15em;
+        left: 50%;
+        margin-left: -13.125em;
+        overflow: hidden;
+      }
+    }
+
+    .monitor:before,
+    .monitor:after,
+    .laptop:before {
+      content: "";
+      position: absolute;
+      left: 50%;
+    }
+
+    .monitor:before,
+    .laptop:before {
+      top: -0.250em;
+      margin: -0.188em 0 0 -0.188em;
+      width: 0.250em;
+      height: 0.250em;
+      border-radius: 0.250em;
+      background: $grey-dark;
+      top: -0.625em;
+    }
+
+    // monitor base
+    .base {
+      width: 5.625em;
+      height: 3.1em;
+      bottom: -3.9em;
+      left: 50%;
+      margin-left: -2.8125em;
+      background: $grey;
+      bottom: -4.3em;
+      z-index: 1;
+
+      &:before {
+        border-left: 0.813em solid transparent;
+        border-right: 0px solid transparent;
+        border-bottom: 3.125em solid $grey;
+        left: -0.77em;
+      }
+
+      &:after {
+        border-right: 0.813em solid transparent;
+        border-left: 0px solid transparent;
+        border-bottom: 3.125em solid $grey;
+        right: -0.77em;
+      }
+
+      & > div {
+         position: absolute;
+      }
+    }
+
+    .base:before,
+    .base:after,
+    .grey-shadow:before,
+    .grey-shadow:after{
+      content: "";
+      position: absolute;
+      top: 0;
+    }
+
+    // monitor base shadow
+    .grey-shadow {
+      width: 5.55em;
+      height: 0.750em;
+      background: $grey-dark;
+      top: 0;
+
+      &:before {
+        border-left: 3px solid transparent;
+        border-right: 0px solid transparent;
+        border-bottom: 0.750em solid $grey-dark;
+        left: -3px;
+        z-index: 2;
+      }
+
+      &:after {
+        border-right: 3px solid transparent;
+        border-left: 0px solid transparent;
+        border-bottom: 0.750em solid $grey-dark;
+        right: -2px;
+        z-index: 1;
+      }
+    }
+
+    // monitor foot
+    .foot {
+      background: $grey;
+
+      &.top {
+        width:7.250em;
+        height: 0.313em;
+        bottom: -0.3em;
+        left: 50%;
+        margin-left: -3.625em;
+
+        &:before {
+          border-left: 16px solid transparent;
+          border-right: 0px solid transparent;
+          border-bottom: 5px solid $grey;
+          left: -16px;
+        }
+
+        &:after {
+          border-right: 1em solid transparent;
+          border-left: 0px solid transparent;
+          border-bottom: 5px solid $grey;
+          right: -1em;
+        }
+      }
+
+      &.bottom {
+        width: 9.375em;
+        height: 0.313em;
+        bottom: -0.625em;
+        left: 50%;
+        margin-left: -4.688em;
+      }
+
+      &.top:before,
+      &.top:after,
+      &.bottom:before {
+        content: "";
+        position: absolute;
+        top: 0px;
+      }
+    }
+  }
+
+  .screen:after {
+    width: 0.500em;
+    height: 0.500em;
+    border-radius: 0.500em;
+    margin: 0 0 -0.250em -0.250em;
+    background: $grey;
+    bottom: -0.625em;
+  }
+
+  // add reflection
+  .monitor .glass:before,
+  .laptop .screen:before,
+  .phone .screen:before,
+  .ipad .screen:before {
+    content: "";
+    position: absolute;
+    right: -5.625em;
+    width: 12.500em;
+    height: 18.750em;
+    transform: rotate(45deg);
+    background: linear-gradient(to bottom, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 100%);
+    z-index: 5;
+  }
+
+  .phone {
+    background: $black;
+    border: 1.563em solid $black;
+    border-left: 0.313em solid $black;
+    border-right: 0.313em solid $black;
+    border-radius: 0.5em;
+    height: 8.750em;
+    width: 4.125em;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      background: #474e5d;
+    }
+
+    &:before {
+      background: #474e5d;
+      width: 1.250em;
+      height: 0.250em;
+      margin-left: -0.625em;
+      top: -0.750em;
+      border-radius: 2px;
+    }
+
+    &:after {
+      width: 0.625em;
+      height: 0.625em;
+      border-radius: 0.625em;
+      bottom: -1.125em;
+      margin-left: -0.313em;
+    }
+
+    .screen {
+      width: 3.50em;
+      height: 5.625em;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      background: #fff;
+    }
+  }
+
+  .ipad {
+    background: $black;
+    border: 1.563em solid $black;
+    border-left: 0.313em solid $black;
+    border-right: 0.313em solid $black;
+    border-radius: 0.5em;
+    height: 12.750em;
+    width: 8.75em;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      background: #474e5d;
+    }
+
+    &:before {
+      background: #474e5d;
+      width: 1.250em;
+      height: 0.250em;
+      margin-left: -0.625em;
+      top: -0.750em;
+      border-radius: 2px;
+    }
+
+    &:after {
+      width: 0.625em;
+      height: 0.625em;
+      border-radius: 0.625em;
+      bottom: -1.125em;
+      margin-left: -0.313em;
+    }
+
+    .screen {
+      width: 8em;
+      height: 9.8em;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .content {
+      width: 100%;
+      left: 0%;
+      margin-left: 0px;
+    }
+  }
+
+  // browser thumbnail area
+  .browser-chrome {
+    width: 18.45em;
+    height: 11.250em;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -5.625em 0 0 -9.225em;
+  }
+
+  .browser-window {
+    overflow: hidden;
+    height: 9.938em;
+    //padding-top: 0.625em;
+  }
+}
+
+
+// browser animation
+.screen .img-src,
+.phone .img-src {
+  animation: scroll 16s 1s cubic-bezier(0.250, 0.100, 0.250, 1.000) infinite;
+}
+
+@keyframes scroll {
+  0% { background-position: center 0; }
+  20% { background-position: center 20%; }
+  60% { background-position: center 50%; }
+  80% { background-position: center 100%; }
+}
