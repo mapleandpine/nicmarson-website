@@ -4,20 +4,42 @@ var $window = $(window),
     windowSmall = 768,
     viewportWidth = $(window).width(),
     viewportHeight = $(window).height(),
+    site_nav = $('nav.site-nav'),
+    page_nav = $('nav.page-nav'),
     site_nav_button = $( "button.site-nav-toggle" ),
-    page_nav_button = $( "button.page-nav-toggle" ),
-    nav_link_span = "nav.site-nav a span";
+    page_nav_button = $( "button.page-nav-toggle" );
+
+/* global BackgroundCheck:false */
+
+document.addEventListener('DOMContentLoaded', function () {
+  BackgroundCheck.init({
+    targets: '.site-header'
+  });
+});
 
 $(function() {
 
-  // Toggle site nav
+  // Add overlay for menu toggles
+  $('body').append('<div class="overlay">');
+  var overlay = $('div.overlay');
+  overlay.hide();
+  site_nav.hide();
+  page_nav.hide();
+
+  // Toggle site nav visiblity
   site_nav_button.on("click", function() {
-    site_nav_toggle();
+    menu_toggle('nav.site-nav');
   });
 
-  // Toggle page nav
+  // Toggle page nav visibility
   page_nav_button.on("click", function() {
-    page_nav_toggle();
+    menu_toggle('nav.page-nav');
+  });
+
+  // Close menus when overlay is clicked
+  overlay.on("click", function() {
+    menu_toggle('nav.site-nav');
+    menu_toggle('nav.page-nav');
   });
 
   // target portfolio thumbnails
@@ -110,17 +132,17 @@ $(function() {
   // FUNCTIONS
 
   // toggle site nav visibility
-  function site_nav_toggle() {
-    $(site_nav_button).toggleClass('active');
-    $("body").toggleClass("site-nav-closed");
-    $('#site-nav-collapse').toggleClass('in');
-  }
+  var menu_toggle = function(m) {
 
-  // toggle page nav visibility
-  function page_nav_toggle() {
-    $(page_nav_button).toggleClass('active');
-    $('body').toggleClass("page-nav-closed");
-    $('#page-nav-collapse').toggleClass('in');
+    if ( $(m).is(':hidden') ) {
+      $(m).fadeToggle(200);
+      $(overlay).fadeToggle(200);
+      $body.toggleClass("site-nav-open");
+    } else {
+      $(m).fadeOut(200);
+      $(overlay).fadeOut(200);
+      $body.removeClass("site-nav-open");
+    }
   }
 });
 
@@ -139,3 +161,15 @@ function webFontsLoaded() {
     }
   });
 }
+
+var rr = function(x) {
+  var i = x,
+      n = "never gonna";
+  do {
+    i -= 1;
+    console.log( n + " give you up" );
+    console.log( n + " let you down" );
+  } while ( i > 0 );
+}
+
+rr(6);

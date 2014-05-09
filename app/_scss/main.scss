@@ -16,6 +16,7 @@
 @import "utils/media";
 @import "utils/visibility";
 @import "utils/animate";
+@import "utils/image";
 
 // Base
 @import "base/base";
@@ -35,22 +36,17 @@
 @import "layouts/section";
 
 // Components
-@import "components/banner";
 @import "components/browser-chrome";
 @import "components/button";
+@import "components/card";
 @import "components/component";
 @import "components/device";
-@import "components/error";
-@import "components/icon";
-@import "components/image";
-@import "components/input-add-on";
-@import "components/media";
 @import "components/nav";
 @import "components/nav-page";
 @import "components/nav-site";
+@import "components/popover";
 @import "components/post";
 @import "components/progress";
-@import "components/thumb";
 @import "components/tooltip";
 
 // Vendor

@@ -23,3 +23,43 @@ big,
   font-family: $font-family-sans-serif;
   text-transform: uppercase;
 }
+
+.futurefriendly,
+.futurefriendly:after {
+  // 1200px x 800px svg image
+  background: url(../img/futurefriendly.svg);
+  background-size: 300px 200px;
+  display: block;
+  height: 200px;
+  width: 150px;
+}
+
+.futurefriendly {
+  background-position: 142px 0;
+  float: right;
+  position: relative;
+
+  &:hover {
+    &:after {
+      opacity: 0;
+    }
+  }
+
+  &:after {
+    background-color: $color-gray-dark;
+    background-position: 0 0;
+    content: "";
+    position: absolute;
+    transition: opacity .5s;
+  }
+}
+
+.stubby {
+  clear: both;
+  display: block;
+  border: none;
+  border-bottom: 2px solid lighten($color-gray-dark, 5);
+  margin: 1.25em auto;
+  width: 4.5em;
+  height: 0;
+}

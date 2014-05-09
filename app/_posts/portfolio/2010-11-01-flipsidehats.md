@@ -15,6 +15,10 @@ img-ext: png
 img-alt: Home &ndash; flipsidehats.com
 
 color-dark: 2D2716
+
+solo: design and development
+designer: 100
+developer: 100
 ---
 I’ve been working with Kori Giudici since the first version of her web site, Flipside Hats. We met through a mutual friend, and since then, I’ve designed and built each subsequent version. I'm always impressed with Kori's skills and eye for design. It's been a pleasure seeing her brand develop.
 

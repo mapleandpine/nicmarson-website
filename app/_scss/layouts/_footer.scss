@@ -1,4 +1,30 @@
 .site-footer {
-  background-color: $color-gray-dark;
-  color: $bg-color;
+
+  .complementary__blog .card {
+    text-align: left;
+
+    a.title {
+      background-color: $color-orange;
+    }
+  }
+
+  .complementary__resources .card {
+
+    a.title {
+      background-color: $color-teal;
+    }
+  }
+
+  .section__blog {
+    background-color: $color-grayblue;
+  }
+
+  .section__links {
+    background-color: $bg-color;
+  }
+
+  .section__copyright {
+    background-color: $color-gray-dark;
+    color: #FFF;
+  }
 }

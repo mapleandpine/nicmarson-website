@@ -44,25 +44,45 @@ body {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: calc(100vh - $site-header-height);
   // Ala Trent Walton
   // http://trentwalton.com/2011/09/07/css-hyphenation
   @include hyphens(auto);
+  min-height: calc(100vh - $site-header-height);
+  padding-top: $site-header-height;
+}
+
+.home {
+  min-height: 100vh;
+  padding-top: 0;
 }
 
 a {
   color: $link-color;
   text-decoration: none;
 
+  &:visited {
+    color: $link-visited-color;
+  }
+
   &:hover,
   &:focus {
     color: $link-hover-color;
   }
+}
 
-  &:visited {
-    color: $link-visited-color;
+.inverse {
+
+  a {
+    color: $inverse-link-color;
+
+    &:visited {
+      color: $inverse-link-visited-color;
+    }
+
+    &:hover,
+    &:focus {
+      color: $inverse-link-hover-color;
+    }
   }
 }
 

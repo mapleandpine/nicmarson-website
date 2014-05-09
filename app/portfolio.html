@@ -1,12 +1,16 @@
 ---
-layout: layout-3-col
+layout: default
 title: Portfolio
 slug: portfolio
 ---
 
-<div class="grid grid--guttersLarge grid-wrap clip-grid cf">
-  {% for post in site.categories['portfolio'] %}
-    {% include section-portfolio.html %}
-  {% endfor %}
-  <button type="button" class="nav-toggle page-nav-toggle"><span>Toggle navigation</span></button>
-</div>
+<article class="article__portfolio">
+  <header>
+    <h1>A select group of websites I've designed and developed.</h1>
+  </header>
+  <div class="component content__portfolio" data-eq-pts="small: 0, medium: 694, large: 1124">
+    {% for post in site.categories['portfolio'] %}
+      {% include section-portfolio.html %}
+    {% endfor %}
+  </div>
+</article>

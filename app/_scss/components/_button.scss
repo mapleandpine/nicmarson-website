@@ -86,19 +86,18 @@ a[role="button"] {
   background-color: transparent;
   border: 2px solid rgba(255,255,255,.75);
   border-radius: 50%;
-  color: $color-gray;
+  color: #FFF;
   cursor: pointer;
   display: block;
   height: 42px;
   outline: none;
   padding: 0;
   position: absolute;
-  transition-property: background-color, opacity, transform;
+  transition-property: background-color, opacity;
   width: 43px;
 
   @include breakpoint("medium") {
     opacity: .75;
-    transform: scale3d(.94, .94, 1);
   }
 
   &:after {
@@ -146,9 +145,7 @@ a[role="button"] {
 
   &:hover,
   &.active {
-    background-color: $color-gray-dark;
     opacity: 1;
-    transform: scale3d(1, 1, 1);
 
     span:before {
       transform: translateY(-220%);
@@ -158,21 +155,20 @@ a[role="button"] {
       transform: translateY(220%);
     }
   }
+}
 
-  &.active {
+.site-nav-open .nav-toggle {
 
-    span {
-      background-color: transparent;
+  span {
 
-      &:before {
-        -webkit-transform: translateY(0) rotate(45deg);
-        transform: translateY(0) rotate(45deg);
-      }
+    &:before {
+      -webkit-transform: translateY(0) rotate(45deg);
+      transform: translateY(0) rotate(45deg);
+    }
 
-      &:after {
-        -webkit-transform: translateY(0) rotate(-45deg);
-        transform: translateY(0) rotate(-45deg);
-      }
+    &:after {
+      -webkit-transform: translateY(0) rotate(-45deg);
+      transform: translateY(0) rotate(-45deg);
     }
   }
 }

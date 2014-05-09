@@ -9,7 +9,7 @@ $color-gray-dark: #292929;
 $color-gray: lighten($color-gray-dark, 25);
 $color-gray-light: lighten($color-gray-dark, 50);
 $color-gray-bg: lighten($color-gray-dark, 80);
-$color-brown: #412A22;
+$color-brown: #78655B;
 $color-cream: #F2E6B6;
 $color-sand: #E6E2AF;
 $color-sand-wet: #A7A37E;
@@ -21,29 +21,32 @@ $color-paper-wet: #E1E0C9;
 $color-blue: #3497DB;
 $color-grayblue: #5B7876;
 $color-grayblue-dark: #4F5E67;
-$color-grayblue-light: #8F9E8B;
 $color-midnight: #2B3D4F;
 
 
 // Accents
-$color-orange: #F60;
+$color-orange: #C48B6E;
 $color-red: #E64B3B;
-$color-green: hsl(150, 45%, 50%);
+$color-green: #8F9E8B;
 $color-yellow: #CFCA4C;
+$color-teal: #A9C4C3;
 
 
 // Color assignments
 $color-text: $color-gray-dark;
 $color-muted: #999;
-$bg-color: #EFECCA;
+$bg-color: $color-paper;
 $small-caps-color: $color-gray;
 $link-color: $color-blue;
 $link-hover-color: $color-midnight;
 $link-visited-color: $color-midnight;
+$inverse-link-color: lighten($color-yellow, 15);
+$inverse-link-hover-color: lighten($color-yellow, 25);
+$inverse-link-visited-color: $color-yellow;
 
 
 // Font families
-$font-family-serif: 'Playfair Display', serif;
+$font-family-serif: 'PT+Serif', serif;
 $font-family-sans-serif: 'Lato', sans-serif;
 $font-family-display: 'Bitter', serif;
 $font-family-code: 'Source Code Pro', monospace;
@@ -97,6 +100,8 @@ $font-size-large: 150% !default;
 
 
 $site-header-height: 80px;
+$content-width-medium: 55rem;
+$content-width-large: 65rem;
 
 
 

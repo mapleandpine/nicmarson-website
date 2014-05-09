@@ -6,96 +6,39 @@ slug: home
 
 <section class="section__about">
   <div class="content">
-    <div class="row">
-      <div class="col-one-third">
-        <div class="img-circle">
-          <img src="../img/vector-me.png" alt="Nicholas Marson" class="img-responsive">
-        </div>
-      </div>
-      <div class="col-two-thirds">
-        <h1><span class="slabtext">Hi, my name is Nic Marson.</span> <span class="slabtext">I'm a Front-end Developer &amp;</span> <span class="slabtext">UI Designer in Portland, OR.</span></h1>
-        <p><a href="portfolio.html" role="button" class="btn__link">View my work</a> <a href="contact.html" role="button" class="btn__danger">Get in touch</a></p>
-      </div>
+    <div class="img-circle">
+      <img src="../img/vector-me.png" alt="Nicholas Marson" class="img-responsive">
     </div>
+    <h1><span>Hi, my name is Nic Marson.</span> <span>I'm a Front-end Developer &amp;</span> <span>UI Designer in Portland, OR.</span></h1>
+    <p><a href="portfolio.html" role="button" class="btn__link">View my work</a> <a href="contact.html" role="button" class="btn__danger">Get in touch</a></p>
   </div>
-  <footer>
-    <div class="content">
-      <a href="about.html">
-        <h2>About me</h2>
-        <p>My background, employment history, and hobbies.</p>
-      </a>
-    </div>
-  </footer>
+  <aside class="popover__about" role="complementary">
+    <a href="about.html" class="icon-person">
+      <svg class="shape-person" viewBox="0 0 100 100">
+        <use xlink:href="#shape-person"/>
+      </svg>
+    </a>
+    <h2><a href="about.html">About me</a></h2>
+    <p>My background, employment history, and hobbies.</p>
+  </aside>
 </section>
 
 <section class="section__portfolio">
-  <header class="content">
+  <header>
     <h1>Here are a few web sites I've worked on.</h1>
   </header>
-  <div class="max__4 portfolio">
-    <div class="component" data-eq-pts="small: 322, medium: 498, large: 644, huge: 830">
-      {% for post in site.categories['portfolio'] limit:4 %}
-        {% include section-portfolio.html %}
-      {% endfor %}
-    </div>
+  <div class="component content__portfolio" data-eq-pts="small: 0, medium: 694, large: 1124">
+    {% for post in site.categories['portfolio'] limit:4 %}
+      {% include section-portfolio.html %}
+    {% endfor %}
   </div>
-  <footer>
-    <div class="content">
-      <a href="portfolio.html">
-        <h2>Portfolio</h2>
-        <p>A select group of sites I've designed and developed.</p>
-      </a>
-    </div>
-  </footer>
-</section>
-
-<section class="section__blog">
-  <header class="content">
-    <h1>My writing</h1>
-  </header>
-  <div class="content max__2 posts">
-    <div class="component" data-eq-pts="small: 322, medium: 498, large: 644, huge: 830">
-      {% for post in site.categories['blog'] limit:2 %}
-      <div class="component__item post__item">
-        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-        {% if post.content contains '<!--more-->' %}
-          {{ post.content | split:'<!--more-->' | first }}
-          <p><a href="{{ post.url }}">Continue reading</a></p>
-        {% else %}
-          {{ post.content }}
-          <p><a href="{{ post.url }}">Continue reading</a></p>
-        {% endif %}
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-  <footer>
-    <div class="content">
-      <a href="blog.html">
-        <h2>Blog</h2>
-        <p>I don't write often, but when I do I put it here.</p>
-      </a>
-    </div>
-  </footer>
-</section>
-
-<section class="section__inspiration">
-  <div class="content">
-    <p>Things that inspire and motivate me.</p>
-  </div>
-  <div class="component max__8 inspiration">
-    <div class="component " data-eq-pts="small: 322, medium: 498, large: 644, huge: 830">
-      <div class="component__item inspiration__item">{% for post in site.categories['inspiration'] limit:8 %}
-        {% include section-inspiration.html %}
-      {% endfor %}</div>
-    </div>
-  </div>
-  <footer>
-    <div class="content">
-      <a href="inspiration.html">
-        <h2>Inspiration</h2>
-        <p>I find things from all over the web, and if I find it valuable I'll save it to Kippt.</p>
-      </a>
-    </div>
-  </footer>
+  <aside class="popover__portfolio" role="complementary">
+    <a href="portfolio.html" class="icon-browser">
+      <svg class="shape-browser" viewBox="0 0 100 100">
+        <use xlink:href="#shape-browser"/>
+      </svg>
+    </a>
+    <h2><a href="portfolio.html">My portfolio</a></h2>
+    <p>A select group of websites I've designed and developed.</p>
+  </aside>
 </section>

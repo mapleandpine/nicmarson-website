@@ -1,9 +1,3 @@
-@mixin eq($state) {
-  [data-eq-state="#{$state}"] & {
-    @content;
-  }
-}
-
 .cf,
 .group,
 .row {
@@ -11,23 +5,46 @@
 }
 
 [class^="col-"] {
-  float: left;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   max-width: 100%;
 }
 
-.col-one-third {
-  width: calc(100% / 3 - 3rem);
-}
-.col-half {
-  width: calc(100% / 2 - 3rem);
-}
-.col-two-thirds {
-  width: calc(100% / 1.5 - 3rem);
-}
 .col-full {
   margin-left: 0;
   margin-right: 0;
   width: 100%;
+}
+
+@include breakpoint("medium") {
+
+  [class^="col-"] {
+    float: left;
+  }
+
+  .col-one-third {
+    width: calc(100% / 3 - 3rem);
+  }
+
+  .col-half {
+    width: calc(100% / 2 - 3rem);
+  }
+
+  .col-two-thirds {
+    width: calc(100% / 1.5 - 3rem);
+  }
+
+  .col-one-fifth {
+    width: calc(100% / 5 - 3rem);
+  }
+
+  .col-three-fifths {
+    width: calc(100% / 5 * 3 - 3rem);
+  }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 769px) {
+  .md-col-full {
+    width: 100%;
+  }
 }

@@ -2,11 +2,25 @@
 
   @include breakpoint("medium") {
     margin: auto;
-    max-width: 45rem;
+    max-width: $content-width-medium;
+    padding: 3.5rem 0 4rem;
   }
 
   @include breakpoint("large") {
-    max-width: 65rem;
+    max-width: $content-width-large;
+    padding: 5rem 0 6rem;
+  }
+}
+
+.content__portfolio {
+  padding: 2rem;
+
+  @include breakpoint("medium") {
+    padding: 3rem;
+  }
+
+  @include breakpoint("large") {
+    padding: 4rem;
   }
 }
 

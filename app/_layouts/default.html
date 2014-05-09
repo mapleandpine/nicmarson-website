@@ -3,14 +3,13 @@
   <head>
     {% include head.html %}
   </head>
-  <body class="{{ page.slug }} site-nav-closed">
+  <body class="{{ page.slug }}">
     {% include header.html %}
-    <div class="page-flex page-2-col">
-      <main class="page-second flex-item main">
-        {{ content }}
-      </main>
-      {% include navigation.html %}
-    </div>
+    <main role="main">
+      {{ content }}
+    </main>
+    {% include navigation.html %}
+    {% include footer.html %}
   </body>
   {% include tail.html %}
   </body>

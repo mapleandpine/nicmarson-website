@@ -1,5 +1,5 @@
 $site-nav-link-color: #FFF;
-$site-nav-link-color-hover: $color-grayblue-light;
+$site-nav-link-color-hover: $color-green;
 $site-nav-width-open: 300px;
 $site-nav-item-height: 3em;
 
@@ -29,7 +29,7 @@ $site-nav-item-height: 3em;
     }
 
     &.active {
-      border-right: 3px solid $color-grayblue-light;
+      border-right: 3px solid $site-nav-link-color-hover;
 
       a {
         color: $site-nav-link-color-hover;
@@ -40,19 +40,15 @@ $site-nav-item-height: 3em;
       @extend %transition-fast;
       color: $site-nav-link-color;
       display: block;
-      font-weight: 300;
+      font-weight: 400;
       height: $site-nav-item-height;
+      letter-spacing: .0125em;
       line-height: $site-nav-item-height;
       padding-left: 20px;
       position: relative;
 
       &:hover {
         box-shadow: 0 5px 10px -5px rgba(255,255,255,.5), 0 -5px 10px -5px rgba(255,255,255,.5);
-        color: $site-nav-link-color-hover;
-
-        .icon {
-          color: $site-nav-link-color-hover;
-        }
       }
     }
 
@@ -88,14 +84,6 @@ $site-nav-item-height: 3em;
     border-bottom: 1px solid rgba(255,255,255, .08);
     border-top: 1px solid rgba(255,255,255, .08);
   }
-}
-
-.js .site-nav {
-  display: none;
-}
-
-.js .site-nav.in {
-  display: block;
 }
 
 // conditional styles
