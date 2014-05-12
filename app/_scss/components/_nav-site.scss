@@ -48,12 +48,21 @@ $site-nav-link-color-hover: $color-green;
   a,
   a span {
     display: block;
+    height: 2em;
+    letter-spacing: .0125em;
+    line-height: 2em;
     position: relative;
   }
 
   a {
+    @extend %transition-fast;
+    border-top: 1px solid rgba(255,255,255, .04);
     color: $site-nav-link-color;
     padding-left: 20px;
+
+    &:last-child {
+      border-bottom: 1px solid rgba(255,255,255, .04);
+    }
 
     span {
       opacity: 1;
@@ -64,18 +73,11 @@ $site-nav-link-color-hover: $color-green;
   &.page-links {
 
     a {
-      @extend %transition-fast;
-      border-top: 1px solid rgba(255,255,255, .04);
       height: 3em;
-      letter-spacing: .0125em;
       line-height: 3em;
 
       &:hover {
         box-shadow: 0 5px 10px -5px rgba(255,255,255,.5), 0 -5px 10px -5px rgba(255,255,255,.5);
-      }
-
-      &:last-child {
-        border-bottom: 1px solid rgba(255,255,255, .04);
       }
 
       &.active {

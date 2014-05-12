@@ -24,20 +24,7 @@
   }
 }
 
-#intro {
-  margin-bottom: 2rem;
-
-  @include breakpoint("medium") {
-    margin-bottom: 3rem;
-
-    .image {
-      flex: none;
-      width: 33.3333%;
-    }
-  }
-}
-
-#history {
+.employment-history {
   margin-bottom: 2rem;
 
   @include breakpoint("medium") {
@@ -57,7 +44,7 @@
   }
 }
 
-#tidbits {
+.extracurricular-history {
   font-size: 14px;
   font-weight: 700;
 

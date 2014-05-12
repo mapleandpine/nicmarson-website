@@ -46,13 +46,15 @@ h6 {
 .title {
   a,
   a[role="link"] {
-    border-bottom: none;
-    color: $color-gray-dark;
+    border-bottom-color: inherit;
+    color: inherit;
+
+    &:visited {
+      color: inherit;
+    }
 
     &:hover,
-    &:focus,
-    &:visited {
-      border-bottom: none;
+    &:focus {
       color: #000;
     }
   }
@@ -74,14 +76,6 @@ h6 {
 .section-title {
   margin-bottom: 2em;
   padding-bottom: 1px;
-
-  @include breakpoint("medium") {
-    margin-left: -5rem;
-  }
-
-  @include breakpoint("large") {
-    margin-left: -10rem;
-  }
 }
 
 .breakdown-title {

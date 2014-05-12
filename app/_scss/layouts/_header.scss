@@ -28,25 +28,20 @@
     white-space: nowrap;
   }
 
-  a,
-  .name {
-    display: inline-block;
-    font-weight: 300;
-    margin-left: 5px;
-    padding: 0 10px 0 18px;
-  }
-
-  a {
-    text-transform: capitalize;
-  }
-
-  .page-title {
+  .site-name,
+  .page-title,
+  .site-nav-toggle:after {
     color: #FFF;
     display: inline-block;
     font-family: $font-family-sans-serif;
-    font-size: inherit;
+    font-size: 28px;
     font-weight: 300;
-    margin: 0 70px 0 5px;
+    line-height: 29px;
+  }
+
+  .site-name,
+  .page-title {
+    margin: 10px 5px;
   }
 
   .site-nav-toggle {
@@ -57,11 +52,7 @@
 
     &:after {
       content: "menu";
-      font-family: $font-family-sans-serif;
-      font-size: 28px;
-      font-weight: 300;
       left: 52px;
-      line-height: 29px;
       position: absolute;
       top: 0;
     }

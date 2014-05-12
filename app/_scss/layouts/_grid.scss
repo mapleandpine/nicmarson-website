@@ -9,18 +9,45 @@
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   max-width: 100%;
-}
 
-.col-full {
-  margin-left: 0;
-  margin-right: 0;
-  width: 100%;
+  [class^="col-"] {
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 @include breakpoint("medium") {
 
   [class^="col-"] {
     float: left;
+
+    .col-one-third {
+      width: calc(100% / 3 - 1.5rem);
+    }
+
+    .col-half {
+      width: calc(100% / 2 - 1.5rem);
+    }
+
+    .col-two-thirds {
+      width: calc(100% / 1.5 - 1.5rem);
+    }
+
+    .col-one-fifth {
+      width: calc(100% / 5 - 1.5rem);
+    }
+
+    .col-three-fifths {
+      width: calc(100% / 5 * 3 - 1.5rem);
+    }
+
+    .col-full {
+      width: calc(100% - 1.5rem);
+    }
   }
 
   .col-one-third {
@@ -41,6 +68,10 @@
 
   .col-three-fifths {
     width: calc(100% / 5 * 3 - 3rem);
+  }
+
+  .col-full {
+    width: calc(100% - 3rem);
   }
 }
 

@@ -1,5 +1,4 @@
 <header class="site-header">
   <button type="button" class="nav-toggle site-nav-toggle"><span>Toggle navigation</span></button>
-  {% if page.slug != "home" %}<a href="/" class="site-name">Nic Marson</a>{% endif %}
-  {% if page.parent %}<a href="/{{ page.parent }}.html">{{ page.parent }}</a>{% endif %}
+  {% if page.parent %}<a href="/{{ page.parent }}.html">Back</a>{% endif %}
 </header>

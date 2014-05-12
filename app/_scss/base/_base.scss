@@ -47,13 +47,7 @@ body {
   // Ala Trent Walton
   // http://trentwalton.com/2011/09/07/css-hyphenation
   @include hyphens(auto);
-  min-height: calc(100vh - $site-header-height);
-  padding-top: $site-header-height;
-}
-
-.home {
   min-height: 100vh;
-  padding-top: 0;
 }
 
 a {
@@ -68,11 +62,8 @@ a {
   &:focus {
     color: $link-hover-color;
   }
-}
 
-.inverse {
-
-  a {
+  .inverse & {
     color: $inverse-link-color;
 
     &:visited {
@@ -89,14 +80,27 @@ a {
 a[role="link"] {
   border-bottom: 0.0625rem dotted $link-color;
 
+  &:visited {
+    border-bottom-color: $link-visited-color;
+  }
+
   &:hover,
   &:focus {
     border-bottom-color: $link-hover-color;
     border-bottom-style: solid;
   }
 
-  &:visited {
-    border-bottom-color: $link-visited-color;
+  .inverse & {
+    border-bottom-color: $inverse-link-color;
+
+    &:visited {
+      border-bottom-color: $inverse-link-visited-color;
+    }
+
+    &:hover,
+    &:focus {
+      border-bottom-color: $inverse-link-hover-color;
+    }
   }
 }
 
