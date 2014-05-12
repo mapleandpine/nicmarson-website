@@ -8,7 +8,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $font-family-heading;
+  font-family: $heading-font-family;
+  font-weight: $heading-weight;
   font-kerning: normal;
 }
 

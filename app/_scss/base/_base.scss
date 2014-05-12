@@ -25,7 +25,7 @@ html,
 body {
   background-color: $bg-color;
   color: $color-text;
-  font-family: $font-family-base;
+  font-family: $base-font-family;
   font-size: $typecsset-base-font-size / 16px + em; /* [1] */
   line-height: $typecsset-base-line-height / $typecsset-base-font-size; /* [2] */
   margin: 0;
@@ -118,7 +118,7 @@ xmp {
 }
 
 abbr {
-  @include smallcaps($small-caps-color, $small-caps-weight);
+  @include smallcaps();
   &:hover {
     cursor: help;
   }

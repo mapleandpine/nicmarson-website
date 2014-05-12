@@ -17,26 +17,28 @@
     @include breakpoint("large") {
       padding-top: 6rem;
     }
-
-    h1 {
-      font-size: 2em;
-      font-weight: 300;
-    }
   }
 }
 
 .section__about {
   background-color: $color-grayblue;
   color: #FFF;
-  padding-top: 100px;
+  padding-bottom: 2rem;
+  padding-top: 80px;
 
   @include breakpoint("medium") {
+    padding-bottom: 4rem;
     text-align: left;
   }
 
+  @include breakpoint("large") {
+    padding-bottom: 6rem;
+  }
+
   h1 {
-    font-family: $font-family-display;
+    font-family: $font-family-serif;
     font-size: 1.625em;
+    font-weight: 400;
     line-height: 1.25;
     margin-top: 1em;
 
@@ -138,5 +140,35 @@
 
   @include breakpoint("large") {
     padding-bottom: 6rem;
+  }
+}
+
+.section__links {
+  text-align: left;
+
+  h3 {
+    color: $color-gray-dark;
+    @include typecsset-font-size($typecsset-h5-size);
+    font-weight: 300;
+
+    &:after {
+      background-color: $color-gray;
+      content: "";
+      display: block;
+      height: 1px;
+      margin-top: 1em;
+      width: 2em;
+    }
+  }
+
+  .social-links {
+    @include breakpoint("medium") {
+      text-align: right;
+
+      h3:after {
+        left: calc(100% - 2em);
+        position: relative;
+      }
+    }
   }
 }

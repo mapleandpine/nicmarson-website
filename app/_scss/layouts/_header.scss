@@ -1,11 +1,8 @@
 .site-header {
-  background-color: $color-gray-dark;
   font-size: 16px;
   height: $site-header-height;
   left: 0;
   line-height: 32px;
-  padding-left: 5px;
-  padding-top: 8px;
   position: fixed;
   right: 0;
   top: 0;
@@ -53,8 +50,21 @@
   }
 
   .site-nav-toggle {
+    background-color: $color-gray-dark;
+    border-color: $color-gray-dark;
     left: 10px;
     top: 10px;
+
+    &:after {
+      content: "menu";
+      font-family: $font-family-sans-serif;
+      font-size: 28px;
+      font-weight: 300;
+      left: 52px;
+      line-height: 29px;
+      position: absolute;
+      top: 0;
+    }
 
     @include breakpoint("medium") {
       left: 20px;
@@ -68,26 +78,7 @@
   }
 }
 
-.home .site-header {
-  background-color: transparent;
-  border-top: 6px solid $color-gray-dark;
-
-  .site-nav-toggle {
-    left: 10px;
-    top: 4px;
-
-    @include breakpoint("medium") {
-      left: 20px;
-      top: 14px;
-    }
-  }
-}
-
-.screen-scroll .site-header {
-  background-color: rgba(0,0,0,.1);
-}
-
-.site-nav-open .site-header .nav-toggle {
+.site-nav-open .site-header .site-nav-toggle {
   border-color: rgba(255,255,255,.75);
   color: #FFF;
 
@@ -96,7 +87,7 @@
 
     &:before,
     &:after {
-      background-color: rgba(255,255,255,.8);
+      background-color: #FFF;
     }
   }
 }

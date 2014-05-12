@@ -4,18 +4,10 @@ var $window = $(window),
     windowSmall = 768,
     viewportWidth = $(window).width(),
     viewportHeight = $(window).height(),
-    site_nav = $('nav.site-nav'),
+    site_nav = $('div#site-nav-collapse'),
     page_nav = $('nav.page-nav'),
     site_nav_button = $( "button.site-nav-toggle" ),
     page_nav_button = $( "button.page-nav-toggle" );
-
-/* global BackgroundCheck:false */
-
-document.addEventListener('DOMContentLoaded', function () {
-  BackgroundCheck.init({
-    targets: '.site-header'
-  });
-});
 
 $(function() {
 
@@ -28,7 +20,7 @@ $(function() {
 
   // Toggle site nav visiblity
   site_nav_button.on("click", function() {
-    menu_toggle('nav.site-nav');
+    menu_toggle(site_nav);
   });
 
   // Toggle page nav visibility
@@ -38,7 +30,7 @@ $(function() {
 
   // Close menus when overlay is clicked
   overlay.on("click", function() {
-    menu_toggle('nav.site-nav');
+    menu_toggle(site_nav);
     menu_toggle('nav.page-nav');
   });
 
