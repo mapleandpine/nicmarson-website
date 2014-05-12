@@ -4,7 +4,7 @@ parent: portfolio
 ---
 
 <article class="post post-portfolio">
-  <section class="post post-banner">
+  <section class="section__browser">
     <div class="browser-chrome">
       <div class="browser-header">
         <ul class="browser-buttons">
@@ -14,70 +14,65 @@ parent: portfolio
       </div>
       <div class="browser-window dark-bg" style="background-color: #{{ page.color-dark }}">
         <div class="content">
-          <h1 class="title">{{ page.project }}</h1>
-          <p>{{ page.tags | array_to_sentence_string }}</p>
-        </div>
-        <div class="service-graphic sg2">
-          <div class="screen monitor">
-            <div class="glass">
-              <div class="browser-chrome browser-chrome-mini">
-                <div class="browser-header"><ul class="browser-buttons"><li></li><li></li><li></li></ul><div class="browser-tab"></div></div>
-                <div class="browser-window">
-                  <div class="img-src" style="background-image:url('/img/portfolio/{{ page.name }}/{{ page.name }}-browser.jpg')"></div>
-                </div>
-              </div>
-            </div>
-            <div class="base"><div class="grey-shadow"></div><div class="foot top"></div><div class="foot bottom"></div></div>
-          </div>
-          <div class="laptop">
-            <div class="screen">
+          <div class="service-graphic sg2">
+            <div class="screen monitor">
               <div class="glass">
-                <div class="image">
-                  <div class="img-src" style="background-image:url('/img/portfolio/{{ page.name }}/{{ page.name }}-browser.jpg')"></div>
+                <div class="browser-chrome browser-chrome-mini">
+                  <div class="browser-header"><ul class="browser-buttons"><li></li><li></li><li></li></ul><div class="browser-tab"></div></div>
+                  <div class="browser-window">
+                    <div class="img-src" style="background-image:url('/img/portfolio/{{ page.name }}/{{ page.name }}-browser.jpg')"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="base"><div class="grey-shadow"></div><div class="foot top"></div><div class="foot bottom"></div></div>
+            </div>
+            <div class="laptop">
+              <div class="screen">
+                <div class="glass">
+                  <div class="image">
+                    <div class="img-src" style="background-image:url('/img/portfolio/{{ page.name }}/{{ page.name }}-browser.jpg')"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="keyboard"></div>
+            </div>
+            {% if page.mobile %}
+            <div class="ipad">
+              <div class="screen">
+                <div class="glass">
+                  <div class="image">
+                    <div class="img-src" style="background-image:url('/img/portfolio/{{ page.name }}/{{ page.name }}-mobile.jpg')"></div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="keyboard"></div>
-          </div>
-          {% if page.mobile %}
-          <div class="ipad">
-            <div class="screen">
-              <div class="glass">
-                <div class="image">
-                  <div class="img-src" style="background-image:url('/img/portfolio/{{ page.name }}/{{ page.name }}-mobile.jpg')"></div>
+            <div class="phone">
+              <div class="screen">
+                <div class="glass">
+                  <div class="image">
+                    <div class="img-src" style="background-image:url('/img/portfolio/{{ page.name }}/{{ page.name }}-mobile.jpg')"></div>
+                  </div>
                 </div>
               </div>
+              <div class="shadow"></div>
             </div>
+            {% endif %}
           </div>
-          <div class="phone">
-            <div class="screen">
-              <div class="glass">
-                <div class="image">
-                  <div class="img-src" style="background-image:url('/img/portfolio/{{ page.name }}/{{ page.name }}-mobile.jpg')"></div>
-                </div>
-              </div>
-            </div>
-            <div class="shadow"></div>
-          </div>
-          {% endif %}
         </div>
       </div>
     </div>
   </section>
-  <div class="content">
-    <section class="cf">
-      <span class="section-title"><b>Project</b> information</span>
-      <div class="grid grid--gutters3x">
-        <div class="grid-cell">
-          {% if page.website %}
-          <p class="lead">The <a href="http://{{ page.website }}" class="external" role="link">{{ page.title }}</a> website was built in {{ page.date | date: "%Y" }} {% if page.client %} and produced by {{ page.client }}{% endif %}.</p>
-          {% endif %}
-        </div>
-        <div class="grid-cell">
-          <p>{{ page.excerpt }}</p>
-        </div>
-      </div>
-    </section>
-    {{ content }}
-  </div>
+  <section class="section__post">
+    <div class="content">
+      <header>
+        <p class="meta">{{ page.date | date: "%Y" }}{% if page.website %} | <a href="http://{{ page.website }}" class="external" role="link">{{ page.website }}</a>{% endif %}{% if page.client %} | {{ page.client }}{% endif %}</p>
+        <h1 class="title">{{ page.project }}</h1>
+        <p>{{ page.excerpt }}</p>
+      </header>
+      {{ content }}
+      <footer>
+        <p class="meta">{{ page.tags | array_to_sentence_string }}</p>
+      </footer>
+    </div>
+  </section>
 </article>

@@ -9,16 +9,7 @@
   }
 
   header {
-    padding-top: 2rem;
     text-align: center;
-
-    @include breakpoint("medium") {
-      padding-top: 4rem;
-    }
-
-    @include breakpoint("large") {
-      padding-top: 6rem;
-    }
   }
 }
 
@@ -154,6 +145,68 @@
 
   @include breakpoint("large") {
     padding-bottom: 6rem;
+  }
+}
+
+.section__browser {
+  z-index: 1;
+
+  @include breakpoint("medium") {
+
+    .content {
+      height: 550px;
+    }
+
+    + .section__post {
+      margin-top: -6.625rem;
+      position: relative;
+      z-index: 2;
+
+      header {
+        padding: 0 4rem;
+      }
+
+      .content {
+        background-color: $bg-color;
+      }
+    }
+  }
+
+  @include breakpoint("large") {
+
+    .content {
+      height: 650px;
+    }
+  }
+
+  .title {
+
+    @include breakpoint("medium") {
+      font-size: 4rem;
+      line-height: 1.2;
+      margin-left: -5rem;
+      width: 12em;
+    }
+
+    @include breakpoint("large") {
+      margin-left: -10rem;
+    }
+
+    span {
+      color: rgba(255,255,255, .5);
+      display: block;
+      font-size: 65%;
+    }
+  }
+
+  p {
+    @include breakpoint("medium") {
+      width: 24em;
+    }
+
+    @include breakpoint("large") {
+      width: 30%;
+    }
   }
 }
 

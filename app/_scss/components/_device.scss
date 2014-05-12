@@ -25,7 +25,7 @@ $grey-dark: #d8dbe1;
   }
 
   @include breakpoint("medium") {
-    bottom: 4em;
+    bottom: 10em;
     height: auto;
     left: 0;
     margin: 0;
@@ -55,7 +55,7 @@ $grey-dark: #d8dbe1;
   }
 
   @include breakpoint("large") {
-    bottom: 5em;
+    bottom: 12em;
     right: 8em;
 
     .ipad {
