@@ -1,7 +1,12 @@
 .site-footer {
 
   .complementary__blog .card {
+    margin-bottom: 1.5em;
     text-align: left;
+
+    @include breakpoint("large"){
+      margin-bottom: 0;
+    }
 
     a.title {
       background-color: $color-orange;
@@ -23,7 +28,7 @@
     background-color: $bg-color;
   }
 
-  .section__copyright {
+  .section__siteinfo {
     background-color: $color-gray-dark;
     color: #FFF;
     font-size: 13px;
