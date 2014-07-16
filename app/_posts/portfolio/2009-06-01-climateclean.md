@@ -1,5 +1,5 @@
 ---
-layout: portfolio_entry
+layout: 04-portfolio
 name: climateclean
 title: Climate Clean
 categories:

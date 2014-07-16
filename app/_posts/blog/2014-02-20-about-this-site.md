@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: 02-post
 title:  Building your own website
 tagline: Treat yourself like a client
 date:   2014-02-20 14:55:06

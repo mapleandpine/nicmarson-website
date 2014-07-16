@@ -1,41 +1,67 @@
-// Generated on 2014-02-06 using generator-jekyllrb 0.4.1
+// Generated on 2014-07-07 using generator-webapp 0.4.9
 'use strict';
 
-// Directory reference:
-//   css: css
-//   sass: _scss
-//   javascript: js
-//   images: img
-//   fonts: fonts
+// # Globbing
+// for performance reasons we're only matching one level down:
+// 'test/spec/{,*/}*.js'
+// use this if you want to recursively match all subfolders:
+// 'test/spec/**/*.js'
 
-module.exports = function (grunt) {
-  // Show elapsed time after tasks run
-  require('time-grunt')(grunt);
-  // Load all Grunt tasks
+module.exports = function(grunt) {
+
+  // Load grunt tasks automatically
   require('load-grunt-tasks')(grunt);
 
+  // Time how long tasks take. Can help when optimizing build times
+  require('time-grunt')(grunt);
+
+  // Configurable paths
+  var config = {
+    app: 'app',
+    dist: 'dist'
+  };
+
+  // Define the configuration for all the tasks
   grunt.initConfig({
-    // Configurable paths
-    yeoman: {
-      app: 'app',
-      dist: 'nicmarson.github.io'
-    },
+
+    // Project settings
+    config: config,
+
+    // Watches files for changes and runs tasks based on the changed files
     watch: {
-      sass: {
-        files: ['<%= yeoman.app %>/_scss/**/*.{scss,sass}'],
-        tasks: ['sass:server', 'autoprefixer:server']
+      bower: {
+        files: ['bower.json'],
+        tasks: ['bowerInstall']
       },
-      autoprefixer: {
-        files: ['<%= yeoman.app %>/css/**/*.css'],
-        tasks: ['copy:stageCss', 'autoprefixer:server']
+      js: {
+        files: ['<%= config.app %>/scripts/{,*/}*.js'],
+        tasks: ['jshint'],
+        options: {
+          livereload: true
+        }
+      },
+      jstest: {
+        files: ['test/spec/{,*/}*.js'],
+        tasks: ['test:watch']
+      },
+      gruntfile: {
+        files: ['Gruntfile.js']
       },
       jekyll: {
         files: [
-          '<%= yeoman.app %>/**/*.{html,yml,md,mkd,markdown}',
+          '<%= config.app %>/**/*.{html,yml,md,mkd,markdown}',
           '_config.yml',
-          '!<%= yeoman.app %>/_bower_components'
+          '!bower_components'
         ],
         tasks: ['jekyll:server']
+      },
+      sass: {
+        files: ['<%= config.app %>/styles/{,*/}*.{scss,sass}'],
+        tasks: ['sass:server', 'autoprefixer']
+      },
+      styles: {
+        files: ['<%= config.app %>/styles/{,*/}*.css'],
+        tasks: ['newer:copy:styles', 'autoprefixer']
       },
       livereload: {
         options: {
@@ -43,59 +69,65 @@ module.exports = function (grunt) {
         },
         files: [
           '.jekyll/**/*.html',
-          '.tmp/css/**/*.css',
-          '{.tmp,<%= yeoman.app %>}/<%= js %>/**/*.js',
-          '<%= yeoman.app %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}'
+          '.tmp/styles/{,*/}*.css',
+          '<%= config.app %>/images/{,*/}*'
         ]
       }
     },
+
+    // The actual grunt server settings
     connect: {
       options: {
         port: 9000,
+        open: true,
         livereload: 35729,
-        // change this to '0.0.0.0' to access the server from outside
+        // Change this to '0.0.0.0' to access the server from outside
         hostname: 'localhost'
       },
       livereload: {
         options: {
-          open: true,
-          base: [
-            '.tmp',
-            '.jekyll',
-            '<%= yeoman.app %>'
-          ]
-        }
-      },
-      dist: {
-        options: {
-          open: true,
-          base: [
-            '<%= yeoman.dist %>'
-          ]
+          middleware: function(connect) {
+            return [
+              connect.static('.tmp'),
+              connect.static('.jekyll'),
+              connect().use('/bower_components', connect.static('./bower_components')),
+              connect.static(config.app)
+            ];
+          }
         }
       },
       test: {
         options: {
-          base: [
-            '.tmp',
-            '.jekyll',
-            'test',
-            '<%= yeoman.app %>'
-          ]
+          open: false,
+          port: 9001,
+          middleware: function(connect) {
+            return [
+              connect.static('.tmp'),
+              connect.static('.jekyll'),
+              connect.static('test'),
+              connect().use('/bower_components', connect.static('./bower_components')),
+              connect.static(config.app)
+            ];
+          }
+        }
+      },
+      dist: {
+        options: {
+          base: '<%= config.dist %>',
+          livereload: false
         }
       }
     },
+
+    // Empties folders to start fresh
     clean: {
       dist: {
         files: [{
           dot: true,
           src: [
             '.tmp',
-            '<%= yeoman.dist %>/*',
-            // Running Jekyll also cleans the target directory.  Exclude any
-            // non-standard `keep_files` here (e.g., the generated files
-            // directory from Jekyll Picture Tag).
-            '!<%= yeoman.dist %>/.git*'
+            '<%= config.dist %>/*',
+            '!<%= config.dist %>/.git*'
           ]
         }]
       },
@@ -104,197 +136,27 @@ module.exports = function (grunt) {
         '.jekyll'
       ]
     },
-    sass: {
-      options: {
-        bundleExec: true,
-        debugInfo: false,
-        lineNumbers: false,
-        loadPath: 'app/_bower_components'
-      },
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.app %>/_scss',
-          src: '*.scss',
-          dest: '.tmp/css',
-          ext: '.css'
-        }]
-      },
-      server: {
-        options: {
-          debugInfo: true,
-          lineNumbers: true
-        },
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.app %>/_scss',
-          src: '*.scss',
-          dest: '.tmp/css',
-          ext: '.css'
-        }]
-      }
-    },
-    autoprefixer: {
-      options: {
-        browsers: ['last 2 versions']
-      },
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.dist %>/css',
-          src: '**/*.css',
-          dest: '<%= yeoman.dist %>/css'
-        }]
-      },
-      server: {
-        files: [{
-          expand: true,
-          cwd: '.tmp/css',
-          src: '**/*.css',
-          dest: '.tmp/css'
-        }]
-      }
-    },
+
     jekyll: {
-      options: {
+      options: {                          // Universal options
         bundleExec: true,
-        config: '_config.yml,_config.build.yml',
-        src: '<%= yeoman.app %>'
+        src : '<%= config.app %>'
       },
       dist: {
-        options: {
-          dest: '<%= yeoman.dist %>',
+        options: {                        // Target options
+          dest: '<%= dist %>',
+          config: '_config.yml,_config.build.yml'
         }
       },
-      server: {
+      server: {                            // Another target
         options: {
           config: '_config.yml',
           dest: '.jekyll'
         }
-      },
-      check: {
-        options: {
-          doctor: true
-        }
       }
     },
-    // UseminPrepare will only scan a single page for usemin blocks. If you
-    // use usemin blocks that aren't in index.html, create a usemin manifest
-    // page (hackery!) and point this task there.
-    useminPrepare: {
-      options: {
-        dest: '<%= yeoman.dist %>'
-      },
-      html: '<%= yeoman.dist %>/index.html'
-    },
-    usemin: {
-      options: {
-        basedir: '<%= yeoman.dist %>',
-        dirs: ['<%= yeoman.dist %>/**/*']
-      },
-      html: ['<%= yeoman.dist %>/**/*.html'],
-      css: ['<%= yeoman.dist %>/css/**/*.css']
-    },
-    htmlmin: {
-      dist: {
-        options: {
-          collapseWhitespace: true,
-          collapseBooleanAttributes: true,
-          removeAttributeQuotes: true,
-          removeRedundantAttributes: true
-        },
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.dist %>',
-          src: '**/*.html',
-          dest: '<%= yeoman.dist %>'
-        }]
-      }
-    },
-    // Usemin adds files to concat
-    concat: {},
-    // Usemin adds files to uglify
-    uglify: {},
-    // Usemin adds files to cssmin
-    cssmin: {
-      dist: {
-        options: {
-          check: 'gzip'
-        }
-      }
-    },
-    imagemin: {
-      dist: {
-        options: {
-          cache: false,
-          progressive: false
-        },
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.dist %>',
-          src: '**/*.{jpg,jpeg,png}',
-          dest: '<%= yeoman.dist %>'
-        }]
-      }
-    },
-    svgmin: {
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.dist %>',
-          src: '**/*.svg',
-          dest: '<%= yeoman.dist %>'
-        }]
-      }
-    },
-    copy: {
-      dist: {
-        files: [{
-          expand: true,
-          dot: true,
-          cwd: '<%= yeoman.app %>',
-          src: [
-            // Jekyll processes and moves HTML and text files
-            // Usemin moves CSS and javascript inside of Usemin blocks
-            // Copy moves asset files and directories
-            'img/**/*',
-            'fonts/**/*',
-            // Like Jekyll, exclude files & folders prefixed with an underscore
-            '!**/_*{,/**}'
-            // Explicitly add any files your site needs for distribution here
-            //'_bower_components/jquery/jquery.js',
-            //'favicon.ico',
-            //'apple-touch*.png'
-          ],
-          dest: '<%= yeoman.dist %>'
-        }]
-      },
-      // Copy CSS into .tmp directory for Autoprefixer processing
-      stageCss: {
-        files: [{
-          expand: true,
-          dot: true,
-          cwd: '<%= yeoman.app %>/css',
-          src: '**/*.css',
-          dest: '.tmp/css'
-        }]
-      }
-    },
-    rev: {
-      options: {
-        length: 4
-      },
-      dist: {
-        files: {
-          src: [
-            '<%= yeoman.dist %>/js/**/*.js',
-            '<%= yeoman.dist %>/css/**/*.css',
-            '<%= yeoman.dist %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}',
-            '<%= yeoman.dist %>/fonts/**/*.{eot*,otf,svg,ttf,woff}'
-          ]
-        }
-      }
-    },
+
+    // Make sure code styles are up to par and there are no obvious mistakes
     jshint: {
       options: {
         jshintrc: '.jshintrc',
@@ -302,51 +164,241 @@ module.exports = function (grunt) {
       },
       all: [
         'Gruntfile.js',
-        '<%= yeoman.app %>/js/**/*.js',
-        'test/spec/**/*.js',
-        '!<%= yeoman.app %>/js/vendor/**/*'
+        '<%= config.app %>/scripts/{,*/}*.js',
+        '!<%= config.app %>/scripts/vendor/*',
+        'test/spec/{,*/}*.js'
       ]
     },
-    csscss: {
-      options: {
-        bundleExec: true,
-        minMatch: 2,
-        ignoreSassMixins: false,
-        colorize: true,
-        shorthand: false,
-        verbose: true
-      },
-      check: {
-       src: ['<%= yeoman.app %>/css/**/*.css',
-             '<%= yeoman.app %>/_scss/**/*.scss']
+
+    // Mocha testing framework configuration options
+    mocha: {
+      all: {
+        options: {
+          run: true,
+          urls: ['http://<%= connect.test.options.hostname %>:<%= connect.test.options.port %>/index.html']
+        }
       }
     },
-    csslint: {
+
+    // Compiles Sass to CSS and generates necessary files if requested
+    sass: {
       options: {
-        csslintrc: '.csslintrc'
+        sourcemap: true
       },
-      check: {
-        src: [
-          '<%= yeoman.app %>}/css/**/*.css',
-          '<%= yeoman.app %>}/_scss/**/*.scss'
-        ]
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '<%= config.app %>/styles',
+          src: ['*.scss'],
+          dest: '.tmp/styles',
+          ext: '.css'
+        }]
+      },
+      server: {
+        files: [{
+          expand: true,
+          cwd: '<%= config.app %>/styles',
+          src: ['*.scss'],
+          dest: '.tmp/styles',
+          ext: '.css'
+        }]
       }
     },
+
+    // Add vendor prefixed styles
+    autoprefixer: {
+      options: {
+        browsers: ['last 1 version']
+      },
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '.tmp/styles/',
+          src: '{,*/}*.css',
+          dest: '.tmp/styles/'
+        }]
+      }
+    },
+
+    // Automatically inject Bower components into the HTML file
+    bowerInstall: {
+      app: {
+        src: ['<%= config.app %>/index.html'],
+        exclude: ['bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap.js']
+      },
+      sass: {
+        src: ['<%= config.app %>/styles/{,*/}*.{scss,sass}']
+      }
+    },
+
+    // Renames files for browser caching purposes
+    rev: {
+      dist: {
+        files: {
+          src: [
+            '<%= config.dist %>/scripts/{,*/}*.js',
+            '<%= config.dist %>/styles/{,*/}*.css',
+            '<%= config.dist %>/images/{,*/}*.*',
+            '<%= config.dist %>/styles/fonts/{,*/}*.*',
+            '<%= config.dist %>/*.{ico,png}'
+          ]
+        }
+      }
+    },
+
+    // Reads HTML for usemin blocks to enable smart builds that automatically
+    // concat, minify and revision files. Creates configurations in memory so
+    // additional tasks can operate on them
+    useminPrepare: {
+      options: {
+        dest: '<%= config.dist %>'
+      },
+      html: '<%= config.app %>/usemin.html'
+    },
+
+    // Performs rewrites based on rev and the useminPrepare configuration
+    usemin: {
+      options: {
+        assetsDirs: ['<%= config.dist %>', '<%= config.dist %>/images']
+      },
+      html: ['<%= config.dist %>/{,*/}*.html'],
+      css: ['<%= config.dist %>/styles/{,*/}*.css']
+    },
+
+    // The following *-min tasks produce minified files in the dist folder
+    imagemin: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '<%= config.app %>/images',
+          src: '{,*/}*.{gif}',
+          dest: '<%= config.dist %>/images'
+        }]
+      }
+    },
+
+    // Launches external apps, best to run manually
+    imageoptim: {
+      myPngs: {
+        options: {
+          jpegMini: false,
+          imageAlpha: true,
+          quitAfter: true
+        },
+        src: ['<%= config.dist %>/images', '<%= config.app %>/images']
+      },
+      myJpgs: {
+        options: {
+          jpegMini: false, // $19.99 to buy
+          imageAlpha: false,
+          quitAfter: true
+        },
+        src: ['<%= config.dist %>/images', '<%= config.app %>/images']
+      }
+    },
+
+    svgmin: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '<%= config.app %>/images',
+          src: '{,*/}*.svg',
+          dest: '<%= config.dist %>/images'
+        }]
+      }
+    },
+
+    htmlmin: {
+      dist: {
+        options: {
+          collapseBooleanAttributes: true,
+          collapseWhitespace: true,
+          removeAttributeQuotes: true,
+          removeCommentsFromCDATA: true,
+          removeEmptyAttributes: true,
+          removeOptionalTags: true,
+          removeRedundantAttributes: true,
+          useShortDoctype: true
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= config.dist %>',
+          src: '{,*/}*.html',
+          dest: '<%= config.dist %>'
+        }]
+      }
+    },
+
+    // Copies remaining files to places other tasks can use
+    copy: {
+      dist: {
+        files: [{
+          expand: true,
+          dot: true,
+          cwd: '<%= config.app %>',
+          dest: '<%= config.dist %>',
+          src: [
+            '.htaccess',
+            'images/{,*/}*.*', // everything in images
+            'styles/fonts/{,*/}*.*',
+            '!**/_*{,/**}'
+          ]
+        }, {
+          expand: true,
+          dot: true,
+          cwd: '.',
+          src: ['bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/*.*'],
+          dest: '<%= config.dist %>'
+        }]
+      },
+      styles: {
+        expand: true,
+        dot: true,
+        cwd: '<%= config.app %>/styles',
+        dest: '.tmp/styles/',
+        src: '{,*/}*.css'
+      }
+    },
+
+    // Generates a custom Modernizr build that includes only the tests you
+    // reference in your app
+    modernizr: {
+      dist: {
+        devFile: 'bower_components/modernizr/modernizr.js',
+        outputFile: '<%= config.dist %>/scripts/vendor/modernizr.js',
+        files: {
+          src: [
+            '<%= config.dist %>/scripts/{,*/}*.js',
+            '<%= config.dist %>/styles/{,*/}*.css',
+            '!<%= config.dist %>/scripts/vendor/*'
+          ]
+        },
+        uglify: true
+      }
+    },
+
+    // Run some tasks in parallel to speed up build process
     concurrent: {
       server: [
         'sass:server',
-        'copy:stageCss',
+        'copy:styles',
         'jekyll:server'
       ],
+      test: [
+        'copy:styles'
+      ],
       dist: [
-        'sass:dist',
-        'copy:dist'
+        'sass',
+        'copy:styles',
+        'imagemin',
+        'svgmin'
       ]
     }
   });
 
-  // Define Tasks
-  grunt.registerTask('serve', function (target) {
+  grunt.loadNpmTasks('grunt-jekyll');
+
+  grunt.registerTask('serve', function(target) {
     if (target === 'dist') {
       return grunt.task.run(['build', 'connect:dist:keepalive']);
     }
@@ -354,51 +406,49 @@ module.exports = function (grunt) {
     grunt.task.run([
       'clean:server',
       'concurrent:server',
-      'autoprefixer:server',
+      'autoprefixer',
       'connect:livereload',
       'watch'
     ]);
   });
 
-  grunt.registerTask('server', function () {
+  grunt.registerTask('server', function(target) {
     grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
-    grunt.task.run(['serve']);
+    grunt.task.run([target ? ('serve:' + target) : 'serve']);
   });
 
-  // No real tests yet. Add your own.
-  grunt.registerTask('test', [
-  //   'clean:server',
-  //   'concurrent:test',
-  //   'connect:test'
-  ]);
+  grunt.registerTask('test', function(target) {
+    if (target !== 'watch') {
+      grunt.task.run([
+        'clean:server',
+        'concurrent:test',
+        'autoprefixer'
+      ]);
+    }
 
-  grunt.registerTask('check', [
-    'clean:server',
-    'jekyll:check',
-    'sass:server',
-    'jshint:all',
-    'csscss:check',
-    'csslint:check'
-  ]);
+    grunt.task.run([
+      'connect:test'
+    ]);
+  });
 
   grunt.registerTask('build', [
     'clean:dist',
-    // Jekyll cleans files from the target directory, so must run first
     'jekyll:dist',
-    'concurrent:dist',
     'useminPrepare',
+    'concurrent:dist',
+    'autoprefixer',
     'concat',
-    'autoprefixer:dist',
     'cssmin',
     'uglify',
-    'imagemin',
-    'svgmin',
-    'usemin'
-    // 'htmlmin'
-    ]);
+    'copy:dist',
+    'modernizr',
+    // 'rev',
+    'usemin',
+    'htmlmin'
+  ]);
 
   grunt.registerTask('default', [
-    'check',
+    'newer:jshint',
     'test',
     'build'
   ]);

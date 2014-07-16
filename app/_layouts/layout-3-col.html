@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
   <head>
-    {% include head.html %}
+    {% include 00-atoms/00-meta/00-head.html %}
   </head>
   <body class="{{ page.slug }} site-nav-closed page-nav-closed">
-    {% include header.html %}
+    {% include 02-organisms/00-global/00-header.html %}
     <div class="page-flex page-3-col">
       <main class="page-second flex-item main">
         {{ content }}
@@ -14,9 +14,9 @@
           <ul class="nav">{% if page.slug == "portfolio" %}{% include nav-portfolio.html %}{% endif %}</ul>
         </nav>
       </div>
-      {% include navigation.html %}
+      {% include 01-molecules/01-navigation/00-primary-nav.html %}
     </div>
   </body>
-  {% include tail.html %}
+  {% include 00-atoms/00-meta/01-foot.html %}
   </body>
 </html>

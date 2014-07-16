@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: 02-post
 title:  Boost your efficiency with a styleguide
 date:   2014-04-04 10:44:06
 categories:

@@ -1,0 +1,37 @@
+.site-footer {
+
+  .complementary__blog .card {
+    margin-bottom: 1.5em;
+    text-align: left;
+
+    @include mq($from: huge){
+      margin-bottom: 0;
+    }
+
+    a.title {
+      background-color: $color-orange;
+    }
+  }
+
+  .complementary__resources .card {
+
+    a.title {
+      background-color: $color-teal;
+    }
+  }
+
+  .section__blog {
+    background-color: $color-grayblue;
+  }
+
+  .section__links {
+    background-color: $bg-color;
+  }
+
+  .section__siteinfo {
+    background-color: $color-gray-dark;
+    color: #FFF;
+    font-size: 13px;
+    text-align: left;
+  }
+}

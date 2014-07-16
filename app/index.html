@@ -1,26 +1,11 @@
 ---
-layout: home
+layout: 01-home
 title: Home
 slug: home
 ---
 
-<section class="section__intro inverse">
-  <div class="content">
-    <div class="img-circle">
-      <img src="../img/vector-me.png" alt="Nicholas Marson" class="img-responsive">
-    </div>
-    <h1><span>Hi, my name is Nic Marson.</span> <span>I'm a Front-end Developer &amp;</span> <span>UI Designer in Portland, OR.</span></h1>
-    <p><a href="portfolio.html" role="button" class="btn__link">View my work</a> <a href="#section__links" role="button" class="btn__danger">Get in touch</a></p>
-  </div>
-  <aside class="popover__about" role="complementary">
-    <a href="about.html" class="icon-person">
-      <svg class="shape-person" viewBox="0 0 100 100">
-        <use xlink:href="#shape-person"/>
-      </svg>
-    </a>
-    <h2><a href="about.html">About me</a></h2>
-    <p>My background, employment history, and hobbies.</p>
-  </aside>
+<section class="section__intro">
+  <h1><span>Hi, my name is Nic Marson.</span> <span>I'm a Front-end Developer &amp;</span> <span>UI Designer in Portland, OR.</span></h1>
 </section>
 
 <section class="section__portfolio">
@@ -29,16 +14,7 @@ slug: home
   </header>
   <div class="component content__portfolio" data-eq-pts="small: 0, medium: 694, large: 1124">
     {% for post in site.categories['portfolio'] limit:4 %}
-      {% include section-portfolio.html %}
+      {% include 02-organisms/01-sections/01-section-portfolio.html %}
     {% endfor %}
   </div>
-  <aside class="popover__portfolio" role="complementary">
-    <a href="portfolio.html" class="icon-browser">
-      <svg class="shape-browser" viewBox="0 0 100 100">
-        <use xlink:href="#shape-browser"/>
-      </svg>
-    </a>
-    <h2><a href="portfolio.html">My portfolio</a></h2>
-    <p>A select group of websites I've designed and developed.</p>
-  </aside>
 </section>

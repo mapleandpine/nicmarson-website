@@ -1,6 +1,5 @@
 source "http://rubygems.org"
 
-gem 'jekyll', '~>1.2.1'
-gem 'redcarpet'
-gem 'csscss', '~>1.3'
+gem 'jekyll', '~>1.4.0'
+gem 'maruku'
 gem 'sass', '>=3.2'

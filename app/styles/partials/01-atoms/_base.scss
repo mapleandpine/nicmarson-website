@@ -1,0 +1,61 @@
+/*------------------------------------*\
+    #BASE
+\*------------------------------------*/
+/**
+ * 1. Set the base element’s `font-size` to the value of your choosing. Set in
+ *    ems, assuming a browser default of 16px.
+ * 2. Work out the unitless `line-height` for your project based around your
+ *    desired `line-height` (defined previously in pixels), and your project’s
+ *    base font size.
+ */
+
+@if $typecsset-show-baseline == true {
+/**
+ * 3. If you have chosen to display a baseline grid, we turn it on here.
+ */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: $bg-color;
+  color: $color-text;
+  font-family: $base-font-family;
+  font-size: $typecsset-base-font-size / 16px + em; /* [1] */
+  line-height: $typecsset-base-line-height / $typecsset-base-font-size; /* [2] */
+  margin: 0;
+  min-width: 320px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+
+  @include mq($from: desktop) {
+    font-size: 13px;
+  }
+
+  @include mq($from: huge) {
+    font-size: 1em;
+    letter-spacing: -.01em;
+  }
+}
+
+body {
+  // Ala Trent Walton
+  // http://trentwalton.com/2011/09/07/css-hyphenation
+  @include hyphens(auto);
+  min-height: 100vh;
+}
+
+
+// Horizontal rules
+
+hr {
+  margin-top:    $line-height-computed;
+  margin-bottom: $line-height-computed;
+  border: 0;
+  border-top: 1px solid $hr-border;
+}

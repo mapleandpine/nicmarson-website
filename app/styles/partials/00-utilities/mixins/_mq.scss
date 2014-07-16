@@ -1,0 +1,99 @@
+@mixin mq($from: false, $to: false, $and: false) {
+
+	// Initialize variables
+	$min-width: 0;
+	$max-width: 0;
+	$mediaQuery: '';
+
+	// From: this breakpoint (inclusive)
+	@if $from {
+		@if type-of($from) == number {
+			$min-width: mq-px2em($from);
+		} @else {
+			$min-width: mq-px2em(mq-retrieve-breakpoint-width($from));
+		}
+	}
+
+	// To: that breakpoint (exclusive)
+	@if $to {
+		@if type-of($to) == number {
+			$max-width: mq-px2em($to);
+		} @else {
+			$max-width: mq-px2em(mq-retrieve-breakpoint-width($to) - 1px);
+		}
+	}
+
+	// Responsive support is disabled, rasterize the output outside @media blocks
+	// The browser will rely on the cascade itself.
+	@if ($mq-responsive == false) {
+		$static-breakpoint-width: mq-retrieve-breakpoint-width($mq-static-breakpoint);
+		@if type-of($static-breakpoint-width) == number {
+			$target-width: mq-px2em($static-breakpoint-width);
+			// Output only rules that start at or span our target width
+			@if ($and == false and ($min-width <= $target-width) and (($to == false) or ($max-width >= $target-width))) {
+				@content;
+			}
+		} @else {
+			// Throw a warning if $mq-static-breakpoint is not in the $mq-breakpoints list
+			@warn "No static styles will be output: #{$static-breakpoint-width}";
+		}
+	}
+
+	// Responsive support is enabled, output rules inside @media queries
+	@else {
+		@if $min-width != 0 { $mediaQuery: '#{$mediaQuery} and (min-width: #{$min-width})'; }
+		@if $max-width != 0 { $mediaQuery: '#{$mediaQuery} and (max-width: #{$max-width})'; }
+		@if $and            { $mediaQuery: '#{$mediaQuery} and #{$and}'; }
+
+		$mediaQuery: unquote(#{$mediaQuery});
+
+		@media all #{$mediaQuery} {
+			@content;
+		}
+	}
+}
+
+
+// Mozilla specific CSS targeting
+@mixin mozilla() {
+  @-moz-document url-prefix() {
+    @content;
+  }
+}
+
+// Media query mixins various screen sizes and combinations
+@mixin desktop-up() {
+  @media #{$large-up} {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @media #{$large-only} {
+    @content;
+  }
+}
+
+@mixin tablet-desktop() {
+  @media #{$medium-up} {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media #{$medium-only} {
+    @content;
+  }
+}
+
+@mixin tablet-mobile() {
+  @media #{$small-and-medium} {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @media #{$small-only} {
+    @content;
+  }
+}

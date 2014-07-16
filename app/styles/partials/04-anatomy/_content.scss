@@ -1,0 +1,131 @@
+.content {
+  padding: 2rem 0;
+
+  @include mq($from: desktop) {
+    margin: auto;
+    max-width: $content-width-medium;
+    padding: 3.5rem 0 4rem;
+  }
+
+  @include mq($from: huge) {
+    max-width: $content-width-large;
+    padding: 5rem 0 6rem;
+  }
+}
+
+.content__portfolio {
+  padding: 2rem;
+
+  @include mq($from: desktop) {
+    padding: 0 3rem 3rem;
+  }
+
+  @include mq($from: huge) {
+    padding: 0 4rem 4rem;
+  }
+}
+
+.article__portfolio {
+  header {
+    text-align: center;
+  }
+}
+
+.employment-history {
+  margin-bottom: 2rem;
+
+  @include mq($from: desktop) {
+    margin-bottom: 3rem;
+  }
+
+  tfoot a {
+    margin-right: 1em;
+
+    &:hover .icon {
+      color: $color-blue;
+    }
+  }
+
+  .year {
+    width: 5em;
+  }
+}
+
+.extracurricular-history {
+  font-size: 14px;
+  font-weight: 700;
+
+  @include mq($from: desktop) {
+    flex: none;
+    padding-left: 20px;
+    width: 33.3333%;
+  }
+
+  ul {
+    margin-left: 0;
+  }
+}
+
+.tinyhouse {
+  border-bottom: 1px solid $color-gray-light;
+  padding: 105px 30px 20px 10px;
+  position: relative;
+
+  span {
+    display: block;
+    font-size: 20px;
+    font-weight: 200;
+    text-transform: uppercase;
+  }
+
+  .year {
+    color: $color-blue;
+    font-size: 30px;
+    font-weight: 900;
+    left: 10px;
+    line-height: 1.2;
+    position: absolute;
+    top: 30px;
+    width: 80px;
+  }
+
+  .typcn-home {
+    font-size: 120px;
+    line-height: 1;
+    position: absolute;
+    left: 140px;
+    top: 0;
+
+    @include mq($from: desktop) {
+      display: none;
+    }
+
+    @include mq($from: huge) {
+      display: inline-block;
+    }
+  }
+
+  .typcn-home-outline {
+    color: $color-blue;
+    position: absolute;
+    left: 193px;
+    top: 96px;
+
+    @include mq($from: desktop) {
+      display: none;
+    }
+
+    @include mq($from: huge) {
+      display: inline-block;
+    }
+  }
+}
+
+.bridgecity {
+  background-image: url("../img/bridge.svg");
+  background-position: center -20px;
+  background-repeat: no-repeat;
+  background-size: 160px auto;
+  padding: 110px 10px 20px;
+  text-align: center;
+}

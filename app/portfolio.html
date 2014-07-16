@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: 00-default
 title: Portfolio
 slug: portfolio
 ---
@@ -10,7 +10,7 @@ slug: portfolio
   </header>
   <div class="component content__portfolio" data-eq-pts="small: 0, medium: 694, large: 1124">
     {% for post in site.categories['portfolio'] %}
-      {% include section-portfolio.html %}
+      {% include 02-organisms/01-sections/01-section-portfolio.html %}
     {% endfor %}
   </div>
 </article>

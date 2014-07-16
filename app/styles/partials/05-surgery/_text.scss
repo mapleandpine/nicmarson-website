@@ -1,0 +1,128 @@
+// Word wrap
+//
+// The word-wrap <abbr title="cascading style sheets">CSS</abbr> property is used to specify whether or not the browser may break lines within words in order to prevent overflow when an otherwise unbreakable string is too long to fit in its containing box.
+//
+// .breakword     - Break words at container width
+//
+// Markup: <div style="width:15em"><p class="{$modifiers}">ThisIsOneReallyLongWordThatWouldn'tNormallyBreak. This line will-break-at-hyphenates.</p></div>
+//
+// Styleguide 1.11.6
+
+.breakword {
+  word-wrap: break-word;
+}
+
+.normal-wrap {
+  word-wrap: normal;
+}
+
+.inherit-wrap {
+  word-wrap: auto;
+}
+
+
+// Alignment
+//
+// Easily realign text to components with text alignment classes.
+//
+// .text-left   - Left aligned text
+// .text-center - Center aligned text.
+// .text-right  - Right aligned text
+// .text-justify  - Justify text
+//
+// Markup: <p class="{$modifiers}">When zombies arrive, quickly fax judge Pat.</p>
+//
+// Styleguide 1.4.4
+
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+.text-justify        { text-align: justify; }
+
+.divider {
+  display: none;
+
+  @include mq($from: desktop) {
+    display: inline;
+    font-size: .85em;
+    margin: 0 1em;
+  }
+}
+
+.roomy {
+  margin-bottom: 3em;
+  margin-top: 3em;
+}
+
+.u-smaller {
+  @extend %small-text;
+}
+
+.u-bigger {
+  @extend %large-text;
+}
+
+
+
+
+.name {
+  @extend %fat-skinny;
+  font-family: $font-family-sans-serif;
+  text-transform: uppercase;
+}
+
+.futurefriendly,
+.futurefriendly:after {
+  // 1200px x 800px svg image
+  background: url(../img/futurefriendly.svg);
+  background-size: 300px 200px;
+  display: block;
+  height: 200px;
+  width: 150px;
+}
+
+.futurefriendly {
+  background-position: 142px 0;
+  float: right;
+  position: relative;
+
+  &:hover {
+    &:after {
+      opacity: 0;
+    }
+  }
+
+  &:after {
+    background-color: $color-gray-dark;
+    background-position: 0 0;
+    content: "";
+    position: absolute;
+    transition: opacity .5s;
+  }
+}
+
+.stubby {
+  clear: both;
+  display: block;
+  border: none;
+  border-bottom: 2px solid lighten($color-gray-dark, 5);
+  margin: 1.25em auto;
+  width: 4.5em;
+  height: 0;
+}
+
+/**
+ * Objects and abstractions
+ */
+%sass-margin-bottom,
+.media,
+.island,
+.islet{
+    margin-bottom:$base-spacing-unit;
+    margin-bottom:($base-spacing-unit / $typecsset-base-font-size)*1rem;
+
+    .islet &{
+        margin-bottom:$base-spacing-unit / 2;
+        margin-bottom:(($base-spacing-unit / $typecsset-base-font-size) / 2)*1rem;
+    }
+}

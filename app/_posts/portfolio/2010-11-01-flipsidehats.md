@@ -1,5 +1,5 @@
 ---
-layout: portfolio_entry
+layout: 04-portfolio
 name: flipsidehats
 title: Flipside Hats v3
 categories:

@@ -1,0 +1,27 @@
+@include exports('global typography') {
+  %global-type {
+    font-smoothing: antialiased;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    line-height: 1;
+    speak: none;
+    text-transform: none;
+  }
+}
+
+%small-text {
+  font-size: $font-size-small;
+}
+
+%large-text {
+  font-size: $font-size-large;
+}
+
+%fat-skinny {
+  font-weight: 200;
+
+  b {
+    font-weight: 800;
+  }
+}

@@ -1,0 +1,46 @@
+.page-nav {
+
+  @include mq($from: desktop) {
+    height: 100%;
+    right: 0;
+    top: 0;
+    z-index: 99;
+  }
+
+  .nav {
+
+    a {
+      border-bottom: 1px solid rgba(1,1,1, .1);
+      color: #222;
+      padding: 4px 10px 5px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      @include mq($from: desktop) {
+        padding: 7px 15px 8px;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: $color-grayblue;
+        color: $bg-color;
+      }
+    }
+  }
+
+  &.in {
+
+    .page-nav {
+      position: relative;
+    }
+  }
+}
+
+.page-nav-closed .page-nav {
+  display: none;
+
+  @include mq($from: desktop) {
+    display: block;
+  }
+}

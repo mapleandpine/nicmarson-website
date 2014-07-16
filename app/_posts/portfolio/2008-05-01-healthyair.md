@@ -1,5 +1,5 @@
 ---
-layout: portfolio_entry
+layout: 04-portfolio
 name: healthyair
 title: Carrier Healthy Air
 categories:

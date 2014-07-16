@@ -1,0 +1,20 @@
+@mixin unset-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@mixin destroy-list {
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li,
+  dd,
+  dt {
+    @include inline-block(middle);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+}

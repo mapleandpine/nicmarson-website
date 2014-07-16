@@ -1,0 +1,188 @@
+[class^="btn__"]:not(.disabled),
+a[role="button"] {
+  border: 0 none;
+  border-radius: 0.125em;
+  box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.15);
+  box-sizing: content-box;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 300;
+  letter-spacing: .0125em;
+  line-height: normal;
+  overflow: hidden;
+  padding: 0.6em 1em;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  user-select: none;
+  white-space: nowrap;
+
+  @include mq($from: tablet) {
+    max-width: 99%;
+  }
+
+
+  // Button states
+
+  &:focus {
+    outline: thin dotted #666;
+    text-decoration:none;
+  }
+
+  &:hover, &:active, &:focus {
+    text-decoration:none; // override any link default styles
+  }
+
+  &:active {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
+    transform: translate(1px, 4px);
+  }
+
+
+  // Button themes
+
+  &.btn__default {
+    background-color: $color-gray;
+    color: inherit;
+
+    &:hover, &:active, &:focus {
+      background: lighten($color-gray, 10);
+    }
+  }
+
+  &.btn__primary {
+    background-color: $color-blue;
+    color: #fff;
+
+    &:hover, &:active, &:focus {
+      background-color: darken($color-blue, 10);
+    }
+  }
+
+  &.btn__inverse {
+    background-color: rgba(255,255,255, .2);
+    border: 2px solid;
+    color: #fff;
+
+    &:hover, &:active, &:focus {
+      background-color: transparent;
+    }
+  }
+
+  &.btn__danger {
+    background-color: darken($color-red, 15);
+    color: #fff;
+    font-weight: 700;
+
+    &:hover, &:active, &:focus {
+      background-color: darken($color-red, 20);
+    }
+  }
+
+  &.btn__link {
+    background-color: transparent;
+    border-bottom: 1px dashed;
+    border-radius: 0;
+    box-shadow: none;
+    color: #fff;
+    padding-left: .25em;
+    padding-right: .25em;
+
+    &:hover, &:active, &:focus {
+      background-color: transparent;
+      border-bottom-style: solid;
+    }
+  }
+
+
+  // Button sizing
+
+  &.btn__wide {
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+  }
+
+  &.btn__block {
+    display: block;
+    padding: 1em 1.5em;
+    text-align: center;
+  }
+}
+
+.nav-toggle {
+  @extend %transition-component;
+  border: 2px solid;
+  color: #FFF;
+  cursor: pointer;
+  display: block;
+  height: 38px;
+  outline: none;
+  padding: 0;
+  position: absolute;
+  transition-property: background-color, opacity;
+  width: 40px;
+
+  @include mq($from: desktop) {
+    opacity: .75;
+  }
+
+  span {
+    background-color: rgba(255,255,255,.8);
+    display: block;
+    font-size: 0;
+    height: 4px;
+    left: 8px;
+    margin-top: -2px;
+    position: absolute;
+    top: 50%;
+    user-select: none;
+    width: 20px;
+
+    &:before,
+    &:after {
+      background-color: rgba(255,255,255,.8);
+      content: '';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      transition: transform .2s;
+      width: 100%;
+    }
+
+    &:before {
+      transform: translateY(-200%);
+    }
+
+    &:after {
+      transform: translateY(200%);
+    }
+  }
+
+  &:hover,
+  &.active {
+    opacity: 1;
+
+    span:before {
+      transform: translateY(-220%);
+    }
+
+    span:after {
+      transform: translateY(220%);
+    }
+  }
+}
+
+.site-nav-open .nav-toggle {
+
+  span {
+
+    &:before {
+      -webkit-transform: translateY(0) rotate(45deg);
+      transform: translateY(0) rotate(45deg);
+    }
+
+    &:after {
+      -webkit-transform: translateY(0) rotate(-45deg);
+      transform: translateY(0) rotate(-45deg);
+    }
+  }
+}

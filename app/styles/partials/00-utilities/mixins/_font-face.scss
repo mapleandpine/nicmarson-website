@@ -1,0 +1,18 @@
+/*
+ * @font-face mixin
+ * @include font-face('family', '../fonts/', 'myfontname');
+ */
+
+@mixin font-face($font-family, $font-url, $font-name) {
+  @font-face {
+    font: {
+      family: $font-family;
+      style: normal;
+      weight: normal;
+    }
+    src: url($font-url + '/' + $font-name + '.eot') format('eot'),
+       url($font-url + '/' + $font-name + '.woff') format('woff'),
+       url($font-url + '/' + $font-name + '.ttf')  format('truetype'),
+       url($font-url + '/' + $font-name + '.svg#' + $font-name) format('svg');
+  }
+}

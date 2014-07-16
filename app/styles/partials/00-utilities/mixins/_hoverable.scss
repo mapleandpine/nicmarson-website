@@ -1,0 +1,8 @@
+// Hoverable
+// Hoverable class mixin. Only allow hover when the .hoverable class is on body.
+
+@mixin hover() {
+  .hoverable &:hover {
+    @content;
+  }
+}

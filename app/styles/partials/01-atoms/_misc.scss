@@ -1,0 +1,66 @@
+/*------------------------------------*\
+    #MISC
+\*------------------------------------*/
+
+abbr,
+acronym,
+blockquote,
+code,
+dir,
+kbd,
+listing,
+plaintext,
+q,
+samp,
+tt,
+var,
+xmp {
+  // http://meyerweb.com/eric/thoughts/2012/12/17/where-to-avoid-css-hyphenation
+  @include hyphens(none);
+}
+
+abbr {
+  @include smallcaps();
+  &:hover {
+    cursor: help;
+  }
+}
+
+
+// Emphasis & misc
+// -------------------------
+.fontface strong {
+  font-weight: 700;
+}
+
+// Undo browser default styling
+cite    { font-style: normal; }
+
+mark {
+  background-color: $state-warning-bg;
+  padding: .2em;
+}
+
+.muted {
+  color: $color-muted;
+}
+
+// Abbreviations and acronyms
+abbr[title],
+// Add data-* attribute to help out our tooltip plugin, per https://github.com/twbs/bootstrap/issues/5257
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted $abbr-border-color;
+}
+.initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+
+// Addresses
+address {
+  @extend %typecsset-vertical-rhythm;
+  font-style: normal;
+  line-height: $line-height-base;
+  margin-bottom: $line-height-computed;
+}

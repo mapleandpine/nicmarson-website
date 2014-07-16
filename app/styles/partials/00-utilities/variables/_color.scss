@@ -1,0 +1,149 @@
+//== Colors
+//
+//
+
+$color-black: #000;
+$color-white: #fff;
+
+$gray-darker:            lighten(#000, 13.5%) !default; // #222
+$gray-dark:              lighten(#000, 20%) !default;   // #333
+$gray:                   lighten(#000, 33.5%) !default; // #555
+$gray-light:             lighten(#000, 60%) !default;   // #999
+$gray-lighter:           lighten(#000, 93.5%) !default; // #eee
+
+$xtra-ltgray: #f6f6f6;
+$ltgray: #cecece;
+$ltgrayhover: #bebebe;
+$medgray: #838383;
+$txtgray: #747474;
+$txthovergray: #3b3938;
+$dkgray: #575453;
+$dkgrayhover: #413f3e;
+
+$red: #e63127;
+$green: #7cbe31;
+$ltgreen: #c6e4a3;
+
+$black: #000000;
+$white: #ffffff;
+
+$brand-primary:         #428bca !default;
+$brand-success:         #5cb85c !default;
+$brand-info:            #5bc0de !default;
+$brand-warning:         #f0ad4e !default;
+$brand-danger:          #d9534f !default;
+
+// Neutrals
+$color-gray-dark: #292929;
+$color-gray: lighten($color-gray-dark, 25);
+$color-gray-light: lighten($color-gray-dark, 50);
+$color-gray-bg: lighten($color-gray-dark, 80);
+$color-brown: #78655B;
+$color-cream: #F2E6B6;
+$color-sand: #E6E2AF;
+$color-sand-wet: #A7A37E;
+$color-paper: #F7F7EB;
+$color-paper-wet: #E1E0C9;
+
+
+// Blues
+$color-blue: #3497DB;
+$color-grayblue: #5B7876;
+$color-grayblue-dark: #4F5E67;
+$color-midnight: #2B3D4F;
+
+
+// Accents
+$color-orange: #C48B6E;
+$color-red: #E64B3B;
+$color-green: #8F9E8B;
+$color-yellow: #CFCA4C;
+$color-grayteal: #A9C4C3;
+$color-teal: #81C4C0;
+
+
+// Color assignments
+$color-text: $color-gray-dark;
+$color-muted: #999;
+$bg-color: $color-paper;
+$small-caps-color: $color-gray;
+$link-color: $color-blue;
+$link-hover-color: $color-midnight;
+$link-visited-color: $color-midnight;
+$inverse-link-color: lighten($color-yellow, 15);
+$inverse-link-hover-color: lighten($color-yellow, 25);
+$inverse-link-visited-color: $color-yellow;
+
+$_color-base-blue: #008FD5;
+$_color-base-grey: #999;
+
+$palettes: (
+  blue: (
+    base:  $_color-base-blue,
+    light: lighten($_color-base-blue, 5),
+    dark:  darken($_color-base-blue, 5)
+  ),
+  purple: (
+    base:   rgb(42,40,80),
+    light:  rgb(51,46,140),
+    dark:   rgb(40,38,65)
+  ),
+  grey: (
+    base:  $_color-base-grey,
+    light: lighten($_color-base-grey, 10%),
+    dark: darken($_color-base-grey, 10%)
+  )
+);
+
+// .element {
+//   background-color: map-get($colors, sky);
+// }
+
+// .element {
+//     color: palette(purple);
+//     &:hover {
+//         color: palette(purple, light);
+//     }
+// }
+
+// Brightness math based on:
+//   http://www.nbdtech.com/Blog/archive/2008/04/27/Calculating-the-Perceived-Brightness-of-a-Color.aspx
+
+$red-magic-number: 241;
+$green-magic-number: 691;
+$blue-magic-number: 68;
+$brightness-divisor: $red-magic-number + $green-magic-number + $blue-magic-number;
+
+
+//== States
+//
+//## Define colors for form feedback states and, by default, alerts.
+
+$state-success-text:             #3c763d !default;
+$state-success-bg:               #dff0d8 !default;
+$state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%) !default;
+
+$state-info-text:                #31708f !default;
+$state-info-bg:                  #d9edf7 !default;
+$state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%) !default;
+
+$state-warning-text:             #8a6d3b !default;
+$state-warning-bg:               #fcf8e3 !default;
+$state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) !default;
+
+$state-danger-text:              #a94442 !default;
+$state-danger-bg:                #f2dede !default;
+$state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
+
+$color-good: green !default;
+$color-warning: yellow !default;
+$color-error: red !default;
+
+//** Global color for active items (e.g., navs or dropdowns).
+$component-active-color:    #fff !default;
+//** Global background color for active items (e.g., navs or dropdowns).
+$component-active-bg:       palette(blue);
+
+
+//** Horizontal line color.
+$hr-border:                   $gray-lighter !default;
