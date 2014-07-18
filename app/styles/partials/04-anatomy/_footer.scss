@@ -1,5 +1,12 @@
 footer[role=contentinfo] {
+  background-color: palette(grey, light);
+  color: $black;
   font-size: 12px;
+  padding: 1rem;
+
+  @include mq($from: desktop) {
+    padding: 4rem 0;
+  }
 
   .section__blog {
   }

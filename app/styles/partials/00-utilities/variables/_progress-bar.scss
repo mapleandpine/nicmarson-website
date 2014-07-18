@@ -3,9 +3,9 @@
 //##
 
 //** Background color of the whole progress component
-$progress-bg:                 #FFF !default;
+$progress-bg:                 $white;
 //** Progress bar text color
-$progress-bar-color:          #FFF !default;
+$progress-bar-color:          $white;
 
 //** Default progress bar color
-$progress-bar-bg:             $color-red !default;
+$progress-bar-bg:             palette(red);

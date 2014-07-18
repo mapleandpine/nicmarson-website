@@ -3,7 +3,7 @@ nav[role=navigation] {
 
   a {
     border-bottom: 1px solid transparent;
-    color: $nav-site-link-color;
+    color: $nav-link-color;
     display: inline-block;
     letter-spacing: .0125em;
     margin-right: .8em;
@@ -13,13 +13,13 @@ nav[role=navigation] {
 
     &:focus,
     &:hover {
-      border-bottom-color: lighten($nav-site-link-color-hover, 6);
-      color: $nav-site-link-color-hover;
+      border-bottom-color: lighten($nav-link-color-hover, 6);
+      color: $nav-link-color-hover;
     }
 
     &.active {
-      border-bottom-color: $nav-site-link-color-active;
-      color: $nav-site-link-color-active;
+      border-bottom-color: $nav-link-color-active;
+      color: $nav-link-color-active;
     }
   }
 

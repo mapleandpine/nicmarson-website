@@ -14,19 +14,6 @@ a {
   &:focus {
     color: $link-hover-color;
   }
-
-  .inverse & {
-    color: $inverse-link-color;
-
-    &:visited {
-      color: $inverse-link-visited-color;
-    }
-
-    &:hover,
-    &:focus {
-      color: $inverse-link-hover-color;
-    }
-  }
 }
 
 a[role="link"] {
@@ -40,18 +27,5 @@ a[role="link"] {
   &:focus {
     border-bottom-color: $link-hover-color;
     border-bottom-style: solid;
-  }
-
-  .inverse & {
-    border-bottom-color: $inverse-link-color;
-
-    &:visited {
-      border-bottom-color: $inverse-link-visited-color;
-    }
-
-    &:hover,
-    &:focus {
-      border-bottom-color: $inverse-link-hover-color;
-    }
   }
 }

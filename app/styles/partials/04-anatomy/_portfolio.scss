@@ -1,0 +1,95 @@
+.content__portfolio {
+  padding: 2rem;
+
+  @include mq($from: desktop) {
+    padding: 0 3rem 3rem;
+  }
+
+  @include mq($from: huge) {
+    padding: 0 4rem 4rem;
+  }
+}
+
+.article__portfolio {
+  header {
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+.section__portfolio {
+
+  @include mq($from: desktop) {
+    padding-bottom: 4rem;
+  }
+
+  @include mq($from: huge) {
+    padding-bottom: 6rem;
+  }
+}
+
+.section__browser {
+  z-index: 1;
+
+  @include mq($from: desktop) {
+
+    .content {
+      height: 550px;
+    }
+
+    + .section__post {
+      margin-top: -6.625rem;
+      position: relative;
+      z-index: 2;
+
+      header {
+        padding: 0 4rem;
+      }
+
+      .content {
+        background-color: $white;
+      }
+    }
+  }
+
+  @include mq($from: huge) {
+
+    .content {
+      height: 650px;
+    }
+  }
+
+  .title {
+
+    @include mq($from: desktop) {
+      font-size: 4rem;
+      line-height: 1.2;
+      margin-left: -5rem;
+      width: 12em;
+    }
+
+    @include mq($from: huge) {
+      margin-left: -10rem;
+    }
+
+    span {
+      color: rgba(255,255,255, .5);
+      display: block;
+      font-size: 65%;
+    }
+  }
+
+  p {
+    @include mq($from: desktop) {
+      width: 24em;
+    }
+
+    @include mq($from: huge) {
+      width: 30%;
+    }
+  }
+}

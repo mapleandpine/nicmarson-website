@@ -4,17 +4,6 @@
   .byline {
     font-style: italic;
   }
-
-  /* terminal */
-  pre.terminal {
-    border: 1px solid #000;
-    background-color: #333;
-    color: #FFF;
-  }
-
-  pre.terminal code {
-    background-color: #333;
-  }
 }
 
 .post-entry {
@@ -128,7 +117,7 @@
   }
 
   .table-info td {
-    border-bottom: 8px solid $color-gray-light;
+    border-bottom: 8px solid palette(grey, light);;
     padding-bottom: 2rem;
   }
 

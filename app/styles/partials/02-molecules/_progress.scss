@@ -41,7 +41,7 @@
   }
 
   &[aria-valuenow="0"] {
-    color: $color-gray-light;
+    color: palette(grey, light);;
     min-width: 30px;
     background-color: transparent;
     background-image: none;

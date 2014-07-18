@@ -1,16 +1,11 @@
-$padding-base-vertical:     6px !default;
-$padding-base-horizontal:   12px !default;
+$padding-base:              .5em;
+$padding-base-vertical:     $padding-base/2;
+$padding-base-horizontal:   $padding-base;
 
-$padding-large-vertical:    10px !default;
-$padding-large-horizontal:  16px !default;
+$padding-large:             .7em;
+$padding-large-vertical:    $padding-large/2;
+$padding-large-horizontal:  $padding-large;
 
-$padding-small-vertical:    5px !default;
-$padding-small-horizontal:  10px !default;
-
-$padding-xs-vertical:       1px !default;
-$padding-xs-horizontal:     5px !default;
-
-$std-padding:               .25em .5em !default;
-
-$spacing-horizontal:        .6em;
-$spacing-vertical:          .6em;
+$padding-small:             .3em;
+$padding-small-vertical:    $padding-small/2;
+$padding-small-horizontal:  $padding-small;

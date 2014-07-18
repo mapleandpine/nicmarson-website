@@ -26,21 +26,51 @@
       background-color: $black;
       color: $white;
       font-size: 1em;
-      line-height: 2;
+      font-weight: 400;
+      line-height: 2.5;
       margin: 0;
+      padding-left: 1em;
       text-transform: uppercase;
     }
   }
 }
 
+@media screen and (min-width: $screen-md) and (min-height: 40rem) {
+
+  .home footer {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+  }
+}
+
 .home__intro {
-  margin-bottom: 5em;
-  margin-top: 5em;
+  margin-bottom: 2em;
+  margin-top: 2em;
+
+  @include mq($from: desktop) {
+    margin-bottom: 5em;
+    margin-top: 5em;
+  }
+}
+
+.home__img-circle {
+  @extend %transition-component;
+  background-color: palette(red);
+  border-radius: 50%;
+  margin: .5em auto;
+  opacity: .95;
+  overflow: hidden;
+
+  img {
+    animation: body-movement 16s cubic-bezier(.5, .2, .3, 1) infinite;
+    width: 180px;
+  }
 }
 
 .home__portfolio {
   position: relative;
-  top: 2em;
+  top: 2.5em;
 }
 
 .home__portfolio__items {
@@ -50,7 +80,7 @@
     position: relative;
 
     a {
-      background-color: #2D2527;
+      background-color: $portfolio-item-bg-color;
       display: block;
       height: 0;
       overflow: hidden;
@@ -60,7 +90,7 @@
 
     span {
       @include centerer();
-      border: 1px solid #FFF;
+      border: 1px solid $white;
       color: #FFF;
       display: block;
       font-size: 12px;
@@ -75,7 +105,7 @@
     }
 
     img {
-      background-color: #2D2527;
+      background-color: $portfolio-item-bg-color;
       margin: 0px auto;
       opacity: 0.2;
       transition: all .75s ease-out 0s;
@@ -84,7 +114,7 @@
       width: 100%;
 
       &:hover {
-        background-color: #131313;
+        background-color: $portfolio-item-hover-bg-color;
         opacity: 0.5;
         transform: scale(1, 1);
         transition-duration: .25s;

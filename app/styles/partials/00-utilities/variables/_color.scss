@@ -2,94 +2,32 @@
 //
 //
 
-$color-black: #000;
-$color-white: #fff;
+$black: #000;
+$white: #fff;
+$grey:  #999;
 
-$gray-darker:            lighten(#000, 13.5%) !default; // #222
-$gray-dark:              lighten(#000, 20%) !default;   // #333
-$gray:                   lighten(#000, 33.5%) !default; // #555
-$gray-light:             lighten(#000, 60%) !default;   // #999
-$gray-lighter:           lighten(#000, 93.5%) !default; // #eee
-
-$xtra-ltgray: #f6f6f6;
-
-$ltgray: #cecece;
-$ltgrayhover: #bebebe;
-
-$medgray: #838383;
-
-$txtgray: #747474;
-$txthovergray: #3b3938;
-
-$dkgray: #575453;
-$dkgrayhover: #413f3e;
-
-$red: #e63127;
-$green: #7cbe31;
-$ltgreen: #c6e4a3;
-
-$black: #000000;
-$white: #ffffff;
-
-$brand-primary:         #428bca !default;
-$brand-success:         #5cb85c !default;
-$brand-info:            #5bc0de !default;
-$brand-warning:         #f0ad4e !default;
-$brand-danger:          #d9534f !default;
-
-// Neutrals
-$color-gray-dark: #292929;
-$color-gray: lighten($color-gray-dark, 25);
-$color-gray-light: lighten($color-gray-dark, 50);
-$color-gray-bg: lighten($color-gray-dark, 80);
-$color-brown: #78655B;
-$color-cream: #F2E6B6;
-$color-sand: #E6E2AF;
-$color-sand-wet: #A7A37E;
-$color-paper: #F7F7EB;
-$color-paper-wet: #E1E0C9;
-
-
-// Blues
-$color-blue: #3497DB;
-$color-grayblue: #5B7876;
-$color-grayblue-dark: #4F5E67;
-$color-midnight: #2B3D4F;
-
-
-// Accents
-$color-orange: #C48B6E;
-$color-red: #E64B3B;
-$color-green: #8F9E8B;
-$color-yellow: #CFCA4C;
-$color-grayteal: #A9C4C3;
-$color-teal: #81C4C0;
-
-$_color-base-blue: #008FD5;
-$_color-base-grey: #999;
-
-
-$color-good: green !default;
-$color-warning: yellow !default;
-$color-error: red !default;
-$color-muted: $gray-light !default;
-
+$blue: #008FD5;
+$red: #E64B3B;
 
 $palettes: (
   blue: (
-    base:  $_color-base-blue,
-    light: lighten($_color-base-blue, 5),
-    dark:  darken($_color-base-blue, 5)
+    base:   $blue,
+    light:  lighten($blue, 10),
+    dark:   darken($blue, 10)
   ),
-  purple: (
-    base:   rgb(42,40,80),
-    light:  rgb(51,46,140),
-    dark:   rgb(40,38,65)
+  red: (
+    base:   $red,
+    light:  lighten($red, 10),
+    dark:   darken($red, 10)
   ),
   grey: (
-    base:  $_color-base-grey,
-    light: lighten($_color-base-grey, 10%),
-    dark: darken($_color-base-grey, 10%)
+    base:  $grey,
+    light: lighten($grey, 10%),
+    lighter: lighten($grey, 20%),
+    lightest: lighten($grey, 30%),
+    dark: darken($grey, 10%),
+    darker: darken($grey, 20%),
+    darkest: darken($grey, 30%)
   )
 );
 
@@ -104,49 +42,67 @@ $palettes: (
 //     }
 // }
 
-// Brightness math based on:
-//   http://www.nbdtech.com/Blog/archive/2008/04/27/Calculating-the-Perceived-Brightness-of-a-Color.aspx
-
-$red-magic-number:    241;
-$green-magic-number:  691;
-$blue-magic-number:   68;
-$brightness-divisor:  $red-magic-number + $green-magic-number + $blue-magic-number;
-
 // Color assignments
 $body-bg-color:       $white;
-$body-color:          $color-gray-dark;
+$body-color:          palette(grey, dark);
 $heading-color:       inherit;
+$muted-color:         palette(grey, light);
 
 // Links
-$link-color:          $color-blue;
-$link-hover-color:    $color-midnight;
-$link-visited-color:  $color-midnight;
+$link-color:          palette(blue);
+$link-hover-color:    palette(blue, dark);
+$link-visited-color:  palette(blue, dark);
 
-$inverse-link-color:          lighten($color-yellow, 15);
-$inverse-link-hover-color:    lighten($color-yellow, 25);
-$inverse-link-visited-color:  $color-yellow;
-
-$nav-site-link-color:         $ltgray;
-$nav-site-link-color-hover:   $ltgrayhover;
-$nav-site-link-color-active:  #FF4056;
+$nav-link-color:         palette(grey, light);
+$nav-link-color-hover:   palette(grey);
+$nav-link-color-active:  palette(red);
 
 
 //== Type
 //
 //##
 
-//** Text muted color
-$text-muted:                  $color-muted !default;
 //** Abbreviations and acronyms border color
-$abbr-border-color:           $gray-light !default;
+$abbr-border-color:           palette(grey, light);
 //** Headings small color
-$heading-small-color:         $gray-light !default;
+$heading-small-color:         palette(grey, light);
 //** Blockquote small color
-$blockquote-small-color:      $gray-light !default;
+$blockquote-small-color:      palette(grey, light);
 //** Blockquote border color
-$blockquote-border-color:     $gray-lighter !default;
+$blockquote-border-color:     palette(grey, lighter);
 //** Page header border color
-$page-header-border-color:    $gray-lighter !default;
+$page-header-border-color:    palette(grey, lighter);
+
+//** Global color for active items (e.g., navs or dropdowns).
+$component-active-color:      $body-bg-color;
+//** Global background color for active items (e.g., navs or dropdowns).
+$component-active-bg:         $link-color;
+
+//** Horizontal line color.
+$hr-border:                   palette(grey, lighter);
+
+$card-bg-color:               $body-bg-color;
+
+$portfolio-item-bg-color:       palette(grey, darker);
+$portfolio-item-hover-bg-color: palette(grey, darkest);
+
+// Forms
+// -------------------------
+$input-bg:                    $white;
+$input-bg-disabled:           palette(grey, light);
+$input-border-color:          palette(grey);
+$input-focus-color:           palette(blue, light);
+$placeholder-color:           palette(grey, light);
+
+// Code
+// -------------------------
+$code-color:                  #c7254e !default;
+$code-bg:                     #f9f2f4 !default;
+$kbd-color:                   $white;
+$kbd-bg:                      palette(grey, darker);
+$pre-bg:                      palette(grey, lightest);
+$pre-color:                   $body-color;
+$pre-border-color:            palette(grey, light);
 
 
 //== States
@@ -168,23 +124,3 @@ $state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) 
 $state-danger-text:              #a94442 !default;
 $state-danger-bg:                #f2dede !default;
 $state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
-
-//** Global color for active items (e.g., navs or dropdowns).
-$component-active-color:    #fff !default;
-//** Global background color for active items (e.g., navs or dropdowns).
-$component-active-bg:       palette(blue);
-
-
-//** Horizontal line color.
-$hr-border:                   $gray-lighter !default;
-
-
-/*=================================
-=            Molecules            =
-=================================*/
-
-$card-bg-color:     $body-bg-color;
-
-
-
-
