@@ -142,25 +142,40 @@
 
 </svg>
 
-<!-- build:js({app,.tmp}) /scripts/typography.js -->
-<script src="/scripts/vendor/lettering.js"></script> <!-- wraps individual letters in spans -->
-<script src="/scripts/vendor/slabtext.js"></script> <!-- fits text to width of container -->
+<!-- build:js scripts/vendor/vendor.js -->
+<!-- bower:js -->
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script src='../bower_components/velocity/jquery.velocity.min.js'></script>
+<script src="../bower_components/eventEmitter/EventEmitter.js"></script> <!-- required for imagesLoaded  -->
+<script src="../bower_components/imagesloaded/imagesloaded.js"></script> <!-- required for fluidbox  -->
+<!-- endbower -->
+<script src="scripts/vendor/lettering.js"></script> <!-- wraps individual letters in spans -->
+<script src="scripts/vendor/slabtext.js"></script> <!-- fits text to width of container -->
+<script src="scripts/vendor/snap.svg.js"></script> <!-- required for pie charts -->
+<script src="scripts/vendor/pizza.js"></script> <!-- pie charts -->
+<script src="scripts/vendor/visible.js"></script> <!-- is an element is in the viewport? -->
+<script src="scripts/vendor/eq.js"></script> <!-- element queries -->
+<script src="scripts/vendor/fluidbox.js"></script> <!-- lightbox module seen on Medium with fluid transitions -->
 <!-- endbuild -->
 
-<!-- build:js({app,.tmp}) /scripts/plugins.js -->
-<script src="/scripts/vendor/velocity.js"></script> <!-- better animations -->
-<script src="/scripts/vendor/snap.svg.js"></script> <!-- required for pie charts -->
-<script src="/scripts/vendor/pizza.js"></script> <!-- pie charts -->
-<script src="/scripts/visible.js"></script> <!-- is an element is in the viewport? -->
-<script src="/scripts/vendor/eq.js"></script> <!-- element queries -->
-<!-- endbuild -->
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+(function(b, o, i, l, e, r) {
+  b.GoogleAnalyticsObject = l;
+  b[l] || (b[l] =
+    function() {
+      (b[l].q = b[l].q || []).push(arguments)
+    });
+  b[l].l = +new Date;
+  e = o.createElement(i);
+  r = o.getElementsByTagName(i)[0];
+  e.src = '//www.google-analytics.com/analytics.js';
+  r.parentNode.insertBefore(e, r)
+}(window, document, 'script', 'ga'));
+ga('create', 'UA-XXXXX-X');
+ga('send', 'pageview');
+</script>
 
-<!-- build:js({app,.tmp}) /scripts/fluidbox.js -->
-<script src="/_bower_components/eventEmitter/EventEmitter.js"></script> <!-- required for imagesLoaded  -->
-<script src="/_bower_components/imagesloaded/imagesloaded.js"></script> <!-- required for fluidbox  -->
-<script src="/scripts/vendor/fluidbox.js"></script> <!-- lightbox module seen on Medium with fluid transitions -->
-<!-- endbuild -->
-
-<!-- build:js({app,.tmp}) /scripts/main.js -->
-<script src="/scripts/main.js"></script>
+<!-- build:js({app,.tmp}) scripts/main.js -->
+<script src="scripts/main.js"></script>
 <!-- endbuild -->

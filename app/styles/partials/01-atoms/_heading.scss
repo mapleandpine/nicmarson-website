@@ -3,16 +3,18 @@
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: $headings-font-family;
-  font-weight: $headings-font-weight;
-  line-height: $headings-line-height;
-  color: $headings-color;
+  @extend %typecsset-vertical-rhythm;
+  color: $heading-color;
+  font-family: $heading-font-family;
+  font-kerning: normal;
+  font-weight: $heading-weight;
+  line-height: $heading-line-height;
 
   small,
   .small {
     font-weight: normal;
     line-height: 1;
-    color: $headings-small-color;
+    color: $heading-small-color;
   }
 }
 
@@ -45,49 +47,3 @@ h3, .h3 { font-size: $font-size-h3; }
 h4, .h4 { font-size: $font-size-h4; }
 h5, .h5 { font-size: $font-size-h5; }
 h6, .h6 { font-size: $font-size-h6; }
-
-
-/*------------------------------------*\
-  #HEADINGS
-\*------------------------------------*/
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $heading-font-family;
-  font-weight: $heading-weight;
-  font-kerning: normal;
-}
-
-h1 {
-  @extend %typecsset-vertical-rhythm;
-  @include typecsset-font-size($typecsset-h1-size);
-}
-
-h2 {
-  @extend %typecsset-vertical-rhythm;
-  @include typecsset-font-size($typecsset-h2-size);
-}
-
-h3 {
-  @extend %typecsset-vertical-rhythm;
-  @include typecsset-font-size($typecsset-h3-size);
-}
-
-h4 {
-  @extend %typecsset-vertical-rhythm;
-  @include typecsset-font-size($typecsset-h4-size);
-}
-
-h5 {
-  @extend %typecsset-vertical-rhythm;
-  @include typecsset-font-size($typecsset-h5-size);
-}
-
-h6 {
-  @extend %typecsset-vertical-rhythm;
-  @include typecsset-font-size($typecsset-h6-size);
-}

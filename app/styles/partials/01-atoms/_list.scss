@@ -6,6 +6,7 @@ ul,
 ol {
   @extend %typecsset-vertical-rhythm;
   @include typecsset-space(margin-left);
+  list-style: none;
   margin-top: 0;
   margin-bottom: ($line-height-computed / 2);
 

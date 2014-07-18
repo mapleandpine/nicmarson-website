@@ -1,71 +1,68 @@
 //== Typography
 //
-//## Font, line-height, and color for body text, headings, and more.
+//## Weight, line-height, and size for body text, headings, and more.
 
 
-// Font families
-$font-family-bitter: "Bitter", serif !default;
-$font-family-lato: "Lato", sans-serif !default;
-$font-family-source: "Source Code Pro", monospace !default;
+/*==================================
+=            Font sizes            =
+==================================*/
+$font-size-base:              16px;
+$typecsset-base-font-size:    $font-size-base;
+$font-size-small:             75% !default;
+$font-size-large:             150% !default;
+$font-size-large-static:      ceil(($font-size-base * 1.25)) !default; // ~20px
+$font-size-small-static:      ceil(($font-size-base * 0.75)) !default; // ~12px
 
-// Font definitions
-$font-family-serif:       $font-family-bitter;
-$font-family-sans-serif:  $font-family-lato;
-$font-family-monospace:   $font-family-source;
+$font-size-h1:                floor(($font-size-base * 2.6)) !default; // ~36px
+$font-size-h2:                floor(($font-size-base * 2.15)) !default; // ~30px
+$font-size-h3:                ceil(($font-size-base * 1.7)) !default; // ~24px
+$font-size-h4:                ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-h5:                $font-size-base !default;
+$font-size-h6:                ceil(($font-size-base * 0.85)) !default; // ~12px
 
-// Font assignments
-$font-family-base:        $font-family-sans-serif;
-$font-family-controls:    $font-family-sans-serif;
-$font-family-code:        $font-family-monospace;
-
-
-// Font assignments
-$base-font-family: $font-family-sans-serif;
-$heading-font-family: $font-family-sans-serif;
-$heading-weight: 700;
-$small-caps-weight: 600;
-
-$font-size-base:          14px;
-$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
-$font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
-
-$font-size-h1:            floor(($font-size-base * 2.6)) !default; // ~36px
-$font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~30px
-$font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
-$font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
-$font-size-h5:            $font-size-base !default;
-$font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
-
-//** Unit-less `line-height` for use in components like buttons.
-$line-height-base:        1.428571429 !default; // 20/14
-//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
-$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
-
-$line-height-large:         1.33 !default;
-$line-height-small:         1.5 !default;
-
-//** By default, this inherits from the `<body>`.
-$headings-font-family:    inherit !default;
-$headings-font-weight:    500 !default;
-$headings-line-height:    1.1 !default;
-$headings-color:          inherit !default;
-
-
-//== Type
-//
-//##
-
-//** Text muted color
-$text-muted:                  $gray-light !default;
-//** Abbreviations and acronyms border color
-$abbr-border-color:           $gray-light !default;
-//** Headings small color
-$headings-small-color:        $gray-light !default;
-//** Blockquote small color
-$blockquote-small-color:      $gray-light !default;
 //** Blockquote font size
 $blockquote-font-size:        ($font-size-base * 1.25) !default;
-//** Blockquote border color
-$blockquote-border-color:     $gray-lighter !default;
-//** Page header border color
-$page-header-border-color:    $gray-lighter !default;
+
+
+/*========================================
+=            Font line-height            =
+========================================*/
+
+//** Unit-less `line-height` for use in components like buttons.
+$line-height-base:            1.5; // 24/16
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+$line-height-computed:        floor(($font-size-base * $line-height-base)) !default; // ~20px
+
+$typecsset-base-line-height:  $line-height-computed;
+
+$line-height-large:           1.33 !default;
+$line-height-small:           1.5 !default;
+
+$heading-line-height:         1.1 !default;
+
+
+/*====================================
+=            Font weights            =
+====================================*/
+
+$heading-weight:          700;
+$small-caps-weight:       600;
+
+
+/*==========================================
+=            Typecsset settings            =
+==========================================*/
+
+// Would you like indented (rather than spaced) paragraph delimiting?
+$typecsset-indented-paragraphs: false !default;
+
+// Would you like to show a baseline grid? This is handy during development.
+$typecsset-show-baseline:       false !default;
+
+// Do not modify these variables; they are internal settings upon which the
+// library depends.
+$typecsset-magic-number:        $typecsset-base-line-height;
+$typecsset-magic-ratio:         $typecsset-base-line-height / $typecsset-base-font-size;
+
+// SIZE AND SPACING
+$base-spacing-unit:             $typecsset-base-line-height;

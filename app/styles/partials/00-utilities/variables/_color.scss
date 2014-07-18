@@ -12,11 +12,15 @@ $gray-light:             lighten(#000, 60%) !default;   // #999
 $gray-lighter:           lighten(#000, 93.5%) !default; // #eee
 
 $xtra-ltgray: #f6f6f6;
+
 $ltgray: #cecece;
 $ltgrayhover: #bebebe;
+
 $medgray: #838383;
+
 $txtgray: #747474;
 $txthovergray: #3b3938;
+
 $dkgray: #575453;
 $dkgrayhover: #413f3e;
 
@@ -61,21 +65,15 @@ $color-yellow: #CFCA4C;
 $color-grayteal: #A9C4C3;
 $color-teal: #81C4C0;
 
-
-// Color assignments
-$color-text: $color-gray-dark;
-$color-muted: #999;
-$bg-color: $color-paper;
-$small-caps-color: $color-gray;
-$link-color: $color-blue;
-$link-hover-color: $color-midnight;
-$link-visited-color: $color-midnight;
-$inverse-link-color: lighten($color-yellow, 15);
-$inverse-link-hover-color: lighten($color-yellow, 25);
-$inverse-link-visited-color: $color-yellow;
-
 $_color-base-blue: #008FD5;
 $_color-base-grey: #999;
+
+
+$color-good: green !default;
+$color-warning: yellow !default;
+$color-error: red !default;
+$color-muted: $gray-light !default;
+
 
 $palettes: (
   blue: (
@@ -109,10 +107,46 @@ $palettes: (
 // Brightness math based on:
 //   http://www.nbdtech.com/Blog/archive/2008/04/27/Calculating-the-Perceived-Brightness-of-a-Color.aspx
 
-$red-magic-number: 241;
-$green-magic-number: 691;
-$blue-magic-number: 68;
-$brightness-divisor: $red-magic-number + $green-magic-number + $blue-magic-number;
+$red-magic-number:    241;
+$green-magic-number:  691;
+$blue-magic-number:   68;
+$brightness-divisor:  $red-magic-number + $green-magic-number + $blue-magic-number;
+
+// Color assignments
+$body-bg-color:       $white;
+$body-color:          $color-gray-dark;
+$heading-color:       inherit;
+
+// Links
+$link-color:          $color-blue;
+$link-hover-color:    $color-midnight;
+$link-visited-color:  $color-midnight;
+
+$inverse-link-color:          lighten($color-yellow, 15);
+$inverse-link-hover-color:    lighten($color-yellow, 25);
+$inverse-link-visited-color:  $color-yellow;
+
+$nav-site-link-color:         $ltgray;
+$nav-site-link-color-hover:   $ltgrayhover;
+$nav-site-link-color-active:  #FF4056;
+
+
+//== Type
+//
+//##
+
+//** Text muted color
+$text-muted:                  $color-muted !default;
+//** Abbreviations and acronyms border color
+$abbr-border-color:           $gray-light !default;
+//** Headings small color
+$heading-small-color:         $gray-light !default;
+//** Blockquote small color
+$blockquote-small-color:      $gray-light !default;
+//** Blockquote border color
+$blockquote-border-color:     $gray-lighter !default;
+//** Page header border color
+$page-header-border-color:    $gray-lighter !default;
 
 
 //== States
@@ -135,10 +169,6 @@ $state-danger-text:              #a94442 !default;
 $state-danger-bg:                #f2dede !default;
 $state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
 
-$color-good: green !default;
-$color-warning: yellow !default;
-$color-error: red !default;
-
 //** Global color for active items (e.g., navs or dropdowns).
 $component-active-color:    #fff !default;
 //** Global background color for active items (e.g., navs or dropdowns).
@@ -147,3 +177,14 @@ $component-active-bg:       palette(blue);
 
 //** Horizontal line color.
 $hr-border:                   $gray-lighter !default;
+
+
+/*=================================
+=            Molecules            =
+=================================*/
+
+$card-bg-color:     $body-bg-color;
+
+
+
+

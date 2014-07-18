@@ -5,7 +5,10 @@
 <meta name="keywords" content="designer, developer, html, css, javascript, responsive, user experience, ui, ux, portland">
 <meta name="robots" content="index,follow">
 <meta name="author" content="Nicholas Marson">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+<meta http-equiv="cleartype" content="on">
 <meta property='og:locale' content='en_US'/>
 <meta property='og:title' content='Portfolio - Nic Marson'/>
 <meta property='og:url' content='http://nicmarson.com/'/>
@@ -14,22 +17,17 @@
 <meta property="og:image" content="http://nicmarson.com/img/vector-me.png" />
 <link rel="shortcut icon" href="http://nicmarson.s3.amazonaws.com/wp-content/themes/elastico/admin/images/favicon.ico.gzip?f7c362" />
 
-<!-- build:css({app,.tmp}) /styles/main.css -->
-<!-- Custom CSS -->
-<link rel="stylesheet" href="/styles/main.css">
+<!-- build:css(.tmp) styles/main.css -->
+<link rel="stylesheet" href="styles/main.css">
 <!-- endbuild -->
 
-<!-- build:js({app,.tmp}) /js/head.js -->
-<script src="/_bower_components/modernizr/modernizr.js"></script>
-<script src="/_bower_components/jquery/jquery.js"></script>
+<!-- build:js scripts/vendor/modernizr.js -->
+<script src="../bower_components/modernizr/modernizr.js"></script>
 <!-- endbuild -->
 
 <script type="text/javascript">
   WebFontConfig = {
-    google: { families: [ 'Lato:300,400,700,900:latin', 'Source+Code+Pro::latin', 'Bitter:400,700,400italic:latin' ] },
-    active: function() {
-      webFontsLoaded();
-    }
+    google: { families: [ 'Lato:300,400,700,900:latin', 'Source+Code+Pro::latin', 'Bitter:400,700,400italic:latin' ] }
   };
   (function() {
     var wf = document.createElement('script');

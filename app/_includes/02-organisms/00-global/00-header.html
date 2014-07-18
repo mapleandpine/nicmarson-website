@@ -1,4 +1,5 @@
 <header class="site-header">
-  <button type="button" class="nav-toggle site-nav-toggle"><span>Toggle navigation</span></button>
+  <!-- <button type="button" class="nav-toggle site-nav-toggle"><span>Toggle navigation</span></button> -->
   {% if page.parent %}<a href="/{{ page.parent }}.html">Back</a>{% endif %}
+  {% include 01-molecules/01-navigation/00-primary-nav.html %}
 </header>

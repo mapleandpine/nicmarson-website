@@ -8,6 +8,7 @@ $tooltip-color: #FFF;
     border-radius: 3px;
     box-shadow: 1px 1px 10px 0 rgba(0,0,0, .05);
     color: $tooltip-color;
+    display: none;
     font-size: 12px;
     line-height: 1;
     margin-left: $tooltip-arrow-size+1px;

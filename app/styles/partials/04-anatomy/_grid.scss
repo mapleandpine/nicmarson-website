@@ -1,6 +1,36 @@
+.container {
+  margin: 20px;
+
+  @include mq($from: desktop) {
+    margin: 0 auto;
+    width: 80%;
+  }
+}
+
+.flex-container {
+  display: flex;
+
+  &--row {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  &--column {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+}
+
+.flex-item {
+  flex: 1 auto;
+
+  &--scroll {
+    flex: 1 auto;
+    overflow: auto;
+  }
+}
+
 .cf,
-.content,
-.group,
 .row {
   @include clearfix;
 }

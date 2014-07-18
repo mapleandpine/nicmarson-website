@@ -1,0 +1,94 @@
+.home main,
+.home aside {
+  @include mq($from: desktop) {
+    height: 100%;
+    position: absolute;
+    width: 50%;
+  }
+}
+
+.home main {
+  overflow-y: auto;
+}
+
+.home aside {
+  box-shadow: 10px 0 15px -10px rgba(0, 0, 0, .8);
+  left: 50%;
+  overflow: hidden;
+
+  header {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    h1 {
+      background-color: $black;
+      color: $white;
+      font-size: 1em;
+      line-height: 2;
+      margin: 0;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.home__intro {
+  margin-bottom: 5em;
+  margin-top: 5em;
+}
+
+.home__portfolio {
+  position: relative;
+  top: 2em;
+}
+
+.home__portfolio__items {
+  min-height: -webkit-min-content;
+
+  .portfolio__item {
+    position: relative;
+
+    a {
+      background-color: #2D2527;
+      display: block;
+      height: 0;
+      overflow: hidden;
+      padding-bottom: 50%;
+      width: 100%;
+    }
+
+    span {
+      @include centerer();
+      border: 1px solid #FFF;
+      color: #FFF;
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      line-height: 20px;
+      padding: 13px 0px;
+      text-align: center;
+      text-transform: uppercase;
+      transition: all 0.2s ease-in-out 0s;
+      width: 45%;
+    }
+
+    img {
+      background-color: #2D2527;
+      margin: 0px auto;
+      opacity: 0.2;
+      transition: all .75s ease-out 0s;
+      transform: scale(1.03, 1.03);
+      overflow: hidden;
+      width: 100%;
+
+      &:hover {
+        background-color: #131313;
+        opacity: 0.5;
+        transform: scale(1, 1);
+        transition-duration: .25s;
+      }
+    }
+  }
+}

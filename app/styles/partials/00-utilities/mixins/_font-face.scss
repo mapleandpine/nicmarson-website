@@ -1,7 +1,5 @@
-/*
- * @font-face mixin
- * @include font-face('family', '../fonts/', 'myfontname');
- */
+// @font-face mixin
+// @include font-face('family', '../fonts/', 'myfontname');
 
 @mixin font-face($font-family, $font-url, $font-name) {
   @font-face {

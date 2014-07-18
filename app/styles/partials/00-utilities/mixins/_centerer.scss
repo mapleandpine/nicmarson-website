@@ -4,17 +4,17 @@
 @mixin centerer($position: absolute, $direction: both) {
   position: $position;
 
-  @if type-of($direction) == horizontal {
+  @if $direction == horizontal {
     left: 50%;
     transform: translateX(-50%);
   }
 
-  @if type-of($direction) == vertical {
+  @if $direction == vertical {
     top: 50%;
     transform: translateY(-50%);
   }
 
-  @if type-of($direction) == both {
+  @if $direction == both {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

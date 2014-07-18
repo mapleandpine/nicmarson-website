@@ -5,6 +5,8 @@
  * Crude table styles; tables are very difficult to keep on the baseline.
  */
  table {
+   border-collapse: collapse;
+   border-spacing: 0;
    max-width: 100%;
  }
 
@@ -44,58 +46,5 @@
   // Nesting
   .table {
     background-color: #FFF;
-  }
-}
-
-.table-border {
-  width: 100%;
-
-  // Cells
-  > thead,
-  > tbody,
-  > tfoot {
-    > tr > td {
-      border-top: 1px solid $color-gray-bg;
-    }
-  }
-
-  // Remove top border from thead by default
-  > caption + thead,
-  > colgroup + thead,
-  > thead:first-child {
-    > tr:first-child {
-      > th,
-      > td {
-        border-top: 0;
-      }
-    }
-  }
-
-  > thead > tr > th {
-    color: $color-muted;
-  }
-
-  // Account for multiple tbody instances
-  > tbody + tbody {
-    border-top: 1px solid $color-gray-light;
-  }
-}
-
-.table-info {
-
-  // Cells
-  > thead,
-  > tbody,
-  > tfoot {
-    > tr {
-      > th,
-      > td {
-        padding: .25rem 50px .25rem 0;
-      }
-    }
-  }
-
-  td {
-    font-size: 2em;
   }
 }

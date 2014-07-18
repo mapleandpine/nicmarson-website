@@ -1,0 +1,57 @@
+/*------------------------------------*\
+    #ANIMATION
+\*------------------------------------*/
+
+/* FADE-IN */
+@keyframes fadein { from {opacity:0;} to {opacity:1;}}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* SLIDE-DOWN */
+@keyframes aniload { from {transform:translate(0px, -40px)} to {transform:translate(0px, 0px)}}
+
+@keyframes menuload { from {transform:translate(0px, 0px)} to {transform:translate(25px, 0px)}}
+
+/* SLIDE-UP */
+@keyframes upload { from {transform:translate(0px, 40px)} to {transform:translate(0px, 0px)}}
+
+/* SLIDE-UP */
+@keyframes zoom { from {transform:scale(1.2,1.2)} to {transform:scale(1,1)}}
+
+/* SLIDE-OVER */
+@keyframes sideload { from {transform:translate(-30px, 0px)} to {transform:translate(0px, 0px)}}
+
+@keyframes body-movement {
+  0%   {
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+  20% {
+    transform: rotate(.5deg) translate(2px, 5px);
+  }
+  35% {
+    transform: rotate(.2deg) translate(-2px, -2px);
+  }
+  50% {
+    transform: rotate(0deg) translate(2px, 3px);
+  }
+  65% {
+    transform: rotate(-.5deg) translate(0px, 5px);
+  }
+  80% {
+    transform: rotate(-1.25deg) translate(-3px, 2px);
+  }
+  100% {
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+}
+

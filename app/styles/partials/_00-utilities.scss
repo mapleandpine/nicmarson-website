@@ -6,19 +6,19 @@
 // Variables
 // -------------------------
 
-// Initialization
+// Global settings
 @import "00-utilities/variables/color";
+@import "00-utilities/variables/border-radius";
+@import "00-utilities/variables/fonts";
+@import "00-utilities/variables/spacing";
+@import "00-utilities/variables/timing";
 @import "00-utilities/variables/typography";
 
-// Utilities
-@import "00-utilities/variables/border-radius";
+// Elements
+@import "00-utilities/variables/base";
 @import "00-utilities/variables/code";
 @import "00-utilities/variables/form";
 @import "00-utilities/variables/iconography";
-@import "00-utilities/variables/scaffold";
-@import "00-utilities/variables/spacing";
-@import "00-utilities/variables/timing";
-@import "00-utilities/variables/typecsset";
 
 // Organisms
 @import "00-utilities/variables/pie-chart";
@@ -69,14 +69,6 @@
 @import "00-utilities/mixins/grid";
 @import "00-utilities/mixins/centerer";
 @import "00-utilities/mixins/coverer";
-
-
-// Reset
-// -------------------------
-// bower:scss
-@import "../../../bower_components/normalize-scss/normalize",
-        "../../../bower_components/normalize-opentype.css/normalize-opentype.scss";
-// endbower
 
 
 // Styles

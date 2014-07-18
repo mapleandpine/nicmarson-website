@@ -4,18 +4,6 @@ var windowSmall = 768,
     $docWindow = $(document.window),
     viewportWidth = $docWindow.width();
 
-// After web fonts are loaded
-(function(){
-  if (viewportWidth > windowSmall) {
-
-    // run after web fonts are loaded to get correct width
-    $('html.wf-active section.post-excerpt footer').slabText();
-
-    // fix kerning on home page banner
-    $('section.banner-site h1.name span:last-child').lettering();
-  }
-})();
-
 (function ($, window, undefined) {
 
   var $body = $(document.body),
@@ -28,7 +16,6 @@ var windowSmall = 768,
   $body.append('<div class="overlay">');
   var overlay = $('div.overlay');
   overlay.hide();
-  siteNav.hide();
   pageNav.hide();
 
   // Toggle site nav visiblity

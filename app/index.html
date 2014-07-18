@@ -4,17 +4,26 @@ title: Home
 slug: home
 ---
 
-<section class="section__intro">
-  <h1><span>Hi, my name is Nic Marson.</span> <span>I'm a Front-end Developer &amp;</span> <span>UI Designer in Portland, OR.</span></h1>
-</section>
-
-<section class="section__portfolio">
-  <header class="content">
-    <h1>Here are a few web sites I've worked on.</h1>
+<main role="main">
+  {% include 02-organisms/00-global/00-header.html %}
+  <!-- <section class="section__home__intro">
+    <h1><span>Hi, my name is Nic Marson.</span> <span>I'm a Front-end Developer &amp;</span> <span>UI Designer in Portland, OR.</span></h1>
+  </section> -->
+  <section class="home__intro container">
+    <h1 class="headline">Shooting for no less than flabbergasted.</h1>
+    <p>I create digital experiences that promote interaction. I think bigger, move faster, blow minds, get shit done and innovate—plus any other cliché saying that comes to mind.</p>
+  </section>
+  {% include 02-organisms/00-global/01-footer.html %}
+</main>
+<aside class="flex-container--column">
+  <header class="flex-item">
+    <h1>A few projects I've worked on</h1>
   </header>
-  <div class="component content__portfolio" data-eq-pts="small: 0, medium: 694, large: 1124">
-    {% for post in site.categories['portfolio'] limit:4 %}
-      {% include 02-organisms/01-sections/01-section-portfolio.html %}
-    {% endfor %}
+  <div class="home__portfolio flex-item--scroll">
+    <div class="home__portfolio__items flex-container--column">
+      {% for post in site.categories['portfolio'] limit:4 %}
+        {% include 02-organisms/01-sections/03-section-portfolio-light.html %}
+      {% endfor %}
+    </div>
   </div>
-</section>
+</aside>

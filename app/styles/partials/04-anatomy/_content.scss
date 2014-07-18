@@ -3,12 +3,10 @@
 
   @include mq($from: desktop) {
     margin: auto;
-    max-width: $content-width-medium;
     padding: 3.5rem 0 4rem;
   }
 
   @include mq($from: huge) {
-    max-width: $content-width-large;
     padding: 5rem 0 6rem;
   }
 }

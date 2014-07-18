@@ -67,10 +67,10 @@
   }
 
   .title {
-    @include typecsset-font-size($typecsset-h2-size);
+    font-size: $font-size-h2;
 
     @include mq($from: desktop) {
-      @include typecsset-font-size($typecsset-h1-size);
+      font-size: $font-size-h1;
       margin-bottom: 3rem;
       margin-left: -5rem;
     }

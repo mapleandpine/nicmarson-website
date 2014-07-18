@@ -56,12 +56,12 @@ module.exports = function(grunt) {
         tasks: ['jekyll:server']
       },
       sass: {
-        files: ['<%= config.app %>/styles/{,*/}*.{scss,sass}'],
+        files: ['<%= config.app %>/styles/**/*.{scss,sass}'],
         tasks: ['sass:server', 'autoprefixer']
       },
       styles: {
         files: ['<%= config.app %>/styles/{,*/}*.css'],
-        tasks: ['newer:copy:styles', 'autoprefixer']
+        tasks: ['newer:copy:styles', 'autoprefixer', 'penthouse']
       },
       livereload: {
         options: {
@@ -217,6 +217,16 @@ module.exports = function(grunt) {
           src: '{,*/}*.css',
           dest: '.tmp/styles/'
         }]
+      }
+    },
+
+    penthouse: {
+      options: {
+        outfile: ".tmp/critical.css",
+        css: "./dist/styles/main.css",
+        url: "http://localhost:9000",
+        width : 1300,
+        height : 900
       }
     },
 
@@ -408,6 +418,7 @@ module.exports = function(grunt) {
       'concurrent:server',
       'autoprefixer',
       'connect:livereload',
+      'penthouse',
       'watch'
     ]);
   });
