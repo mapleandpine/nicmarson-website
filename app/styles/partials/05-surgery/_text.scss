@@ -54,12 +54,12 @@
   margin-top: 3em;
 }
 
-.u-smaller {
-  @extend %small-text;
+.font-small {
+  @extend %font-small;
 }
 
-.u-bigger {
-  @extend %large-text;
+.font-large {
+  @extend %font-large;
 }
 
 .name {
@@ -71,7 +71,7 @@
 .futurefriendly,
 .futurefriendly:after {
   // 1200px x 800px svg image
-  background: url(../img/futurefriendly.svg);
+  background: url(../images/futurefriendly.svg);
   background-size: 300px 200px;
   display: block;
   height: 200px;

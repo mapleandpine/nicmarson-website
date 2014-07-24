@@ -4,7 +4,13 @@
 
 $black: #000;
 $white: #fff;
-$grey:  #999;
+$grey:  #9d9e9f;
+
+// $black: #1f1f1f;
+// $white: #f8f8f8;
+// $grey-light: #e8ebf0;
+// $grey: #e8ebf0;
+// $grey-dark: #d8dbe1;
 
 $blue: #008FD5;
 $red: #E64B3B;
@@ -13,21 +19,23 @@ $palettes: (
   blue: (
     base:   $blue,
     light:  lighten($blue, 10),
+    lighter:  lighten($blue, 20),
     dark:   darken($blue, 10)
   ),
   red: (
     base:   $red,
     light:  lighten($red, 10),
+    lighter:  lighten($red, 20),
     dark:   darken($red, 10)
   ),
   grey: (
     base:  $grey,
-    light: lighten($grey, 10%),
-    lighter: lighten($grey, 20%),
-    lightest: lighten($grey, 30%),
-    dark: darken($grey, 10%),
-    darker: darken($grey, 20%),
-    darkest: darken($grey, 30%)
+    light: lighten($grey, 10),
+    lighter: lighten($grey, 20),
+    lightest: lighten($grey, 30),
+    dark: darken($grey, 12),
+    darker: darken($grey, 24),
+    darkest: darken($grey, 36)
   )
 );
 
@@ -44,7 +52,7 @@ $palettes: (
 
 // Color assignments
 $body-bg-color:       $white;
-$body-color:          palette(grey, dark);
+$body-color:          palette(grey, darker);
 $heading-color:       inherit;
 $muted-color:         palette(grey, light);
 

@@ -4,13 +4,15 @@ title: Portfolio
 slug: portfolio
 ---
 
-<article class="article__portfolio">
-  <header class="content">
-    <h1>A select group of websites I've designed and developed.</h1>
-  </header>
-  <div class="component content__portfolio" data-eq-pts="small: 0, medium: 694, large: 1124">
+<main role="main">
+  {% include 02-organisms/00-global/00-header.html %}
+  <article class="flex--row portfolio__screens">
     {% for post in site.categories['portfolio'] %}
       {% include 02-organisms/01-sections/02-section-portfolio.html %}
     {% endfor %}
-  </div>
-</article>
+  </article>
+  {% include 02-organisms/00-global/01-footer.html %}
+</main>
+<aside>
+  <ul class="nav">{% include 01-molecules/01-navigation/01-portfolio-nav.html %}</ul>
+</aside>

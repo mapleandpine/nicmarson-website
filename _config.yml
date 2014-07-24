@@ -9,11 +9,17 @@ author:
   name: Nic Marson
   email: nicholas.marson@weareinstrument.com
 
+source:      app
+destination: dist
+
 # Grunt handles images and assets.
 exclude: ['images', 'styles', 'scripts', 'fonts',
           '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp', '**.svg', '**.ico']
 
 include: ['.htaccess']
+
+# Load jekyll plugins
+# gems: [generate_sitemap.rb, filter_posts_and_categories, category_aware_next_generator]
 
 # _config.build.yml sets future and show_drafts to false on `grunt build`
 future: true

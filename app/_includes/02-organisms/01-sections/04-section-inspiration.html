@@ -1,6 +1,9 @@
 <div id="{{ post.name }}" class="component__item portfolio__item">
   <a href="{{ post.url }}" class="component__link">
-    {% if post.thumb-ext %}<div class="img"><img src="img/portfolio/{{ post.name }}/thumb.{{ post.thumb-ext }}" alt="{{ post.title }} thumbnail"></div>{% endif %}
+    {% if post.thumb-ext %}<div class="img">
+      <!-- <img src="images/portfolio/{{ post.name }}/thumb.{{ post.thumb-ext }}" alt="{{ post.title }} thumbnail"> -->
+      <img src="http://fillmurray.com/g/200/200" alt="{{ post.title }} thumbnail">
+    </div>{% endif %}
     <div class="meta" style="background-color: #{{ post.color-dark }}">
       <span class="description">{{ post.date | date: "%Y" }} <b>{{ post.title }}</b></span>
       <span class="tags">{{ post.tags | array_to_sentence_string }}</span>

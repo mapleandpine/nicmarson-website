@@ -3,9 +3,6 @@
   margin-bottom: $typecsset-magic-ratio + rem;
 }
 
-/**
- * Objects and abstractions
- */
 %sass-margin-bottom {
     margin-bottom:$base-spacing-unit;
     margin-bottom:($base-spacing-unit / $typecsset-base-font-size)*1rem;

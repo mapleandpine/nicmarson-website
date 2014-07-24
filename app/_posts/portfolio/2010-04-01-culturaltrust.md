@@ -23,12 +23,12 @@ I was given the job of redesigning and recoding the Oregon Cultural Trust websit
   <div class="grid grid--guttersLarge grid-wrap thumb-grid">
     <div class="thumb grid-cell show-me animated">
       <a href="#" class="fluidbox">
-        <img src="/img/portfolio/{{ page.name }}/{{ page.name }}-01.{{ page.img-ext }}" alt="{{ page.thumb-alt }}" class="img-responsive">
+        <img src="/images/portfolio/{{ page.name }}/{{ page.name }}-01.{{ page.img-ext }}" alt="{{ page.thumb-alt }}" class="img-responsive">
       </a>
     </div>
     <div class="thumb grid-cell show-me animated">
       <a href="#" class="fluidbox">
-        <img src="/img/portfolio/{{ page.name }}/{{ page.name }}-02.{{ page.img-ext }}" alt="{{ page.thumb-alt }}" class="img-responsive">
+        <img src="/images/portfolio/{{ page.name }}/{{ page.name }}-02.{{ page.img-ext }}" alt="{{ page.thumb-alt }}" class="img-responsive">
       </a>
     </div>
   </div>

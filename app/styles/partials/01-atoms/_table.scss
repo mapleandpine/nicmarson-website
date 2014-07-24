@@ -18,7 +18,6 @@
   @extend %typecsset-vertical-rhythm;
   border-collapse: collapse;
   border-spacing: 0;
-  font-size: 85%;
 
   // Cells
   > thead,
@@ -46,5 +45,27 @@
   // Nesting
   .table {
     background-color: #FFF;
+  }
+}
+
+.table-border {
+  width: 100%;
+
+  // Cells
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: .5rem 1em .5rem 0;
+      }
+      > th {
+        border-bottom: 2px solid palette(grey, light);
+      }
+      > td {
+        border-bottom: 1px solid palette(grey);
+      }
+    }
   }
 }

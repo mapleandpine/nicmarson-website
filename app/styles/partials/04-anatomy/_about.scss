@@ -1,35 +1,33 @@
-.employment-history {
-  margin-bottom: 2rem;
+.about__img-circle {
+  background-color: palette(red);
+  float: right;
+  opacity: .95;
+  padding-bottom: 75%;
+  position: relative;
+  @extend %transition-fast;
+  width: 80%;
 
-  @include mq($from: desktop) {
-    margin-bottom: 3rem;
-  }
-
-  tfoot a {
-    margin-right: 1em;
-
-    &:hover .icon {
-      color: palette(blue);
-    }
-  }
-
-  .year {
-    width: 5em;
+  img {
+    animation: body-movement 16s cubic-bezier(.5, .2, .3, 1) infinite;
+    position: absolute;
+    top: 5%;
+    width: 100%;
   }
 }
 
-.extracurricular-history {
-  font-size: 14px;
-  font-weight: 700;
+.about__history {
+  background-color: palette(grey, lightest);
+}
 
-  @include mq($from: desktop) {
-    flex: none;
-    padding-left: 20px;
-    width: 33.3333%;
-  }
+.about__favorites {
+  background-color: palette(grey, light);
 
-  ul {
-    margin-left: 0;
+  .col-one-third {
+    border-right: 1px solid rgba(0,0,0,.1);
+
+    &:last-child {
+      border-right: none;
+    }
   }
 }
 
@@ -89,7 +87,7 @@
 }
 
 .bridgecity {
-  background-image: url("../img/bridge.svg");
+  background-image: url("../images/bridge.svg");
   background-position: center -20px;
   background-repeat: no-repeat;
   background-size: 160px auto;

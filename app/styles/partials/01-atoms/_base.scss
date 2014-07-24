@@ -1,11 +1,9 @@
 /*------------------------------------*\
     #BASE
+    http://meyerweb.com/eric/tools/css/reset/
+    v2.0 | 20110126
+    License: none (public domain)
 \*------------------------------------*/
-
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
 
 *,
 *::before,
@@ -44,13 +42,23 @@ html,
 body {
   background-color: $body-bg-color;
   color: $body-color;
-  font-family: $base-font-family;
-  font-size: $typecsset-base-font-size / 16px + em; /* [1] */
-  line-height: $typecsset-base-line-height / $typecsset-base-font-size; /* [2] */
   margin: 0;
+  speak: none;
   text-rendering: optimizelegibility;
+}
+
+html {
+  font-family: $base-font-family;
+  font-size: $font-size-sm;
+  font-smoothing: antialiased;
+  line-height: $line-height-base;
+
+  @include mq($from: desktop) {
+    font-size: $font-size-md;
+  }
 
   @include mq($from: huge) {
+    font-size: $font-size-lg;
     letter-spacing: -.01em;
   }
 }
@@ -59,17 +67,10 @@ body {
   // Ala Trent Walton
   // http://trentwalton.com/2011/09/07/css-hyphenation
   @include hyphens(auto);
+  font-size: 1em;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-}
-
-// Horizontal rules
-hr {
-  border: 0;
-  border-top: 1px solid $hr-border;
-  margin-top:    $line-height-computed;
-  margin-bottom: $line-height-computed;
 }

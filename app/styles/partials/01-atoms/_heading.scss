@@ -8,6 +8,11 @@ h1, h2, h3, h4, h5, h6,
   font-kerning: normal;
   font-weight: $heading-weight;
   line-height: $heading-line-height;
+  @extend %typecsset-vertical-rhythm;
+
+  &:first-child {
+    margin-top: 0;
+  }
 
   small,
   .small {
@@ -20,23 +25,19 @@ h1, h2, h3, h4, h5, h6,
 h1, .h1,
 h2, .h2,
 h3, .h3 {
-  margin-top: $line-height-computed;
-  margin-bottom: ($line-height-computed / 2);
-
-  &:first-child {
-    margin-top: 0;
-  }
+  margin-top: 1.5rem;
 
   small,
   .small {
     font-size: 65%;
   }
 }
+
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  margin-top: ($line-height-computed / 2);
-  margin-bottom: ($line-height-computed / 2);
+  margin-top: .75rem;
+  margin-bottom: .75rem;
 
   small,
   .small {
@@ -50,3 +51,17 @@ h3, .h3 { font-size: $font-size-h3; }
 h4, .h4 { font-size: $font-size-h4; }
 h5, .h5 { font-size: $font-size-h5; }
 h6, .h6 { font-size: $font-size-h6; }
+
+.headline {
+  font-size: $font-size-h1;
+
+  @include mq($from: tablet) {
+    font-size: $font-size-headline;
+  }
+}
+
+.section__title {
+  font-size: 1em;
+  font-weight: 400;
+  text-transform: uppercase;
+}

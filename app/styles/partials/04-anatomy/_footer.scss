@@ -1,19 +1,19 @@
 footer[role=contentinfo] {
-  background-color: palette(grey, light);
-  color: $black;
   font-size: 12px;
-  padding: 1rem;
+  padding: $gutter-width-small $gutter-width-small*2;
 
   @include mq($from: desktop) {
-    padding: 4rem 0;
+    padding: $gutter-width-medium $gutter-width-medium*2;
   }
 
-  .section__blog {
+  @include mq($from: huge) {
+    padding: $gutter-width-large $gutter-width-large*2;
   }
 
-  .section__links {
-  }
+  .site-connect {
 
-  .section__siteinfo {
+    .js & {
+      display: none;
+    }
   }
 }

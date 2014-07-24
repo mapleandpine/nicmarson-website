@@ -1,7 +1,5 @@
-<div class="container">
-  <nav role="navigation">
-    <a href="/index.html" class="name {% if page.slug == 'home' %}active{% endif %}">Home</a>
-    <a href="/about.html" {% if page.slug == "about" %} class="active"{% endif %}>About</a>
-    <a href="/portfolio.html" {% if page.slug == "portfolio" %} class="active"{% endif %}>Blog</a>
-  </nav>
-</div>
+<nav role="navigation">
+  <a href="/index.html" class="name {% if page.slug == 'home' %}active{% endif %}">Home</a>
+  <a href="/about.html" {% if page.slug == "about" %} class="active"{% endif %}>About</a>
+  <a href="/portfolio.html" {% if page.slug == "portfolio" %} class="active"{% endif %}>Blog</a>
+</nav>

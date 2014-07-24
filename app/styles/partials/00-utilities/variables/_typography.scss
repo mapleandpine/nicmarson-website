@@ -3,37 +3,33 @@
 //## Weight, line-height, and size for body text, headings, and more.
 
 
-/*==================================
-=            Font sizes            =
-==================================*/
-$font-size-base:              16px;
-$typecsset-base-font-size:    $font-size-base;
+// Font sizes
+$font-size-sm:                14px;
+$font-size-md:                16px;
+$font-size-lg:                20px;
+$typecsset-base-font-size:    1rem;
 $font-size-small:             75% !default;
 $font-size-large:             150% !default;
-$font-size-large-static:      ceil(($font-size-base * 1.25)) !default; // ~20px
-$font-size-small-static:      ceil(($font-size-base * 0.75)) !default; // ~12px
 
-$font-size-h1:                floor(($font-size-base * 2.6)) !default; // ~36px
-$font-size-h2:                floor(($font-size-base * 2.15)) !default; // ~30px
-$font-size-h3:                ceil(($font-size-base * 1.7)) !default; // ~24px
-$font-size-h4:                ceil(($font-size-base * 1.25)) !default; // ~18px
-$font-size-h5:                $font-size-base !default;
-$font-size-h6:                ceil(($font-size-base * 0.85)) !default; // ~12px
+$font-size-headline:          3.25rem;  // ~52px
+$font-size-h1:                3rem;     // ~48px
+$font-size-h2:                2.5rem;   // ~40px
+$font-size-h3:                2rem;     // ~32px
+$font-size-h4:                1.5rem;   // ~24px
+$font-size-h5:                1rem;     // ~16px
+$font-size-h6:                .875rem;  // ~14px
 
 //** Blockquote font size
-$blockquote-font-size:        ($font-size-base * 1.25) !default;
+$blockquote-font-size:        1.25rem;
 
-
-/*========================================
-=            Font line-height            =
-========================================*/
+// Font line-height
 
 //** Unit-less `line-height` for use in components like buttons.
 $line-height-base:            1.5; // 24/16
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
-$line-height-computed:        floor(($font-size-base * $line-height-base)) !default; // ~20px
+$line-height-computed:        24px; // based on a 16px font-size
 
-$typecsset-base-line-height:  $line-height-computed;
+$typecsset-base-line-height:  $line-height-base;
 
 $line-height-large:           1.33 !default;
 $line-height-small:           1.5 !default;
@@ -41,17 +37,12 @@ $line-height-small:           1.5 !default;
 $heading-line-height:         1.1 !default;
 
 
-/*====================================
-=            Font weights            =
-====================================*/
-
+// Font weights
 $heading-weight:          700;
 $small-caps-weight:       600;
 
 
-/*==========================================
-=            Typecsset settings            =
-==========================================*/
+// Typecsset settings
 
 // Would you like indented (rather than spaced) paragraph delimiting?
 $typecsset-indented-paragraphs: false !default;
@@ -59,10 +50,7 @@ $typecsset-indented-paragraphs: false !default;
 // Would you like to show a baseline grid? This is handy during development.
 $typecsset-show-baseline:       false !default;
 
-// Do not modify these variables; they are internal settings upon which the
-// library depends.
-$typecsset-magic-number:        $typecsset-base-line-height;
-$typecsset-magic-ratio:         $typecsset-base-line-height / $typecsset-base-font-size;
+$typecsset-magic-number:        $line-height-computed;
+$typecsset-magic-ratio:         1.5;
 
-// SIZE AND SPACING
-$base-spacing-unit:             $typecsset-base-line-height;
+$base-spacing-unit:             1rem;

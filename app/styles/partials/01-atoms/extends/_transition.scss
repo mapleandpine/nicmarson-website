@@ -10,7 +10,11 @@
   transition: all .25s cubic-bezier(.17,.67,.83,.67) 0s;
 }
 
-%transition-component {
+%transition-faster {
+  transition: all .15s cubic-bezier(.17,.67,.83,.67) 0s;
+}
+
+%transition-portfolio {
   transition-duration: .2s;
   transition-timing-function: cubic-bezier(.17,.67,.83,.67);
 }

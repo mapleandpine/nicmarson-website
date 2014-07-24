@@ -1,0 +1,46 @@
+%font-small {
+  font-size: $font-size-small;
+}
+
+%font-large {
+  font-size: $font-size-large;
+}
+
+%fat-skinny {
+  font-weight: 200;
+
+  b {
+    font-weight: 800;
+  }
+}
+
+.inverse {
+  background-color: palette(grey, darkest);
+  color: palette(grey, lightest);
+
+  a {
+    color: palette(red, light);
+
+    &:visited {
+      color: palette(red, light);
+    }
+
+    &:hover,
+    &:focus {
+      color: palette(red, lighter);
+    }
+  }
+
+  a[role="link"] {
+    border-bottom: .0625rem solid palette(red, light);
+
+    &:visited {
+      border-bottom-color: palette(red, light);
+    }
+
+    &:hover,
+    &:focus {
+      border-bottom-color: palette(red, lighter);
+    }
+  }
+}

@@ -1,0 +1,47 @@
+
+/*!
+ * Waves v0.3.1
+ * https://publicis-indonesia.github.io/Waves
+ *
+ * Copyright 2014 Publicis Metro Indonesia, PT. and other contributors
+ * Released under the BSD license
+ * https://github.com/publicis-indonesia/Waves/blob/master/LICENSE
+ */
+
+.waves-effect {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    user-select: none;
+    transition: all .3s ease-out;
+
+    .waves-ripple {
+        position: absolute;
+        border-radius: 100%;
+        border-width:0px;
+        border-style:solid;
+        width:0px;
+        height:0px;
+        opacity:0;
+        border-color: rgba(0, 0, 0, 0.2);
+        transition: all 0.5s ease-out;
+    }
+}
+
+.waves-effect.waves-light .waves-ripple {
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.waves-float {
+    -webkit-mask-image:none;
+    box-shadow: 0px 1px 1.5px 1px rgba(0, 0, 0, 0.12);
+
+    &:active {
+        box-shadow: 0px 8px 20px 1px rgba(0, 0, 0, 0.30);
+    }
+}
+
+.waves-block {
+    display:block;
+}

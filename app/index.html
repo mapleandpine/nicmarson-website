@@ -11,28 +11,19 @@ slug: home
   </section> -->
   <section class="home__intro container">
     <div class="row">
-      <div class="col-one-third">
-        <div class="home__img-circle">
-          <img src="../images/vector-me.png" alt="Nicholas Marson" class="img-responsive">
-        </div>
-      </div>
-      <div class="col-two-thirds">
-        <h1 class="headline">Shooting for no less than flabbergasted.</h1>
-        <p>I create digital experiences that promote interaction. I think bigger, move faster, blow minds, get shit done and innovate—plus any other cliché saying that comes to mind.</p>
-      </div>
+      <h1 class="headline">Shooting for no less than flabbergasted.</h1>
+      <p class="lead">I create digital experiences that promote interaction. I think bigger, move faster, blow minds, get shit done and innovate—plus any other cliché saying that comes to mind.</p>
     </div>
   </section>
   {% include 02-organisms/00-global/01-footer.html %}
 </main>
-<aside class="flex-container--column">
-  <header class="flex-item">
-    <h1>A few projects I've worked on</h1>
+<aside>
+  <header>
+    <h1 class="section__title">A few projects I've worked on</h1>
   </header>
-  <div class="home__portfolio flex-item--scroll">
-    <div class="home__portfolio__items flex-container--column">
-      {% for post in site.categories['portfolio'] limit:4 %}
-        {% include 02-organisms/01-sections/03-section-portfolio-light.html %}
-      {% endfor %}
-    </div>
+  <div class="home__portfolio flex-container--column">
+    {% for post in site.categories['portfolio'] limit:4 %}
+      {% include 02-organisms/01-sections/03-section-portfolio-light.html %}
+    {% endfor %}
   </div>
 </aside>

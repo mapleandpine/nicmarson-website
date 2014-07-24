@@ -1,109 +1,230 @@
-.container {
-  margin: 20px;
-
-  @include mq($from: desktop) {
-    margin: 0 auto;
-    width: 80%;
-  }
-}
-
-.flex-container {
-  display: flex;
-
-  &--row {
-    display: flex;
-    flex-flow: row nowrap;
-  }
-
-  &--column {
-    display: flex;
-    flex-flow: column nowrap;
-  }
-}
-
-.flex-item {
-  flex: 1 auto;
-
-  &--scroll {
-    flex: 1 auto;
-    overflow: auto;
-  }
-}
+$gutter-width-small:  1rem;
+$gutter-width-medium: 1.5rem;
+$gutter-width-large:  2rem;
 
 .cf,
-.row {
+.row,
+.row--gutters,
+.row--moat {
   @include clearfix;
 }
 
 [class^="col-"] {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-  max-width: 100%;
+  float: left;
 }
 
-.row {
+.col-half {
+  width: 100%;
 
-  [class^="col-"] {
+  @include mq($from: desktop) {
+    width: 50%;
+  }
+}
+
+.col-one-third {
+  width: 50%;
+
+  @include mq($from: desktop) {
+    width: 33%;
+
     &:first-child {
-      margin-left: 0;
-    }
-    &:last-child {
-      margin-right: 0;
+      width: 34%;
     }
   }
 }
 
-@include mq($from: desktop) {
+.col-two-thirds {
+  width: 100%;
+
+  @include mq($from: desktop) {
+    width: 67%;
+  }
+}
+
+.col-one-fourth {
+  width: 50%;
+
+  @include mq($from: desktop) {
+    width: 25%;
+  }
+}
+
+.col-three-fourths {
+  width: 100%;
+
+  @include mq($from: desktop) {
+    min-width: 75%;
+  }
+}
+
+.col-one-fifth {
+  width: 50%;
+
+  @include mq($from: desktop) {
+    width: 20%;
+  }
+}
+
+.col-two-fifths {
+  width: 50%;
+
+  @include mq($from: desktop) {
+    width: 40%;
+  }
+}
+
+.col-three-fifths {
+  width: 100%;
+
+  @include mq($from: desktop) {
+    width: 60%;
+  }
+}
+
+.col-four-fifths {
+  width: 100%;
+
+  @include mq($from: desktop) {
+    width: 80%;
+  }
+}
+
+.col-full {
+  width: 100%;
+}
+
+.row--gutters {
 
   [class^="col-"] {
-    float: left;
+    max-width: 100%;
+    padding-left: $gutter-width-small;
+    padding-right: $gutter-width-small;
 
-    .col-one-third {
-      width: calc(100% / 3 - 1.5rem);
+    @include mq($from: desktop) {
+      padding-left: $gutter-width-medium;
+      padding-right: $gutter-width-medium;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
     }
 
-    .col-half {
-      width: calc(100% / 2 - 1.5rem);
+    @include mq($from: huge) {
+      padding-left: $gutter-width-large;
+      padding-right: $gutter-width-large;
     }
+  }
 
-    .col-two-thirds {
-      width: calc(100% / 1.5 - 1.5rem);
+  .col-one-fifth {
+
+    &:first-child,
+    &:last-child {
+      @include mq($from: desktop) {
+        width: calc(20% - $gutter-width-medium);
+      }
+
+      @include mq($from: huge) {
+        width: calc(20% - $gutter-width-large);
+      }
     }
+  }
 
-    .col-one-fifth {
-      width: calc(100% / 5 - 1.5rem);
-    }
+  .col-one-fourth {
 
-    .col-three-fifths {
-      width: calc(100% / 5 * 3 - 1.5rem);
-    }
+    &:first-child,
+    &:last-child {
+      @include mq($from: desktop) {
+        width: calc(25% - $gutter-width-medium);
+      }
 
-    .col-full {
-      width: calc(100% - 1.5rem);
+      @include mq($from: huge) {
+        width: calc(25% - $gutter-width-large);
+      }
     }
   }
 
   .col-one-third {
-    width: calc(100% / 3 - 3rem);
-  }
 
-  .col-half {
-    width: calc(100% / 2 - 3rem);
+    &:first-child,
+    &:last-child {
+      @include mq($from: desktop) {
+        width: calc(33% - $gutter-width-medium);
+      }
+
+      @include mq($from: huge) {
+        width: calc(33% - $gutter-width-large);
+      }
+    }
   }
 
   .col-two-thirds {
-    width: calc(100% / 1.5 - 3rem);
+
+    &:first-child,
+    &:last-child {
+      @include mq($from: desktop) {
+        width: calc(67% - $gutter-width-medium);
+      }
+
+      @include mq($from: huge) {
+        width: calc(67% - $gutter-width-large);
+      }
+    }
+  }
+}
+
+.row--moat {
+
+  [class^="col-"] {
+    padding: $gutter-width-small*2;
+
+    @include mq($from: desktop) {
+      padding: $gutter-width-medium*2;
+    }
+
+    @include mq($from: huge) {
+      padding: $gutter-width-large*2;
+    }
+  }
+}
+
+.container {
+  padding: $gutter-width-small*2;
+
+  @include mq($from: desktop) {
+    padding: $gutter-width-medium*2;
   }
 
-  .col-one-fifth {
-    width: calc(100% / 5 - 3rem);
+  @include mq($from: huge) {
+    padding: $gutter-width-large*2;
+  }
+}
+
+// modernizr feature detection
+.flexbox {
+
+  .flex {
+    display: flex;
+    overflow: auto;
+
+    &--row {
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    &--column {
+      display: flex;
+      flex-flow: column nowrap;
+    }
   }
 
-  .col-three-fifths {
-    width: calc(100% / 5 * 3 - 3rem);
-  }
-
-  .col-full {
-    width: calc(100% - 3rem);
+  .flex__item {
+    display: inline-flex;
+    flex: 1 auto;
+    position: relative;
+    overflow: hidden;
   }
 }

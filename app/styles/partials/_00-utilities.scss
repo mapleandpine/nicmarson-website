@@ -17,7 +17,6 @@
 
 // Animation
 @import "00-utilities/variables/timing";
-@import "00-utilities/extends/transition";
 
 // Fonts
 @import "00-utilities/mixins/font-face";
@@ -31,8 +30,6 @@
 @import "00-utilities/mixins/text-emphasis";
 @import "00-utilities/mixins/text-overflow";
 @import "00-utilities/mixins/list";
-@import "00-utilities/extends/typecsset";
-@import "00-utilities/extends/typography";
 
 // Images
 @import "00-utilities/variables/iconography";
@@ -64,7 +61,5 @@
 @import "00-utilities/functions/z-index";
 @import "00-utilities/variables/z-index";
 
-
 // Extras
-// -------------------------
 @import "00-utilities/mixins/long-shadow";

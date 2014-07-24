@@ -58,7 +58,7 @@ Let me share with you how I became more efficient by building a styleguide and i
 
 At my workplace it&rsquo;s really difficult to get something from an idea to production. The design process is pretty standard. We have a goal and some guidelines. We produce wireframes and design comps, but to take it any further we need our information technology department (IT) to step in.
 
-<img alt="chart of workflow" src="/img/post/styleguide_01.png">
+<img alt="chart of workflow" src="/images/post/styleguide_01.png">
 
 We have a Java based environment and portal software. We use git for version control, a package manager, and several environments for publishing.
 
@@ -86,7 +86,7 @@ As we view it on the newly rendered page we see that it fixes the problem perfec
 
 Now we need to get IT to do another build, but they can&rsquo;t. It&rsquo;s the end of the day and the administrator left to pick their child up from school. We&rsquo;ll have to wait until next week, since today&rsquo;s Friday. It might be an easy fix, but we have no control in fixing it.
 
-<img alt="Ron Burgundy saying that doesn't make any sense" src="/img/post/styleguide03.gif">
+<img alt="Ron Burgundy saying that doesn't make any sense" src="/images/post/styleguide03.gif">
 
 If only I had known about the unique page layout before committing the style. We do have a way of fixing it, but it feels dirty, like I need to take a shower afterwards. The change is part of a larger build that has to go out for the weekend. So, I log into the portal admin tool and add an inline style to the unique page. It works, but to our detriment, as it may create a problem later.
 
@@ -114,7 +114,7 @@ Whenever I wrote a styleguide there was a limited amount of time it was relevant
 
 Having a living document means that your styleguide updates automatically when you update your code. The HTML is constructed based on a template, and the generated examples even have syntax highlighting!
 
-<img alt="shocked owl" src="/img/post/styleguide_04.gif">
+<img alt="shocked owl" src="/images/post/styleguide_04.gif">
 
 A good example of this is <a href="https://www.google.com/url?q=https%3A%2F%2Fgithub.com%2Fstyleguide%2Fcss&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNHh0DPKVs2PdtldtkR59aGjouTlaw">Github&rsquo;s styleguide</a>. They use a tool called KSS, or <a href="https://www.google.com/url?q=https%3A%2F%2Fgithub.com%2Fkneath%2Fkss&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNHcIf0mikc8m2eXzzuTOZhYUSGqVw">Knyle Style Sheets</a>, to automatically generate pages containing style definitions and examples. While KSS is awesome, it&rsquo;s only a small part of your factory.
 
@@ -141,7 +141,7 @@ In addition, because of Jekyll you have a factory at your fingertips to generate
 
 With these tools at your disposal you can mimic your production environment with as much detail as you want. Thereby eliminating the reliance on a third-party for accurate previews. Without being tied to an IDE, you can also use your favorite text editor to write code.
 
-<img alt="final workflow chart" src="/img/post/styleguide_02.png">
+<img alt="final workflow chart" src="/images/post/styleguide_02.png">
 
 In the following section you&rsquo;ll find links that will help you get started on building styleguides and working with Grunt. I&rsquo;ve also included a generator that that installs everything you need to get started.
 

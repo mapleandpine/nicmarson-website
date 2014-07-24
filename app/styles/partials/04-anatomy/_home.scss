@@ -1,37 +1,12 @@
-.home main,
-.home aside {
-  @include mq($from: desktop) {
-    height: 100%;
-    position: absolute;
-    width: 50%;
-  }
-}
-
 .home main {
   overflow-y: auto;
-}
 
-.home aside {
-  box-shadow: 10px 0 15px -10px rgba(0, 0, 0, .8);
-  left: 50%;
-  overflow: hidden;
-
-  header {
+  @include mq($from: desktop) {
+    height: 100%;
     left: 0;
-    position: absolute;
+    position: fixed;
     top: 0;
-    width: 100%;
-
-    h1 {
-      background-color: $black;
-      color: $white;
-      font-size: 1em;
-      font-weight: 400;
-      line-height: 2.5;
-      margin: 0;
-      padding-left: 1em;
-      text-transform: uppercase;
-    }
+    width: 60%;
   }
 }
 
@@ -41,6 +16,7 @@
     bottom: 0;
     left: 0;
     position: absolute;
+    width: 100%;
   }
 }
 
@@ -49,76 +25,42 @@
   margin-top: 2em;
 
   @include mq($from: desktop) {
-    margin-bottom: 5em;
-    margin-top: 5em;
+    margin-bottom: 3em;
+    margin-top: 3em;
   }
 }
 
-.home__img-circle {
-  @extend %transition-component;
-  background-color: palette(red);
-  border-radius: 50%;
-  margin: .5em auto;
-  opacity: .95;
-  overflow: hidden;
 
-  img {
-    animation: body-movement 16s cubic-bezier(.5, .2, .3, 1) infinite;
-    width: 180px;
+// Portfolio items
+
+.home aside {
+  overflow: hidden;
+  position: relative;
+
+  @include mq($from: desktop) {
+    box-shadow: 15px 0 15px -10px rgba(0, 0, 0, .2) inset;
+    left: 60%;
+    width: 40%;
+  }
+
+  header {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  h1 {
+    background-color: $red;
+    color: $white;
+    line-height: 2.5;
+    margin: 0;
+    padding-left: 1em;
   }
 }
 
 .home__portfolio {
+  min-height: -webkit-min-content;
   position: relative;
   top: 2.5em;
-}
-
-.home__portfolio__items {
-  min-height: -webkit-min-content;
-
-  .portfolio__item {
-    position: relative;
-
-    a {
-      background-color: $portfolio-item-bg-color;
-      display: block;
-      height: 0;
-      overflow: hidden;
-      padding-bottom: 50%;
-      width: 100%;
-    }
-
-    span {
-      @include centerer();
-      border: 1px solid $white;
-      color: #FFF;
-      display: block;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 3px;
-      line-height: 20px;
-      padding: 13px 0px;
-      text-align: center;
-      text-transform: uppercase;
-      transition: all 0.2s ease-in-out 0s;
-      width: 45%;
-    }
-
-    img {
-      background-color: $portfolio-item-bg-color;
-      margin: 0px auto;
-      opacity: 0.2;
-      transition: all .75s ease-out 0s;
-      transform: scale(1.03, 1.03);
-      overflow: hidden;
-      width: 100%;
-
-      &:hover {
-        background-color: $portfolio-item-hover-bg-color;
-        opacity: 0.5;
-        transform: scale(1, 1);
-        transition-duration: .25s;
-      }
-    }
-  }
 }

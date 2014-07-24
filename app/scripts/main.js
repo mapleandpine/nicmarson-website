@@ -124,11 +124,11 @@ var windowSmall = 768,
     if ( $(m).is(':hidden') ) {
       $(m).fadeToggle(200);
       $(overlay).fadeToggle(200);
-      $body.toggleClass("site-nav-open");
+      $body.toggleClass("site-nav-closed");
     } else {
       $(m).fadeOut(200);
       $(overlay).fadeOut(200);
-      $body.removeClass("site-nav-open");
+      $body.removeClass("site-nav-closed");
     }
   };
 
