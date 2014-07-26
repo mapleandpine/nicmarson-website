@@ -7,19 +7,19 @@
 // Styleguide 1.11.1
 
 .close {
-  color: #333;
-  font-size: 48px;
-  float: right;
+  color: $white;
+  font-size: 3rem;
   line-height: 1;
-  opacity: 20;
-  text-shadow: 0 1px 0 rgba(255,255,255,1);
+  opacity: .5;
+  position: absolute;
+  right: 1.25rem;
+  text-transform: uppercase;
+  top: .5rem;
 
   &:hover,
   &:focus {
-    color: $black;
     cursor: pointer;
-    opacity: 40;
-    text-decoration: none;
+    opacity: .8;
   }
 }
 

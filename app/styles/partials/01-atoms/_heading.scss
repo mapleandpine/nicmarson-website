@@ -52,7 +52,7 @@ h4, .h4 { font-size: $font-size-h4; }
 h5, .h5 { font-size: $font-size-h5; }
 h6, .h6 { font-size: $font-size-h6; }
 
-.headline {
+.title {
   font-size: $font-size-h1;
 
   @include mq($from: tablet) {
@@ -60,8 +60,34 @@ h6, .h6 { font-size: $font-size-h6; }
   }
 }
 
-.section__title {
-  font-size: 1em;
+.title--section {
+  border-bottom: 1px solid palette(grey);
+  font-size: 1rem;
   font-weight: 400;
+  letter-spacing: .07em;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
   text-transform: uppercase;
+
+  b {
+    font-weight: 800;
+  }
+}
+
+.title--overlay {
+  @extend %title;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  color: $white;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: .07em;
+  line-height: 1;
+  margin-bottom: 1rem;
+  padding-bottom: .75rem;
+  padding-right: 3rem;
+  padding-top: .75rem;
+
+  b {
+    font-weight: 800;
+  }
 }

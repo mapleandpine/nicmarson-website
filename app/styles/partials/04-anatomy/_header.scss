@@ -1,43 +1,73 @@
 .site-header {
-  padding: $gutter-width-small $gutter-width-small*2;
 
-  @include mq($from: desktop) {
-    padding: $gutter-width-medium $gutter-width-medium*2;
-  }
+  a {
+    border-bottom: 1px solid transparent;
+    letter-spacing: .0125em;
+    text-transform: uppercase;
 
-  @include mq($from: huge) {
-    padding: $gutter-width-large $gutter-width-large*2;
+    &:focus,
+    &:hover {
+      border-bottom-color: lighten($nav-link-color-hover, 6);
+      color: $nav-link-color-hover;
+    }
+
+    &.active {
+      border-bottom-color: $nav-link-color-active;
+      color: $nav-link-color-active;
+    }
   }
 
   nav[role=navigation] {
-
-    a {
-      border-bottom: 1px solid transparent;
-      display: inline-block;
-      letter-spacing: .0125em;
-      margin-right: .8em;
-      padding: .2em;
-      text-transform: uppercase;
-
-      &:focus,
-      &:hover {
-        border-bottom-color: lighten($nav-link-color-hover, 6);
-        color: $nav-link-color-hover;
-      }
-
-      &.active {
-        border-bottom-color: $nav-link-color-active;
-        color: $nav-link-color-active;
-      }
-    }
 
     .site-nav-closed & {
       display: none;
     }
   }
+
+  .toggle-connect-container {
+    border-radius: 50%;
+    @extend %transition-fast;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .toggle--connect {
+    background-color: palette(grey, light);
+    border: none;
+    border-radius: 50%;
+
+    &:hover {
+      background-color: palette(grey);
+
+      svg {
+        transform: scale(1.1);
+      }
+    }
+
+    svg {
+      fill: $white;
+      @extend %transition-fast;
+      vertical-align: middle;
+    }
+  }
+
+  .toggle--nav {
+    left: 0;
+    position: absolute;
+    top: 0;
+
+    @include mq($from: desktop) {
+      opacity: .75;
+    }
+
+    &:hover,
+    &.active {
+      opacity: 1;
+    }
+  }
 }
-
-
 
 .nav-previous {
   display: inline-block;
@@ -47,86 +77,7 @@
   top: 0;
 }
 
-.nav-toggle {
-  background-color: palette(grey, dark);
-  border-color: palette(grey, dark);
-  border: 2px solid palette(grey, dark);
-  color: #FFF;
-  cursor: pointer;
-  display: block;
-  height: 38px;
-  outline: none;
-  padding: 0;
-  position: relative;
-  @extend %transition-fast;
-  transition-property: background-color, opacity;
-  width: 40px;
-
-  @include mq($from: desktop) {
-    opacity: .75;
-  }
-
-  span {
-    background-color: rgba(255,255,255,.8);
-    display: block;
-    font-size: 0;
-    height: 4px;
-    left: 8px;
-    margin-top: -2px;
-    position: absolute;
-    top: 50%;
-    user-select: none;
-    width: 20px;
-
-    &:before,
-    &:after {
-      background-color: rgba(255,255,255,.8);
-      content: '';
-      height: 100%;
-      left: 0;
-      position: absolute;
-      transition: transform .2s;
-      width: 100%;
-    }
-
-    &:before {
-      transform: translateY(-200%);
-    }
-
-    &:after {
-      transform: translateY(200%);
-    }
-  }
-
-  &:hover,
-  &.active {
-    opacity: 1;
-
-    span:before {
-      transform: translateY(-220%);
-    }
-
-    span:after {
-      transform: translateY(220%);
-    }
-  }
-}
-
-.site-nav-open .nav-toggle {
-
-  span {
-
-    &:before {
-      transform: translateY(0) rotate(45deg);
-    }
-
-    &:after {
-      transform: translateY(0) rotate(-45deg);
-    }
-  }
-}
-
-.site-nav-open .site-header .site-nav-toggle {
+.site-nav-open .toggle--nav {
   border-color: rgba(255,255,255,.75);
 
   span {
@@ -135,6 +86,14 @@
     &:before,
     &:after {
       background-color: #FFF;
+    }
+
+    &:before {
+      transform: translateY(0) rotate(45deg);
+    }
+
+    &:after {
+      transform: translateY(0) rotate(-45deg);
     }
   }
 }

@@ -15,6 +15,10 @@ img-ext: png
 img-alt: Home &ndash; perrosproject.com
 
 color-dark: 692B06
+
+solo: development
+designer: 100
+developer: 100
 ---
 The founders, Courtney Dillard and Matt Webber, returned from their travels in South America determined to make a difference by focusing on a particular community and partnering with local animal activists in the region. To date The Perros Project has positively impacted hundreds of dogs by its activities on the ground and its ongoing support of local animal organizations and veterinary clinics.
 

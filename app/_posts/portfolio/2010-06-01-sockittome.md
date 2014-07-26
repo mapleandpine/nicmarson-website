@@ -15,6 +15,10 @@ img-ext: png
 img-alt: Sock It To Me home page
 
 color-dark: 0097D8
+
+solo: design and development
+designer: 100
+developer: 100
 ---
 Front-end development and design for the local sock company, Sock It To Me. They needed an e-commerce store and WordPress blog to match their new branding.
 

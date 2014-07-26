@@ -1,0 +1,174 @@
+.nav-connect {
+  @include centerer();
+  background-color: palette(grey, darker);
+  border-radius: 4px;
+  min-width: 38em;
+  padding: 1.5rem;
+  z-index: z(overlay);
+
+  @include mq($from: desktop) {
+    position: fixed;
+  }
+
+  .js & {
+    display: none;
+  }
+
+  .email-phone {
+    margin-bottom: 1.5rem;
+
+    .btn--block {
+      height: 148px;
+      padding: 20px;
+    }
+
+    svg {
+      @include centerer();
+      fill: palette(grey, darkest);
+      margin: auto;
+      width: 128px;
+    }
+
+    span {
+      @extend %text-white-border;
+      @include centerer();
+      display: inline-block;
+      padding: 1em .5em;
+    }
+  }
+
+  .title--section {
+    border-bottom-color: rgba(255,255,255,.1);
+  }
+
+  .social {
+    @extend %text-white-border;
+
+    &:focus,
+    &:hover {
+
+      .tooltip--top {
+        bottom: 3.25em;
+        opacity: 1;
+      }
+    }
+  }
+
+  .tooltip--top {
+    bottom: 1500px;
+    font-size: 12px;
+    min-width: 148px;
+    opacity: 0;
+    padding: 20px;
+
+    $tooltip-arrow-size: 10px;
+
+    &:after {
+      border-right: $tooltip-arrow-size solid transparent;
+      border-left: $tooltip-arrow-size solid transparent;
+      border-top: $tooltip-arrow-size solid;
+      bottom: -$tooltip-arrow-size+1px;
+    }
+
+    span {
+      display: block;
+    }
+
+    svg {
+      fill: $white;
+      margin: 0 auto 10px;
+      width: 64px;
+    }
+  }
+
+  .linkedin {
+
+    &:focus,
+    &:hover,
+    small {
+      background-color: $linkedin;
+    }
+
+    small::after {
+      border-top-color: $linkedin;
+    }
+  }
+
+  .twitter {
+
+    &:focus,
+    &:hover,
+    small {
+      background-color: $twitter;
+    }
+
+    small::after {
+      border-top-color: $twitter;
+    }
+  }
+
+  .facebook {
+
+    &:focus,
+    &:hover,
+    small {
+      background-color: $facebook;
+    }
+
+    small::after {
+      border-top-color: $facebook;
+    }
+  }
+
+  .pinterest {
+
+    &:focus,
+    &:hover,
+    small {
+      background-color: $pinterest;
+    }
+
+    small::after {
+      border-top-color: $pinterest;
+    }
+  }
+
+  .github {
+
+    &:focus,
+    &:hover,
+    small {
+      background-color: $github;
+    }
+
+    small::after {
+      border-top-color: $github;
+    }
+  }
+
+  .kippt {
+
+    &:focus,
+    &:hover,
+    small {
+      background-color: $kippt;
+    }
+
+    small::after {
+      border-top-color: $kippt;
+    }
+  }
+
+  .googleplus {
+
+    &:focus,
+    &:hover,
+    small {
+      background-color: $googleplus;
+    }
+
+    small::after {
+      border-top-color: $googleplus;
+    }
+  }
+}

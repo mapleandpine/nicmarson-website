@@ -6,7 +6,8 @@
     "jquery": "~2.1.1",
     "velocity": "~0.8.0",
     "eventEmitter": "~4.2.7",
-    "imagesloaded": "~3.1.8"
+    "imagesloaded": "~3.1.8",
+    "Steady.js": "~1.1.0"
   },
   "devDependencies": {}
 }

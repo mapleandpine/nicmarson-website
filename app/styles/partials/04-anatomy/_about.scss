@@ -1,11 +1,14 @@
 .about__img-circle {
-  background-color: palette(red);
-  float: right;
-  opacity: .95;
-  padding-bottom: 75%;
-  position: relative;
   @extend %transition-fast;
-  width: 80%;
+
+  @include mq($from: tablet) {
+    background-color: #e85545;
+    float: right;
+    height: 400px;
+    opacity: .95;
+    position: relative;
+    width: 400px;
+  }
 
   img {
     animation: body-movement 16s cubic-bezier(.5, .2, .3, 1) infinite;
@@ -19,15 +22,19 @@
   background-color: palette(grey, lightest);
 }
 
-.about__favorites {
-  background-color: palette(grey, light);
+.about__favorite {
+  background-color: palette(grey, lighter);
 
-  .col-one-third {
-    border-right: 1px solid rgba(0,0,0,.1);
+  &.kippt {
+    background-color: $kippt;
+  }
 
-    &:last-child {
-      border-right: none;
-    }
+  &.twitter {
+    background-color: $twitter;
+  }
+
+  &.github {
+    background-color: $github;
   }
 }
 
@@ -53,44 +60,41 @@
     top: 30px;
     width: 80px;
   }
+}
 
-  .typcn-home {
-    font-size: 120px;
-    line-height: 1;
-    position: absolute;
-    left: 140px;
-    top: 0;
+.shape-home {
+  font-size: 120px;
+  line-height: 1;
+  position: absolute;
+  left: 140px;
+  top: 0;
 
-    @include mq($from: desktop) {
-      display: none;
-    }
-
-    @include mq($from: huge) {
-      display: inline-block;
-    }
+  @include mq($from: desktop) {
+    display: none;
   }
 
-  .typcn-home-outline {
-    color: palette(blue);
-    position: absolute;
-    left: 193px;
-    top: 96px;
+  @include mq($from: huge) {
+    display: inline-block;
+  }
+}
 
-    @include mq($from: desktop) {
-      display: none;
-    }
+.shape-house {
+  color: palette(blue);
+  position: absolute;
+  left: 193px;
+  top: 96px;
 
-    @include mq($from: huge) {
-      display: inline-block;
-    }
+  @include mq($from: desktop) {
+    display: none;
+  }
+
+  @include mq($from: huge) {
+    display: inline-block;
   }
 }
 
 .bridgecity {
-  background-image: url("../images/bridge.svg");
-  background-position: center -20px;
-  background-repeat: no-repeat;
-  background-size: 160px auto;
   padding: 110px 10px 20px;
   text-align: center;
 }
+

@@ -15,6 +15,10 @@ img-ext: png
 img-alt: Home &ndash; climateclean.net
 
 color-dark: 165324
+
+solo: design and development
+designer: 100
+developer: 100
 ---
 As Web Master for Climate Clean I was responsible for designing, building, and maintaining our corporate and satellite web sites. These sites were built to use WordPress as a management system with custom built and designed templates. In addition, I also designed the corporate identity systems, and kiosks for use in auto dealerships.
 

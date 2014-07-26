@@ -1,19 +1,61 @@
 footer[role=contentinfo] {
   font-size: 12px;
-  padding: $gutter-width-small $gutter-width-small*2;
+  min-height: 220px;
+  position: relative;
 
-  @include mq($from: desktop) {
-    padding: $gutter-width-medium $gutter-width-medium*2;
-  }
+  nav[role=navigation] {
+    margin-bottom: 2rem;
 
-  @include mq($from: huge) {
-    padding: $gutter-width-large $gutter-width-large*2;
-  }
+    a {
+      @extend %text-grey-background;
+      height: 3em;
+      line-height: 1;
+      padding: 11px 1em;
 
-  .site-connect {
-
-    .js & {
-      display: none;
+      &:focus,
+      &:hover {
+        @extend %text-grey-background-hover;
+      }
     }
+  }
+
+  .copyright {
+    margin-bottom: 0;
+  }
+}
+
+.futurefriendly,
+.futurefriendly:after {
+  // 1200px x 800px svg image
+  background: url(../images/futurefriendly.svg);
+  background-size: 300px 200px;
+  display: block;
+  height: 200px;
+  @extend %transition-fast;
+  width: 150px;
+}
+
+.futurefriendly {
+  background-position: 142px 0;
+  opacity: .5;
+  position: absolute;
+  right: 0;
+  top: 10px;
+
+  &:hover {
+    opacity: 1;
+
+    &:after {
+      opacity: 0;
+    }
+  }
+
+  &:after {
+    background-color: palette(grey, darkest);
+    background-position: 0 0;
+    content: "";
+    position: absolute;
+    top: 0;
+    transition: opacity .75s;
   }
 }

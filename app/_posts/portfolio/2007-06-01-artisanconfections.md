@@ -16,6 +16,10 @@ img-ext: jpg
 img-alt: Artisan Confections
 
 color-dark: 33211B
+
+solo: design and development
+designer: 100
+developer: 100
 ---
 This was Hershey’s umbrella company for their premium brands: Scharffenberger Chocolate, Joseph Schmidt Confections, and Dagoba Organic Chocolate.
 

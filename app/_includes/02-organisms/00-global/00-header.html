@@ -1,9 +1,11 @@
-<header class="site-header">
+<header class="site-header flex--row row--moat" role="banner">
+  <div class="col-full site-nav">
   {% if page.parent %}
-    <button type="button" class="nav-toggle site-nav-toggle"><span>Toggle navigation</span></button>
+    <button type="button" class="toggle--nav hamburger"><span>Toggle navigation</span></button>
     <a class="nav-previous" href="/{{ page.parent }}.html">Previous page</a>
     {% include 01-molecules/01-navigation/00-primary-nav.html %}
   {% else %}
     {% include 01-molecules/01-navigation/00-primary-nav.html %}
   {% endif %}
+  </div>
 </header>

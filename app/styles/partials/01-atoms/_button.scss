@@ -1,0 +1,36 @@
+.btn {
+  border: 0 none;
+  box-sizing: content-box;
+  cursor: pointer;
+  display: inline-block;
+  line-height: normal;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  user-select: none;
+  white-space: nowrap;
+
+  @include mq($from: tablet) {
+    max-width: 99%;
+  }
+
+  // Button states
+  &:focus {
+    outline: thin dotted #666;
+    text-decoration:none;
+  }
+
+  &:hover, &:active, &:focus {
+    text-decoration:none; // override any link default styles
+  }
+}
+
+.btn--default {
+  @extend .btn;
+}
+
+.btn--block {
+  @extend .btn;
+  display: block;
+}

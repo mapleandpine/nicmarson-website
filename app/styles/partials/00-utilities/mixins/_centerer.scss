@@ -3,6 +3,7 @@
 
 @mixin centerer($position: absolute, $direction: both) {
   position: $position;
+  transform-style: preserve-3d;
 
   @if $direction == horizontal {
     left: 50%;

@@ -12,12 +12,14 @@ $dot-distance: 4px;
 $dot-distance-top: 10px;
 $dot-main-color: $slider-main-color;
 $dot-back-color: $slider-back-color;
+$dot-nav-back-color: palette(grey, lightest);
 
 // Arrow
 $arrow-type: 'lite'; // standard | lite
 $arrow-size: 13px;
 $arrow-distance: 0;
 $arrow-hover-shift: 0px;
+$arrow-back-color: $white;
 $arrow-color: $slider-back-color;
 $arrow-hover-color: $slider-main-color;
 $arrow-thickness: 2px;
@@ -105,7 +107,7 @@ $easing: cubic-bezier(.4,1.3,.65,1); // ease-out
     user-select: none;
 
     > div {
-      background-color: $white;
+      background-color: $dot-nav-back-color;
       height: 6*$dot-outer-size;
       margin-left: -100%;
       padding: 2*$dot-outer-size 0;
@@ -184,7 +186,7 @@ $easing: cubic-bezier(.4,1.3,.65,1); // ease-out
     z-index: 99;
 
     label {
-      background-color: $white;
+      background-color: $arrow-back-color;
       box-shadow: 0 5px 10px 0 rgba(0,0,0,.25);
       cursor: pointer;
       display: none;

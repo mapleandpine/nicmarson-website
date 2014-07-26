@@ -1,0 +1,112 @@
+---
+layout: 00-default
+parent: portfolio
+slug: portfolio-detail site-nav-closed
+---
+
+<main role="main">
+  <article class="post portfolio__post">
+    <section class="row">
+      <div class="col-half">
+        {% include 02-organisms/00-global/00-header.html %}
+        <div class="container">
+          <div class="project">
+            <h1>{{ page.project }}</h1>
+            <p class="byline">
+              {{ page.date | date: "%Y" }}
+              {% if page.website %} | <a href="http://{{ page.website }}" class="external" role="link">{{ page.website }}</a>{% endif %}
+              {% if page.client %} | {{ page.client }}{% endif %}
+            </p>
+            <p>{{ page.excerpt }}</p>
+            <p class="meta">{{ page.tags | array_to_sentence_string }}</p>
+          </div>
+          <div class="role">
+            {{ page.role }}
+            {{ page.role-description }}
+          </div>
+        </div>
+      </div>
+      <div class="col-half">
+        <div class="csslider">
+          <input type="radio" name="slides" id="slides_1">
+          <input type="radio" name="slides" id="slides_2" checked="">
+          <input type="radio" name="slides" id="slides_3">
+          <input type="radio" name="slides" id="slides_4">
+          <ul class="portfolio__item">
+            <li>
+              <h1>Say hello to CSS3</h1>
+              <p>CSSlider is lightweight &amp; easy to use slider. No JS - pure CSS.</p>
+            </li>
+            <li>
+              <img src="/images/portfolio/{{ page.name }}/{{ page.name }}-01.png">
+            </li>
+            <li>
+              <img class="img-responsive" src="http://fillmurray.com/800/800">
+              <div id="bg">
+                <div>
+                  <h1>CSS Events</h1>
+                  <p>When slide 3 is reached - play CSS animation!</p>
+                </div>
+              </div>
+            </li>
+            <li class="scrollable">
+              <span class="waves-effect">
+                <img src="https://farm2.staticflickr.com/1297/1091511802_2fb2451ecc_n.jpg">
+              </span>
+
+              <span class="waves-effect waves-light waves-float">
+                <img src="https://farm6.staticflickr.com/5241/5238554034_851a63e262_n.jpg">
+              </span>
+            </li>
+          </ul>
+          <div class="arrows">
+            <label for="slides_1"></label>
+            <label for="slides_2"></label>
+            <label for="slides_3"></label>
+            <label for="slides_4"></label>
+          </div>
+          <div class="navigation">
+            <div>
+              <label for="slides_1"></label>
+              <label for="slides_2"></label>
+              <label for="slides_3"></label>
+              <label for="slides_4"></label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Load Skills and Additional Screens -->
+    {{ content }}
+    <!-- Previous and Next Projects -->
+    <section class="row portfolio__next-previous">
+      <div class="col-half">
+        {% if page.next_in_category != nil %}
+          <section id="{{page.next_in_category.name}}" class="portfolio__item">
+            <a class="waves-effect waves-float" href="{{page.next_in_category.url}}">
+              <div class="portfolio__image">
+                <!-- <img src="/images/portfolio/{{page.next_in_category.name}}/{{page.next_in_category.name}}-browser.jpg"> -->
+                <span>&larr; {{ page.next_in_category.title }}</span>
+                <img class="img-responsive" src="http://fillmurray.com/g/800/400" alt="{{ page.next_in_category.title }} thumbnail">
+              </div>
+            </a>
+          </section>
+        {% endif %}
+      </div>
+      <div class="col-half">
+        {% if page.previous_in_category != nil %}
+          <section id="{{page.previous_in_category.name}}" class="portfolio__item">
+            <a class="waves-effect waves-float" href="{{page.previous_in_category.url}}">
+              <div class="portfolio__image">
+                <!-- <img src="/images/portfolio/{{page.previous_in_category.name}}/{{page.previous_in_category.name}}-browser.jpg"> -->
+                <span>{{ page.previous_in_category.title }} &rarr;</span>
+                <img class="img-responsive" src="http://fillmurray.com/g/800/400" alt="{{ page.previous_in_category.title }} thumbnail">
+              </div>
+            </a>
+          </section>
+        {% endif %}
+      </div>
+    </section>
+  </article>
+  {% include 02-organisms/00-global/01-footer.html %}
+</main>

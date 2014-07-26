@@ -11,15 +11,14 @@ slug: home
   </section> -->
   <section class="home__intro container">
     <div class="row">
-      <h1 class="headline">Shooting for no less than flabbergasted.</h1>
+      <h1 class="title">Shooting for no less than flabbergasted.</h1>
       <p class="lead">I create digital experiences that promote interaction. I think bigger, move faster, blow minds, get shit done and innovate—plus any other cliché saying that comes to mind.</p>
     </div>
   </section>
-  {% include 02-organisms/00-global/01-footer.html %}
 </main>
 <aside>
   <header>
-    <h1 class="section__title">A few projects I've worked on</h1>
+    <h1 class="title--section">A few projects I've worked on</h1>
   </header>
   <div class="home__portfolio flex-container--column">
     {% for post in site.categories['portfolio'] limit:4 %}
@@ -27,3 +26,4 @@ slug: home
     {% endfor %}
   </div>
 </aside>
+{% include 02-organisms/00-global/01-footer.html %}

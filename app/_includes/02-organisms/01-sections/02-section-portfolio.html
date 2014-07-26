@@ -2,19 +2,49 @@
   <a href="{{ post.url }}">
     <div class="portfolio__image">
       <!-- <img src="images/portfolio/{{ post.name }}/thumb.{{ post.thumb-ext }}" alt="{{ post.title }} thumbnail"> -->
-      <img src="http://fillmurray.com/g/600/400" alt="{{ post.title }} thumbnail">
-      <span>{{ post.date | date: "%Y" }} <b>{{ post.title }}</b></span>
+      <img src="http://fillmurray.com/g/600/600" alt="{{ post.title }} thumbnail">
+      <span><b>{{ post.title }}</b></span>
     </div>
   </a>
   <input id="{{ post.name }}-meta" type="checkbox">
+  <label class="toggle--meta" for="{{ post.name }}-meta">
+    <svg class="shape-plus" viewBox="0 0 100 100">
+      <use xlink:href="#shape-plus"/>
+    </svg>
+  </label>
   <div class="meta" style="background-color: #{{ post.color-dark }}">
-    <span>{% if post.thumb-ext %}{{ post.role }}{% else %}Contractor{% endif %}</span>
-    <span class="tags">{{ post.tags | array_to_sentence_string }}</span>
+    <span class="title--section">{{ post.date | date: "%Y" }} <b>{% if post.thumb-ext %}{{ post.role }}{% else %}Contractor{% endif %}</b></span>
+    <span>
+      {% if post.solo %}
+      <svg class="shape-user" viewBox="0 0 100 100">
+        <use xlink:href="#shape-user"/>
+      </svg>
+      <span>Solo project</span>
+      {% else %}
+      <svg class="shape-users" viewBox="0 0 100 100">
+        <use xlink:href="#shape-users"/>
+      </svg>
+      <span>Team project</span>
+      {% endif %}
+    </span>
+    <span class="tags">
+      <svg class="shape-tags" viewBox="0 0 100 100">
+        <use xlink:href="#shape-tags"/>
+      </svg>
+      {{ post.tags | array_to_sentence_string }}
+    </span>
   </div>
-  <label class="meta-switch" for="{{ post.name }}-meta">Meta data</label>
-  {% if post.solo %}
-  <span class="icon-star"><svg class="shape-star" viewBox="0 0 100 100">
-    <use xlink:href="#shape-star"/>
-  </svg></span>
-  {% endif %}
+  <div class="team">
+    {% if post.solo %}
+    <svg class="shape-user" viewBox="0 0 100 100">
+      <use xlink:href="#shape-user"/>
+    </svg>
+    <span>Solo project</span>
+    {% else %}
+    <svg class="shape-users" viewBox="0 0 100 100">
+      <use xlink:href="#shape-users"/>
+    </svg>
+    <span>Team project</span>
+    {% endif %}
+  </div>
 </div>

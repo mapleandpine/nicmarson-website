@@ -8,6 +8,10 @@ a {
 
   &:visited {
     color: $link-visited-color;
+
+    svg {
+      fill: $link-visited-color
+    }
   }
 
   &:hover,
@@ -27,5 +31,67 @@ a[role="link"] {
   &:focus {
     border-bottom-color: $link-hover-color;
     border-bottom-style: solid;
+  }
+}
+
+.inverse {
+  background-color: palette(grey, darkest);
+  color: palette(grey, lightest);
+
+  a {
+    color: palette(red, light);
+
+    &:visited {
+      color: palette(red, light);
+    }
+
+    &:hover,
+    &:focus {
+      color: palette(red, lighter);
+    }
+  }
+
+  a[role="link"] {
+    border-bottom: .0625rem solid palette(red, light);
+
+    &:visited {
+      border-bottom-color: palette(red, light);
+    }
+
+    &:hover,
+    &:focus {
+      border-bottom-color: palette(red, lighter);
+    }
+  }
+
+  &--white {
+    color: $white;
+
+    a {
+      color: rgba(255,255,255,.8);
+
+      &:visited {
+        color: rgba(255,255,255,.8);
+      }
+
+      &:hover,
+      &:focus {
+        background-color: rgba(0,0,0, .15);
+        color: $white;
+      }
+    }
+
+    a[role="link"] {
+      border-bottom: .0625rem solid rgba(255,255,255,.8);
+
+      &:visited {
+        border-bottom-color: rgba(255,255,255,.8);
+      }
+
+      &:hover,
+      &:focus {
+        border-bottom-color: $white;
+      }
+    }
   }
 }

@@ -1,0 +1,66 @@
+.toggle {
+  cursor: pointer;
+  display: block;
+  outline: none;
+  position: relative;
+}
+
+.toggle--connect {
+  @extend .toggle;
+
+  svg {
+    width: 1em;
+  }
+}
+
+.hamburger {
+  @extend %text-grey-background;
+  @extend .toggle;
+  padding: 0;
+  width: 40px;
+
+  span {
+    background-color: rgba(255,255,255,.8);
+    display: block;
+    font-size: 0;
+    height: 4px;
+    left: 8px;
+    margin-top: -2px;
+    position: absolute;
+    top: 50%;
+    user-select: none;
+    width: 20px;
+
+    &:before,
+    &:after {
+      background-color: rgba(255,255,255,.8);
+      content: '';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      transition: transform .2s;
+      width: 100%;
+    }
+
+    &:before {
+      transform: translateY(-200%);
+    }
+
+    &:after {
+      transform: translateY(200%);
+    }
+  }
+
+  &:hover,
+  &.active {
+    @extend %text-grey-background-hover;
+
+    span:before {
+      transform: translateY(-220%);
+    }
+
+    span:after {
+      transform: translateY(220%);
+    }
+  }
+}

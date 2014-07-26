@@ -2,25 +2,44 @@ nav[role=navigation],
 .nav {
   margin-left: 0;
 
+  ul,
+  ol {
+    margin-left: 0;
+  }
+
+  li {
+    display: block;
+    margin-bottom: .5em;
+    position: relative;
+
+    @include mq($from: tablet) {
+      display: inline-block;
+      margin-bottom: .75em;
+      margin-right: .75em;
+    }
+  }
+
   a {
     color: $nav-link-color;
+    display: block;
+    padding: .25em .5em;
+    position: relative;
     @extend %transition-fast;
+    user-select: none;
+
+    svg {
+      fill: $nav-link-color;
+    }
+
+    &.active {
+      color: $nav-link-color-active;
+    }
   }
 }
 
-.nav {
+nav[role=navigation] {
 
-  a {
-    display: block;
-    padding: .25em 1em;
-  }
-
-  &:focus,
-  &:hover {
-    color: $nav-link-color-hover;
-  }
-
-  &.active {
-    color: $nav-link-color-active;
+  li {
+    overflow: hidden;
   }
 }

@@ -1,11 +1,4 @@
 /* standard */
-.post {
-
-  .byline {
-    font-style: italic;
-  }
-}
-
 .post-entry {
   @include mq($from: desktop) {
     p {

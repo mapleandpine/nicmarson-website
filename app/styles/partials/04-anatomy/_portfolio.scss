@@ -1,0 +1,264 @@
+.nav-portfolio {
+
+  .js & {
+    display: none;
+  }
+}
+
+.portfolio__item {
+  overflow: hidden;
+  position: relative;
+
+  input[type=checkbox]:checked {
+
+    ~ .meta {
+      animation-name: rotateInUpLeft;
+      top: 0;
+    }
+
+    + label {
+      transform: rotate(45deg);
+    }
+  }
+
+  a {
+    background-color: $portfolio-item-bg-color;
+    display: block;
+    height: 0;
+    padding-bottom: 75%;
+    width: 100%;
+
+    &.fluidbox-opened {
+      overflow: visible;
+    }
+  }
+
+  img {
+    @include img-responsive();
+    min-height: 100%;
+  }
+
+  input {
+    display: none;
+  }
+
+  .meta {
+    animation-duration: .25s;
+    animation-fill-mode: both;
+    color: #FFF;
+    display: block;
+    height: 100%;
+    font-size: 12px;
+    opacity: 0;
+    overflow-y: auto;
+    padding: 1rem;
+    position: absolute;
+    top: 100%;
+    transform-origin: left bottom;
+    transform: rotate3d(0, 0, 1, 45deg);
+    @extend %transition-fast;
+    width: 100%;
+    z-index: z(default);
+
+    > span {
+      display: block;
+      margin-bottom: 1em;
+    }
+
+    svg {
+      display: inline-block;
+      fill: $white;
+      height: 1em;
+      margin-right: .5em;
+      vertical-align: baseline;
+      width: 1em;
+    }
+  }
+
+  .title--section {
+    border-bottom-color: rgba(255,255,255,.1);
+  }
+
+  .toggle--meta,
+  .team {
+    bottom: 1rem;
+    color: $white;
+    height: 1.5rem;
+    position: absolute;
+    @extend %transition-fast;
+    z-index: (z(default) + 1);
+
+    &:focus,
+    &:hover {
+      svg {
+        fill: $white;
+      }
+    }
+
+    svg {
+      fill: rgba(255,255,255, .5);
+      vertical-align: middle;
+    }
+  }
+
+  .toggle--meta {
+    cursor: pointer;
+    left: 1rem;
+
+    svg {
+      width: 1.5rem;
+    }
+  }
+
+  .team {
+    left: 3.5rem;
+
+    &:hover,
+    &:focus {
+      span {
+        display: inline;
+      }
+    }
+
+    span {
+      display: none;
+    }
+
+    svg {
+      margin-right: 5px;
+      width: 1.25rem;
+    }
+  }
+}
+
+.portfolio__image {
+  background-color: $portfolio-item-bg-color;
+
+  &:hover {
+    background-color: $portfolio-item-hover-bg-color;
+
+    img {
+      animation-name: reverse-pulse;
+      animation-duration: .3s;
+      animation-iteration-count: 1;
+      filter: blur(0);
+      opacity: 1;
+      @extend %transition-medium;
+    }
+
+    span {
+      opacity: .5;
+      @extend %transition-medium;
+    }
+  }
+
+  img {
+    filter: blur(5px);
+    opacity: .5;
+    transform: scale(1.05, 1.05);
+    @extend %transition-fast;
+    will-change: filter, opacity, transform;
+  }
+
+  span {
+    @extend %title;
+    @extend %text-white-border;
+    @include centerer();
+    display: inline-block;
+    font-size: 12px;
+    min-width: 50%;
+    max-width: 80%;
+    padding: 1em .5em;
+    @extend %transition-fast;
+    width: 50%;
+  }
+}
+
+.portfolio__screens {
+  background-color: palette(grey, lightest);
+
+  .portfolio__item {
+    width: 50%;
+
+    @include mq($from: desktop) {
+      width: 25%;
+    }
+  }
+}
+
+.portfolio__post {
+  background-color: $white;
+
+  #bg {
+    color: $black;
+    padding: 22px 0;
+    position: absolute;
+    left: 0;
+    top: 16%;
+    height: 20%;
+    width: 0;
+    z-index: 10;
+    overflow: hidden;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 20;
+      background: rgba(0, 0, 0, 0.35);
+      pointer-events: none;
+    }
+
+    div {
+      transform: translate(120%);
+    }
+  }
+
+  .csslider {
+    width: 100%;
+
+    > ul {
+      width: 100%;
+
+      > li {
+        height: 0;
+        padding-bottom: 100%;
+      }
+    }
+
+    > input:nth-of-type(3):checked ~ ul #bg {
+      width: 80%;
+      padding: 22px;
+      transition: .5s .5s;
+    }
+
+    > input:nth-of-type(3):checked ~ ul #bg div {
+      transform: translate(0);
+      transition: .5s .9s;
+    }
+  }
+}
+
+.portfolio__skills {
+  background-color: palette(grey, lightest);
+  margin-top: -6px;
+}
+
+.portfolio__next-previous {
+  background-color: palette(grey, darker);
+
+  .portfolio__item a {
+    padding-bottom: 50%;
+  }
+}
+
+.project {
+
+}
+
+.role {
+
+}

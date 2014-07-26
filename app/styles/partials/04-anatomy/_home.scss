@@ -20,16 +20,6 @@
   }
 }
 
-.home__intro {
-  margin-bottom: 2em;
-  margin-top: 2em;
-
-  @include mq($from: desktop) {
-    margin-bottom: 3em;
-    margin-top: 3em;
-  }
-}
-
 
 // Portfolio items
 
@@ -51,7 +41,7 @@
   }
 
   h1 {
-    background-color: $red;
+    background-color: palette(red, dark);
     color: $white;
     line-height: 2.5;
     margin: 0;
@@ -63,4 +53,8 @@
   min-height: -webkit-min-content;
   position: relative;
   top: 2.5em;
+
+  .portfolio__item a {
+    padding-bottom: 50%;
+  }
 }

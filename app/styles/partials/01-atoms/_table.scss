@@ -61,10 +61,10 @@
         padding: .5rem 1em .5rem 0;
       }
       > th {
-        border-bottom: 2px solid palette(grey, light);
+        border-bottom: 2px solid palette(grey, lighter);
       }
       > td {
-        border-bottom: 1px solid palette(grey);
+        border-bottom: 1px solid palette(grey, lighter);
       }
     }
   }

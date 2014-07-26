@@ -53,6 +53,13 @@ mark {
   color: $muted-color;
 }
 
+.byline {
+  font-weight: 900;
+  letter-spacing: .07em;
+  margin-top: -.75rem;
+  text-transform: uppercase;
+}
+
 // Abbreviations and acronyms
 abbr[title],
 // Add data-* attribute to help out our tooltip plugin, per https://github.com/twbs/bootstrap/issues/5257

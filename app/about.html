@@ -8,16 +8,16 @@ slug: about
   {% include 02-organisms/00-global/00-header.html %}
   <article class="flex--column">
     <section class="about__intro flex--row container">
-      <div class="flex--column col-half">
+      <div class="col-half flex--column">
         <div class="img-circle about__img-circle">
           <img src="../images/vector-me.png" alt="Nicholas Marson" class="img-responsive">
         </div>
       </div>
-      <div class="flex--column col-half">
+      <div class="col-half flex--column">
         <h1>About Nic Marson</h1>
         <p class="lead">I am an advocate for a unified web experience on all devices. I specialize in <a href="http://bradfrostweb.com/blog/post/the-many-faces-of-adaptive-design/" class="external" role="link">adaptive design</a> for large websites, integrating User Experience data, and improving workplace efficiency.</p>
         <h2>My background</h2>
-        <div class="row">
+        <div class="row--gutter">
           <div class="col-half">
             <p>I began as an artist in my youth, putting to paper what I saw in the world and in my imagination. As I grew I developed an aptitude for math and science. After high school I went to Oregon State University to major in biology. Eventually I changed my major to graphic design where I found a perfect mix of my talents. In addition to the graphic design curriculum I also began learning web design.</p>
           </div>
@@ -28,8 +28,8 @@ slug: about
       </div>
     </section>
 
-    <section class="about__history flex--row row--moat">
-      <div class="col-two-thirds">
+    <section class="flex--row row--moat">
+      <div class="col-two-thirds about__history">
         <h2 class="section-title"><b>Employment</b> history</h2>
         <table class="table table-border">
           <thead>
@@ -41,7 +41,7 @@ slug: about
           <tbody>
             <tr>
               <td>2012 &ndash; &infin;</td>
-              <td>Developer at <a href="http://www.instrument.com/" class="external" role="link">Instrument</a></td>
+              <td>Web Developer at <a href="http://www.instrument.com/" class="external" role="link">Instrument</a></td>
             </tr>
             <tr>
               <td class="muted">2012 &ndash; 2014</td>
@@ -74,13 +74,23 @@ slug: about
         </table>
       </div>
       <div class="col-one-third inverse">
-        <div class="tinyhouse"><span class="year">In<br> 2013</span> <span>I designed</span> <span>and built</span> a <a href="http://portlandtinyhouse.com" class="external">tiny house</a> with my partner, Natalie Perrin<i class="typcn typcn-home"></i><i class="typcn typcn-home-outline"></i></div>
-        <div class="bridgecity">I paddle <b>outrigger canoes</b> competitively with <a href="http://www.bridgecitypaddling.org/" class="external">Bridge city paddling club</a></div>
+        <div class="tinyhouse">
+          <p><span class="year">In<br> 2013</span> <span>I designed</span> <span>and built</span> a <a href="http://portlandtinyhouse.com" class="external">tiny house</a> with my partner, Natalie Perrin</p>
+          <svg viewBox="0 0 100 100" class="shape-house">
+            <use xlink:href="#shape-house"></use>
+          </svg>
+          <svg viewBox="0 0 100 100" class="shape-home">
+            <use xlink:href="#shape-home"></use>
+          </svg>
+        </div>
+        <div class="bridgecity">
+          <svg viewBox="0 0 100 100" class="shape-bridge">
+            <use xlink:href="#shape-bridge"></use>
+          </svg>
+          <span>I paddle <b>outrigger canoes</b> competitively with <a href="http://www.bridgecitypaddling.org/" class="external">Bridge city paddling club</a></span>
+        </div>
       </div>
-    </section>
-
-    <section class="about__favorites flex--row row--moat">
-      <div class="col-one-third">
+      <div class="col-one-third about__favorite inverse--white kippt">
         <h4><b>Favorite</b> sites</h4>
         <ul class="list-unstyled">
           <li><a href="http://www.sidebar.io/" class="external" role="link">Sidebar</a></li>
@@ -89,7 +99,7 @@ slug: about
         </ul>
         <p><a href="https://kippt.com/nicmarson" class="kippt external img-fade">More at <span>Kippt</span></a></p>
       </div>
-      <div class="col-one-third">
+      <div class="col-one-third col-one-thirdish about__favorite inverse--white twitter">
         <h4><b>Twitter</b> users</h4>
         <ul class="list-unstyled">
           <li><a href="https://twitter.com/chriscoyier" class="external" role="link">@chriscoyier</a></li>
@@ -98,7 +108,7 @@ slug: about
         </ul>
         <p><a href="http://twitter.com/nicmarson" class="twitter external img-fade">More at <span>Twitter</span></a></p>
       </div>
-      <div class="col-one-third">
+      <div class="col-one-third about__favorite inverse--white github">
         <h4><b>Web</b> projects</h4>
         <ul class="list-unstyled">
           <li><a href="https://github.com/twbs" class="external" role="link">Bootstrap</a></li>
@@ -110,5 +120,5 @@ slug: about
     </section>
   </article>
 </main>
+<!-- <small>This site was built using <a href="http://jekyllrb.com" title="Simple, blog-aware, static sites" role="link">jekyllrb</a>, with the help of <a href="http://gruntjs.com/" title="The JavaScript Task Runner" role="link">Grunt</a>, <a href="http://sass-lang.com" title="Syntactically Awesome Style Sheets" role="link"><abbr>SASS</abbr></a>, <a href="http://yeoman.io/" title="Modern workflows for modern webapps" role="link">Yeoman</a>, and <a href="http://bower.io/" title="A package manager for the web" role="link">Bower</a>. A special thanks to <a href="http://github.com" title="Build software better, together." role="link">Github</a> for keeping track of my many changes and hosting this site via <a href="http://pages.github.com" title="Public webpages freely hosted and easily published through our site" role="link">Github pages</a>.</small> -->
 {% include 02-organisms/00-global/01-footer.html %}
-<small>This site was built using <a href="http://jekyllrb.com" title="Simple, blog-aware, static sites" role="link">jekyllrb</a>, with the help of <a href="http://gruntjs.com/" title="The JavaScript Task Runner" role="link">Grunt</a>, <a href="http://sass-lang.com" title="Syntactically Awesome Style Sheets" role="link"><abbr>SASS</abbr></a>, <a href="http://yeoman.io/" title="Modern workflows for modern webapps" role="link">Yeoman</a>, and <a href="http://bower.io/" title="A package manager for the web" role="link">Bower</a>. A special thanks to <a href="http://github.com" title="Build software better, together." role="link">Github</a> for keeping track of my many changes and hosting this site via <a href="http://pages.github.com" title="Public webpages freely hosted and easily published through our site" role="link">Github pages</a>.</small>

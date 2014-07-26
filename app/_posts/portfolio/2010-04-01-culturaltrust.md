@@ -15,6 +15,10 @@ img-ext: jpg
 img-alt: Home &ndash; culturaltrust.org
 
 color-dark: 1F1F1F
+
+solo: design and development
+designer: 100
+developer: 100
 ---
 I was given the job of redesigning and recoding the Oregon Cultural Trust website in order to educate and promote donors to the program. This involved meetings with the client, design proofs, and finally mocking up web pages for their website.
 
