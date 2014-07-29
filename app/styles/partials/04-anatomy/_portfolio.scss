@@ -21,6 +21,16 @@
     min-height: 100%;
   }
 
+  .come-in {
+    animation: come-in-margin-top 1.5s ease forwards;
+    margin-top: 150px;
+  }
+
+  // stagger the animation
+  .come-in:nth-child(odd) {
+    animation-duration: 0.75s;
+  }
+
   .popup {
     color: #FFF;
     height: 100%;

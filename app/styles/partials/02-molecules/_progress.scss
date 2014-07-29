@@ -18,6 +18,11 @@
   &:hover .progress-bar {
     background-color: $progress-bar-bg;
   }
+
+  .come-in {
+    animation: come-in-margin-left 1.25s ease forwards;
+    margin-left: -100%;
+  }
 }
 
 // Bar of progress

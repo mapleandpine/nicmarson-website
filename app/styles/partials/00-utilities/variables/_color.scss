@@ -64,36 +64,6 @@ $palettes: (
   )
 );
 
-/*
- * Light Gray
- */
-.palete-color--light-gray > .palete-color__lighten {
-    background-color: #f5f7fa;
-}
-.palete-color--light-gray > .palete-color__darken {
-    background-color: #e6e9ed;
-}
-
-/*
- * Medium Gray
- */
-.palete-color--medium-gray > .palete-color__lighten {
-    background-color: #ccd1d9;
-}
-.palete-color--medium-gray > .palete-color__darken {
-    background-color: #aab2bd;
-}
-
-/*
- * Dark Gray
- */
-.palete-color--dark-gray > .palete-color__lighten {
-    background-color: #656d78;
-}
-.palete-color--dark-gray > .palete-color__darken {
-    background-color: #434a54;
-}
-
 // .element {
 //   background-color: map-get($colors, sky);
 // }

@@ -1,14 +1,10 @@
 .modal {
-  @include centerer();
+  @include centerer(fixed, both);
   background-color: palette(grey, darker);
   border-radius: 4px;
   min-width: 38em;
   padding: 1.5rem;
   z-index: z(overlay);
-
-  @include mq($from: tablet) {
-    position: fixed;
-  }
 
   .js & {
     display: none;

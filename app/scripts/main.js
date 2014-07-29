@@ -1,15 +1,9 @@
 'use strict';
 
-var windowSmall = 768,
-    $docWindow = $(document.window),
-    viewportWidth = $docWindow.width();
-
 (function ($, window, undefined) {
 
-  console.log(windowSmall, viewportWidth);
-
   $('.toggle--connect').on('click', function(){
-    $('.nav-connect').fadeIn();
+    $('.modal--connect').fadeIn();
   });
 
   $('[data-dismiss="modal"]').on('click', function(){
