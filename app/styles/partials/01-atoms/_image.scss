@@ -20,3 +20,12 @@ figure {
   border-radius: 50%;
   overflow: hidden;
 }
+
+.svg-inline {
+  display: inline-block;
+  fill: $body-color;
+  height: 1em;
+  margin-right: .5em;
+  vertical-align: calc(50% - .75em);
+  width: 1em;
+}

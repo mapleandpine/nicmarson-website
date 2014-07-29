@@ -1,0 +1,19 @@
+.sidebar {
+
+  main {
+    overflow-y: auto;
+    position: relative;
+
+    @include mq($from: tablet) {
+      width: 60%;
+    }
+  }
+
+  aside {
+    overflow-y: auto;
+
+    @include mq($from: tablet) {
+      width: 40%;
+    }
+  }
+}

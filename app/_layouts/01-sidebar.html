@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+  <head>
+    {% include 00-atoms/00-meta/00-head.html %}
+  </head>
+  <body class="flex--row sidebar {{ page.class }}">
+    <main role="main">
+      {% include 02-organisms/00-global/00-header.html %}
+      {{ content }}
+      {% include 02-organisms/00-global/01-footer.html %}
+    </main>
+    <aside>
+    {% if page.slug == "home" %}
+      <header>
+        <h1 class="title--section">A few projects I've worked on</h1>
+      </header>
+      <div class="home__portfolio flex-container--column">
+        {% for post in site.categories['portfolio'] limit:4 %}
+          {% include 02-organisms/01-sections/03-section-portfolio-light.html %}
+        {% endfor %}
+      </div>
+    {% endif %}
+    </aside>
+    {% include 00-atoms/00-meta/01-foot.html %}
+  </body>
+</html>

@@ -8,21 +8,12 @@ var windowSmall = 768,
 
   console.log(windowSmall, viewportWidth);
 
-  // target portfolio thumbnails
-  $('#page-nav-collapse a').hover(function() {
-    var target = $(this).attr("data-target");
-    $(target).addClass('hover');
-  }, function() {
-    var target = $(this).attr("data-target");
-    $(target).removeClass('hover');
+  $('.toggle--connect').on('click', function(){
+    $('.nav-connect').fadeIn();
   });
 
-  // activate fluidbox, a lightbox module seen on Medium with fluid transitions
-  $('a.fluidbox, [data-fluidbox]').fluidbox({
-    closeTrigger: [
-      { selector: '#fluidbox-overlay', event: 'click'  }, // close fluidbox when overlay is clicked
-      { selector: 'window',            event: 'resize' } // close fluidbox on window resize
-    ]
+  $('[data-dismiss="modal"]').on('click', function(){
+    $(this).closest('.modal').fadeOut();
   });
 
   // Smooth scrolling plugin by Chris Coiyer

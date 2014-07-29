@@ -4,15 +4,11 @@ title: Portfolio
 slug: portfolio
 ---
 
-<main role="main">
-  {% include 02-organisms/00-global/00-header.html %}
-  <article class="flex--row portfolio__screens">
-    {% for post in site.categories['portfolio'] %}
-      {% include 02-organisms/01-sections/02-section-portfolio.html %}
-    {% endfor %}
-  </article>
-</main>
+<div class="flex--row portfolio__thumbs">
+  {% for post in site.categories['portfolio'] %}
+    {% include 02-organisms/01-sections/02-section-portfolio.html %}
+  {% endfor %}
+</div>
 <div class="nav-portfolio">
   {% include 01-molecules/01-navigation/01-portfolio-nav.html %}
 </div>
-{% include 02-organisms/00-global/01-footer.html %}

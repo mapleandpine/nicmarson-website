@@ -18,7 +18,7 @@ h1, h2, h3, h4, h5, h6,
   .small {
     font-weight: normal;
     line-height: 1;
-    color: $heading-small-color;
+    color: inherit;
   }
 }
 
@@ -53,7 +53,9 @@ h5, .h5 { font-size: $font-size-h5; }
 h6, .h6 { font-size: $font-size-h6; }
 
 .title {
+  color: palette(grey, darkest);
   font-size: $font-size-h1;
+  font-weight: 900;
 
   @include mq($from: tablet) {
     font-size: $font-size-headline;
@@ -83,9 +85,9 @@ h6, .h6 { font-size: $font-size-h6; }
   letter-spacing: .07em;
   line-height: 1;
   margin-bottom: 1rem;
+  margin-top: 0;
   padding-bottom: .75rem;
   padding-right: 3rem;
-  padding-top: .75rem;
 
   b {
     font-weight: 800;

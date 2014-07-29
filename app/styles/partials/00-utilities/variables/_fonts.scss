@@ -4,17 +4,18 @@
 
 
 // Font families
-$font-family-bitter: "Bitter", serif !default;
+$font-family-merriweather: "Merriweather", serif !default;
 $font-family-lato: "Lato", sans-serif !default;
 $font-family-source: "Source Code Pro", monospace !default;
 
 // Font definitions
-$font-family-serif:       $font-family-bitter;
+$font-family-serif:       $font-family-merriweather;
 $font-family-sans-serif:  $font-family-lato;
 $font-family-monospace:   $font-family-source;
 
 // Font assignments
 $base-font-family:        $font-family-sans-serif;
+$text-font-family:        $font-family-serif;
 $control-font-family:     $font-family-sans-serif;
 $code-font-family:        $font-family-monospace;
 $heading-font-family:     $font-family-sans-serif;

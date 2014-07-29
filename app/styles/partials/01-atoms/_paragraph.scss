@@ -15,12 +15,14 @@ p {
 }
 
 .lead {
-  margin-bottom: 1.5rem;
+  font-family: $text-font-family;
   font-size: 1.15rem;
   font-weight: 200;
   line-height: 1.4;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
 
-  @include mq($from: tablet) {
+  @include mq($from: desktop) {
     font-size: 1.5rem;
   }
 }

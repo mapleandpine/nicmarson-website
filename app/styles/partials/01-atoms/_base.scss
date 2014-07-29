@@ -74,3 +74,19 @@ body {
   bottom: 0;
   left: 0;
 }
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+  cursor: pointer
+}
+
+::-webkit-scrollbar-track {
+  background-color: palette(grey, light);
+  border-radius: 10px
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: palette(red);
+}

@@ -1,5 +1,6 @@
 .btn {
   border: 0 none;
+  border-radius: $border-radius-base;
   box-sizing: content-box;
   cursor: pointer;
   display: inline-block;
@@ -30,7 +31,26 @@
   @extend .btn;
 }
 
+.btn--danger {
+  @extend .btn;
+  background-color: palette(red);
+  color: $white;
+  padding: 1em 1.5em;
+
+  &:hover, &:active, &:focus {
+    background-color: palette(red, dark);
+  }
+
+  svg {
+    fill: $white;
+  }
+}
+
 .btn--block {
   @extend .btn;
   display: block;
+}
+
+.btn--toggle {
+  @extend .btn;
 }

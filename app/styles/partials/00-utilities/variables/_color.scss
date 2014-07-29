@@ -107,7 +107,7 @@ $palettes: (
 
 // Color assignments
 $body-bg-color:       $white;
-$body-color:          palette(grey, darker);
+$body-color:          palette(grey, dark);
 $heading-color:       inherit;
 $muted-color:         palette(grey, light);
 
@@ -131,8 +131,6 @@ $nav-link-inverse-color-active:  $white;
 
 //** Abbreviations and acronyms border color
 $abbr-border-color:           palette(grey, light);
-//** Headings small color
-$heading-small-color:         palette(grey, light);
 //** Blockquote small color
 $blockquote-small-color:      palette(grey, light);
 //** Blockquote border color

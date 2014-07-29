@@ -10,33 +10,31 @@
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
 
-  <!-- build:js scripts/vendor/modernizr.js -->
-  <script src="bower_components/modernizr/modernizr.js"></script>
+  <!-- build:js /scripts/vendor/modernizr.js -->
+  <!-- bower:js -->
+  <script src="/bower_components/modernizr/modernizr.js"></script>
+  <!-- endbower -->
   <!-- endbuild -->
 
+  <!-- build:js /scripts/vendor/jquery.js -->
+  <!-- bower:js -->
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
 </head>
 
 <body>
 
   <!-- build:js scripts/vendor/vendor.js -->
   <!-- bower:js -->
-  <script src="../bower_components/jquery/dist/jquery.js"></script>
-  <script src='../bower_components/velocity/jquery.velocity.min.js'></script>
-  <script src="../bower_components/eventEmitter/EventEmitter.js"></script> <!-- required for imagesLoaded  -->
-  <script src="../bower_components/imagesloaded/imagesloaded.js"></script> <!-- required for fluidbox  -->
+  <script src="/bower_components/morlock/dist/morlock.js"></script>
   <!-- endbower -->
-  <script src="scripts/vendor/lettering.js"></script> <!-- wraps individual letters in spans -->
-  <script src="scripts/vendor/slabtext.js"></script> <!-- fits text to width of container -->
-  <script src="scripts/vendor/snap.svg.js"></script> <!-- required for pie charts -->
-  <script src="scripts/vendor/pizza.js"></script> <!-- pie charts -->
-  <script src="scripts/vendor/visible.js"></script> <!-- is an element is in the viewport? -->
-  <script src="scripts/vendor/waves.js"></script>
-  <script src="scripts/vendor/fluidbox.js"></script> <!-- lightbox module seen on Medium with fluid transitions -->
+  <script src="/scripts/util.js"></script>
   <!-- endbuild -->
 
   <!-- build:js({app,.tmp}) scripts/main.js -->
+<script src="/scripts/app.js"></script>
   <script src="scripts/main.js"></script>
   <!-- endbuild -->
 </body>
-
 </html>

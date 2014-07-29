@@ -1,36 +1,12 @@
-.home main {
-  overflow-y: auto;
-
-  @include mq($from: desktop) {
-    height: 100%;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 60%;
-  }
-}
-
-@media screen and (min-width: $screen-md) and (min-height: 40rem) {
-
-  .home footer {
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    width: 100%;
-  }
-}
 
 
 // Portfolio items
-
 .home aside {
-  overflow: hidden;
+  background-color: palette(grey, darker);
   position: relative;
 
   @include mq($from: desktop) {
     box-shadow: 15px 0 15px -10px rgba(0, 0, 0, .2) inset;
-    left: 60%;
-    width: 40%;
   }
 
   header {
@@ -44,9 +20,13 @@
     background-color: palette(red, dark);
     color: $white;
     line-height: 2.5;
-    margin: 0;
+    padding-bottom: 0;
     padding-left: 1em;
   }
+}
+
+.home__intro {
+  margin-bottom: 4rem;
 }
 
 .home__portfolio {

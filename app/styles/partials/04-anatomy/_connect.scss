@@ -1,4 +1,4 @@
-.nav-connect {
+.modal {
   @include centerer();
   background-color: palette(grey, darker);
   border-radius: 4px;
@@ -48,7 +48,7 @@
     &:hover {
 
       .tooltip--top {
-        bottom: 3.25em;
+        bottom: 3.5em;
         opacity: 1;
       }
     }
@@ -76,7 +76,7 @@
 
     svg {
       fill: $white;
-      margin: 0 auto 10px;
+      margin: 10px auto 20px;
       width: 64px;
     }
   }

@@ -6,29 +6,29 @@
       <span><b>{{ post.title }}</b></span>
     </div>
   </a>
-  <input id="{{ post.name }}-meta" type="checkbox">
-  <label class="toggle--meta" for="{{ post.name }}-meta">
+  <input class="popup--input" id="{{ post.name }}-popup" type="checkbox">
+  <label class="popup--toggle" for="{{ post.name }}-popup">
     <svg class="shape-plus" viewBox="0 0 100 100">
       <use xlink:href="#shape-plus"/>
     </svg>
   </label>
-  <div class="meta" style="background-color: #{{ post.color-dark }}">
-    <span class="title--section">{{ post.date | date: "%Y" }} <b>{% if post.thumb-ext %}{{ post.role }}{% else %}Contractor{% endif %}</b></span>
+  <div class="popup" style="background-color: #{{ post.color-dark }}">
+    <h2 class="title--section">{{ post.date | date: "%Y" }} <b>{{ post.title }}</b><br><small>{% if post.role %}{{ post.role }}{% else %}Contractor{% endif %}</small></h2>
     <span>
       {% if post.solo %}
-      <svg class="shape-user" viewBox="0 0 100 100">
+      <svg class="shape-user svg-inline" viewBox="0 0 100 100">
         <use xlink:href="#shape-user"/>
       </svg>
       <span>Solo project</span>
       {% else %}
-      <svg class="shape-users" viewBox="0 0 100 100">
+      <svg class="shape-users svg-inline" viewBox="0 0 100 100">
         <use xlink:href="#shape-users"/>
       </svg>
       <span>Team project</span>
       {% endif %}
     </span>
     <span class="tags">
-      <svg class="shape-tags" viewBox="0 0 100 100">
+      <svg class="shape-tags svg-inline" viewBox="0 0 100 100">
         <use xlink:href="#shape-tags"/>
       </svg>
       {{ post.tags | array_to_sentence_string }}

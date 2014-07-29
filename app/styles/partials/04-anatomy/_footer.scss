@@ -1,7 +1,9 @@
 footer[role=contentinfo] {
+  bottom: 0;
   font-size: 12px;
-  min-height: 220px;
-  position: relative;
+  height: 180px;
+  position: absolute;
+  width: 100%;
 
   nav[role=navigation] {
     margin-bottom: 2rem;
@@ -30,7 +32,7 @@ footer[role=contentinfo] {
   background: url(../images/futurefriendly.svg);
   background-size: 300px 200px;
   display: block;
-  height: 200px;
+  height: 170px;
   @extend %transition-fast;
   width: 150px;
 }

@@ -3,8 +3,14 @@
   <head>
     {% include 00-atoms/00-meta/00-head.html %}
   </head>
-  <body class="{{ page.slug }}">
-    {{ content }}
+  <body class="{{ page.class }}">
+    <main class="flexbox--column" role="main">
+      {% include 02-organisms/00-global/00-header.html %}
+      <article class="flex--column {{ page.slug }}__article">
+        {{ content }}
+      </article>
+      {% include 02-organisms/00-global/01-footer.html %}
+    </main>
     {% include 00-atoms/00-meta/01-foot.html %}
   </body>
 </html>

@@ -1,4 +1,8 @@
 .site-header {
+  left: 0;
+  padding: 2.5rem 3rem 2rem;
+  position: absolute;
+  top: 0;
 
   a {
     border-bottom: 1px solid transparent;
@@ -17,13 +21,6 @@
     }
   }
 
-  nav[role=navigation] {
-
-    .site-nav-closed & {
-      display: none;
-    }
-  }
-
   .toggle-connect-container {
     border-radius: 50%;
     @extend %transition-fast;
@@ -34,22 +31,23 @@
   }
 
   .toggle--connect {
-    background-color: palette(grey, light);
+    background-color: palette(grey);
     border: none;
     border-radius: 50%;
 
     &:hover {
-      background-color: palette(grey);
+      background-color: palette(red);
 
       svg {
-        transform: scale(1.1);
+        transform: scale(1.2);
       }
     }
 
     svg {
       fill: $white;
       @extend %transition-fast;
-      vertical-align: middle;
+      vertical-align: calc(50% - .9em);
+      width: 1em;
     }
   }
 
@@ -65,35 +63,6 @@
     &:hover,
     &.active {
       opacity: 1;
-    }
-  }
-}
-
-.nav-previous {
-  display: inline-block;
-  left: 50px;
-  line-height: 38px;
-  position: absolute;
-  top: 0;
-}
-
-.site-nav-open .toggle--nav {
-  border-color: rgba(255,255,255,.75);
-
-  span {
-    background-color: transparent;
-
-    &:before,
-    &:after {
-      background-color: #FFF;
-    }
-
-    &:before {
-      transform: translateY(0) rotate(45deg);
-    }
-
-    &:after {
-      transform: translateY(0) rotate(-45deg);
     }
   }
 }

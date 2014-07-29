@@ -1,18 +1,3 @@
-.toggle {
-  cursor: pointer;
-  display: block;
-  outline: none;
-  position: relative;
-}
-
-.toggle--connect {
-  @extend .toggle;
-
-  svg {
-    width: 1em;
-  }
-}
-
 .hamburger {
   @extend %text-grey-background;
   @extend .toggle;

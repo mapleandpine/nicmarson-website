@@ -16,9 +16,8 @@
     position: absolute;
     width: 0;
   }
-}
 
-  .tooltip--top {
+  &--top {
     @extend .tooltip;
     @include centerer(absolute, horizontal);
 
@@ -26,3 +25,36 @@
       @include centerer(absolute, horizontal);
     }
   }
+}
+
+.popup {
+  animation-duration: .25s;
+  animation-fill-mode: both;
+  display: block;
+  opacity: 0;
+  overflow-y: auto;
+  position: absolute;
+  @extend %transition-fast;
+  z-index: z(default);
+
+  &--container {
+    position: relative;
+  }
+
+  &--input {
+    display: none;
+
+    &:checked {
+
+      ~ .popup {
+        animation-name: rotateInUpLeft;
+      }
+    }
+  }
+
+  &--toggle {
+    cursor: pointer;
+    @extend %transition-fast;
+    z-index: (z(default) + 1);
+  }
+}
