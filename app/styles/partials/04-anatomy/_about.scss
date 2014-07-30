@@ -1,20 +1,22 @@
 .about__img-circle {
+  align-self: center;
+  background-color: #e85545;
+  margin-bottom: 1.5rem;
+  position: relative;
   @extend %transition-fast;
-
-  @include mq($from: tablet) {
-    background-color: #e85545;
-    float: right;
-    height: 400px;
-    opacity: .95;
-    position: relative;
-    width: 400px;
-  }
+  width: 100%;
 
   img {
-    animation: body-movement 16s cubic-bezier(.5, .2, .3, 1) infinite;
-    position: absolute;
+    position: relative;
     top: 5%;
-    width: 100%;
+  }
+
+  @include mq($from: tablet) {
+    width: 80%;
+
+    img {
+      animation: body-movement 16s cubic-bezier(.5, .2, .3, 1) infinite;
+    }
   }
 }
 

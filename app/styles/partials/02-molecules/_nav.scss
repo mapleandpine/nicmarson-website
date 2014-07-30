@@ -9,15 +9,10 @@ nav[role=navigation],
   }
 
   li {
-    display: block;
-    margin-bottom: .5em;
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right: .75em;
     position: relative;
-
-    @include mq($from: tablet) {
-      display: inline-block;
-      margin-bottom: 0;
-      margin-right: .75em;
-    }
   }
 
   a {

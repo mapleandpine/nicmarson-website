@@ -1,8 +1,13 @@
 .site-header {
   left: 0;
-  padding: 2.5rem 3rem 2rem;
+  padding: 2.5rem 2rem 2rem;
   position: absolute;
   top: 0;
+
+  @include mq($from: tablet) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 
   a {
     border-bottom: 1px solid transparent;
@@ -48,21 +53,6 @@
       @extend %transition-fast;
       vertical-align: calc(50% - .9em);
       width: 1em;
-    }
-  }
-
-  .toggle--nav {
-    left: 0;
-    position: absolute;
-    top: 0;
-
-    @include mq($from: desktop) {
-      opacity: .75;
-    }
-
-    &:hover,
-    &.active {
-      opacity: 1;
     }
   }
 }

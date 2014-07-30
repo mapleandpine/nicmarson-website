@@ -28,60 +28,11 @@ class: portfolio-detail
         </label>
         <div class="popup">{{ page.role-description }}</div>
       </div>
-      <p class="tags">
-        <svg class="shape-tags svg-inline" viewBox="0 0 100 100">
-          <use xlink:href="#shape-tags"/>
-        </svg>
-        {{ page.tags | array_to_sentence_string }}
-      </p>
     </div>
   </div>
   <div class="col-half">
-    <div class="csslider">
-      <input type="radio" name="slides" id="slides_1">
-      <input type="radio" name="slides" id="slides_2" checked="">
-      <input type="radio" name="slides" id="slides_3">
-      <ul class="portfolio__item">
-        <li class="slide-1">
-          <img class="img-responsive" src="/images/portfolio/{{ page.name }}/{{ page.name }}-01.png">
-          <div class="caption">
-            <div>
-              <h1>Slide 1</h1>
-              <p>Some info about this slide</p>
-            </div>
-          </div>
-        </li>
-        <li class="slide-2">
-          <img class="img-responsive" src="/images/portfolio/{{ page.name }}/{{ page.name }}-02.png">
-          <div class="caption">
-            <div>
-              <h1>Slide 2</h1>
-              <p>Some info about this slide</p>
-            </div>
-          </div>
-        </li>
-        <li class="slide-3">
-          <img class="img-responsive" src="/images/portfolio/{{ page.name }}/{{ page.name }}-03.png">
-          <div class="caption">
-            <div>
-              <h1>Slide 3</h1>
-              <p>Some info about this slide</p>
-            </div>
-          </div>
-        </li>
-      </ul>
-      <div class="arrows">
-        <label for="slides_1"></label>
-        <label for="slides_2"></label>
-        <label for="slides_3"></label>
-      </div>
-      <div class="navigation">
-        <div>
-          <label for="slides_1"></label>
-          <label for="slides_2"></label>
-          <label for="slides_3"></label>
-        </div>
-      </div>
+    <div class="image">
+      <img class="img-responsive" src="/images/portfolio/{{ page.name }}/{{ page.name }}-01.png">
     </div>
   </div>
 </section>

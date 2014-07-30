@@ -18,14 +18,10 @@ $gutter-width-large:  2rem;
 }
 
 .col-one-third {
-  width: 50%;
+  width: 100%;
 
   @include mq($from: desktop) {
     width: 33%;
-
-    &:first-child {
-      width: 34%;
-    }
   }
 }
 
