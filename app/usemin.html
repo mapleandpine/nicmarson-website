@@ -11,8 +11,8 @@
   <!-- endbuild -->
 
   <!-- build:css(.tmp) styles/main.css -->
-  <!-- <link rel="stylesheet" href="styles/main.css"> -->
-  <link rel="stylesheet" href="styles/main.css">
+  <!-- <link rel="stylesheet" href="styles/main.css" lazyload> -->
+  <link rel="stylesheet" href="styles/main.css" lazyload>
   <!-- endbuild -->
 
   <!-- build:js /scripts/vendor/modernizr.js -->
@@ -23,7 +23,7 @@
 
   <!-- build:js /scripts/vendor/jquery.js -->
   <!-- bower:js -->
-  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/jquery/dist/jquery.js" lazyload></script>
   <!-- endbower -->
   <!-- endbuild -->
 </head>
@@ -32,12 +32,12 @@
 
   <!-- build:js scripts/vendor/vendor.js -->
   <!-- bower:js -->
-  <script src="/bower_components/morlock/dist/morlock.js"></script>
+  <script src="/bower_components/morlock/dist/morlock.js" lazyload></script>
   <!-- endbower -->
   <!-- endbuild -->
 
   <!-- build:js({app,.tmp}) scripts/main.js -->
-  <script src="scripts/main.js"></script>
+  <script src="scripts/main.js" lazyload></script>
   <!-- endbuild -->
 </body>
 </html>

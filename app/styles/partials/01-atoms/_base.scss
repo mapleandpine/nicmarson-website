@@ -63,18 +63,6 @@ html {
   }
 }
 
-body {
-  // Ala Trent Walton
-  // http://trentwalton.com/2011/09/07/css-hyphenation
-  @include hyphens(auto);
-  font-size: 1em;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
 ::-webkit-scrollbar {
   width: 7px;
   height: 7px;

@@ -28,7 +28,7 @@ xmp {
 }
 
 abbr {
-  @include smallcaps();
+  @extend %smallcaps;
   &:hover {
     cursor: help;
   }
@@ -55,15 +55,6 @@ mark {
 
 .tags {
   color: palette(grey);
-}
-
-.byline {
-  color: $muted-color;
-  font-size: 1rem;
-  font-weight: 900;
-  letter-spacing: .07em;
-  margin-top: -.75rem;
-  text-transform: uppercase;
 }
 
 // Abbreviations and acronyms

@@ -1,5 +1,37 @@
+.about,
+.about .ink {
+  background-color: $about-bg-color;
+}
+
+.about {
+  background: linear-gradient(to bottom, $about-bg-color, $footer-bg-color);
+
+  .connect .phone small,
+  .connect .email small {
+    background-color: $about-bg-color;
+
+    &::after {
+      border-top-color: $about-bg-color;
+    }
+  }
+
+  .connect .phone:hover,
+  .connect .email:hover {
+    background-color: $about-bg-color;
+  }
+
+  .nav a:focus,
+  .nav a:hover,
+  .nav a.active {
+    color: $about-nav-hover;
+
+    svg {
+      fill: $about-nav-hover;
+    }
+  }
+}
+
 .about__img-circle {
-  align-self: center;
   background-color: #e85545;
   margin-bottom: 1.5rem;
   position: relative;
@@ -26,6 +58,7 @@
 
 .about__favorite {
   background-color: palette(grey, lighter);
+  position: relative;
 
   &.kippt {
     background-color: $kippt;
@@ -38,12 +71,32 @@
   &.github {
     background-color: $github;
   }
+
+  .shape-twitter,
+  .shape-github {
+    bottom: 1rem;
+    position: absolute;
+    right: 1rem;
+    width: 20%;
+  }
+
+  .shape-twitter {
+    fill: lighten($twitter, 5);
+  }
+
+  .shape-github {
+    fill: lighten($github, 5);
+  }
 }
 
 .tinyhouse {
-  border-bottom: 1px solid palette(grey, light);
+  border-bottom: 1px solid palette(grey, darker);
   padding: 105px 30px 20px 10px;
   position: relative;
+
+  p {
+    font-family: $font-family-sans-serif;
+  }
 
   span {
     display: block;
@@ -53,7 +106,7 @@
   }
 
   .year {
-    color: palette(blue);
+    color: palette(red);
     font-size: 30px;
     font-weight: 900;
     left: 10px;
@@ -62,41 +115,57 @@
     top: 30px;
     width: 80px;
   }
-}
 
-.shape-home {
-  font-size: 120px;
-  line-height: 1;
-  position: absolute;
-  left: 140px;
-  top: 0;
-
-  @include mq($from: desktop) {
-    display: none;
+  // Big house
+  .shape-home-roof,
+  .shape-home-walls {
+    fill: palette(grey, darker);
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 160px;
   }
 
-  @include mq($from: huge) {
-    display: inline-block;
-  }
-}
-
-.shape-house {
-  color: palette(blue);
-  position: absolute;
-  left: 193px;
-  top: 96px;
-
-  @include mq($from: desktop) {
-    display: none;
+  .shape-home-roof {
+    fill: palette(red);
   }
 
-  @include mq($from: huge) {
-    display: inline-block;
+  // Little house
+  .shape-house {
+    fill: palette(red);
+    position: absolute;
+    right: 65px;
+    top: 133px;
+    width: 30px;
   }
 }
 
 .bridgecity {
-  padding: 110px 10px 20px;
+  padding: 200px 10px 20px;
+  position: relative;
   text-align: center;
+
+  .shape-bridge {
+    @include centerer(absolute, horizontal);
+    fill: palette(yellow);
+    height: 200px;
+    top: 0;
+  }
 }
 
+.img-fade {
+  position: relative;
+
+  svg {
+    fill: $white;
+    opacity: .75;
+    @extend %transition-fast;
+  }
+
+  &:hover {
+
+    svg {
+      opacity: 1;
+    }
+  }
+}

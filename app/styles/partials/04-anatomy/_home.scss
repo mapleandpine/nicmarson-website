@@ -1,38 +1,55 @@
+.home,
+.home .ink {
+  background-color: $home-bg-color;
+}
 
+.home {
+  background: linear-gradient(to bottom, $home-bg-color, $footer-bg-color);
 
-// Portfolio items
-.home aside {
-  background-color: palette(grey, darker);
-  position: relative;
+  .connect .phone small,
+  .connect .email small {
+    background-color: $home-bg-color;
 
-  @include mq($from: desktop) {
-    box-shadow: 15px 0 15px -10px rgba(0, 0, 0, .2) inset;
+    &::after {
+      border-top-color: $home-bg-color;
+    }
   }
 
-  header {
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
+  .connect .phone:hover,
+  .connect .email:hover {
+    background-color: $home-bg-color;
   }
 
-  h1 {
-    background-color: palette(red, dark);
-    color: $white;
-    line-height: 2.5;
-    padding-bottom: 0;
-    padding-left: 1em;
+  .nav a:focus,
+  .nav a:hover,
+  .nav a.active {
+    color: $home-nav-hover;
+
+    svg {
+      fill: $home-nav-hover;
+    }
   }
 }
 
-.home__intro {
-  margin-bottom: 4rem;
-}
+.home {
 
-.home__portfolio {
-  min-height: -webkit-min-content;
-  position: relative;
-  top: 2.5em;
+  article {
+    padding-bottom: 4rem;
+  }
+
+  aside {
+    border-right: $body-padding solid palette(red);
+
+    header {
+      background-color: palette(red);
+      color: $white;
+      line-height: $body-padding;
+    }
+
+    .title--block {
+      margin-bottom: 0;
+    }
+  }
 
   .portfolio__item a {
     padding-bottom: 50%;

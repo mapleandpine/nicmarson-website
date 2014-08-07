@@ -1,7 +1,152 @@
-.nav-portfolio {
+.portfolio,
+.portfolio .ink {
+  background-color: $portfolio-bg-color;
+}
 
-  .js & {
-    display: none;
+.portfolio .connect .phone small,
+.portfolio .connect .email small {
+  background-color: $portfolio-bg-color;
+
+  &::after {
+    border-top-color: $portfolio-bg-color;
+  }
+}
+
+.portfolio {
+  background: linear-gradient(to bottom, $portfolio-bg-color, $footer-bg-color);
+
+  .connect .phone small,
+  .connect .email small {
+    background-color: $portfolio-bg-color;
+
+    &::after {
+      border-top-color: $portfolio-bg-color;
+    }
+  }
+
+  .connect .phone:hover,
+  .connect .email:hover {
+    background-color: $portfolio-bg-color;
+  }
+
+  .nav a:focus,
+  .nav a:hover,
+  .nav a.active {
+    color: $portfolio-nav-hover;
+
+    svg {
+      fill: $portfolio-nav-hover;
+    }
+  }
+}
+
+.portfolio-detail {
+
+  .popup {
+    background-color: $white;
+    border: 1px solid palette(red, dark);
+    padding: 3rem 3rem 6rem;
+  }
+
+  .popup--input:checked ~ .popup {
+    bottom: 5px;
+    top: auto;
+  }
+
+  .popup--input:checked + .popup--toggle {
+    background-color: palette(red, dark);
+    border-radius: 0;
+
+    svg {
+      transform: rotate(45deg);
+    }
+  }
+
+  .popup--toggle {
+    border-radius: 1.6em;
+  }
+}
+
+.portfolio__image {
+  background-color: palette(gray, darker);
+  color: $white;
+
+  &:focus,
+  &:hover {
+
+    img {
+      animation-name: reverse-pulse;
+      animation-duration: 4s;
+      animation-iteration-count: 1;
+      opacity: 1;
+      @extend %transition-slow;
+    }
+
+    .portfolio__name {
+      opacity: .5;
+      @extend %transition-slow;
+    }
+  }
+
+  img {
+    opacity: .5;
+    transform: scale(1.05, 1.05);
+    @extend %transition-fast;
+    will-change: filter, opacity, transform;
+  }
+
+  .h4 {
+    display: block;
+    line-height: 1;
+  }
+}
+
+.portfolio__name {
+  @extend %text-block;
+  @extend %text-overflow;
+  @extend %text-white-border;
+  min-width: 50%;
+  max-width: 80%;
+  @extend %transition-fast;
+}
+
+.portfolio__thumbs {
+  background-color: palette(grey, lightest);
+
+  .portfolio__item {
+    width: 100%;
+
+    @include mq($from: tablet) {
+      width: 50%;
+    }
+
+    @include mq($from: desktop) {
+      width: 33.3333%;
+    }
+
+    @include mq($from: huge) {
+      width: 25%;
+    }
+  }
+}
+
+.portfolio__screens {
+  background-color: palette(grey, lightest);
+
+  .row {
+    height: 200px;
+    font-size: 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    position: relative;
+    white-space: nowrap;
+  }
+
+  .portfolio__item {
+    cursor: pointer;
+    display: inline-block;
+    height: 200px;
+    max-width: 400px;
   }
 }
 
@@ -9,11 +154,15 @@
   overflow: hidden;
   position: relative;
 
-  a {
+  > a {
     display: block;
     height: 0;
-    padding-bottom: 75%;
+    padding-bottom: 100%;
     width: 100%;
+
+    @include mq($from: tablet) {
+      padding-bottom: 75%;
+    }
   }
 
   img {
@@ -21,25 +170,11 @@
     min-height: 100%;
   }
 
-  .come-in {
-    animation: come-in-margin-top 1.5s ease forwards;
-    margin-top: 150px;
-  }
-
-  // stagger the animation
-  .come-in:nth-child(odd) {
-    animation-duration: 0.75s;
-  }
-
   .popup {
     color: #FFF;
     height: 100%;
     font-size: 12px;
     padding: 1rem;
-    top: 100%;
-    transform-origin: left bottom;
-    transform: rotate3d(0, 0, 1, 45deg);
-    width: 100%;
 
     > span {
       color: inherit;
@@ -63,8 +198,13 @@
     }
   }
 
-  .title--section {
-    border-bottom-color: rgba(255,255,255,.1);
+  .title--block {
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    padding: 1rem 0;
+
+    a {
+      color: inherit;
+    }
   }
 
   .popup--toggle,
@@ -117,147 +257,6 @@
   }
 }
 
-.portfolio__image {
-
-  &:hover {
-
-    img {
-      animation-name: reverse-pulse;
-      animation-duration: .3s;
-      animation-iteration-count: 1;
-      filter: blur(0);
-      opacity: 1;
-      @extend %transition-medium;
-    }
-
-    span {
-      opacity: .5;
-      @extend %transition-medium;
-    }
-  }
-
-  img {
-    filter: blur(5px);
-    opacity: .5;
-    transform: scale(1.05, 1.05);
-    @extend %transition-fast;
-    will-change: filter, opacity, transform;
-  }
-
-  span {
-    @extend %title;
-    @extend %text-white-border;
-    @include centerer();
-    display: inline-block;
-    font-size: 12px;
-    min-width: 50%;
-    max-width: 80%;
-    padding: 1em .5em;
-    @extend %transition-fast;
-    width: 50%;
-  }
-}
-
-.portfolio__thumbs {
-  background-color: palette(grey, lightest);
-
-  .portfolio__item {
-    width: 50%;
-
-    @include mq($from: desktop) {
-      width: 25%;
-    }
-  }
-}
-
-.portfolio__screens {
-  background-color: palette(grey, lightest);
-
-  .row {
-    height: 200px;
-    font-size: 0;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    position: relative;
-    white-space: nowrap;
-  }
-
-  .portfolio__item {
-    cursor: pointer;
-    display: inline-block;
-    height: 200px;
-    max-width: 400px;
-  }
-}
-
-.portfolio-detail__article {
-  background-color: $white;
-
-  .popup {
-    background-color: $white;
-    bottom: 5px;
-    left: 0;
-    padding: 3rem 3rem 6rem;
-
-    &--container {
-      margin-bottom: 3rem;
-    }
-
-    &--input {
-      display: none;
-
-      &:checked {
-
-        ~ .popup {
-          animation-name: rotateInUpLeft;
-          border: 1px solid palette(red, dark);
-        }
-
-        + .popup--toggle {
-          background-color: palette(red, dark);
-          border-radius: 0;
-
-            svg {
-              transform: rotate(45deg);
-            }
-        }
-      }
-    }
-
-    &--toggle {
-      border-radius: 1.6em;
-    }
-  }
-
-  .caption {
-    color: $black;
-    padding: 22px 0;
-    position: absolute;
-    left: 0;
-    top: 16%;
-    height: 20%;
-    width: 0;
-    z-index: 10;
-    overflow: hidden;
-
-    &:after {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: 100%;
-      z-index: 20;
-      background: rgba(0, 0, 0, 0.35);
-      pointer-events: none;
-    }
-
-    div {
-      transform: translate(120%);
-    }
-  }
-}
-
 .portfolio__skills {
   background-color: palette(grey, lightest);
   margin-top: -6px;
@@ -266,15 +265,18 @@
 .portfolio__next-previous {
   background-color: palette(grey, darker);
 
+  svg {
+    fill: $white;
+  }
+
   .portfolio__item a {
     padding-bottom: 50%;
   }
 }
 
-.project {
-
-}
-
-.role {
-
+// make right arrow point left
+.portfolio__item__previous {
+  svg {
+    transform: rotate(180deg);
+  }
 }

@@ -25,10 +25,8 @@
 // Typography
 @import "00-utilities/variables/typography";
 @import "00-utilities/mixins/hyphen";
-@import "00-utilities/mixins/smallcaps";
 @import "00-utilities/mixins/typecsset";
 @import "00-utilities/mixins/text-emphasis";
-@import "00-utilities/mixins/text-overflow";
 @import "00-utilities/mixins/list";
 
 // Images
@@ -37,7 +35,6 @@
 
 // Forms
 @import "00-utilities/mixins/form";
-@import "00-utilities/mixins/tab-focus";
 
 // Organisms
 @import "00-utilities/variables/pie-chart";

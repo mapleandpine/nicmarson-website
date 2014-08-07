@@ -1,13 +1,13 @@
 ---
 layout: 00-default
 parent: portfolio
-slug: portfolio-detail
-class: portfolio-detail
+slug: portfolio
+class: portfolio portfolio-detail
 ---
 
-<section class="row">
-  <div class="col-half">
-    <div class="container">
+<div class="sidebar flexbox--row">
+  <article>
+    <section class="container--text">
       <h1 class="title">{{ page.project }}</h1>
       <p class="byline">
         {{ page.date | date: "%Y" }}
@@ -28,14 +28,14 @@ class: portfolio-detail
         </label>
         <div class="popup">{{ page.role-description }}</div>
       </div>
-    </div>
-  </div>
-  <div class="col-half">
+    </section>
+  </article>
+  <aside>
     <div class="image">
       <img class="img-responsive" src="/images/portfolio/{{ page.name }}/{{ page.name }}-01.png">
     </div>
-  </div>
-</section>
+  </aside>
+</div>
 <!-- Load Skills and Additional Screens -->
 {{ content }}
 <!-- Previous and Next Projects -->
@@ -43,11 +43,19 @@ class: portfolio-detail
   <div class="col-half">
     {% if page.next_in_category != nil %}
       <section id="{{page.next_in_category.name}}" class="portfolio__item">
-        <a class="waves-effect waves-float" href="{{page.next_in_category.url}}">
+        <a class="portfolio__item__previous" href="{{page.next_in_category.url}}">
           <div class="portfolio__image">
             <!-- <img src="/images/portfolio/{{page.next_in_category.name}}/{{page.next_in_category.name}}-browser.jpg"> -->
-            <span>&larr; {{ page.next_in_category.title }}</span>
             <img class="img-responsive" src="http://fillmurray.com/g/800/400" alt="{{ page.next_in_category.title }} thumbnail">
+            <div class="center">
+              <b class="h4">Previous project</b>
+              <span class="portfolio__name">
+                <svg class="shape-arrow-right svg-inline" viewBox="0 0 100 100">
+                  <use xlink:href="#shape-arrow-right"/>
+                </svg>
+                <i>{{ page.next_in_category.title }}</i>
+              </span>
+            </div>
           </div>
         </a>
       </section>
@@ -56,11 +64,19 @@ class: portfolio-detail
   <div class="col-half">
     {% if page.previous_in_category != nil %}
       <section id="{{page.previous_in_category.name}}" class="portfolio__item">
-        <a class="waves-effect waves-float" href="{{page.previous_in_category.url}}">
+        <a class="portfolio__item__next" class="waves-effect waves-float" href="{{page.previous_in_category.url}}">
           <div class="portfolio__image">
             <!-- <img src="/images/portfolio/{{page.previous_in_category.name}}/{{page.previous_in_category.name}}-browser.jpg"> -->
-            <span>{{ page.previous_in_category.title }} &rarr;</span>
             <img class="img-responsive" src="http://fillmurray.com/g/800/400" alt="{{ page.previous_in_category.title }} thumbnail">
+            <div class="center">
+              <b class="h4">Next project</b>
+              <span class="portfolio__name">
+                <i>{{ page.previous_in_category.title }}</i>
+                <svg class="shape-arrow-right svg-inline" viewBox="0 0 100 100">
+                  <use xlink:href="#shape-arrow-right"/>
+                </svg>
+              </span>
+            </div>
           </div>
         </a>
       </section>

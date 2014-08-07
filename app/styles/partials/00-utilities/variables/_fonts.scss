@@ -2,16 +2,14 @@
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-
-// Font families
-$font-family-merriweather: "Merriweather", serif !default;
-$font-family-lato: "Lato", sans-serif !default;
-$font-family-source: "Source Code Pro", monospace !default;
+$font-family-lato: "Lato", Georgia, sans-serif !default;
+$font-family-yanone: "Yanone Kaffeesatz", Georgia, "Arial Narrow", Arial, sans-serif !default;
 
 // Font definitions
-$font-family-serif:       $font-family-merriweather;
+$font-family-serif:       "Book Antiqua", Palatino, Georgia, serif;
 $font-family-sans-serif:  $font-family-lato;
-$font-family-monospace:   $font-family-source;
+$font-family-condensed:   $font-family-yanone;
+$font-family-monospace:   Consolas, monaco, monospace;
 
 // Font assignments
 $base-font-family:        $font-family-sans-serif;

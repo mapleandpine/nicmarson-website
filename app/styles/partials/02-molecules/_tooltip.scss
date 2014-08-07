@@ -3,8 +3,6 @@
   box-shadow: 1px 1px 10px 0 rgba(0,0,0, .05);
   line-height: 1;
   position: absolute;
-  transition-duration: .3s;
-  transition-property: opacity;
   white-space: nowrap;
   width: auto;
   z-index: z(dropdown);
@@ -31,10 +29,15 @@
   animation-duration: .25s;
   animation-fill-mode: both;
   display: block;
+  left: 0;
   opacity: 0;
   overflow-y: auto;
   position: absolute;
+  top: 100%;
+  transform-origin: left bottom;
+  transform: rotate3d(0, 0, 1, 45deg);
   @extend %transition-fast;
+  width: 100%;
   z-index: z(default);
 
   &--container {
@@ -58,3 +61,5 @@
     z-index: (z(default) + 1);
   }
 }
+
+

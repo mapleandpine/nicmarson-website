@@ -1,27 +1,11 @@
 // Showing and hiding content
 //
 // Force an element to be shown or hidden (<strong>including for screen readers</strong>) with the use of <code>.show</code> and <code>.hidden</code> classes. These classes use <code>!important</code> to avoid specificity conflicts, just like the <a href="#helper-classes-floats">quick floats</a>. They are only available for block level toggling. They can also be used as mixins.</p> <p><code>.hide</code> is available, but it does not always affect screen readers and is <strong>deprecated</strong> as of v3.0.1. Use <code>.hidden</code> or <code>.sr-only</code> instead.</p> <p>Furthermore, <code>.invisible</code> can be used to toggle only the visibility of an element, meaning its <code>display</code> is not modified and the element can still affect the flow of the document.
-//
-// .hidden     - Hide content with display none
-// .show       - Show content
-// .invisible  - Hide content with visibility hidden
-// .sr-only    - Screen reader content only
-// .text-hide  - Hide text for image replacement
-//
-// Styleguide 1.11.5
 
-// Note: Deprecated .hide in favor of .hidden or .sr-only (as appropriate) in v3.0.1
-.hide {
-  display: none !important;
-}
-.show {
-  display: block !important;
-}
 .invisible {
   visibility: hidden;
 }
-.sr-only,
-.visuallyhidden {
+.sr-only {
   position: absolute;
   width:1px;
   height:1px;

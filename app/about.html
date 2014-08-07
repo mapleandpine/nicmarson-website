@@ -2,28 +2,32 @@
 layout: 00-default
 title: About Me
 slug: about
+class: about
 ---
 
-<section class="about__intro flex--row container">
-  <div class="col-one-third flex--column">
-    <div class="img-circle about__img-circle">
-      <img src="../images/vector-me.png" alt="Nicholas Marson" class="img-responsive">
-    </div>
-  </div>
-  <div class="col-two-thirds flex--column">
-    <h1>About Nic Marson</h1>
-    <p class="lead">I am an advocate for a unified web experience on all devices. I specialize in <a href="http://bradfrostweb.com/blog/post/the-many-faces-of-adaptive-design/" class="external" role="link">adaptive design</a> for large websites, integrating User Experience data, and improving workplace efficiency.</p>
-    <h2>My background</h2>
-    <div class="row--gutter">
-      <div class="col-half">
-        <p>I began as an artist in my youth, putting to paper what I saw in the world and in my imagination. As I grew I developed an aptitude for math and science. After high school I went to Oregon State University to major in biology. Eventually I changed my major to graphic design where I found a perfect mix of my talents. In addition to the graphic design curriculum I also began learning web design.</p>
+<div class="sidebar flexbox--row">
+  <article>
+    <section class="container--text">
+      <h1 class="title">About<!--  Nic Marson --></h1>
+      <p class="lead">I am an advocate for a unified web experience on all devices. I specialize in <a href="http://bradfrostweb.com/blog/post/the-many-faces-of-adaptive-design/" class="external" role="link">adaptive design</a> for large websites, integrating User Experience data, and improving workplace efficiency.</p>
+      <h2>My background</h2>
+      <div class="row--gutter">
+        <div class="col-half">
+          <p>I began as an artist in my youth, putting to paper what I saw in the world and in my imagination. As I grew I developed an aptitude for math and science. After high school I went to Oregon State University to major in biology. Eventually I changed my major to graphic design where I found a perfect mix of my talents. In addition to the graphic design curriculum I also began learning web design.</p>
+        </div>
+        <div class="col-half">
+          <p>My first web projects took place at Oregon State back in 2001, but I wouldn't get back into the web business again until 2004 as a web master at InFocus. During this off time I was teaching myself to hand code HTML and CSS and discovered A List Apart and related sites to guide me. Years later I would attend An Event Apart and by putting new skills to use with some great agencies.</p>
+        </div>
       </div>
-      <div class="col-half">
-        <p>My first web projects took place at Oregon State back in 2001, but I wouldn't get back into the web business again until 2004 as a web master at InFocus. During this off time I was teaching myself to hand code HTML and CSS and discovered A List Apart and related sites to guide me. Years later I would attend An Event Apart and by putting new skills to use with some great agencies.</p>
-      </div>
+    </section>
+  </article>
+  <aside class="flex--centered">
+    <div class="flex__item--center img-circle about__img-circle">
+      <!-- <img src="../images/vector-me.png" alt="Nicholas Marson" class="img-responsive"> -->
+      <img class="img-responsive" src="http://fillmurray.com/g/600/600" alt="{{ post.title }} thumbnail">
     </div>
-  </div>
-</section>
+  </aside>
+</div>
 
 <section class="flex--row row--moat">
   <div class="col-two-thirds about__history">
@@ -72,12 +76,15 @@ slug: about
   </div>
   <div class="col-one-third inverse">
     <div class="tinyhouse">
-      <p><span class="year">In<br> 2013</span> <span>I designed</span> <span>and built</span> a <a href="http://portlandtinyhouse.com" class="external">tiny house</a> with my partner, Natalie Perrin</p>
+      <p><span class="year">In<br> 2013</span> <span>I designed</span> <span>and built</span> a <a href="http://portlandtinyhouse.com" class="external">tiny house</a> with my<br> partner, Natalie Perrin</p>
       <svg viewBox="0 0 100 100" class="shape-house">
         <use xlink:href="#shape-house"></use>
       </svg>
-      <svg viewBox="0 0 100 100" class="shape-home">
-        <use xlink:href="#shape-home"></use>
+      <svg viewBox="0 0 100 100" class="shape-home-roof">
+        <use xlink:href="#shape-home-roof"></use>
+      </svg>
+      <svg viewBox="0 0 100 100" class="shape-home-walls">
+        <use xlink:href="#shape-home-walls"></use>
       </svg>
     </div>
     <div class="bridgecity">
@@ -88,7 +95,7 @@ slug: about
     </div>
   </div>
   <div class="col-one-third about__favorite inverse--white kippt">
-    <h4><b>Favorite</b> sites</h4>
+    <h3><b>Favorite</b> sites</h4>
     <ul class="list-unstyled">
       <li><a href="http://www.sidebar.io/" class="external" role="link">Sidebar</a></li>
       <li><a href="http://codepen.io/" class="external" role="link">Codepen</a></li>
@@ -97,7 +104,10 @@ slug: about
     <p><a href="https://kippt.com/nicmarson" class="kippt external img-fade">More at <span>Kippt</span></a></p>
   </div>
   <div class="col-one-third col-one-thirdish about__favorite inverse--white twitter">
-    <h4><b>Twitter</b> users</h4>
+    <h3><b>Twitter</b> users</h4>
+    <svg viewBox="0 0 100 100" class="shape-twitter">
+      <use xlink:href="#shape-twitter"></use>
+    </svg>
     <ul class="list-unstyled">
       <li><a href="https://twitter.com/chriscoyier" class="external" role="link">@chriscoyier</a></li>
       <li><a href="https://twitter.com/brad_frost" class="external" role="link">@brad_frost</a></li>
@@ -106,7 +116,10 @@ slug: about
     <p><a href="http://twitter.com/nicmarson" class="twitter external img-fade">More at <span>Twitter</span></a></p>
   </div>
   <div class="col-one-third about__favorite inverse--white github">
-    <h4><b>Web</b> projects</h4>
+    <h3><b>Web</b> projects</h4>
+    <svg viewBox="0 0 100 100" class="shape-github">
+      <use xlink:href="#shape-github"></use>
+    </svg>
     <ul class="list-unstyled">
       <li><a href="https://github.com/twbs" class="external" role="link">Bootstrap</a></li>
       <li><a href="https://github.com/yeoman" class="external" role="link">Yeoman</a></li>
@@ -115,4 +128,3 @@ slug: about
     <p><a href="https://github.com/nicmarson" class="github external img-fade">More at <span>Github</span></a></p>
   </div>
 </section>
-<!-- <small>This site was built using <a href="http://jekyllrb.com" title="Simple, blog-aware, static sites" role="link">jekyllrb</a>, with the help of <a href="http://gruntjs.com/" title="The JavaScript Task Runner" role="link">Grunt</a>, <a href="http://sass-lang.com" title="Syntactically Awesome Style Sheets" role="link"><abbr>SASS</abbr></a>, <a href="http://yeoman.io/" title="Modern workflows for modern webapps" role="link">Yeoman</a>, and <a href="http://bower.io/" title="A package manager for the web" role="link">Bower</a>. A special thanks to <a href="http://github.com" title="Build software better, together." role="link">Github</a> for keeping track of my many changes and hosting this site via <a href="http://pages.github.com" title="Public webpages freely hosted and easily published through our site" role="link">Github pages</a>.</small> -->

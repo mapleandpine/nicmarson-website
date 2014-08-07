@@ -3,11 +3,8 @@
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  color: $heading-color;
-  font-family: $heading-font-family;
   font-kerning: normal;
   font-weight: $heading-weight;
-  line-height: $heading-line-height;
   @extend %typecsset-vertical-rhythm;
 
   &:first-child {
@@ -36,12 +33,21 @@ h5, .h5 { font-size: $font-size-h5; }
 h6, .h6 { font-size: $font-size-h6; }
 
 .title {
-  color: palette(grey, darkest);
   font-size: $font-size-h1;
   font-weight: 900;
+  line-height: 1.1;
+  padding-top: 4rem;
 
   @include mq($from: tablet) {
-    font-size: $font-size-headline;
+    padding-top: 6rem;
+  }
+
+  @include mq($from: desktop) {
+    padding-top: 8rem;
+  }
+
+  @include mq($from: tablet) {
+    font-size: $font-size-title;
   }
 
   small {
@@ -51,14 +57,8 @@ h6, .h6 { font-size: $font-size-h6; }
   }
 }
 
-.title--section {
-  border-bottom: 1px solid palette(grey);
-  font-size: 1rem;
-  font-weight: 400;
-  letter-spacing: .07em;
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  text-transform: uppercase;
+.title--block {
+  @extend %text-block;
 
   b {
     font-weight: 800;
@@ -68,22 +68,5 @@ h6, .h6 { font-size: $font-size-h6; }
     color: inherit;
     font-size: .75rem;
     font-weight: normal;
-  }
-}
-
-.title--overlay {
-  border-bottom: 1px solid rgba(255,255,255,.1);
-  color: $white;
-  font-size: 1rem;
-  font-weight: 400;
-  letter-spacing: .07em;
-  line-height: 1;
-  margin-bottom: 1rem;
-  margin-top: 0;
-  padding-bottom: .75rem;
-  padding-right: 3rem;
-
-  b {
-    font-weight: 800;
   }
 }

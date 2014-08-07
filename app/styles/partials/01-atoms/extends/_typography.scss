@@ -14,13 +14,12 @@
   }
 }
 
-%title {
-  font-size: 1rem;
-  letter-spacing: .07em;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  text-transform: uppercase;
-  white-space: nowrap;
+%smallcaps {
+  // depends on the font family.
+  // some font-families don’t support small caps
+  // or don’t provide them with their web font.
+  font-variant: small-caps;
+  text-transform: lowercase;
 }
 
 %text-grey-background {
@@ -41,4 +40,19 @@
   color: #FFF;
   font-weight: 700;
   text-align: center;
+}
+
+%text-block {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: .07em;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+%text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

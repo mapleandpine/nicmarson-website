@@ -1,58 +1,49 @@
-.site-header {
-  left: 0;
-  padding: 2.5rem 2rem 2rem;
-  position: absolute;
-  top: 0;
+header[role=banner] {
+  color: $header-color;
+  height: $header-height;
+  padding: 1.75rem $body-padding 1.5rem;
+  text-align: right;
+}
 
-  @include mq($from: tablet) {
-    padding-left: 3rem;
-    padding-right: 3rem;
+.header-nav {
+  float: left;
+  font-family: $font-family-condensed;
+  letter-spacing: .07em;
+  text-align: left;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  li {
+    margin-right: .75em;
+    overflow: hidden; // for wave effect
+  }
+}
+
+.nav .connect-link {
+  padding-right: 2.75em;
+
+  i {
+    font-family: $font-family-serif;
+    font-style: italic;
+    font-weight: 300;
   }
 
-  a {
-    border-bottom: 1px solid transparent;
-    letter-spacing: .0125em;
-    text-transform: uppercase;
-
-    &:focus,
-    &:hover {
-      border-bottom-color: lighten($nav-link-color-hover, 6);
-      color: $nav-link-color-hover;
-    }
-
-    &.active {
-      border-bottom-color: $nav-link-color-active;
-      color: $nav-link-color-active;
-    }
-  }
-
-  .toggle-connect-container {
-    border-radius: 50%;
+  svg {
+    display: inline-block;
+    position: absolute;
+    right: .5em;
+    top: .25em;
     @extend %transition-fast;
-
-    &:hover {
-      transform: scale(1.1);
-    }
+    width: 1.5em;
   }
 
-  .toggle--connect {
-    background-color: palette(grey);
-    border: none;
-    border-radius: 50%;
-
-    &:hover {
-      background-color: palette(red);
-
-      svg {
-        transform: scale(1.2);
-      }
-    }
-
-    svg {
-      fill: $white;
-      @extend %transition-fast;
-      vertical-align: calc(50% - .9em);
-      width: 1em;
-    }
+  @include mq($to: tablet) {
+    display: none;
   }
+}
+
+.nav .connect-link:hover svg {
+  right: -.5em;
+  top: -.5em;
+  width: 3em;
 }

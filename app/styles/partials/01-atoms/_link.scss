@@ -8,10 +8,6 @@ a {
 
   &:visited {
     color: $link-visited-color;
-
-    svg {
-      fill: $link-visited-color
-    }
   }
 
   &:hover,
@@ -39,28 +35,31 @@ a[role="link"] {
   color: palette(grey, lightest);
 
   a {
-    color: palette(red, light);
+    color: palette(grey);
 
     &:visited {
-      color: palette(red, light);
+      color: palette(grey);
     }
 
     &:hover,
     &:focus {
-      color: palette(red, lighter);
+      color: palette(grey, lightest);
     }
   }
 
   a[role="link"] {
-    border-bottom: .0625rem solid palette(red, light);
+    border-bottom: .0625rem solid palette(yellow, dark);
+    color: palette(yellow, dark);
 
     &:visited {
-      border-bottom-color: palette(red, light);
+      border-bottom-color: palette(yellow, dark);
+      color: palette(yellow, dark);
     }
 
     &:hover,
     &:focus {
-      border-bottom-color: palette(red, lighter);
+      border-bottom-color: palette(yellow);
+      color: palette(yellow, light);
     }
   }
 

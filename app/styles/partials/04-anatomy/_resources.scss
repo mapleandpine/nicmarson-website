@@ -1,0 +1,32 @@
+.resources,
+.resources .ink {
+  background-color: $resources-bg-color;
+}
+
+.resources {
+  background: linear-gradient(to bottom, $resources-bg-color, $footer-bg-color);
+
+  .connect .phone small,
+  .connect .email small {
+    background-color: $resources-bg-color;
+
+    &::after {
+      border-top-color: $resources-bg-color;
+    }
+  }
+
+  .connect .phone:hover,
+  .connect .email:hover {
+    background-color: $resources-bg-color;
+  }
+
+  .nav a:focus,
+  .nav a:hover,
+  .nav a.active {
+    color: $resources-nav-hover;
+
+    svg {
+      fill: $resources-nav-hover;
+    }
+  }
+}

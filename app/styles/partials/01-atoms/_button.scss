@@ -8,7 +8,7 @@
   overflow: hidden;
   position: relative;
   text-decoration: none;
-  transition: all 0.2s ease;
+  @extend %transition-fast;
   user-select: none;
   white-space: nowrap;
 
@@ -29,6 +29,11 @@
 
 .btn--default {
   @extend .btn;
+}
+
+.btn--connect {
+  @extend .btn;
+  padding: .25em;
 }
 
 .btn--danger {

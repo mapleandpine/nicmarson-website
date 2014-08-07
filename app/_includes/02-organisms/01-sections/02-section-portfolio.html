@@ -1,9 +1,9 @@
-<div id="{{ post.name }}" class="portfolio__item show-me animated">
+<div id="{{ post.name }}" class="portfolio__item">
   <a href="{{ post.url }}">
     <div class="portfolio__image">
       <!-- <img src="images/portfolio/{{ post.name }}/thumb.{{ post.thumb-ext }}" alt="{{ post.title }} thumbnail"> -->
       <img src="http://fillmurray.com/g/600/600" alt="{{ post.title }} thumbnail">
-      <span><b>{{ post.title }}</b></span>
+      <span class="center portfolio__name">{{ post.title }}</span>
     </div>
   </a>
   <input class="popup--input" id="{{ post.name }}-popup" type="checkbox">
@@ -13,7 +13,7 @@
     </svg>
   </label>
   <div class="popup" style="background-color: #{{ post.color-dark }}">
-    <h2 class="title--section">{{ post.date | date: "%Y" }} <b>{{ post.title }}</b><br><small>{% if post.role %}{{ post.role }}{% else %}Contractor{% endif %}</small></h2>
+    <h2 class="title--block"><a href="{{ post.url }}">{{ post.date | date: "%Y" }} <b>{{ post.title }}</b><br><small>{% if post.role %}{{ post.role }}{% else %}Contractor{% endif %}</small></a></h2>
     <span>
       {% if post.solo %}
       <svg class="shape-user svg-inline" viewBox="0 0 100 100">

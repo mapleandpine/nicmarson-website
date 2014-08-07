@@ -2,13 +2,14 @@
 layout: 00-default
 title: Portfolio
 slug: portfolio
+class: portfolio
 ---
 
 <div class="flex--row portfolio__thumbs">
   {% for post in site.categories['portfolio'] %}
     {% include 02-organisms/01-sections/02-section-portfolio.html %}
   {% endfor %}
-</div>
-<div class="nav-portfolio">
-  {% include 01-molecules/01-navigation/01-portfolio-nav.html %}
+  <div class="nav">
+    {% include 01-molecules/01-navigation/01-portfolio-nav.html %}
+  </div>
 </div>

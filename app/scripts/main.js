@@ -2,14 +2,6 @@
 
 (function ($, window, undefined) {
 
-  $('.toggle--connect').on('click', function(){
-    $('.modal--connect').fadeIn();
-  });
-
-  $('[data-dismiss="modal"]').on('click', function(){
-    $(this).closest('.modal').fadeOut();
-  });
-
   // Smooth scrolling plugin by Chris Coiyer
   // Source: http://css-tricks.com/snippets/jquery/smooth-scrolling/
   $('a[href*=#]:not([href=#])').click(function() {

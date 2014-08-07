@@ -1,55 +1,54 @@
-.modal--connect {
+// Contact and social network links in footer
+.connect {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
 
-  .js & {
-    display: none;
-  }
+  a {
+    font-size: 2vmin;
+    margin: 0 .125em;
 
-  .email-phone {
-    margin-bottom: 1.5rem;
-
-    .btn--block {
-      height: 148px;
-      padding: 20px;
+    @include mq($from: tablet) {
+      font-size: 3vmin;
     }
 
-    svg {
-      @include centerer();
-      fill: palette(grey, darkest);
-      margin: auto;
-      width: 128px;
+    @include mq($from: desktop) {
+      font-size: 4vmin;
     }
-
-    span {
-      @extend %text-white-border;
-      @include centerer();
-      display: inline-block;
-      padding: 1em .5em;
-    }
-  }
-
-  .title--section {
-    border-bottom-color: rgba(255,255,255,.1);
-  }
-
-  .social {
-    @extend %text-white-border;
 
     &:focus,
     &:hover {
+      color: $white;
 
       .tooltip--top {
-        bottom: 3.5em;
+        bottom: calc(4vmin + 10px);
+        left: 50%;
         opacity: 1;
+        transition-delay: .15s, 0;
+        transition-duration: .3s;
+        transition-property: opacity, bottom;
+        transition-timing-function: ease-in-out;
+
+        @include mq($from: tablet) {
+          bottom: calc(6vmin + 10px);
+        }
+
+        @include mq($from: desktop) {
+          bottom: calc(8vmin + 10px);
+        }
       }
     }
   }
 
   .tooltip--top {
-    bottom: 1500px;
+    bottom: 10em;
+    display: block;
     font-size: 12px;
+    left: -10000px;
     min-width: 148px;
     opacity: 0;
     padding: 20px;
+    text-align: center;
 
     $tooltip-arrow-size: 10px;
 
@@ -73,7 +72,6 @@
 
   .linkedin {
 
-    &:focus,
     &:hover,
     small {
       background-color: $linkedin;
@@ -86,7 +84,6 @@
 
   .twitter {
 
-    &:focus,
     &:hover,
     small {
       background-color: $twitter;
@@ -99,7 +96,6 @@
 
   .facebook {
 
-    &:focus,
     &:hover,
     small {
       background-color: $facebook;
@@ -112,7 +108,6 @@
 
   .pinterest {
 
-    &:focus,
     &:hover,
     small {
       background-color: $pinterest;
@@ -125,7 +120,6 @@
 
   .github {
 
-    &:focus,
     &:hover,
     small {
       background-color: $github;
@@ -138,7 +132,6 @@
 
   .kippt {
 
-    &:focus,
     &:hover,
     small {
       background-color: $kippt;
@@ -151,7 +144,6 @@
 
   .googleplus {
 
-    &:focus,
     &:hover,
     small {
       background-color: $googleplus;
@@ -160,5 +152,28 @@
     small::after {
       border-top-color: $googleplus;
     }
+  }
+
+  .phone,
+  .email {
+
+    &:hover,
+    small {
+      background-color: palette(grey, darker);
+    }
+
+    small::after {
+      border-top-color: palette(grey, darker);
+    }
+  }
+}
+
+// override default nav styles
+.connect.connect a:focus,
+.connect.connect a:hover {
+  color: $white;
+
+  svg {
+    fill: $white;
   }
 }

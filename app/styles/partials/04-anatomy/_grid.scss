@@ -21,14 +21,14 @@ $gutter-width-large:  2rem;
   width: 100%;
 
   @include mq($from: desktop) {
-    width: 33%;
+    width: 33.33%;
   }
 }
 
 .col-one-thirdish {
 
   @include mq($from: desktop) {
-    width: 34%;
+    width: 33.34%;
   }
 }
 
@@ -36,14 +36,14 @@ $gutter-width-large:  2rem;
   width: 100%;
 
   @include mq($from: desktop) {
-    width: 67%;
+    width: 66.67%;
   }
 }
 
 .col-one-fourth {
   width: 50%;
 
-  @include mq($from: desktop) {
+  @include mq($from: tablet) {
     width: 25%;
   }
 }
@@ -51,7 +51,7 @@ $gutter-width-large:  2rem;
 .col-three-fourths {
   width: 100%;
 
-  @include mq($from: desktop) {
+  @include mq($from: tablet) {
     width: 75%;
   }
 }
@@ -59,7 +59,7 @@ $gutter-width-large:  2rem;
 .col-one-fifth {
   width: 50%;
 
-  @include mq($from: desktop) {
+  @include mq($from: tablet) {
     width: 20%;
   }
 }
@@ -67,7 +67,7 @@ $gutter-width-large:  2rem;
 .col-two-fifths {
   width: 50%;
 
-  @include mq($from: desktop) {
+  @include mq($from: tablet) {
     width: 40%;
   }
 }
@@ -75,7 +75,7 @@ $gutter-width-large:  2rem;
 .col-three-fifths {
   width: 100%;
 
-  @include mq($from: desktop) {
+  @include mq($from: tablet) {
     width: 60%;
   }
 }
@@ -83,7 +83,7 @@ $gutter-width-large:  2rem;
 .col-four-fifths {
   width: 100%;
 
-  @include mq($from: desktop) {
+  @include mq($from: tablet) {
     width: 80%;
   }
 }
@@ -122,7 +122,7 @@ $gutter-width-large:  2rem;
 
     &:first-child,
     &:last-child {
-      @include mq($from: desktop) {
+      @include mq($from: tablet) {
         width: calc(20% - $gutter-width-medium);
       }
 
@@ -136,7 +136,7 @@ $gutter-width-large:  2rem;
 
     &:first-child,
     &:last-child {
-      @include mq($from: desktop) {
+      @include mq($from: tablet) {
         width: calc(25% - $gutter-width-medium);
       }
 
@@ -173,6 +173,20 @@ $gutter-width-large:  2rem;
       }
     }
   }
+
+  .col-half {
+
+    &:first-child,
+    &:last-child {
+      @include mq($from: desktop) {
+        width: calc(50% - $gutter-width-medium);
+      }
+
+      @include mq($from: huge) {
+        width: calc(50% - $gutter-width-large);
+      }
+    }
+  }
 }
 
 .row--moat {
@@ -180,7 +194,7 @@ $gutter-width-large:  2rem;
   [class^="col-"] {
     padding: $gutter-width-small*2;
 
-    @include mq($from: desktop) {
+    @include mq($from: tablet) {
       padding: $gutter-width-medium*2;
     }
 
@@ -193,7 +207,7 @@ $gutter-width-large:  2rem;
 .container {
   padding: 0 $gutter-width-small*2;
 
-  @include mq($from: desktop) {
+  @include mq($from: tablet) {
     padding: 0 $gutter-width-medium*2;
   }
 
@@ -202,33 +216,50 @@ $gutter-width-large:  2rem;
   }
 }
 
-// modernizr feature detection
-.flexbox {
+.container--text {
+  @extend .container;
+  padding-bottom: 4rem;
 
-  .flex {
-    display: flex;
-
-    &--row {
-      display: flex;
-      flex-flow: row wrap;
-    }
-
-    &--column {
-      display: flex;
-      flex-flow: column nowrap;
-    }
-
-    &--media {
-      align-items: flex-start;
-      display: flex;
-    }
+  @include mq($from: tablet) {
+    padding-bottom: 6rem;
   }
 
-  .flex__item {
-    flex: 1;
+  @include mq($from: huge) {
+    padding-bottom: 8rem;
+  }
+}
 
-    &--inline {
-      display: inline-flex;
-    }
+.flex {
+  display: flex;
+
+  &--row {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  &--column {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  &--media {
+    align-items: flex-start;
+    display: flex;
+  }
+
+  &--centered {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.flex__item {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+
+  &--center {
+    @extend .flex__item;
+    align-self: center;
   }
 }
