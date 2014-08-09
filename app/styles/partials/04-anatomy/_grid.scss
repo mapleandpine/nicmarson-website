@@ -1,38 +1,8 @@
-$gutter-width-small:  1rem;
-$gutter-width-medium: 1.5rem;
-$gutter-width-large:  2rem;
-
-.cf,
-.row,
-.row--gutter,
-.row--moat {
-  @include clearfix;
+[class^="group--"] {
+  max-width: 100%;
 }
 
-[class^="col-"] {
-  float: left;
-}
-
-.col-half {
-  width: 50%;
-}
-
-.col-one-third {
-  width: 100%;
-
-  @include mq($from: desktop) {
-    width: 33.33%;
-  }
-}
-
-.col-one-thirdish {
-
-  @include mq($from: desktop) {
-    width: 33.34%;
-  }
-}
-
-.col-two-thirds {
+.group--large {
   width: 100%;
 
   @include mq($from: desktop) {
@@ -40,7 +10,31 @@ $gutter-width-large:  2rem;
   }
 }
 
-.col-one-fourth {
+.group--medium {
+  width: 100%;
+
+  @include mq($from: tablet) {
+    width: 50%;
+  }
+}
+
+.group--small {
+  width: 100%;
+
+  @include mq($from: desktop) {
+    width: 33.33%;
+  }
+}
+
+.group--smallish {
+  width: 100%;
+
+  @include mq($from: desktop) {
+    width: 33.34%;
+  }
+}
+
+.group--tiny {
   width: 50%;
 
   @include mq($from: tablet) {
@@ -48,218 +42,106 @@ $gutter-width-large:  2rem;
   }
 }
 
-.col-three-fourths {
-  width: 100%;
+.block {
+  overflow: hidden;
+  padding-left: 2rem;
+  padding-right: 2rem;
 
   @include mq($from: tablet) {
-    width: 75%;
-  }
-}
-
-.col-one-fifth {
-  width: 50%;
-
-  @include mq($from: tablet) {
-    width: 20%;
-  }
-}
-
-.col-two-fifths {
-  width: 50%;
-
-  @include mq($from: tablet) {
-    width: 40%;
-  }
-}
-
-.col-three-fifths {
-  width: 100%;
-
-  @include mq($from: tablet) {
-    width: 60%;
-  }
-}
-
-.col-four-fifths {
-  width: 100%;
-
-  @include mq($from: tablet) {
-    width: 80%;
-  }
-}
-
-.col-full {
-  width: 100%;
-}
-
-.row--gutter {
-
-  [class^="col-"] {
-    max-width: 100%;
-    padding-left: $gutter-width-small;
-    padding-right: $gutter-width-small;
-
-    &:first-child {
-      padding-left: 0;
-    }
-
-    &:last-child {
-      padding-right: 0;
-    }
-
-    @include mq($from: desktop) {
-      padding-left: $gutter-width-medium;
-      padding-right: $gutter-width-medium;
-    }
-
-    @include mq($from: huge) {
-      padding-left: $gutter-width-large;
-      padding-right: $gutter-width-large;
-    }
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
-  .col-one-fifth {
-
-    &:first-child,
-    &:last-child {
-      @include mq($from: tablet) {
-        width: calc(20% - $gutter-width-medium);
-      }
-
-      @include mq($from: huge) {
-        width: calc(20% - $gutter-width-large);
-      }
-    }
-  }
-
-  .col-one-fourth {
-
-    &:first-child,
-    &:last-child {
-      @include mq($from: tablet) {
-        width: calc(25% - $gutter-width-medium);
-      }
-
-      @include mq($from: huge) {
-        width: calc(25% - $gutter-width-large);
-      }
-    }
-  }
-
-  .col-one-third {
-
-    &:first-child,
-    &:last-child {
-      @include mq($from: desktop) {
-        width: calc(33% - $gutter-width-medium);
-      }
-
-      @include mq($from: huge) {
-        width: calc(33% - $gutter-width-large);
-      }
-    }
-  }
-
-  .col-two-thirds {
-
-    &:first-child,
-    &:last-child {
-      @include mq($from: desktop) {
-        width: calc(67% - $gutter-width-medium);
-      }
-
-      @include mq($from: huge) {
-        width: calc(67% - $gutter-width-large);
-      }
-    }
-  }
-
-  .col-half {
-
-    &:first-child,
-    &:last-child {
-      @include mq($from: desktop) {
-        width: calc(50% - $gutter-width-medium);
-      }
-
-      @include mq($from: huge) {
-        width: calc(50% - $gutter-width-large);
-      }
-    }
-  }
-}
-
-.row--moat {
-
-  [class^="col-"] {
-    padding: $gutter-width-small*2;
-
-    @include mq($from: tablet) {
-      padding: $gutter-width-medium*2;
-    }
-
-    @include mq($from: huge) {
-      padding: $gutter-width-large*2;
-    }
-  }
-}
-
-.container {
-  padding: 0 $gutter-width-small*2;
-
-  @include mq($from: tablet) {
-    padding: 0 $gutter-width-medium*2;
+  @include mq($from: desktop) {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   @include mq($from: huge) {
-    padding: 0 $gutter-width-large*2;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  &--intro {
+    @extend .block;
+    @extend %bottom-padding;
   }
 }
 
-.container--text {
-  @extend .container;
-  padding-bottom: 4rem;
+@include mq($from: tablet) {
+  .flex {
+    display: flex;
+
+    &--row {
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    &--column {
+      display: flex;
+      flex-flow: column nowrap;
+    }
+
+    &--media {
+      align-items: flex-start;
+      display: flex;
+    }
+
+    &--centered {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .flex__item {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+
+    &--center {
+      @extend .flex__item;
+      align-self: center;
+    }
+  }
+}
+
+// responsive visibility
+.phone {
+  display: block;
 
   @include mq($from: tablet) {
-    padding-bottom: 6rem;
-  }
-
-  @include mq($from: huge) {
-    padding-bottom: 8rem;
+    display: none;
   }
 }
 
-.flex {
-  display: flex;
+.tablet {
+  display: none;
 
-  &--row {
-    display: flex;
-    flex-flow: row wrap;
+  @include mq($from: tablet) {
+    display: block;
   }
 
-  &--column {
-    display: flex;
-    flex-flow: column nowrap;
-  }
-
-  &--media {
-    align-items: flex-start;
-    display: flex;
-  }
-
-  &--centered {
-    display: flex;
-    justify-content: center;
+  @include mq($from: desktop) {
+    display: none;
   }
 }
 
-.flex__item {
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
+.laptop {
+  display: none;
 
-  &--center {
-    @extend .flex__item;
-    align-self: center;
+  @include mq($from: desktop) {
+    display: block;
+  }
+
+  @include mq($from: cinema) {
+    display: none;
+  }
+}
+
+.monitor {
+  display: none;
+
+  @include mq($from: cinema) {
+    display: block;
   }
 }

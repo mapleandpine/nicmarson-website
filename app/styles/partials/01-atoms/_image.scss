@@ -11,6 +11,16 @@ figure {
   margin: 0;
 }
 
+.img-fill {
+  background-position: center top;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 // Responsive images (ensure images don't scale beyond their parents)
 .img-responsive {
   @include img-responsive();
@@ -24,8 +34,7 @@ figure {
 .svg-inline {
   display: inline-block;
   fill: $body-color;
-  height: 1em;
-  margin-right: .5em;
-  vertical-align: calc(50% - .75em);
-  width: 1em;
+  height: .9em;
+  vertical-align: calc(50% - .85em);
+  width: .9em;
 }

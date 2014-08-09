@@ -25,7 +25,7 @@ Front-end development and design for the local sock company, Sock It To Me. They
 I worked alongside the owner and office manager to guide me in the right direction. I used HTML, CSS, jQuery, and PHP to build the CS-Cart and WordPress templates.
 
 <section class="cf">
-  <span class="section-title"><b>Screen</b> captures</span>
+  <span class="title--section"><b>Screen</b> captures</span>
   <div class="grid grid--guttersLarge grid-wrap thumb-grid">
     <div class="thumb grid-cell show-me animated">
       <a href="#" class="fluidbox">

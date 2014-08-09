@@ -2,6 +2,29 @@
     #ANIMATION
 \*------------------------------------*/
 
+
+// used on portfolio detail device screen
+@keyframes scroll {
+  0% { background-position: center 0; }
+  20% { background-position: center 20%; }
+  60% { background-position: center 50%; }
+  80% { background-position: center 100%; }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+// .fadeInUp {
+//   animation-name: fadeInUp;
+// }
+
 @keyframes bounce {
   0%, 20%, 53%, 80%, 100% {
     transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
@@ -65,20 +88,31 @@
   }
 }
 
-/* SLIDE-DOWN */
-@keyframes aniload { from {transform:translate(0px, -40px)} to {transform:translate(0px, 0px)}}
+@keyframes rotateOutDownRight {
+  0% {
+    transform-origin: right bottom;
+    opacity: 1;
+  }
+  100% {
+    transform-origin: right bottom;
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0;
+  }
+}
+// .rotateOutDownRight {
+//   animation-name: rotateOutDownRight;
+// }
 
-@keyframes menuload { from {transform:translate(0px, 0px)} to {transform:translate(25px, 0px)}}
+// used for wave effect
+@keyframes ripple {
+  /*scale the element to 250% to safely cover the entire link and fade it out*/
+  100% {
+    opacity: 0;
+    transform: scale(2.5);
+  }
+}
 
-/* SLIDE-UP */
-@keyframes upload { from {transform:translate(0px, 40px)} to {transform:translate(0px, 0px)}}
-
-/* SLIDE-UP */
-@keyframes zoom { from {transform:scale(1.2,1.2)} to {transform:scale(1,1)}}
-
-/* SLIDE-OVER */
-@keyframes sideload { from {transform:translate(-30px, 0px)} to {transform:translate(0px, 0px)}}
-
+// used on profile image
 @keyframes body-movement {
   0%   {
     transform: rotate(0deg) translate(0px, 0px);

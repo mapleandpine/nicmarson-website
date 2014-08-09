@@ -39,20 +39,15 @@
 .text-center         { text-align: center; }
 .text-justify        { text-align: justify; }
 
-.divider {
-  display: none;
-
-  @include mq($from: desktop) {
-    display: inline;
-    font-size: .85em;
-    margin: 0 1em;
-  }
-}
-
 .font-small {
   @extend %font-small;
 }
 
 .font-large {
   @extend %font-large;
+}
+
+.roomy {
+  margin-bottom: 1em;
+  margin-top: 1em;
 }

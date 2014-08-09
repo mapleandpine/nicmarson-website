@@ -29,7 +29,7 @@ In addition to the Magento site, I also set up a Wordpress blog to handle announ
 This is the third version of the Flipside Hats website I created. The first was a simple informational site, the second was an earlier version of the Magento store.
 
 <section class="cf">
-  <span class="section-title"><b>Screen</b> captures</span>
+  <span class="title--section"><b>Screen</b> captures</span>
   <div class="grid grid--guttersLarge grid-wrap thumb-grid">
     <div class="thumb grid-cell show-me animated">
       <a href="#" class="fluidbox">

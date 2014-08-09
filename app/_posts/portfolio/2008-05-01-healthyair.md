@@ -19,7 +19,7 @@ color-dark: 3398CC
 This was my first custom WordPress template. Pop Art provided the design, and I provided a custom theme and admin pages. The template build required a quick turnaround, 5 days, because of late design deliverables. Despite working until 5am a couple of nights, or maybe because of, I was able to deliver the product on time and finished.
 
 <section class="cf">
-  <span class="section-title"><b>Screen</b> captures</span>
+  <span class="title--section"><b>Screen</b> captures</span>
   <div class="grid grid--guttersLarge grid-wrap thumb-grid">
     <div class="thumb grid-cell show-me animated">
       <a href="#" class="fluidbox">

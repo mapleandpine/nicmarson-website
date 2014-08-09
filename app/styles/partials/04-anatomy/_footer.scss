@@ -2,7 +2,27 @@ footer[role=contentinfo] {
   color: $footer-color;
   text-align: center;
 
+  .connect {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+
+    a {
+      font-size: 2vmin;
+      margin: 0 .125em;
+
+      @include mq($from: tablet) {
+        font-size: 3vmin;
+      }
+
+      @include mq($from: desktop) {
+        font-size: 4vmin;
+      }
+    }
+  }
+
   .title {
+    color: inherit;
     margin-bottom: .5em;
   }
 

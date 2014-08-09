@@ -1,5 +1,8 @@
 main {
   background-color: $main-bg-color;
   box-shadow: 0 0 25px rgba(0,0,0,.3);
-  margin-left: $body-padding;
+
+  @include mq($from: tablet) {
+    margin-left: $body-padding;
+  }
 }

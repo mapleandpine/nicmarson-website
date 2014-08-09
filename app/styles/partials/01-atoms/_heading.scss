@@ -7,6 +7,10 @@ h1, h2, h3, h4, h5, h6,
   font-weight: $heading-weight;
   @extend %typecsset-vertical-rhythm;
 
+  b {
+    font-weight: 800;
+  }
+
   &:first-child {
     margin-top: 0;
   }
@@ -33,6 +37,7 @@ h5, .h5 { font-size: $font-size-h5; }
 h6, .h6 { font-size: $font-size-h6; }
 
 .title {
+  color: palette(grey, darkest);
   font-size: $font-size-h1;
   font-weight: 900;
   line-height: 1.1;
@@ -55,18 +60,36 @@ h6, .h6 { font-size: $font-size-h6; }
     line-height: 1;
     color: inherit;
   }
-}
 
-.title--block {
-  @extend %text-block;
+  &--section {
+    padding-top: 1em;
 
-  b {
-    font-weight: 800;
+    &::after {
+      background-color: palette(grey, darker);
+      content: "";
+      display: block;
+      height: .25em;
+      margin-bottom: 1em;
+      margin-top: .5em;
+      width: 33.33%;
+    }
   }
 
-  small {
-    color: inherit;
-    font-size: .75rem;
-    font-weight: normal;
+  &--block {
+    @extend %text-block;
+
+    small {
+      color: inherit;
+      font-size: .75rem;
+      font-weight: normal;
+    }
+  }
+
+  &--inline-block {
+    @extend %smallcaps;
+    display: inline-block;
+    font-size: 1em;
+    letter-spacing: .07em;
+    padding: 0;
   }
 }

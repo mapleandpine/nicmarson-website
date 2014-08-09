@@ -19,7 +19,7 @@ color-dark: F85F00
 Freelance contract front-end development through <a href="http://copio.us/">Copious</a> for the 2009 McMenamin’s redesign. My job involved writing HTML, CSS, and Javascript in a Ruby environment. My projects included all aspects of front-end development, including navigation, slideshows, and other dynamic interfaces throughout the site.
 
 <section class="cf">
-  <span class="section-title"><b>Screen</b> captures</span>
+  <span class="title--section"><b>Screen</b> captures</span>
   <div class="grid grid--guttersLarge grid-wrap thumb-grid">
     <div class="thumb grid-cell show-me animated">
       <a href="#" class="fluidbox">

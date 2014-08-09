@@ -25,7 +25,7 @@ The founders, Courtney Dillard and Matt Webber, returned from their travels in S
 I built a WordPress template based on an existing purchased HTML template. For non-profit websites I work towards a goal of education, and the potential of having the client maintain the site on their own. We formed a great relationship, and I continue to work on other project for this client.
 
 <section class="cf">
-  <span class="section-title"><b>Screen</b> captures</span>
+  <span class="title--section"><b>Screen</b> captures</span>
   <div class="grid grid--guttersLarge grid-wrap thumb-grid">
     <div class="thumb grid-cell show-me animated">
       <a href="#" class="fluidbox">

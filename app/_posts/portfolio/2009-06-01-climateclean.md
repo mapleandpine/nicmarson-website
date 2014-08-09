@@ -23,7 +23,7 @@ developer: 100
 As Web Master for Climate Clean I was responsible for designing, building, and maintaining our corporate and satellite web sites. These sites were built to use WordPress as a management system with custom built and designed templates. In addition, I also designed the corporate identity systems, and kiosks for use in auto dealerships.
 
 <section class="cf">
-  <span class="section-title"><b>Screen</b> captures</span>
+  <span class="title--section"><b>Screen</b> captures</span>
   <div class="grid grid--guttersLarge grid-wrap thumb-grid">
     <div class="thumb grid-cell show-me animated">
       <a href="#" class="fluidbox">

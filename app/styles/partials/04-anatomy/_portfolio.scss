@@ -1,4 +1,9 @@
+/*============================================
+=            Page specific colors            =
+============================================*/
+
 .portfolio,
+.portfolio ::selection,
 .portfolio .ink {
   background-color: $portfolio-bg-color;
 }
@@ -40,55 +45,30 @@
   }
 }
 
-.portfolio-detail {
+/*-----  End of Page specific colors  ------*/
 
-  .popup {
-    background-color: $white;
-    border: 1px solid palette(red, dark);
-    padding: 3rem 3rem 6rem;
-  }
-
-  .popup--input:checked ~ .popup {
-    bottom: 5px;
-    top: auto;
-  }
-
-  .popup--input:checked + .popup--toggle {
-    background-color: palette(red, dark);
-    border-radius: 0;
-
-    svg {
-      transform: rotate(45deg);
-    }
-  }
-
-  .popup--toggle {
-    border-radius: 1.6em;
-  }
+//////////////////////////////////////////////////
+// Project title overlaid on thumbnail image
+//////////////////////////////////////////////////
+.portfolio__name {
+  @extend %text-block;
+  @extend %text-overflow;
+  @extend %text-white-border;
+  min-width: 50%;
+  max-width: 80%;
+  @extend %transition-fast;
 }
 
+//////////////////////////////////////////////////
+// All portfolio thumb images across site
+//////////////////////////////////////////////////
 .portfolio__image {
   background-color: palette(gray, darker);
   color: $white;
 
-  &:focus,
-  &:hover {
-
-    img {
-      animation-name: reverse-pulse;
-      animation-duration: 4s;
-      animation-iteration-count: 1;
-      opacity: 1;
-      @extend %transition-slow;
-    }
-
-    .portfolio__name {
-      opacity: .5;
-      @extend %transition-slow;
-    }
-  }
-
   img {
+    @include img-responsive();
+    min-height: 100%;
     opacity: .5;
     transform: scale(1.05, 1.05);
     @extend %transition-fast;
@@ -101,20 +81,45 @@
   }
 }
 
-.portfolio__name {
-  @extend %text-block;
-  @extend %text-overflow;
-  @extend %text-white-border;
-  min-width: 50%;
-  max-width: 80%;
-  @extend %transition-fast;
+.portfolio__image:hover {
+
+  img {
+    animation-name: reverse-pulse;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    opacity: 1;
+    @extend %transition-slow;
+  }
+
+  .portfolio__name {
+    opacity: .5;
+    @extend %transition-slow;
+  }
 }
 
+//////////////////////////////////////////////////
+// portfolio page thumbnails
+//////////////////////////////////////////////////
 .portfolio__thumbs {
-  background-color: palette(grey, lightest);
+  background-color: palette(grey, darkest);
 
   .portfolio__item {
+    animation-duration: .3s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-name: fadeInUp;
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
     width: 100%;
+
+    $incremental-delay: .25s;
+
+    // Loop through the items and add some delay
+    @for $i from 1 through 8 {
+      &:nth-child(#{$i}n+#{$i}) {
+       animation-delay: $incremental-delay * $i;
+      }
+    }
 
     @include mq($from: tablet) {
       width: 50%;
@@ -130,6 +135,9 @@
   }
 }
 
+//////////////////////////////////////////////////
+// additional screen shots on detail page
+//////////////////////////////////////////////////
 .portfolio__screens {
   background-color: palette(grey, lightest);
 
@@ -150,6 +158,9 @@
   }
 }
 
+//////////////////////////////////////////////////
+// individual item listing with image and details
+//////////////////////////////////////////////////
 .portfolio__item {
   overflow: hidden;
   position: relative;
@@ -165,39 +176,6 @@
     }
   }
 
-  img {
-    @include img-responsive();
-    min-height: 100%;
-  }
-
-  .popup {
-    color: #FFF;
-    height: 100%;
-    font-size: 12px;
-    padding: 1rem;
-
-    > span {
-      color: inherit;
-      display: block;
-      margin-bottom: 1em;
-    }
-
-    svg {
-      fill: $white;
-    }
-  }
-
-  .popup--input:checked {
-
-    ~ .popup {
-      top: 0;
-    }
-
-    + label {
-      transform: rotate(45deg);
-    }
-  }
-
   .title--block {
     border-bottom: 1px solid rgba(255,255,255,.1);
     padding: 1rem 0;
@@ -207,61 +185,37 @@
     }
   }
 
-  .popup--toggle,
-  .team {
-    bottom: 1rem;
+  .popup--container {
     color: $white;
-    height: 1.5rem;
-    position: absolute;
-    z-index: (z(default) + 1);
 
-    &:focus,
-    &:hover {
-      svg {
-        fill: $white;
-      }
+    .popup {
+      height: 100%;
+      padding-bottom: 3rem;
     }
 
     svg {
-      fill: rgba(255,255,255, .5);
-      vertical-align: middle;
+      fill: $white;
     }
   }
 
   .popup--toggle {
-    left: 1rem;
-
-    svg {
-      width: 1.5rem;
-    }
-  }
-
-  .team {
-    left: 3.5rem;
-
-    &:hover,
-    &:focus {
-      span {
-        display: inline;
-      }
-    }
-
-    span {
-      display: none;
-    }
-
-    svg {
-      margin-right: 5px;
-      width: 1.25rem;
-    }
+    bottom: 0;
+    left: 0;
+    position: absolute;
   }
 }
 
+//////////////////////////////////////
+// progress bar graphs on detail page
+//////////////////////////////////////
 .portfolio__skills {
   background-color: palette(grey, lightest);
   margin-top: -6px;
 }
 
+//////////////////////////////////////
+// navigation links on detail page
+//////////////////////////////////////
 .portfolio__next-previous {
   background-color: palette(grey, darker);
 

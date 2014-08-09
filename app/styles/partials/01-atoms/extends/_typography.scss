@@ -14,6 +14,18 @@
   }
 }
 
+%bottom-padding {
+  padding-bottom: 4rem;
+
+  @include mq($from: tablet) {
+    padding-bottom: 6rem;
+  }
+
+  @include mq($from: huge) {
+    padding-bottom: 8rem;
+  }
+}
+
 %smallcaps {
   // depends on the font family.
   // some font-families don’t support small caps

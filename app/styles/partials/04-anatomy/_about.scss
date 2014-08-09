@@ -1,4 +1,5 @@
 .about,
+.about ::selection,
 .about .ink {
   background-color: $about-bg-color;
 }
@@ -56,6 +57,10 @@
   background-color: palette(grey, lightest);
 }
 
+.about__facts {
+  background-color: palette(grey, darkest);
+}
+
 .about__favorite {
   background-color: palette(grey, lighter);
   position: relative;
@@ -72,12 +77,17 @@
     background-color: $github;
   }
 
+  .shape-star,
   .shape-twitter,
   .shape-github {
     bottom: 1rem;
     position: absolute;
     right: 1rem;
     width: 20%;
+  }
+
+  .shape-star {
+    fill: lighten($kippt, 5);
   }
 
   .shape-twitter {

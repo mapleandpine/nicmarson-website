@@ -30,7 +30,7 @@ The supreme challenge was to combine four stores into one system, all while main
 My overall web based tasks for Hersheys were to design all the stores; build and integrate site themes; maintain and troubleshoot web sites; prepare and launch email campaigns; add, edit, and remove content and media; record and report weekly to Hersheys on site statistics.
 
 <section class="cf">
-  <span class="section-title"><b>Screen</b> captures</span>
+  <span class="title--section"><b>Screen</b> captures</span>
   <div class="grid grid--guttersLarge grid-wrap thumb-grid">
     <div class="thumb grid-cell show-me animated">
       <a href="#" class="fluidbox">

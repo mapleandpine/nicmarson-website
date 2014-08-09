@@ -16,11 +16,15 @@
     border: 1px dotted rgba(255,255,255,.5);
     color: $nav-link-color;
     display: inline-block;
-    padding: .25em .75em;
+    padding: .2em .5em;
     position: relative;
     text-decoration: none;
     @extend %transition-fast;
     user-select: none;
+
+    @include mq($from: tablet) {
+      padding: .25em .75em;
+    }
 
     &:visited {
       color: $nav-link-visited-color;

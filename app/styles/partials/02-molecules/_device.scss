@@ -1,0 +1,371 @@
+.device {
+  font-size: 20px;
+  margin-bottom: 2rem;
+  @extend %bottom-padding;
+  position: relative;
+  width: 100%;
+
+  svg {
+    bottom: -4rem;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+  }
+
+  // little grey circle on bottom of screen
+  .screen:after {
+    width: .5em;
+    height: .5em;
+    border-radius: .5em;
+    margin: 0 0 -.25em -.25em;
+    background: $device-grey;
+    bottom: -.625em;
+  }
+
+  &--monitor,
+  &--laptop,
+  &--phone,
+  &--ipad {
+    margin: 0 auto;
+    position: relative;
+
+    // add reflection
+    .glass:before,
+    .screen:before {
+      background: linear-gradient(to bottom, rgba(255,255,255,.5) 0%,rgba(255,255,255,0) 100%);
+      content: "";
+      height: 18.75em;
+      position: absolute;
+      right: -5.625em;
+      transform: rotate(45deg);
+      width: 12.5em;
+      z-index: 5;
+
+      @include mq($from: desktop) {
+        background: linear-gradient(to bottom, rgba(255,255,255,.65) 0%,rgba(255,255,255,0) 100%);
+      }
+    }
+  }
+
+  &--laptop {
+    background: $device-white;
+    border: 0.750em solid $device-black;
+    border-radius: 0.625em 0.625em 0 0;
+    height: 9.688em;
+    width: 14.688em;
+
+    &:before {
+     top: -0.3em;
+    }
+
+    > div {
+      position: absolute;
+    }
+
+    > .screen {
+      background: #fff;
+      height: 8.188em;
+      left: 0;
+      margin-left: 0;
+      overflow: hidden;
+      width: 13.188em;
+    }
+  }
+
+  &--monitor {
+    background: $device-white;
+    border: 1.250em solid $device-black;
+    border-radius: .625em;
+    height: 17.5em;
+    width: 28.750em;
+
+    > div {
+      position: absolute;
+    }
+
+    .glass {
+      width: 26.25em;
+      height: 15em;
+      left: 50%;
+      margin-left: -13.125em;
+      overflow: hidden;
+    }
+  }
+
+  &--monitor:before,
+  &--monitor:after,
+  &--laptop:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+  }
+
+  &--monitor:before,
+  &--laptop:before {
+    top: -.250em;
+    margin: -.188em 0 0 -.188em;
+    width: .25em;
+    height: .25em;
+    border-radius: .25em;
+    background: $device-grey-dark;
+    top: -.625em;
+  }
+
+  &--phone {
+    background-color: $device-black;
+    border: 1.563em solid $device-black;
+    border-left: .313em solid $device-black;
+    border-right: .313em solid $device-black;
+    border-radius: .5em;
+    height: 8.750em;
+    width: 4.125em;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      background: #474e5d;
+    }
+
+    &:before {
+      background: #474e5d;
+      width: 1.250em;
+      height: .250em;
+      margin-left: -.625em;
+      top: -.750em;
+      border-radius: 2px;
+    }
+
+    &:after {
+      width: .625em;
+      height: .625em;
+      border-radius: .625em;
+      bottom: -1.125em;
+      margin-left: -.313em;
+    }
+
+    .screen {
+      width: 3.50em;
+      height: 5.625em;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      background: #fff;
+    }
+  }
+
+  &--ipad {
+    background-color: $device-black;
+    background-image: url(/images/shadow.png);
+    background-position: center 100%;
+    background-repeat: no-repeat;
+    border: 1.563em solid $device-black;
+    border-left: 0.313em solid $device-black;
+    border-right: 0.313em solid $device-black;
+    border-radius: 0.5em;
+    height: 12.750em;
+    width: 8.75em;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      background: #474e5d;
+    }
+
+    &:before {
+      background: #474e5d;
+      width: 1.250em;
+      height: 0.250em;
+      margin-left: -0.625em;
+      top: -0.750em;
+      border-radius: 2px;
+    }
+
+    &:after {
+      width: 0.625em;
+      height: 0.625em;
+      border-radius: 0.625em;
+      bottom: -1.125em;
+      margin-left: -0.313em;
+    }
+
+    .screen {
+      width: 8em;
+      height: 9.8em;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .content {
+      width: 100%;
+      left: 0%;
+      margin-left: 0px;
+    }
+  }
+}
+
+.laptop-keyboard {
+  background: $device-grey;
+  border-radius: 0 0 20px 20px;
+  bottom: -1.188em;
+  height: 0.625em;
+  left: 50%;
+  margin-left: -9.250em;
+  width: 18.500em;
+  z-index: 1;
+
+  &:before {
+    background: $device-grey-dark;
+    border-radius: 0 0 0.313em 0.313em;
+    content: "";
+    position: absolute;
+    width: 2.625em;
+    height: 0.250em;
+    left: 50%;
+    top: 0;
+    margin-left: -1.313em;
+  }
+
+  &:after {
+    background: #bababa;
+    border-bottom-right-radius: 7.5rem 2.5rem;
+    border-bottom-left-radius: 7.5rem 2.5rem;
+    display: none;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.25rem;
+    top: .5rem;
+  }
+}
+
+.monitor-base {
+  background-color: $device-grey;
+  width: 5.625em;
+  height: 3.1em;
+  bottom: -3.9em;
+  left: 50%;
+  margin-left: -2.8125em;
+  bottom: -4.33em;
+  z-index: 1;
+
+  &:before {
+    border-left: .813em solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 3.125em solid $device-grey;
+    left: -.77em;
+  }
+
+  &:after {
+    border-right: .813em solid transparent;
+    border-left: 0 solid transparent;
+    border-bottom: 3.125em solid $device-grey;
+    right: -.77em;
+  }
+
+  & > div {
+     position: absolute;
+  }
+}
+
+.monitor-shadow {
+  width: 5.64em;
+  height: .75em;
+  background: $device-grey-dark;
+  top: 0;
+
+  &:before {
+    border-left: 3px solid transparent;
+    border-right: 0 solid transparent;
+    border-bottom: .75em solid $device-grey-dark;
+    left: -3px;
+    z-index: 2;
+  }
+
+  &:after {
+    border-right: 3px solid transparent;
+    border-left: 0 solid transparent;
+    border-bottom: .75em solid $device-grey-dark;
+    right: -2px;
+    z-index: 1;
+  }
+}
+
+.monitor-base:before,
+.monitor-base:after,
+.monitor-shadow:before,
+.monitor-shadow:after{
+  content: "";
+  position: absolute;
+  top: 0;
+}
+
+.monitor-foot {
+  background: $device-grey;
+
+  &.top {
+    width: 7.25em;
+    height: .313em;
+    bottom: -.3em;
+    left: 50%;
+    margin-left: -3.625em;
+
+    &:before {
+      border-left: 1em solid transparent;
+      border-right: 0 solid transparent;
+      border-bottom: .35em solid $device-grey;
+      left: -1em;
+    }
+
+    &:after {
+      border-right: 1em solid transparent;
+      border-left: 0 solid transparent;
+      border-bottom: .35em solid $device-grey;
+      right: -1em;
+    }
+  }
+
+  &.bottom {
+    width: 9.375em;
+    height: .313em;
+    bottom: -.625em;
+    left: 50%;
+    margin-left: -4.688em;
+  }
+
+  &.top:before,
+  &.top:after,
+  &.bottom:before {
+    content: "";
+    position: absolute;
+    top: 0;
+  }
+}
+
+// browser thumbnail area
+.browser-chrome {
+  width: 18.45em;
+  height: 11.250em;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -5.625em 0 0 -9.225em;
+}
+
+.browser-window {
+  overflow: hidden;
+  height: 9.938em;
+  //padding-top: 0.625em;
+}
+
+
+// browser animation
+.screen .img-fill,
+.phone .img-fill {
+  animation: scroll 16s 1s cubic-bezier(0.250, 0.100, 0.250, 1.000) infinite;
+}

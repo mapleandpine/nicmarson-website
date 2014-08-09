@@ -1,0 +1,77 @@
+.popup {
+  animation-duration: .3s;
+  animation-fill-mode: both;
+  bottom: -10rem;
+  box-shadow: 0 0 20px rgba(0,0,0,.2);
+  display: block;
+  opacity: 0;
+  overflow-y: auto;
+  padding: 1rem;
+  position: absolute;
+  transform-origin: left bottom;
+  transform: rotate3d(0, 0, 1, 45deg);
+  @extend %transition-fast;
+  width: 100%;
+  will-change: opacity, transform, top;
+
+  &--input {
+    display: none;
+
+    &:checked {
+
+      ~ .popup {
+        animation-name: rotateInUpLeft;
+        bottom: 0;
+      }
+
+      ~ .popup--toggle .popup--indicator {
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  &--toggle {
+    color: $white;
+    cursor: pointer;
+  }
+
+  &--indicator {
+    display: block;
+    float: left;
+    height: 1em;
+    margin-right: 1em;
+    @extend %transition-fast;
+    width: 1em;
+
+    svg {
+      fill: $white;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  // popup  variations
+  &--text {
+
+    .popup {
+      background-color: $white;
+      padding: 3rem 3rem 5rem;
+    }
+
+    .popup--input:checked ~ .popup {
+      bottom: 5px;
+    }
+
+    .title--inline-block {
+      border-right: 1px solid;
+      margin-right: 1em;
+      padding-right: 1em;
+    }
+  }
+
+  > span {
+    color: inherit;
+    display: block;
+    margin-bottom: 1em;
+  }
+}

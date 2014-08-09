@@ -1,4 +1,5 @@
 .home,
+.home ::selection,
 .home .ink {
   background-color: $home-bg-color;
 }
@@ -43,7 +44,6 @@
     header {
       background-color: palette(red);
       color: $white;
-      line-height: $body-padding;
     }
 
     .title--block {

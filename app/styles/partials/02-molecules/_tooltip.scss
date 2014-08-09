@@ -18,48 +18,33 @@
   &--top {
     @extend .tooltip;
     @include centerer(absolute, horizontal);
+    bottom: 10em;
+    display: block;
+    font-size: 12px;
+    left: -10000px;
+    min-width: 7rem;
+    opacity: 0;
+    padding: 0 1rem 2em;
+    text-align: center;
+    width: max-content;
+
+    $tooltip-arrow-size: 10px;
 
     &:after {
       @include centerer(absolute, horizontal);
+      border-right: $tooltip-arrow-size solid transparent;
+      border-left: $tooltip-arrow-size solid transparent;
+      border-top: $tooltip-arrow-size solid;
+      bottom: -$tooltip-arrow-size+1px;
+    }
+
+    span {
+      display: block;
+    }
+
+    svg {
+      fill: $white;
+      width: 5rem;
     }
   }
 }
-
-.popup {
-  animation-duration: .25s;
-  animation-fill-mode: both;
-  display: block;
-  left: 0;
-  opacity: 0;
-  overflow-y: auto;
-  position: absolute;
-  top: 100%;
-  transform-origin: left bottom;
-  transform: rotate3d(0, 0, 1, 45deg);
-  @extend %transition-fast;
-  width: 100%;
-  z-index: z(default);
-
-  &--container {
-    position: relative;
-  }
-
-  &--input {
-    display: none;
-
-    &:checked {
-
-      ~ .popup {
-        animation-name: rotateInUpLeft;
-      }
-    }
-  }
-
-  &--toggle {
-    cursor: pointer;
-    @extend %transition-fast;
-    z-index: (z(default) + 1);
-  }
-}
-
-

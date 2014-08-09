@@ -1,20 +1,8 @@
 // Contact and social network links in footer
 .connect {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
 
   a {
-    font-size: 2vmin;
-    margin: 0 .125em;
-
-    @include mq($from: tablet) {
-      font-size: 3vmin;
-    }
-
-    @include mq($from: desktop) {
-      font-size: 4vmin;
-    }
+    position: relative;
 
     &:focus,
     &:hover {
@@ -37,36 +25,6 @@
           bottom: calc(8vmin + 10px);
         }
       }
-    }
-  }
-
-  .tooltip--top {
-    bottom: 10em;
-    display: block;
-    font-size: 12px;
-    left: -10000px;
-    min-width: 148px;
-    opacity: 0;
-    padding: 20px;
-    text-align: center;
-
-    $tooltip-arrow-size: 10px;
-
-    &:after {
-      border-right: $tooltip-arrow-size solid transparent;
-      border-left: $tooltip-arrow-size solid transparent;
-      border-top: $tooltip-arrow-size solid;
-      bottom: -$tooltip-arrow-size+1px;
-    }
-
-    span {
-      display: block;
-    }
-
-    svg {
-      fill: $white;
-      margin: 10px auto 20px;
-      width: 64px;
     }
   }
 

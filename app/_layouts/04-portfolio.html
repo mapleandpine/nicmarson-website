@@ -5,9 +5,9 @@ slug: portfolio
 class: portfolio portfolio-detail
 ---
 
-<div class="sidebar flexbox--row">
+<div class="sidebar flex--row">
   <article>
-    <section class="container--text">
+    <section class="block--intro">
       <h1 class="title">{{ page.project }}</h1>
       <p class="byline">
         {{ page.date | date: "%Y" }}
@@ -15,24 +15,78 @@ class: portfolio portfolio-detail
         {% if page.client %} | {{ page.client }}{% endif %}
       </p>
       <p class="lead">{{ page.excerpt }}</p>
-      <div class="popup--container">
+      <div class="popup--text popup--container">
         <input class="popup--input" id="{{ page.name }}-popup" type="checkbox">
+        <div class="popup">{{ page.role-description }}</div>
         <label class="btn--danger popup--toggle" for="{{ page.name }}-popup">
-          <span>
-            <svg class="shape-plus svg-inline" viewBox="0 0 100 100">
-              <use xlink:href="#shape-plus"/>
-            </svg>
-            My role
-          </span>
+          <span class="title--inline-block">My role</span>
           {{ page.role }}
         </label>
-        <div class="popup">{{ page.role-description }}</div>
       </div>
     </section>
   </article>
-  <aside>
-    <div class="image">
-      <img class="img-responsive" src="/images/portfolio/{{ page.name }}/{{ page.name }}-01.png">
+  <aside class="flex--centered">
+    <div class="flex__item--center">
+      <div class="device">
+
+        <div class="screen monitor device--monitor">
+          <div class="glass">
+            <div class="browser-chrome browser-chrome-mini">
+              <div class="browser-header"><ul class="browser-buttons"><li></li><li></li><li></li></ul><div class="browser-tab"></div></div>
+              <div class="browser-window">
+                <div class="img-fill" style="background-image:url('/images/portfolio/{{ page.name }}/{{ page.name }}-browser.jpg')"></div>
+              </div>
+            </div>
+          </div>
+          <div class="monitor-base">
+            <div class="monitor-shadow"></div>
+            <div class="monitor-foot top"></div>
+            <div class="monitor-foot bottom"></div>
+          </div>
+        </div>
+
+        <div class="laptop device--laptop">
+          <div class="screen">
+            <div class="glass">
+              <div class="image">
+                <div class="img-fill" style="background-image:url('/images/portfolio/{{ page.name }}/{{ page.name }}-browser.jpg')"></div>
+              </div>
+            </div>
+          </div>
+          <div class="laptop-keyboard"></div>
+        </div>
+
+        <div class="tablet device--ipad">
+          <div class="screen">
+            <div class="glass">
+              <div class="image">
+                <div class="img-fill" style="background-image:url('/images/portfolio/{{ page.name }}/{{ page.name }}-mobile.jpg')"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="phone device--phone">
+          <div class="screen">
+            <div class="glass">
+              <div class="image">
+                <div class="img-fill" style="background-image:url('/images/portfolio/{{ page.name }}/{{ page.name }}-mobile.jpg')"></div>
+              </div>
+            </div>
+          </div>
+          <div class="shadow"></div>
+        </div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="100">
+          <defs>
+            <filter id="f1" x="-20%" y="-20%" width="200%" height="200%">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
+            </filter>
+          </defs>
+          <ellipse cx="50" cy="10" rx="50" ry="10" style="fill:rgba(0,0,0,.2)" filter="url(#f1)" />
+        </svg>
+
+      </div>
     </div>
   </aside>
 </div>
@@ -50,7 +104,7 @@ class: portfolio portfolio-detail
             <div class="center">
               <b class="h4">Previous project</b>
               <span class="portfolio__name">
-                <svg class="shape-arrow-right svg-inline" viewBox="0 0 100 100">
+                <svg class="shape-arrow-right svg-inline">
                   <use xlink:href="#shape-arrow-right"/>
                 </svg>
                 <i>{{ page.next_in_category.title }}</i>
@@ -72,9 +126,7 @@ class: portfolio portfolio-detail
               <b class="h4">Next project</b>
               <span class="portfolio__name">
                 <i>{{ page.previous_in_category.title }}</i>
-                <svg class="shape-arrow-right svg-inline" viewBox="0 0 100 100">
-                  <use xlink:href="#shape-arrow-right"/>
-                </svg>
+                <svg class="shape-arrow-right svg-inline"><use xlink:href="#shape-arrow-right"/></svg>
               </span>
             </div>
           </div>

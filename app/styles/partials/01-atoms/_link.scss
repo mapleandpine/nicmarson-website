@@ -31,66 +31,36 @@ a[role="link"] {
 }
 
 .inverse {
-  background-color: palette(grey, darkest);
-  color: palette(grey, lightest);
+  color: $white;
 
   a {
-    color: palette(grey);
+    color: rgba(255,255,255,.8);
 
     &:visited {
-      color: palette(grey);
+      color: rgba(255,255,255,.8);
     }
 
     &:hover,
     &:focus {
-      color: palette(grey, lightest);
+      background-color: rgba(0,0,0, .15);
+      color: $white;
     }
   }
 
   a[role="link"] {
-    border-bottom: .0625rem solid palette(yellow, dark);
-    color: palette(yellow, dark);
+    border-bottom: .0625rem solid rgba(255,255,255,.8);
 
     &:visited {
-      border-bottom-color: palette(yellow, dark);
-      color: palette(yellow, dark);
+      border-bottom-color: rgba(255,255,255,.8);
     }
 
     &:hover,
     &:focus {
-      border-bottom-color: palette(yellow);
-      color: palette(yellow, light);
+      border-bottom-color: $white;
     }
   }
 
-  &--white {
-    color: $white;
-
-    a {
-      color: rgba(255,255,255,.8);
-
-      &:visited {
-        color: rgba(255,255,255,.8);
-      }
-
-      &:hover,
-      &:focus {
-        background-color: rgba(0,0,0, .15);
-        color: $white;
-      }
-    }
-
-    a[role="link"] {
-      border-bottom: .0625rem solid rgba(255,255,255,.8);
-
-      &:visited {
-        border-bottom-color: rgba(255,255,255,.8);
-      }
-
-      &:hover,
-      &:focus {
-        border-bottom-color: $white;
-      }
-    }
+  .title--section::after {
+    background-color: rgba(255,255,255,.8);
   }
 }

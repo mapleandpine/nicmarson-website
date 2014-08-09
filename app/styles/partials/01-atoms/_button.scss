@@ -6,6 +6,7 @@
   display: inline-block;
   line-height: normal;
   overflow: hidden;
+  padding: 1em 1.5em;
   position: relative;
   text-decoration: none;
   @extend %transition-fast;
@@ -29,18 +30,19 @@
 
 .btn--default {
   @extend .btn;
-}
+  background-color: palette(grey, lighter);
+  color: palette(grey, darker);
 
-.btn--connect {
-  @extend .btn;
-  padding: .25em;
+  &:hover, &:active, &:focus {
+    background-color: palette(grey, darker);
+    color: $white;
+  }
 }
 
 .btn--danger {
   @extend .btn;
   background-color: palette(red);
   color: $white;
-  padding: 1em 1.5em;
 
   &:hover, &:active, &:focus {
     background-color: palette(red, dark);
@@ -49,13 +51,4 @@
   svg {
     fill: $white;
   }
-}
-
-.btn--block {
-  @extend .btn;
-  display: block;
-}
-
-.btn--toggle {
-  @extend .btn;
 }

@@ -1,3 +1,6 @@
+@import "01-atoms/extends/typography";
+@import "01-atoms/extends/transition";
+
 @import "01-atoms/base";
 @import "01-atoms/extends/typecsset";
 @import "01-atoms/button";
@@ -11,6 +14,3 @@
 @import "01-atoms/paragraph";
 @import "01-atoms/quote";
 @import "01-atoms/table";
-
-@import "01-atoms/extends/typography";
-@import "01-atoms/extends/transition";
