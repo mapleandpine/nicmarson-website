@@ -121,15 +121,15 @@
       }
     }
 
-    @include mq($from: tablet) {
+    @include mq($from: double) {
       width: 50%;
     }
 
-    @include mq($from: desktop) {
+    @include mq($from: triple) {
       width: 33.3333%;
     }
 
-    @include mq($from: huge) {
+    @include mq($from: quintuple) {
       width: 25%;
     }
   }
@@ -140,15 +140,12 @@
 //////////////////////////////////////////////////
 .portfolio__screens {
   background-color: palette(grey, lightest);
-
-  .row {
-    height: 200px;
-    font-size: 0;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    position: relative;
-    white-space: nowrap;
-  }
+  height: 200px;
+  font-size: 0;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  position: relative;
+  white-space: nowrap;
 
   .portfolio__item {
     cursor: pointer;
@@ -162,8 +159,15 @@
 // individual item listing with image and details
 //////////////////////////////////////////////////
 .portfolio__item {
+  font-size: 14px;
   overflow: hidden;
   position: relative;
+
+  @include mq($from: double) {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+  }
 
   > a {
     display: block;
@@ -171,7 +175,7 @@
     padding-bottom: 100%;
     width: 100%;
 
-    @include mq($from: tablet) {
+    @include mq($from: double) {
       padding-bottom: 75%;
     }
   }
@@ -223,14 +227,11 @@
     fill: $white;
   }
 
+  .portfolio__name {
+    max-width: 100%;
+  }
+
   .portfolio__item a {
     padding-bottom: 50%;
-  }
-}
-
-// make right arrow point left
-.portfolio__item__previous {
-  svg {
-    transform: rotate(180deg);
   }
 }

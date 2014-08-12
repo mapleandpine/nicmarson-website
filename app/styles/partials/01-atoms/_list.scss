@@ -58,7 +58,7 @@ li > ol {
   }
 }
 
-@include mq($from: desktop) {
+@include mq($from: triple) {
   .list--centered {
     padding: 0;
     text-align: center;

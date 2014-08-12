@@ -33,21 +33,33 @@
 }
 
 .about__img-circle {
-  background-color: #e85545;
-  margin-bottom: 1.5rem;
-  position: relative;
-  @extend %transition-fast;
-  width: 100%;
+  @extend %top-padding;
+
+  .img-circle {
+    background-color: #e85545;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    position: relative;
+    @extend %transition-fast;
+
+    @include mq($from: double) {
+      width: 85%;
+    }
+    @include mq($from: triple) {
+      width: 75%;
+    }
+
+    @include mq($from: quadruple) {
+      width: 50%;
+    }
+  }
 
   img {
     position: relative;
     top: 5%;
-  }
 
-  @include mq($from: tablet) {
-    width: 80%;
-
-    img {
+    @include mq($from: double) {
       animation: body-movement 16s cubic-bezier(.5, .2, .3, 1) infinite;
     }
   }
@@ -64,6 +76,10 @@
 .about__favorite {
   background-color: palette(grey, lighter);
   position: relative;
+
+  &:last-child {
+    flex-grow: 1;
+  }
 
   &.kippt {
     background-color: $kippt;

@@ -17,11 +17,11 @@
         transition-property: opacity, bottom;
         transition-timing-function: ease-in-out;
 
-        @include mq($from: tablet) {
+        @include mq($from: double) {
           bottom: calc(6vmin + 10px);
         }
 
-        @include mq($from: desktop) {
+        @include mq($from: triple) {
           bottom: calc(8vmin + 10px);
         }
       }

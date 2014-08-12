@@ -2,43 +2,20 @@
 //
 //## Define the breakpoints at which your layout will change, adapting to different screen sizes.
 
-// Extra small screen / phone
-$screen-xs:                  320px !default;
+// Single
+$screen-1:                  320px;
 
-// Small screen / tablet
-$screen-sm:                  767px !default;
+// Double - ( 640px + 48px )
+$screen-2:                  688px;
 
-// Medium screen / desktop
-$screen-md:                  992px !default;
+// Triple - ( 960px + 48px )
+$screen-3:                  1008px;
 
-// Large screen / wide desktop
-$screen-lg:                  1200px !default;
+// Quadruple - ( 1280px + 48px )
+$screen-4:                  1328px;
 
-// X-Large screen / x-wide desktop
-$screen-xl:                  1600px !default;
-
-// So media queries don't overlap when required, provide a maximum
-$screen-xs-max:              ($screen-sm - 1);
-$screen-sm-max:              ($screen-md - 1);
-$screen-md-max:              ($screen-lg - 1);
-$screen-lg-max:              ($screen-xl - 1);
-
-
-//== Grid system
-//
-//## Define your custom responsive grid.
-
-//** Number of columns in the grid.
-$grid-columns:              12 !default;
-//** Padding between columns. Gets divided in half for the left and right.
-$grid-gutter-width:         30px !default;
-
-
-// Navbar collapse
-//** Point at which the navbar becomes uncollapsed.
-$grid-float-breakpoint:     $screen-sm;
-//** Point at which the navbar begins collapsing.
-$grid-float-breakpoint-max: ($grid-float-breakpoint - 1);
+// Quintuple - ( 1600px + 48px )
+$screen-5:                  1648px;
 
 
 // == Breakpoint map
@@ -51,27 +28,27 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1);
 $mq-responsive: true;
 
 $mq-breakpoints: (
-  mobile:      $screen-xs,
-  tablet:      $screen-sm,
-  desktop:     $screen-md,
-  cinema:      $screen-lg,
-  huge:        $screen-xl
+  single:     $screen-1,
+  double:     $screen-2,
+  triple:     $screen-3,
+  quadruple:  $screen-4,
+  quintuple:  $screen-5
 );
 
 
 // Media Query mixin
 // Usage:
 // .element {
-//   @include mq($from: mobile) {
+//   @include mq($from: single) {
 //     color: red;
 //   }
-//   @include mq($to: tablet) {
+//   @include mq($to: double) {
 //     color: blue;
 //   }
-//   @include mq(mobile, tablet) {
+//   @include mq(single, double) {
 //     color: green;
 //   }
-//   @include mq($from: tablet, $and: '(orientation: landscape)') {
+//   @include mq($from: double, $and: '(orientation: landscape)') {
 //     color: teal;
 //   }
 //   @include mq(950px) {

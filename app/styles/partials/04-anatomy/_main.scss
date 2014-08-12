@@ -2,7 +2,7 @@ main {
   background-color: $main-bg-color;
   box-shadow: 0 0 25px rgba(0,0,0,.3);
 
-  @include mq($from: tablet) {
+  @include mq($from: double) {
     margin-left: $body-padding;
   }
 }

@@ -11,11 +11,11 @@ footer[role=contentinfo] {
       font-size: 2vmin;
       margin: 0 .125em;
 
-      @include mq($from: tablet) {
+      @include mq($from: double) {
         font-size: 3vmin;
       }
 
-      @include mq($from: desktop) {
+      @include mq($from: triple) {
         font-size: 4vmin;
       }
     }

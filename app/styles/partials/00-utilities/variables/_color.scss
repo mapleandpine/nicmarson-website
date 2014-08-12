@@ -128,6 +128,13 @@ $nav-link-hover-color:    palette(grey, darker);
 $nav-link-inverse-color:         $white;
 $nav-link-inverse-color-hover:   $nav-link-inverse-color;
 
+//** Background color of the whole progress component
+$progress-bg:                 $white;
+//** Progress bar text color
+$progress-bar-color:          $white;
+//** Default progress bar color
+$progress-bar-bg:             palette(red);
+
 // Devices
 $device-black: #1f1f1f;
 $device-white: #f8f8f8;

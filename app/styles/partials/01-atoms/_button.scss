@@ -1,6 +1,6 @@
 .btn {
   border: 0 none;
-  border-radius: $border-radius-base;
+  border-radius: r(default);
   box-sizing: content-box;
   cursor: pointer;
   display: inline-block;
@@ -13,7 +13,7 @@
   user-select: none;
   white-space: nowrap;
 
-  @include mq($from: tablet) {
+  @include mq($from: double) {
     max-width: 99%;
   }
 

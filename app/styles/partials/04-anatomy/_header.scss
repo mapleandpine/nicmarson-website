@@ -4,6 +4,15 @@ header[role=banner] {
   padding-bottom: 1.5rem;
   padding-top: 1.75rem;
   text-align: right;
+
+  @include mq($from: double) {
+    padding-left: $body-padding;
+    padding-right: $body-padding;
+  }
+
+  @include mq($from: quintuple) {
+    padding-right: 0;
+  }
 }
 
 .header-nav {
@@ -18,7 +27,7 @@ header[role=banner] {
     margin-right: 4px;
     overflow: hidden; // for wave effect
 
-    @include mq($from: tablet) {
+    @include mq($from: double) {
       margin-right: .75em;
     }
   }
@@ -43,7 +52,7 @@ header[role=banner] {
     width: 1.5em;
   }
 
-  @include mq($to: tablet) {
+  @include mq($to: double) {
     display: none;
   }
 }

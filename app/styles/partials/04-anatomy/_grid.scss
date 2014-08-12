@@ -1,44 +1,74 @@
+.container {
+  max-width: $screen-5 - $body-padding;
+
+  @include mq($from: quintuple) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+[class^="row--"] {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
 [class^="group--"] {
-  max-width: 100%;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  width: 100%;
 }
 
-.group--large {
-  width: 100%;
+.row--two {
 
-  @include mq($from: desktop) {
-    width: 66.67%;
+  @include mq($from: double) {
+    > .group--one {
+      width: 50%;
+    }
+  }
+
+  .row--two > .group--one {
+    @include mq($from: double) {
+      width: 100%;
+    }
+
+    @include mq($from: quadruple) {
+      width: 50%;
+    }
   }
 }
 
-.group--medium {
-  width: 100%;
+.row--three {
 
-  @include mq($from: tablet) {
-    width: 50%;
+  @include mq($from: double) {
+    > .group--one,
+    > .group--two {
+      width: 50%;
+    }
+  }
+
+  @include mq($from: triple) {
+    > .group--one {
+      width: 33.33%;
+    }
+
+    > .group--two {
+      width: 66.67%;
+    }
   }
 }
 
-.group--small {
-  width: 100%;
-
-  @include mq($from: desktop) {
-    width: 33.33%;
+// prevent gaps in grid
+// groups of three every second item is larger
+.group--single:nth-child(3n + 2) {
+  @include mq($from: triple) {
+    max-width: 33.34%;
   }
 }
-
-.group--smallish {
-  width: 100%;
-
-  @include mq($from: desktop) {
-    width: 33.34%;
-  }
-}
-
-.group--tiny {
-  width: 50%;
-
-  @include mq($from: tablet) {
-    width: 25%;
+.group--double:nth-child(3n + 2) {
+  @include mq($from: quintuple) {
+    max-width: 33.34%;
   }
 }
 
@@ -47,38 +77,36 @@
   padding-left: 2rem;
   padding-right: 2rem;
 
-  @include mq($from: tablet) {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-
-  @include mq($from: desktop) {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  @include mq($from: huge) {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-
-  &--intro {
+  &--bottom {
     @extend .block;
     @extend %bottom-padding;
   }
+
+  &--top {
+    @extend .block;
+    @extend %top-padding;
+  }
+
+  &--both {
+    @extend .block;
+    @extend %bottom-padding;
+    @extend %top-padding;
+  }
 }
 
-@include mq($from: tablet) {
+@include mq($from: double) {
   .flex {
     display: flex;
 
     &--row {
       display: flex;
       flex-flow: row wrap;
+      width: 100%;
     }
 
     &--column {
       display: flex;
+      height: 100%;
       flex-flow: column nowrap;
     }
 
@@ -87,61 +115,35 @@
       display: flex;
     }
 
+    &--bottom {
+      align-items: flex-end;
+      display: flex;
+    }
+
     &--centered {
       display: flex;
       justify-content: center;
     }
-  }
 
-  .flex__item {
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-
-    &--center {
-      @extend .flex__item;
-      align-self: center;
+    &--right {
+      display: flex;
+      justify-content: flex-end;
     }
-  }
-}
 
-// responsive visibility
-.phone {
-  display: block;
+    &__item {
+      flex-grow: 0;
+      flex-shrink: 1;
+      flex-basis: auto;
 
-  @include mq($from: tablet) {
-    display: none;
-  }
-}
+      &--center {
+        @extend .flex__item;
+        align-self: center;
+      }
 
-.tablet {
-  display: none;
-
-  @include mq($from: tablet) {
-    display: block;
-  }
-
-  @include mq($from: desktop) {
-    display: none;
-  }
-}
-
-.laptop {
-  display: none;
-
-  @include mq($from: desktop) {
-    display: block;
-  }
-
-  @include mq($from: cinema) {
-    display: none;
-  }
-}
-
-.monitor {
-  display: none;
-
-  @include mq($from: cinema) {
-    display: block;
+      &--right {
+        @extend .flex__item;
+        align-self: right;
+      }
+    }
   }
 }

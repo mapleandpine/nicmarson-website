@@ -33,17 +33,17 @@ p {
   margin-top: 2rem;
 
 
-  @include mq($from: tablet) {
+  @include mq($from: double) {
     font-size: 24px;
     margin-bottom: 3rem;
     margin-top: 3rem;
   }
 
-  @include mq($from: desktop) {
+  @include mq($from: triple) {
     font-size: 1.5rem;
   }
 
-  @include mq($from: cinema) {
+  @include mq($from: quadruple) {
     font-size: 1.5rem;
   }
 }

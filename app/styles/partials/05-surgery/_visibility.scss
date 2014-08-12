@@ -5,6 +5,7 @@
 .invisible {
   visibility: hidden;
 }
+
 .sr-only {
   position: absolute;
   width:1px;
@@ -24,4 +25,46 @@
 .hidden {
   display: none !important;
   visibility: hidden !important;
+}
+
+
+// responsive visibility
+.phone {
+  display: block;
+
+  @include mq($from: double) {
+    display: none;
+  }
+}
+
+.tablet {
+  display: none;
+
+  @include mq($from: double) {
+    display: block;
+  }
+
+  @include mq($from: triple) {
+    display: none;
+  }
+}
+
+.laptop {
+  display: none;
+
+  @include mq($from: triple) {
+    display: block;
+  }
+
+  @include mq($from: quadruple) {
+    display: none;
+  }
+}
+
+.monitor {
+  display: none;
+
+  @include mq($from: quadruple) {
+    display: block;
+  }
 }

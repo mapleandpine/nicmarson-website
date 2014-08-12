@@ -1,6 +1,6 @@
 /* standard */
 .post-entry {
-  @include mq($from: desktop) {
+  @include mq($from: triple) {
     p {
       max-width: 30em;
     }

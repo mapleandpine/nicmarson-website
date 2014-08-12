@@ -22,7 +22,7 @@
     @extend %transition-fast;
     user-select: none;
 
-    @include mq($from: tablet) {
+    @include mq($from: double) {
       padding: .25em .75em;
     }
 

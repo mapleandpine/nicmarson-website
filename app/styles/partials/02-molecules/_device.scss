@@ -41,7 +41,7 @@
       width: 12.5em;
       z-index: 5;
 
-      @include mq($from: desktop) {
+      @include mq($from: triple) {
         background: linear-gradient(to bottom, rgba(255,255,255,.65) 0%,rgba(255,255,255,0) 100%);
       }
     }

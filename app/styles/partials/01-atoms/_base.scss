@@ -49,18 +49,9 @@ body {
 
 html {
   font-family: $base-font-family;
-  font-size: $font-size-sm;
+  font-size: 16px;
   font-smoothing: antialiased;
   line-height: $line-height-base;
-
-  @include mq($from: desktop) {
-    font-size: $font-size-md;
-  }
-
-  @include mq($from: huge) {
-    font-size: $font-size-lg;
-    letter-spacing: -.01em;
-  }
 }
 
 ::-webkit-scrollbar {
