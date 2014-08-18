@@ -46,25 +46,25 @@
   .table {
     background-color: #FFF;
   }
-}
 
-.table-border {
-  width: 100%;
+  &--border {
+    width: 100%;
 
-  // Cells
-  > thead,
-  > tbody,
-  > tfoot {
-    > tr {
-      > th,
-      > td {
-        padding: .5rem 1em .5rem 0;
-      }
-      > th {
-        border-bottom: 2px solid palette(grey, lighter);
-      }
-      > td {
-        border-bottom: 1px solid palette(grey, lighter);
+    // Cells
+    > thead,
+    > tbody,
+    > tfoot {
+      > tr {
+        > th,
+        > td {
+          padding: .5rem 1em .5rem 0;
+        }
+        > th {
+          border-bottom: 2px solid palette(grey, lighter);
+        }
+        > td {
+          border-bottom: 1px solid palette(grey, lighter);
+        }
       }
     }
   }

@@ -7,21 +7,7 @@
     {% include 02-organisms/00-global/00-header.html %}
     <main class="{{ page.slug }}__page" role="main">
       <div class="sidebar flexbox--row">
-        <article>
-          {{ content }}
-        </article>
-        <aside>
-        {% if page.slug == "home" %}
-          <header>
-            <h1 class="title--block">A few projects I've worked on</h1>
-          </header>
-          <div class="home__portfolio">
-            {% for post in site.categories['portfolio'] limit:3 %}
-              {% include 02-organisms/01-sections/03-section-portfolio-light.html %}
-            {% endfor %}
-          </div>
-        {% endif %}
-        </aside>
+
       </div>
     </main>
     {% include 02-organisms/00-global/01-footer.html %}

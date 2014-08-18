@@ -246,6 +246,22 @@ module.exports = function(grunt) {
       }
     },
 
+    csscomb: {
+      dist: {
+        files: {
+          '<%= config.dist %>/styles/{,*/}*.css': ['<%= config.app %>/styles/{,*/}*.css']
+        }
+      }
+    },
+
+    uncss: {
+      dist: {
+        files: {
+          '<%= config.dist %>/styles/*.css': ['<%= config.app %>/index.html', '<%= config.app %>/about.html']
+        }
+      }
+    },
+
     // Reads HTML for usemin blocks to enable smart builds that automatically
     // concat, minify and revision files. Creates configurations in memory so
     // additional tasks can operate on them
@@ -444,7 +460,9 @@ module.exports = function(grunt) {
     'modernizr',
     // 'rev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'csscomb',
+    'uncss'
   ]);
 
   grunt.registerTask('default', [

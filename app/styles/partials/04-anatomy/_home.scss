@@ -30,15 +30,8 @@
       fill: $home-nav-hover;
     }
   }
-}
 
-.home {
-
-  article {
-    padding-bottom: 4rem;
-  }
-
-  aside {
+  .sidebar {
     border-right: $body-padding solid palette(red);
 
     header {
@@ -49,9 +42,5 @@
     .title--block {
       margin-bottom: 0;
     }
-  }
-
-  .portfolio__item a {
-    padding-bottom: 50%;
   }
 }

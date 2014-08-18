@@ -1,14 +1,30 @@
 ---
-layout: 01-sidebar
+layout: 00-default
 title: Home
 slug: home
 class: home
 ---
 
-<!-- <section class="home__intro">
-  <h1 class="title"><span>Hi, my name is Nic Marson.</span> <span>I'm a Front-end Developer &amp;</span> <span>UI Designer in Portland, OR.</span></h1>
-</section> -->
-<section class="home__intro block">
-  <h1 class="title">Shooting for no less than flabbergasted.</h1>
-  <p class="lead">I create digital experiences that promote interaction. I think bigger, move faster, blow minds, get shit done and innovate—plus any other cliché saying that comes to mind.</p>
-</section>
+<article class="row--two">
+  <!-- <section class="home__intro">
+    <h1 class="title"><span>Hi, my name is Nic Marson.</span> <span>I'm a Front-end Developer &amp;</span> <span>UI Designer in Portland, OR.</span></h1>
+  </section> -->
+  <section class="group--one">
+    <div class="block">
+      <h1 class="title">Shooting for no less than flabbergasted.</h1>
+      <p class="lead">I create digital experiences that promote interaction. I think bigger, move faster, blow minds, get shit done and innovate—plus any other cliché saying that comes to mind.</p>
+    </div>
+  </section>
+  <section class="group--one sidebar">
+  {% if page.slug == "home" %}
+    <header>
+      <h2 class="title--block">A few projects I've worked on</h2>
+    </header>
+    <div class="portfolio-item-ratio--2-1">
+      {% for post in site.categories['portfolio'] limit:3 %}
+        {% include 02-organisms/01-sections/03-section-portfolio-light.html %}
+      {% endfor %}
+    </div>
+  {% endif %}
+  </section>
+</article>

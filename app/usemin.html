@@ -12,32 +12,25 @@
 
   <!-- build:css(.tmp) styles/main.css -->
   <!-- <link rel="stylesheet" href="styles/main.css" lazyload> -->
-  <link rel="stylesheet" href="styles/main.css" lazyload>
+  <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
 
-  <!-- build:js /scripts/vendor/modernizr.js -->
+  <!-- build:js /scripts/vendor/head.js -->
   <!-- bower:js -->
   <script src="/bower_components/modernizr/modernizr.js"></script>
-  <!-- endbower -->
-  <!-- endbuild -->
-
-  <!-- build:js /scripts/vendor/jquery.js -->
-  <!-- bower:js -->
-  <script src="/bower_components/jquery/dist/jquery.js" lazyload></script>
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
 </head>
 
 <body>
 
-  <!-- build:js scripts/vendor/vendor.js -->
+  <!-- build:js scripts/vendor/foot.js -->
   <!-- bower:js -->
-  <script src="/bower_components/morlock/dist/morlock.js" lazyload></script>
+  <script src="scripts/vendor/tablesaw.js"></script>
+  <script src="scripts/vendor/waves.js"></script>
   <!-- endbower -->
-  <!-- endbuild -->
-
-  <!-- build:js({app,.tmp}) scripts/main.js -->
-  <script src="scripts/main.js" lazyload></script>
+  <script src="scripts/main.js"></script>
   <!-- endbuild -->
 </body>
 </html>
