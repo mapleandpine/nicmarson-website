@@ -4,8 +4,24 @@
   background-color: $home-bg-color;
 }
 
+@keyframes homeBg {
+  0%, 100% { background-position: 0 0; }
+  50% { background-position: 100% 100%; }
+}
+
 .home {
-  background: linear-gradient(to bottom, $home-bg-color, $home-alt-color);
+  background-color: $home-alt-color;
+  background-image: radial-gradient(farthest-corner at 0 0, $home-bg-color 0%, transparent 100%);
+  background-size: 100% 100%;
+
+  // Resource intensive
+  // @include mq($from: triple) {
+  //   animation-duration: 20s;
+  //   animation-fill-mode: both;
+  //   animation-iteration-count: infinite;
+  //   animation-name: homeBg;
+  //   will-change: background-position;
+  // }
 
   .connect .phone small,
   .connect .email small {

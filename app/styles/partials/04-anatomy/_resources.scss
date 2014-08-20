@@ -5,7 +5,9 @@
 }
 
 .resources {
-  background: linear-gradient(to bottom, $resources-bg-color, $resources-alt-color);
+  background-color: $resources-alt-color;
+  background-image: radial-gradient(farthest-corner at 0 0, $resources-bg-color 0%, transparent 100%);
+  background-size: 100% 100%;
 
   .connect .phone small,
   .connect .email small {

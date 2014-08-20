@@ -70,14 +70,11 @@
     > .group--two {
       width: 66.67%;
     }
-  }
-}
 
-// prevent gaps in grid
-// groups of three every second item is larger
-.group--one:nth-child(3n + 2) {
-  @include mq($from: triple) {
-    max-width: 33.34%;
+    // prevent gaps in grid
+    .group--one:nth-child(3n + 2) {
+      flex-grow: 1;
+    }
   }
 }
 

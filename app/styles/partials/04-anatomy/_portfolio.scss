@@ -9,7 +9,9 @@
 }
 
 .portfolio {
-  background: linear-gradient(to bottom, $portfolio-bg-color, $portfolio-alt-color);
+  background-color: $portfolio-alt-color;
+  background-image: radial-gradient(farthest-corner at 0 0, $portfolio-bg-color 0%, transparent 100%);
+  background-size: 100% 100%;
 
   .connect .phone small,
   .connect .email small {
@@ -51,25 +53,6 @@
 
     @include mq($from: triple) {
       margin-left: $body-padding;
-    }
-  }
-}
-
-.portfolio-detail {
-
-  .device {
-    font-size: 40px;
-
-    @include mq($from: double) {
-      font-size: 30px;
-    }
-
-    @include mq($from: triple) {
-      font-size: 20px;
-    }
-
-    @include mq($from: quadruple) {
-      font-size: 12px;
     }
   }
 }

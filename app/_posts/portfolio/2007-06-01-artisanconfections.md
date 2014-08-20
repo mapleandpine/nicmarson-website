@@ -1,5 +1,5 @@
 ---
-layout: 04-portfolio
+layout: 02-project
 name: artisanconfection
 title: Artisan Confections
 client: McIntyre Direct

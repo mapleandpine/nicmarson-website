@@ -5,7 +5,9 @@
 }
 
 .about {
-  background: linear-gradient(to bottom, $about-bg-color, $about-alt-color);
+  background-color: $about-alt-color;
+  background-image: radial-gradient(farthest-corner at 0 0, $about-bg-color 0%, transparent 100%);
+  background-size: 100% 100%;
 
   .connect .phone small,
   .connect .email small {

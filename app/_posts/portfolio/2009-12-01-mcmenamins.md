@@ -1,5 +1,5 @@
 ---
-layout: 04-portfolio
+layout: 02-project
 name: mcmenamins
 title: McMenamins
 categories:
