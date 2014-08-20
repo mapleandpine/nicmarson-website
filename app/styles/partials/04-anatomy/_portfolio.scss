@@ -8,17 +8,8 @@
   background-color: $portfolio-bg-color;
 }
 
-.portfolio .connect .phone small,
-.portfolio .connect .email small {
-  background-color: $portfolio-bg-color;
-
-  &::after {
-    border-top-color: $portfolio-bg-color;
-  }
-}
-
 .portfolio {
-  background: linear-gradient(to bottom, $portfolio-bg-color, $footer-bg-color);
+  background: linear-gradient(to bottom, $portfolio-bg-color, $portfolio-alt-color);
 
   .connect .phone small,
   .connect .email small {
@@ -45,55 +36,194 @@
   }
 }
 
+.portfolio-list {
+
+  main {
+    background-color: palette(grey, darker);
+
+    > div {
+      width: 95%;
+
+      @include mq($from: triple) {
+        width: 90%;
+      }
+    }
+
+    @include mq($from: triple) {
+      margin-left: $body-padding;
+    }
+  }
+}
+
+.portfolio-detail {
+
+  .device {
+    font-size: 40px;
+
+    @include mq($from: double) {
+      font-size: 30px;
+    }
+
+    @include mq($from: triple) {
+      font-size: 20px;
+    }
+
+    @include mq($from: quadruple) {
+      font-size: 12px;
+    }
+  }
+}
+
 /*-----  End of Page specific colors  ------*/
 
 //////////////////////////////////////////////////
-// Project title overlaid on thumbnail image
+// individual item listing with image and details
 //////////////////////////////////////////////////
-.portfolio__name {
-  @extend %text-block;
-  @extend %text-overflow;
-  @extend %text-white-border;
-  min-width: 50%;
-  max-width: 80%;
-  @extend %transition-fast;
-}
+.portfolio__item { // figure
+  font-size: 14px;
+  overflow: hidden;
+  position: relative;
 
-//////////////////////////////////////////////////
-// All portfolio thumb images across site
-//////////////////////////////////////////////////
-.portfolio__image {
-  background-color: palette(gray, darker);
-  color: $white;
+  @include mq($from: double) {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+  }
 
-  img {
-    @include img-responsive();
-    min-height: 100%;
-    opacity: .5;
-    transform: scale(1.05, 1.05);
+  // prepare transitions
+  figcaption::before,
+  img,
+  p,
+  .title--block {
     @extend %transition-fast;
-    will-change: filter, opacity, transform;
+    will-change: opacity, transform;
   }
 
-  .h4 {
+  a {
     display: block;
-    line-height: 1;
+    height: 0;
+    padding-bottom: 100%;
+    width: 100%;
+
+    @include mq($from: double) {
+      padding-bottom: 125%;
+    }
+  }
+
+  img {
+    display: block;
+    min-height: 100%;
+    opacity: .8;
+  }
+
+  figcaption {
+    @include centerer();
+    color: $white;
+    padding: 2rem;
+    width: 100%;
+
+    @include mq($from: triple) {
+      padding: 3rem;
+    }
+  }
+
+  p {
+    font-family: $font-family-sans-serif;
+  }
+
+  .title--block {
+    @extend %text-white-border;
+    opacity: .9;
   }
 }
 
-.portfolio__image:hover {
+.portfolio__item:hover {
 
   img {
-    animation-name: reverse-pulse;
-    animation-duration: 4s;
-    animation-iteration-count: 1;
-    opacity: 1;
-    @extend %transition-slow;
+    opacity: .35;
+  }
+}
+
+//////////////////////////////////////////////////
+// Popup effect
+//////////////////////////////////////////////////
+.portfolio__popup {
+
+  .popup--container {
+    color: $white;
+    position: static;
+
+    .popup {
+      height: 100%;
+      padding-bottom: 3rem;
+    }
+
+    svg {
+      fill: $white;
+    }
   }
 
-  .portfolio__name {
-    opacity: .5;
-    @extend %transition-slow;
+  .popup--toggle {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+  }
+}
+
+//////////////////////////////////////////////////
+// Zoom effect
+//////////////////////////////////////////////////
+.portfolio__zoom {
+
+  figcaption {
+    backface-visibility: hidden;
+
+    &::before,
+    &::after {
+      pointer-events: none;
+    }
+
+    &::before {
+      border: 1px solid $white;
+      content: '';
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      bottom: 30px;
+      left: 30px;
+      opacity: 0;
+      transform: scale(1.1);
+    }
+  }
+
+  img {
+    position: relative;
+    transform: scale(1.12);
+  }
+
+  p {
+    margin: 0 auto;
+    opacity: 0;
+    padding: 2em;
+    position: relative;
+    transform: scale(1.5);
+  }
+}
+// Hover effects
+.portfolio__zoom:hover {
+
+  img {
+    transform: scale(1);
+  }
+
+  figcaption::before,
+  p {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .title--block {
+    opacity: 0;
   }
 }
 
@@ -101,7 +231,6 @@
 // portfolio page thumbnails
 //////////////////////////////////////////////////
 .portfolio__thumbs {
-  background-color: palette(grey, darkest);
 
   .portfolio__item {
     animation-duration: .3s;
@@ -155,62 +284,19 @@
   }
 }
 
-//////////////////////////////////////////////////
-// individual item listing with image and details
-//////////////////////////////////////////////////
-.portfolio__item {
-  font-size: 14px;
-  overflow: hidden;
-  position: relative;
+//////////////////////////////////////
+// home page
+//////////////////////////////////////
+.home .portfolio__item > a {
+  padding-bottom: 100%;
 
   @include mq($from: double) {
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
+    padding-bottom: 75%;
   }
 
-  > a {
-    display: block;
-    height: 0;
-    padding-bottom: 100%;
-    width: 100%;
-
-    @include mq($from: double) {
-      padding-bottom: 75%;
-    }
+  @include mq($from: triple) {
+    padding-bottom: 50%;
   }
-
-  .title--block {
-    border-bottom: 1px solid rgba(255,255,255,.1);
-    padding: 1rem 0;
-
-    a {
-      color: inherit;
-    }
-  }
-
-  .popup--container {
-    color: $white;
-
-    .popup {
-      height: 100%;
-      padding-bottom: 3rem;
-    }
-
-    svg {
-      fill: $white;
-    }
-  }
-
-  .popup--toggle {
-    bottom: 0;
-    left: 0;
-    position: absolute;
-  }
-}
-
-.portfolio-item-ratio--2-1 .portfolio__item > a {
-  padding-bottom: 50%;
 }
 
 //////////////////////////////////////
@@ -225,13 +311,13 @@
 // navigation links on detail page
 //////////////////////////////////////
 .portfolio__next-previous {
-  background-color: palette(grey, darker);
+  background-color: palette(grey, darkest);
 
   svg {
     fill: $white;
   }
 
-  .portfolio__name {
+  .title--block {
     max-width: 100%;
   }
 

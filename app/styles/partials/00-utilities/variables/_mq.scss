@@ -30,6 +30,7 @@ $mq-responsive: true;
 $mq-breakpoints: (
   single:     $screen-1,
   double:     $screen-2,
+  double-max: ($screen-3 - 1px),
   triple:     $screen-3,
   quadruple:  $screen-4,
   quintuple:  $screen-5

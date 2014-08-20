@@ -7,16 +7,21 @@
   }
 
   li {
-    display: inline-block;
-    margin-bottom: 0;
+    display: block;
+    margin-bottom: .25em;
     position: relative;
+
+    @include mq($from: double) {
+      display: inline-block;
+      margin-bottom: 0;
+    }
   }
 
   a {
     border: 1px dotted rgba(255,255,255,.5);
     color: $nav-link-color;
-    display: inline-block;
-    padding: .2em .5em;
+    display: block;
+    padding: .5em .75em;
     position: relative;
     text-decoration: none;
     @extend %transition-fast;

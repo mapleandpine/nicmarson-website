@@ -5,7 +5,7 @@
 }
 
 .about {
-  background: linear-gradient(to bottom, $about-bg-color, $footer-bg-color);
+  background: linear-gradient(to bottom, $about-bg-color, $about-alt-color);
 
   .connect .phone small,
   .connect .email small {
@@ -40,18 +40,19 @@
     flex-grow: 0;
     flex-shrink: 1;
     flex-basis: auto;
+    margin: auto;
+    min-width: 280px;
     position: relative;
     @extend %transition-fast;
+    width: 65%;
 
     @include mq($from: double) {
+      max-width: 480px;
       width: 85%;
     }
-    @include mq($from: triple) {
-      width: 75%;
-    }
-
     @include mq($from: quadruple) {
-      width: 50%;
+      min-width: 480px;
+      width: 75%;
     }
   }
 
@@ -67,10 +68,18 @@
 
 .about__history {
   background-color: palette(grey, lightest);
+
+  header {
+    background-color: palette(blue);
+  }
 }
 
 .about__facts {
   background-color: palette(grey, darkest);
+
+  header {
+    background-color: palette(red);
+  }
 }
 
 .about__favorite {
@@ -117,7 +126,7 @@
 
 .tinyhouse {
   border-bottom: 1px solid palette(grey, darker);
-  padding: 105px 30px 20px 10px;
+  padding: 3rem 0 2rem;
   position: relative;
 
   p {
@@ -135,11 +144,7 @@
     color: palette(red);
     font-size: 30px;
     font-weight: 900;
-    left: 10px;
     line-height: 1.2;
-    position: absolute;
-    top: 30px;
-    width: 80px;
   }
 
   // Big house
@@ -148,7 +153,7 @@
     fill: palette(grey, darker);
     position: absolute;
     right: 0;
-    top: 0;
+    top: 3rem;
     width: 160px;
   }
 
@@ -160,8 +165,8 @@
   .shape-house {
     fill: palette(red);
     position: absolute;
-    right: 65px;
-    top: 133px;
+    right: 95px;
+    top: 5rem;
     width: 30px;
   }
 }

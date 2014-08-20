@@ -48,7 +48,7 @@ $palettes: (
     light:  lighten($grapefruit, 10),
     dark:   $grapefruit-dark
   ),
-  pink-rose: (
+  pink: (
     base:   $pink-rose,
     light:  lighten($pink-rose, 10),
     dark:   $pink-rose-dark
@@ -93,26 +93,24 @@ $palettes: (
 $body-bg-color:       $white;
 $body-color:          palette(grey, darker);
 
-$home-bg-color:       palette(red, light);
-$home-nav-hover:      palette(red);
+$home-bg-color:       palette(blue);
+$home-alt-color:      palette(red, dark);
+$home-nav-hover:      palette(blue);
 
-$portfolio-bg-color:  palette(mint, light);
-$portfolio-nav-hover: palette(mint);
+$portfolio-bg-color:  palette(lavender);
+$portfolio-alt-color: palette(orange);
+$portfolio-nav-hover: palette(lavender);
 
-$about-bg-color:      palette(orange, light);
-$about-nav-hover:     palette(orange);
+$about-bg-color:      palette(mint, light);
+$about-alt-color:     palette(pink, dark);
+$about-nav-hover:     palette(mint);
 
-$resources-bg-color:  palette(lavender, light);
-$resources-nav-hover: palette(lavender);
+$resources-bg-color:  palette(grass, light);
+$resources-alt-color: palette(yellow, dark);
+$resources-nav-hover: palette(grass);
 
 $header-color:        $white;
-
-$main-bg-color:       $white;
-$main-color:          palette(grey, darker);
-
-$footer-bg-color:     palette(grass, dark);
 $footer-color:        $white;
-
 $heading-color:       inherit;
 $muted-color:         palette(grey, light);
 

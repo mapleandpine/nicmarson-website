@@ -1,7 +1,4 @@
-/*! Tablesaw - v0.1.6 - 2014-07-23
-* https://github.com/filamentgroup/tablesaw
-* Copyright (c) 2014 Filament Group; Licensed MIT */
-/*! Tablesaw - v0.1.6 - 2014-07-23
+/*! Tablesaw - v0.1.7 - 2014-08-06
 * https://github.com/filamentgroup/tablesaw
 * Copyright (c) 2014 Filament Group; Licensed MIT */
 
@@ -25,8 +22,6 @@ table.tablesaw {
 
 .tablesaw th,
 .tablesaw td {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: .5em .7em;
 }
@@ -34,12 +29,6 @@ table.tablesaw {
 .tablesaw thead tr:first-child th {
   padding-top: .9em;
   padding-bottom: .7em;
-}
-
-/* Table rows have a gray bottom stroke by default */
-
-.tablesaw-stack tbody tr {
-  border-bottom: 1px solid #dfdfdf;
 }
 
 .tablesaw-stack td .tablesaw-cell-label,
@@ -98,11 +87,13 @@ table.tablesaw {
     display: none !important;
   }
 }
-@mixin tablesaw-stack-max {
+
+@include mq($to: double-max) {
   .tablesaw-stack thead td,
   .tablesaw-stack thead th {
     display: none;
   }
+
   .tablesaw-stack tbody td,
   .tablesaw-stack tbody th {
     clear: left;
@@ -111,11 +102,13 @@ table.tablesaw {
   }
 }
 
-@mixin tablesaw-stack-min {
+@include mq($from: triple) {
   .tablesaw-stack tr {
     display: table-row;
   }
+
   /* Show the table header rows */
+
   .tablesaw-stack td,
   .tablesaw-stack th,
   .tablesaw-stack thead td,
@@ -123,29 +116,11 @@ table.tablesaw {
     display: table-cell;
     margin: 0;
   }
+
   /* Hide the labels in each cell */
+
   .tablesaw-stack td .tablesaw-cell-label,
   .tablesaw-stack th .tablesaw-cell-label {
     display: none !important;
-  }
-}
-
-$use-respond-mixins: false !default;
-@mixin tablesaw-stack( $breakpoint: 40em ) {
-  @if $use-respond-mixins {
-    @include respond-max($breakpoint - .0625) {
-      @include tablesaw-stack-max;
-    }
-    @include respond-min($breakpoint) {
-      @include tablesaw-stack-min;
-    }
-  }
-  @else {
-    @media (max-width: ($breakpoint - .0625)) {
-      @include tablesaw-stack-max;
-    }
-    @media (min-width: $breakpoint) {
-      @include tablesaw-stack-min;
-    }
   }
 }

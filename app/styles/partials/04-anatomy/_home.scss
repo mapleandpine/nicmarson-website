@@ -5,7 +5,7 @@
 }
 
 .home {
-  background: linear-gradient(to bottom, $home-bg-color, $footer-bg-color);
+  background: linear-gradient(to bottom, $home-bg-color, $home-alt-color);
 
   .connect .phone small,
   .connect .email small {
@@ -32,15 +32,14 @@
   }
 
   .sidebar {
-    border-right: $body-padding solid palette(red);
+    background-color: $home-alt-color;
 
-    header {
-      background-color: palette(red);
-      color: $white;
-    }
+    .portfolio-item {
+      width: 95%;
 
-    .title--block {
-      margin-bottom: 0;
+      @include mq($from: triple) {
+        width: 90%;
+      }
     }
   }
 }

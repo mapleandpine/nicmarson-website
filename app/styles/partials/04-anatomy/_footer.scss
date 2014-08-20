@@ -3,13 +3,14 @@ footer[role=contentinfo] {
   text-align: center;
 
   .connect {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
+
+    @include mq($from: double) {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+    }
 
     a {
-      font-size: 2vmin;
-      margin: 0 .125em;
 
       @include mq($from: double) {
         font-size: 3vmin;
@@ -17,6 +18,13 @@ footer[role=contentinfo] {
 
       @include mq($from: triple) {
         font-size: 4vmin;
+      }
+    }
+
+    li {
+      @include mq($from: double) {
+        display: inline-block;
+        margin: 0 .125em;
       }
     }
   }
@@ -37,7 +45,10 @@ footer[role=contentinfo] {
   font-size: 12px;
   margin-bottom: 0;
   padding: 1rem $body-padding;
-  text-align: right;
+
+  @include mq($from: double) {
+    text-align: right;
+  }
 
   p {
     margin-bottom: 0;
@@ -45,5 +56,7 @@ footer[role=contentinfo] {
 }
 
 .copyright {
-  float: left;
+  @include mq($from: double) {
+    float: left;
+  }
 }

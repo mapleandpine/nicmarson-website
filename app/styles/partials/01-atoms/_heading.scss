@@ -61,14 +61,22 @@ h6, .h6 { font-size: $font-size-h6; }
       content: "";
       display: block;
       height: .25em;
-      margin-bottom: 1em;
-      margin-top: .5em;
+      margin: .5em auto 1em;
       width: 33.33%;
+
+      @include mq($from: double) {
+        margin-left: 0;
+      }
     }
   }
 
   &--block {
     @extend %text-block;
+
+    header & {
+      color: $white;
+      margin-bottom: 0;
+    }
 
     small {
       color: inherit;

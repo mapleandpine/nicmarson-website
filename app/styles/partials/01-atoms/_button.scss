@@ -1,9 +1,9 @@
 .btn {
   border: 0 none;
-  border-radius: r(default);
   box-sizing: content-box;
   cursor: pointer;
   display: inline-block;
+  font-family: $font-family-sans-serif;
   line-height: normal;
   overflow: hidden;
   padding: 1em 1.5em;
@@ -20,17 +20,18 @@
   // Button states
   &:focus {
     outline: thin dotted #666;
-    text-decoration:none;
+    text-decoration: none;
   }
 
   &:hover, &:active, &:focus {
-    text-decoration:none; // override any link default styles
+    text-decoration: none; // override any link default styles
   }
 }
 
 .btn--default {
   @extend .btn;
   background-color: palette(grey, lighter);
+  border-radius: r(default);
   color: palette(grey, darker);
 
   &:hover, &:active, &:focus {
@@ -39,9 +40,15 @@
   }
 }
 
+.btn--clear {
+  @extend .btn;
+  background-color: rgba(0,0,0,.5);
+}
+
 .btn--danger {
   @extend .btn;
   background-color: palette(red);
+  border-radius: r(default);
   color: $white;
 
   &:hover, &:active, &:focus {

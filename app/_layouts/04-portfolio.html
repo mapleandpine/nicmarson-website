@@ -5,8 +5,8 @@ slug: portfolio
 class: portfolio portfolio-detail
 ---
 
-<section class="flex--row">
-  <div class="group--two--half">
+<section class="row--three">
+  <div class="group--two">
     <div class="block--bottom">
       <h1 class="title">{{ page.project }}</h1>
       <p class="byline">
@@ -25,7 +25,7 @@ class: portfolio portfolio-detail
       </div>
     </div>
   </div>
-  <div class="group--two--half flex--centered">
+  <div class="group--one flex--centered">
     <div class="flex__item--center">
       <div class="device">
 
@@ -93,32 +93,30 @@ class: portfolio portfolio-detail
 <!-- Load Skills and Additional Screens -->
 {{ content }}
 <!-- Previous and Next Projects -->
-<section class="flex--row portfolio__next-previous">
+<section class="row--two portfolio__next-previous">
 
   {% if page.next_in_category != nil %}
-  <div class="group--two--half">
-    <section id="{{page.next_in_category.name}}" class="portfolio__item">
+  <div class="group--one">
+    <figure id="{{page.next_in_category.name}}" class="portfolio__item">
       <a class="portfolio__item__previous" href="{{page.next_in_category.url}}">
-        <div class="portfolio__image">
-          <!-- <img src="/images/portfolio/{{page.next_in_category.name}}/{{page.next_in_category.name}}-browser.jpg"> -->
-          <img class="img-responsive" src="http://fillmurray.com/g/1200/600" alt="{{ page.next_in_category.title }} thumbnail">
-          <div class="center">
-            <b class="h4">Previous project</b>
-            <span class="portfolio__name">
-              <svg class="shape-arrow-left svg-inline">
-                <use xlink:href="#shape-arrow-left"/>
-              </svg>
-              <i>{{ page.next_in_category.title }}</i>
-            </span>
-          </div>
-        </div>
+        <!-- <img src="/images/portfolio/{{page.next_in_category.name}}/{{page.next_in_category.name}}-browser.jpg"> -->
+        <img class="img-responsive" src="http://fillmurray.com/g/1200/600" alt="{{ page.next_in_category.title }} thumbnail">
+        <figcaption>
+          <b class="h4">Previous project</b>
+          <span class="title--block">
+            <svg class="shape-arrow-left svg-inline">
+              <use xlink:href="#shape-arrow-left"/>
+            </svg>
+            <i>{{ page.next_in_category.title }}</i>
+          </span>
+        </figcaption>
       </a>
-    </section>
+    </figure>
   </div>
   {% endif %}
 
   {% if page.previous_in_category != nil %}
-  <div class="group--two--half">
+  <div class="group--one">
     <section id="{{page.previous_in_category.name}}" class="portfolio__item">
       <a class="portfolio__item__next" class="waves-effect waves-float" href="{{page.previous_in_category.url}}">
         <div class="portfolio__image">

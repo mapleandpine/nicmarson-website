@@ -20,7 +20,7 @@ class: home
     <header>
       <h2 class="title--block">A few projects I've worked on</h2>
     </header>
-    <div class="portfolio-item-ratio--2-1">
+    <div class="portfolio-item">
       {% for post in site.categories['portfolio'] limit:3 %}
         {% include 02-organisms/01-sections/03-section-portfolio-light.html %}
       {% endfor %}

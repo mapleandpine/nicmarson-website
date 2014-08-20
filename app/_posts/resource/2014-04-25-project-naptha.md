@@ -4,6 +4,7 @@ title:  Project Naptha
 date:   2014-04-25 14:55:06
 url: http://projectnaptha.com
 categories:
+- blog
 - resource
 - tool
 - typography

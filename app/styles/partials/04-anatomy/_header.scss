@@ -1,13 +1,12 @@
 header[role=banner] {
   color: $header-color;
-  height: $header-height;
-  padding-bottom: 1.5rem;
-  padding-top: 1.75rem;
-  text-align: right;
+  padding: 1.75rem 1rem 1.5rem;
 
   @include mq($from: double) {
+    height: $header-height;
     padding-left: $body-padding;
     padding-right: $body-padding;
+    text-align: right;
   }
 
   @include mq($from: quintuple) {
@@ -16,12 +15,15 @@ header[role=banner] {
 }
 
 .header-nav {
-  float: left;
   font-family: $font-family-condensed;
   letter-spacing: .07em;
-  text-align: left;
   text-transform: uppercase;
   white-space: nowrap;
+
+  @include mq($from: double) {
+    float: left;
+    text-align: left;
+  }
 
   li {
     margin-right: 4px;
@@ -34,6 +36,7 @@ header[role=banner] {
 }
 
 .nav .connect-link {
+  display: inline-block;
   padding-right: 2.75em;
 
   i {

@@ -1,15 +1,15 @@
 ---
-layout: 00-default
+layout: 01-no-content
 title: Portfolio
 slug: portfolio
-class: portfolio
+class: portfolio portfolio-list
 ---
 
+<header>
+  <h1 class="title--block">A few projects I've worked on</h1>
+</header>
 <div class="flex--row portfolio__thumbs">
   {% for post in site.categories['portfolio'] %}
     {% include 02-organisms/01-sections/02-section-portfolio.html %}
   {% endfor %}
-  <div class="nav">
-    {% include 01-molecules/01-navigation/01-portfolio-nav.html %}
-  </div>
 </div>

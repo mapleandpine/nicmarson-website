@@ -5,6 +5,7 @@ date:   2014-05-05 14:55:06
 author: David Walsh
 url: http://davidwalsh.name/css-facts
 categories:
+- blog
 - resource
 - article
 - css

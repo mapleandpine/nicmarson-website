@@ -7,6 +7,20 @@
   }
 }
 
+.content {
+  background-color: $white;
+  box-shadow: 0 0 25px rgba(0,0,0,.3);
+  text-align: center;
+
+  @include mq($from: double) {
+    text-align: left;
+  }
+
+  @include mq($from: triple) {
+    margin-left: $body-padding;
+  }
+}
+
 [class^="row--"] {
   display: flex;
   flex-flow: row wrap;
@@ -61,13 +75,8 @@
 
 // prevent gaps in grid
 // groups of three every second item is larger
-.group--single:nth-child(3n + 2) {
+.group--one:nth-child(3n + 2) {
   @include mq($from: triple) {
-    max-width: 33.34%;
-  }
-}
-.group--double:nth-child(3n + 2) {
-  @include mq($from: quintuple) {
     max-width: 33.34%;
   }
 }

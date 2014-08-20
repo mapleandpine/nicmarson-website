@@ -5,10 +5,8 @@
   </head>
   <body class="{{ page.class }}">
     {% include 02-organisms/00-global/00-header.html %}
-    <main class="{{ page.slug }}__page" role="main">
-      <div class="sidebar flexbox--row">
-
-      </div>
+    <main class="container flexbox--column {{ page.slug }}__page" role="main">
+      {{ content }}
     </main>
     {% include 02-organisms/00-global/01-footer.html %}
     {% include 00-atoms/00-meta/01-foot.html %}
