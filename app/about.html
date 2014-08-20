@@ -46,40 +46,47 @@ class: about
 <div class="flex--row row--three">
   <section class="group--two about__history">
     <header class="block">
-      <h2 class="title--block"><b>Employment</b> history</h2>
+      <h2 class="title--header"><b>Employment</b> history</h2>
     </header>
-    <div class="block--top">
+    <div class="block--default">
       <table class="table table--border" data-mode="stack">
         <thead>
           <tr>
             <th class="year">Year</th>
             <th class="role">Role</th>
+            <th class="employer">Employer</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>2012 &ndash; &infin;</td>
-            <td>Web Developer at <a href="http://www.instrument.com/" class="external" role="link">Instrument</a></td>
+            <td>Web Developer</td>
+            <td><a href="http://www.instrument.com/" class="external" role="link">Instrument</a></td>
           </tr>
           <tr>
             <td class="muted">2012 &ndash; 2014</td>
-            <td>Web Experience Developer at <a href="http://www.cambiahealth.com/" class="external" role="link">Cambia</a></td>
+            <td><span class="screen-visible">Web Experience </span>Developer</td>
+            <td><a href="http://www.cambiahealth.com/" class="external" role="link">Cambia</a><span class="screen-visible"> / <a href="https://www.regence.com/" class="external" role="link">Regence BCBS</a></span></td>
           </tr>
           <tr>
             <td class="muted">2010 &ndash; 2012</td>
-            <td>Web Application Developer at <a href="http://extensis.com/" class="external" role="link">Extensis</a></td>
+            <td><span class="screen-visible">Web Application </span>Developer</td>
+            <td><a href="http://extensis.com/" class="external" role="link">Extensis</a></td>
           </tr>
           <tr>
             <td class="muted">2010</td>
-            <td>Contractor at <a href="http://waggeneredstrom.com/" class="external" role="link">Waggener Edstrom</a></td>
+            <td>Contractor</td>
+            <td><a href="http://waggeneredstrom.com/" class="external" role="link">Waggener Edstrom</a></td>
           </tr>
           <tr>
             <td class="muted">2008 &ndash; 2009</td>
-            <td>Contractor at <a href="http://www.isitedesign.com/" class="external" role="link">ISITE Design</a></td>
+            <td>Contractor</td>
+            <td><a href="http://www.isitedesign.com/" class="external" role="link">ISITE Design</a></td>
           </tr>
           <tr>
-            <td>2001 &ndash; 2011</td>
-            <td>I've worked as a freelance contractor on many other projects.<br>See more in my <a href="portfolio.html" role="link">portfolio</a>.</td>
+            <td class="muted">2001 &ndash; 2011</td>
+            <td>Freelance contractor</td>
+            <td>Various</td>
           </tr>
         </tbody>
       </table>
@@ -95,27 +102,31 @@ class: about
     </div>
   </section>
   <section class="group--one about__facts inverse">
-    <header class="block">
-      <h3 class="title--block"><b>Fun</b> facts</h3>
-    </header>
     <div class="block">
-      <div class="tinyhouse">
-        <p><span class="year">In<br> 2013</span> <span>I designed</span> <span>and built</span> a <a href="http://portlandtinyhouse.com" class="external">tiny house</a> with my<br> partner, Natalie Perrin</p>
-        <svg class="shape-house">
-          <use xlink:href="#shape-house"/>
-        </svg>
-        <svg class="shape-home-roof">
-          <use xlink:href="#shape-home-roof"/>
-        </svg>
-        <svg class="shape-home-walls">
-          <use xlink:href="#shape-home-walls"/>
-        </svg>
-      </div>
-      <div class="bridgecity">
-        <svg class="shape-bridge">
-          <use xlink:href="#shape-bridge"/>
-        </svg>
-        <span>I paddle <b>outrigger canoes</b> competitively with <a href="http://www.bridgecitypaddling.org/" class="external">Bridge city paddling club</a></span>
+      <h3 class="title--block"><b>Fun</b> facts</h3>
+      <div class="flex--column flex--centered">
+        <div class="tinyhouse row--two">
+          <div class="group--one">
+            <p><span class="year">In<br> 2013</span> <span>I designed</span> <span>and built</span> a <a href="http://portlandtinyhouse.com" class="external">tiny house</a> with my<br> partner, Natalie Perrin</p>
+          </div>
+          <div class="group--one tinyhouse--graphic">
+            <svg class="shape-house">
+              <use xlink:href="#shape-house"/>
+            </svg>
+            <svg class="shape-home-roof">
+              <use xlink:href="#shape-home-roof"/>
+            </svg>
+            <svg class="shape-home-walls">
+              <use xlink:href="#shape-home-walls"/>
+            </svg>
+          </div>
+        </div>
+        <div class="bridgecity">
+          <svg class="shape-bridge">
+            <use xlink:href="#shape-bridge"/>
+          </svg>
+          <p>I paddle <b>outrigger canoes</b> competitively with <a href="http://www.bridgecitypaddling.org/" class="external">Bridge city paddling club</a></p>
+        </div>
       </div>
     </div>
   </section>
@@ -123,7 +134,7 @@ class: about
 <div class="flex--row row--three">
   <section class="group--one about__favorite inverse kippt">
     <div class="block--bottom">
-      <h3 class="title--section"><b>Favorite</b> sites</h3>
+      <h3 class="title--block"><b>Favorite</b> sites</h3>
       <svg class="shape-star">
         <use xlink:href="#shape-star"/>
       </svg>
@@ -138,7 +149,7 @@ class: about
   </section>
   <section class="group--one about__favorite inverse twitter">
     <div class="block--bottom">
-      <h3 class="title--section"><b>Twitter</b> users</h3>
+      <h3 class="title--block"><b>Twitter</b> users</h3>
       <svg class="shape-twitter">
         <use xlink:href="#shape-twitter"/>
       </svg>
@@ -153,7 +164,7 @@ class: about
   </section>
   <section class="group--one about__favorite inverse github">
     <div class="block--bottom">
-      <h3 class="title--section"><b>Web</b> projects</h3>
+      <h3 class="title--block"><b>Web</b> projects</h3>
       <svg class="shape-github">
         <use xlink:href="#shape-github"/>
       </svg>

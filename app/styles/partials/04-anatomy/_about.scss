@@ -107,9 +107,9 @@
   .shape-star,
   .shape-twitter,
   .shape-github {
-    bottom: 1rem;
+    bottom: 0;
     position: absolute;
-    right: 1rem;
+    right: 1.5rem;
     width: 20%;
   }
 
@@ -128,7 +128,7 @@
 
 .tinyhouse {
   border-bottom: 1px solid palette(grey, darker);
-  padding: 3rem 0 2rem;
+  padding-bottom: 1.5rem;
   position: relative;
 
   p {
@@ -149,13 +149,22 @@
     line-height: 1.2;
   }
 
+  &--graphic {
+    height: 200px;
+    min-width: 160px;
+    position: relative;
+  }
+
   // Big house
   .shape-home-roof,
   .shape-home-walls {
     fill: palette(grey, darker);
+    height: 160px;
+    left: 50%;
     position: absolute;
-    right: 0;
-    top: 3rem;
+    top: 50%;
+    transform: translate(-31.4%, -50%);
+    transform-style: preserve-3d;
     width: 160px;
   }
 
@@ -165,16 +174,17 @@
 
   // Little house
   .shape-house {
+    @include centerer();
     fill: palette(red);
-    position: absolute;
-    right: 95px;
-    top: 5rem;
+    height: 30px;
+    margin-top: 18px;
     width: 30px;
   }
 }
 
 .bridgecity {
-  padding: 200px 10px 20px;
+  padding-bottom: 2rem;
+  padding-top: 11rem;
   position: relative;
   text-align: center;
 
@@ -182,7 +192,7 @@
     @include centerer(absolute, horizontal);
     fill: palette(yellow);
     height: 200px;
-    top: 0;
+    top: -.5rem;
   }
 }
 

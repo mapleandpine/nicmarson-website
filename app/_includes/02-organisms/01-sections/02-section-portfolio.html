@@ -3,14 +3,14 @@
     <!-- <img src="images/portfolio/{{ post.name }}/thumb.{{ post.thumb-ext }}" alt="{{ post.title }} thumbnail"> -->
     <img src="http://fillmurray.com/g/600/600" alt="{{ post.title }} thumbnail">
     <figcaption>
-      <h3 class="title--block">{{ post.title }}</h3>
+      <h3 class="title--header">{{ post.title }}</h3>
       <p>{{ post.excerpt }}</p>
     </figcaption>
   </a>
   <div class="popup--container">
     <input class="popup--input" id="{{ post.name }}-popup" type="checkbox">
     <div class="popup" style="background-color: #{{ post.color-dark }}">
-      <h2 class="title--block">{{ post.date | date: "%Y" }} <b>{{ post.title }}</b><br><small>{% if post.role %}{{ post.role }}{% else %}Contractor{% endif %}</small></h2>
+      <h2 class="title--header">{{ post.date | date: "%Y" }} <b>{{ post.title }}</b><br><small>{% if post.role %}{{ post.role }}{% else %}Contractor{% endif %}</small></h2>
       <span>
         {% if post.solo %}
         <svg class="shape-user svg-inline">
