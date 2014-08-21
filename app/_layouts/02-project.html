@@ -41,15 +41,14 @@ class: portfolio portfolio-detail
 <!-- Load Skills and Additional Screens -->
 {{ content }}
 <!-- Previous and Next Projects -->
-<section class="row--two portfolio__next-previous">
+<section class="row--two next-previous">
 
   {% if page.next_in_category != nil %}
   <div class="group--one">
-    <figure id="{{page.next_in_category.name}}" class="portfolio__item">
-      <a class="portfolio__item__previous" href="{{page.next_in_category.url}}">
-        <!-- <img src="/images/portfolio/{{page.next_in_category.name}}/{{page.next_in_category.name}}-browser.jpg"> -->
-        <img class="img-responsive" src="http://fillmurray.com/g/1200/600" alt="{{ page.next_in_category.title }} thumbnail">
-        <figcaption>
+    <figure id="{{page.next_in_category.name}}">
+      <a class="previous zoom" href="{{page.next_in_category.url}}">
+        <img class="zoom-image img-responsive" src="/images/portfolio/{{page.next_in_category.name}}/{{page.next_in_category.name}}-browser.jpg" alt="{{ page.next_in_category.title }} thumbnail">
+        <figcaption class="center">
           <b class="h4">Previous project</b>
           <span class="title--header">
             <svg class="shape-arrow-left svg-inline">
@@ -65,19 +64,16 @@ class: portfolio portfolio-detail
 
   {% if page.previous_in_category != nil %}
   <div class="group--one">
-    <section id="{{page.previous_in_category.name}}" class="portfolio__item">
-      <a class="portfolio__item__next" class="waves-effect waves-float" href="{{page.previous_in_category.url}}">
-        <div class="portfolio__image">
-          <!-- <img src="/images/portfolio/{{page.previous_in_category.name}}/{{page.previous_in_category.name}}-browser.jpg"> -->
-          <img class="img-responsive" src="http://fillmurray.com/g/1200/600" alt="{{ page.previous_in_category.title }} thumbnail">
-          <div class="center">
-            <b class="h4">Next project</b>
-            <span class="portfolio__name">
-              <i>{{ page.previous_in_category.title }}</i>
-              <svg class="shape-arrow-right svg-inline"><use xlink:href="#shape-arrow-right"/></svg>
-            </span>
-          </div>
-        </div>
+    <section id="{{page.previous_in_category.name}}" class="item">
+      <a class="next" class="zoom" href="{{page.previous_in_category.url}}">
+        <img src="/images/portfolio/{{page.previous_in_category.name}}/{{page.previous_in_category.name}}-browser.jpg" alt="{{ page.previous_in_category.title }} thumbnail">
+        <figcaption>
+          <b class="h4">Next project</b>
+          <span class="title--header">
+            <i>{{ page.previous_in_category.title }}</i>
+            <svg class="shape-arrow-right svg-inline"><use xlink:href="#shape-arrow-right"/></svg>
+          </span>
+        </figcaption>
       </a>
     </section>
   </div>

@@ -1,10 +1,9 @@
-<figure id="{{ post.name }}" class="portfolio__item portfolio__zoom">
-  <a href="{{ post.url }}">
-    <!-- <img src="images/portfolio/{{ post.name }}/thumb.{{ post.thumb-ext }}" alt="{{ post.title }} thumbnail"> -->
-    <img class="img-responsive" src="http://fillmurray.com/g/1200/1200" alt="{{ post.title }} thumbnail">
-    <figcaption>
-      <h3 class="title--header center">{{ post.title }}</h3>
-      <p>{{ post.excerpt }}</p>
+<figure id="{{ post.name }}">
+  <a href="{{ post.url }}" class="zoom">
+    <img class="zoom-image" src="images/portfolio/{{ post.name }}/thumb.jpg" alt="{{ post.title }} thumbnail">
+    <figcaption class="inverse zoom-container">
+      <h3 class="zoom-out title--header center">{{ post.title }}</h3>
+      <p class="zoom-in excerpt">{{ post.excerpt }}</p>
     </figcaption>
   </a>
 </figure>

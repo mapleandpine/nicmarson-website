@@ -1,0 +1,81 @@
+//////////////////////////////////////////////////
+// Zoom effect
+//////////////////////////////////////////////////
+
+.zoom {
+  display: block;
+  height: 0;
+  padding-bottom: 100%;
+  width: 100%;
+}
+
+.zoom-container {
+  backface-visibility: hidden;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+// prepare transitions
+.zoom-out,
+.zoom-in,
+.zoom-in::before,
+.zoom-image {
+  @extend %transition-fast;
+  will-change: opacity, transform;
+}
+
+.zoom-out {
+  opacity: 1;
+}
+
+.zoom-in {
+  font-size: 18px;
+  height: 100%;
+  opacity: 0;
+  padding: 2.5rem;
+  position: relative;
+  transform: scale(1.5);
+  width: 100%;
+
+  &::before {
+    border: 1px solid $white;
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+    opacity: 0;
+    transform: scale(1.1);
+  }
+}
+
+.zoom-image {
+  display: block;
+  min-height: 100%;
+  opacity: .65;
+  transform: scale(1.12);
+}
+
+// Hover effects
+.zoom:hover {
+
+  .zoom-out {
+    opacity: 0;
+  }
+
+  .zoom-in,
+  .zoom-in::before {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .zoom-image {
+    opacity: .25;
+    transform: scale(1);
+  }
+}

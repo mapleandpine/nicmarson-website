@@ -82,10 +82,11 @@ h6, .h6 { font-size: $font-size-h6; }
 
   &--header {
     @extend %text-block;
+    padding: 1em;
+    text-transform: uppercase;
 
     header & {
       color: $white;
-      margin-bottom: 0;
     }
 
     small {
@@ -93,6 +94,11 @@ h6, .h6 { font-size: $font-size-h6; }
       font-size: .75rem;
       font-weight: normal;
     }
+  }
+
+  &--meta {
+    @extend %text-block;
+    margin-bottom: 1em;
   }
 
   &--inline-block {

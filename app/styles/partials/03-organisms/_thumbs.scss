@@ -1,0 +1,26 @@
+//////////////////////////////////////////////////
+// portfolio page thumbnails
+//////////////////////////////////////////////////
+.thumbs {
+  padding: 2rem;
+
+  .thumb {
+    animation-duration: .3s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-name: fadeInUp;
+    opacity: 0;
+    padding: .5rem;
+    transform: translate3d(0, 100%, 0);
+    width: 100%;
+
+    $incremental-delay: .25s;
+
+    // Loop through the items and add some delay
+    @for $i from 1 through 8 {
+      &:nth-child(#{$i}n+#{$i}) {
+       animation-delay: $incremental-delay * $i;
+      }
+    }
+  }
+}

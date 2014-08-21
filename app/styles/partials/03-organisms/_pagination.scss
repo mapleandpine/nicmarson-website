@@ -1,0 +1,18 @@
+//////////////////////////////////////
+// navigation links on detail page
+//////////////////////////////////////
+.next-previous {
+  background-color: palette(grey, darkest);
+
+  svg {
+    fill: $white;
+  }
+
+  .title--header {
+    max-width: 100%;
+  }
+
+  .item a {
+    padding-bottom: 50%;
+  }
+}

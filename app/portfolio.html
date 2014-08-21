@@ -5,11 +5,8 @@ slug: portfolio
 class: portfolio portfolio-list
 ---
 
-<header>
-  <h1 class="title--header">A few projects I've worked on</h1>
-</header>
-<div class="flex--row portfolio__thumbs">
+<div class="row--three thumbs">
   {% for post in site.categories['portfolio'] %}
-    {% include 02-organisms/01-sections/02-section-portfolio.html %}
+    <div class="group--one thumb">{% include 02-organisms/01-sections/02-section-portfolio.html %}</div>
   {% endfor %}
 </div>

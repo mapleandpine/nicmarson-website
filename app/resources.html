@@ -5,7 +5,7 @@ slug: resources
 class: resources
 ---
 
-<article class="row--three">
+<article class="row--three thumbs">
   <div class="group--two">
     <header class="block">
       <h1 class="title">Resources</h1>
@@ -19,17 +19,21 @@ class: resources
       <div class="row--three">
         {% for post in site.categories['blog'] %}
         <div class="group--one">
-          <a href="{{ post.url }}" class="resource__item">
-            <img src="http://cdn.31three.com/assets/craft-img/inspiration/_thumb/YAB_SF_Painting.jpg" width="250" height="333" alt="YAB SF Painting">
-            <div class="resource__item__meta">
-              <h3 class="resource__item__title">{{ post.title }}</h3>
-              <div class="resource__item__details">{{ post.tagline }}</div>
-            </div>
-            <div class="resource__item__desc">
-              Beautiful painting by Andy Luce
-              <span class="resource__item__desc--author">- JBC</span>
-            </div>
-          </a>
+          <figure class="item">
+            <a href="{{ post.url }}">
+              <img src="http://fillmurray.com/200/300">
+              <figcaption>
+                <div class="meta">
+                  <h3 class="title--meta">{{ post.title }}</h3>
+                  <div class="details">{{ post.tagline }}</div>
+                </div>
+                <div class="desc">
+                  Beautiful painting by Andy Luce
+                  <span class="item__desc--author">- JBC</span>
+                </div>
+              </figcaption>
+            </a>
+          </figure>
         </div>
         {% endfor %}
       </div>
@@ -43,49 +47,49 @@ class: resources
       <div class="row--three">
 
         <div class="group--two">
-          <a href="http://31three.com/notebook/articles/viewing_documents_at_100_in_indesign_cs6" class="resource__item">
+          <a href="http://31three.com/notebook/articles/viewing_documents_at_100_in_indesign_cs6" class="item">
             <img src="http://cdn.31three.com/assets/craft-img/articles/InDesign100PercentScript.png" width="680" height="324" alt="InDesign 100% Script">
-            <div class="resource__item__meta resource__item__meta--entry">
-              <h3 class="resource__item__title resource__item__title--entry">Viewing documents at 100% in InDesign CS6</h3>
-              <p class="resource__item__excerpt">
+            <div class="item__meta item__meta--entry">
+              <h3 class="item__title item__title--entry">Viewing documents at 100% in InDesign CS6</h3>
+              <p class="item__excerpt">
 
                 When InDesign CS6 came out earlier this year, I was excited to try out all of the new features aimed at resizing and reflowing documents. My excitement was quickly tempered by the way that the InDesign team chose to...
 
-                <span class="resource__item__more">Continue Reading</span>
+                <span class="item__more">Continue Reading</span>
               </p>
             </div>
           </a>
         </div>
 
         <div class="group--one">
-          <a href="http://www.fromupnorth.com/best-graphic-design-of-2013/" class="resource__item">
+          <a href="http://www.fromupnorth.com/best-graphic-design-of-2013/" class="item">
             <img src="http://cdn.31three.com/assets/craft-img/articles/img/notebook/_thumb/a8cf3cd438999d0b96438006db602f18.jpg" width="250" height="354" alt="a8cf3cd438999d0b96438006db602f18">
 
-            <div class="resource__item__meta">
-              <h3 class="resource__item__title">Peter and the Wolf Poster</h3>
-              <div class="resource__item__details">From Up North</div>
+            <div class="item__meta">
+              <h3 class="item__title">Peter and the Wolf Poster</h3>
+              <div class="item__details">From Up North</div>
             </div>
 
-            <div class="resource__item__desc">
+            <div class="item__desc">
               Phoebe Morris Illustration
-              <span class="resource__item__desc--author">- JBC</span>
+              <span class="item__desc--author">- JBC</span>
             </div>
 
           </a>
         </div>
 
         <div class="group--one">
-          <a href="http://www.pinterest.com/pin/201606520793786372/" class="resource__item">
+          <a href="http://www.pinterest.com/pin/201606520793786372/" class="item">
             <img src="http://cdn.31three.com/assets/craft-img/articles/img/notebook/_thumb/8c3646d850f8192f2bf28c9e72ba52cc.jpg" width="250" height="367" alt="8c3646d850f8192f2bf28c9e72ba52cc">
 
-            <div class="resource__item__meta">
-              <h3 class="resource__item__title">The worst mistake is to not make any</h3>
-              <div class="resource__item__details">relyonwords.com</div>
+            <div class="item__meta">
+              <h3 class="item__title">The worst mistake is to not make any</h3>
+              <div class="item__details">relyonwords.com</div>
             </div>
 
-            <div class="resource__item__desc">
+            <div class="item__desc">
               Nice mix of type to reinforce the message.
-              <span class="resource__item__desc--author">- JBC</span>
+              <span class="item__desc--author">- JBC</span>
             </div>
 
           </a>
@@ -96,23 +100,23 @@ class: resources
   </div>
 
   <div class="group--one sidebar">
-    <nav class="resource__categories">
-      <ul class="resource__categories__list">
-        <li class="resource__categories__item"><a href="/notebook/">View All</a>
+    <nav class="categories">
+      <ul class="categories__list">
+        <li class="categories__item"><a href="/notebook/">View All</a>
         </li>
-        <li class="resource__categories__item "><a href="/notebook/articles/">Articles</a>
+        <li class="categories__item "><a href="/notebook/articles/">Articles</a>
         </li>
-        <li class="resource__categories__item "><a href="/notebook/inspiration/">Inspiration</a>
+        <li class="categories__item "><a href="/notebook/inspiration/">Inspiration</a>
         </li>
-        <li class="resource__categories__item "><a href="/notebook/books/">Books</a>
+        <li class="categories__item "><a href="/notebook/books/">Books</a>
         </li>
-        <li class="resource__categories__item "><a href="/notebook/resources/">Resources</a>
+        <li class="categories__item "><a href="/notebook/resources/">Resources</a>
         </li>
-        <li class="resource__categories__item "><a href="/notebook/quotes/">Quotes</a>
+        <li class="categories__item "><a href="/notebook/quotes/">Quotes</a>
         </li>
       </ul>
 
-      <div class="resource__categories__select">
+      <div class="categories__select">
         <div class="field__label is-visually-hidden">
           <label for="categories">Categories</label>
         </div>

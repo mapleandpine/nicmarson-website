@@ -41,14 +41,11 @@
 .portfolio-list {
 
   main {
-    background-color: palette(grey, darker);
+    background-color: palette(grey, light);
+    box-shadow: 0 1px 3px rgba(0,0,0,.33) inset;
 
     > div {
       width: 95%;
-
-      @include mq($from: triple) {
-        width: 90%;
-      }
     }
 
     @include mq($from: triple) {
@@ -59,193 +56,6 @@
 
 /*-----  End of Page specific colors  ------*/
 
-//////////////////////////////////////////////////
-// individual item listing with image and details
-//////////////////////////////////////////////////
-.portfolio__item { // figure
-  font-size: 14px;
-  overflow: hidden;
-  position: relative;
-
-  @include mq($from: double) {
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-  }
-
-  // prepare transitions
-  figcaption::before,
-  img,
-  p,
-  .title--header {
-    @extend %transition-fast;
-    will-change: opacity, transform;
-  }
-
-  a {
-    display: block;
-    height: 0;
-    padding-bottom: 100%;
-    width: 100%;
-
-    @include mq($from: double) {
-      padding-bottom: 125%;
-    }
-  }
-
-  img {
-    display: block;
-    min-height: 100%;
-    opacity: .8;
-  }
-
-  figcaption {
-    @include centerer();
-    color: $white;
-    padding: 2rem;
-    width: 100%;
-
-    @include mq($from: triple) {
-      padding: 3rem;
-    }
-  }
-
-  p {
-    font-family: $font-family-sans-serif;
-  }
-
-  .title--header {
-    @extend %text-white-border;
-    opacity: .9;
-  }
-}
-
-.portfolio__item:hover {
-
-  img {
-    opacity: .35;
-  }
-}
-
-//////////////////////////////////////////////////
-// Popup effect
-//////////////////////////////////////////////////
-.portfolio__popup {
-
-  .popup--container {
-    color: $white;
-    position: static;
-
-    .popup {
-      height: 100%;
-      padding-bottom: 3rem;
-    }
-
-    svg {
-      fill: $white;
-    }
-  }
-
-  .popup--toggle {
-    bottom: 0;
-    left: 0;
-    position: absolute;
-  }
-}
-
-//////////////////////////////////////////////////
-// Zoom effect
-//////////////////////////////////////////////////
-.portfolio__zoom {
-
-  figcaption {
-    backface-visibility: hidden;
-
-    &::before,
-    &::after {
-      pointer-events: none;
-    }
-
-    &::before {
-      border: 1px solid $white;
-      content: '';
-      position: absolute;
-      top: 30px;
-      right: 30px;
-      bottom: 30px;
-      left: 30px;
-      opacity: 0;
-      transform: scale(1.1);
-    }
-  }
-
-  img {
-    position: relative;
-    transform: scale(1.12);
-  }
-
-  p {
-    margin: 0 auto;
-    opacity: 0;
-    padding: 2em;
-    position: relative;
-    transform: scale(1.5);
-  }
-}
-// Hover effects
-.portfolio__zoom:hover {
-
-  img {
-    transform: scale(1);
-  }
-
-  figcaption::before,
-  p {
-    opacity: 1;
-    transform: scale(1);
-  }
-
-  .title--header {
-    opacity: 0;
-  }
-}
-
-//////////////////////////////////////////////////
-// portfolio page thumbnails
-//////////////////////////////////////////////////
-.portfolio__thumbs {
-
-  .portfolio__item {
-    animation-duration: .3s;
-    animation-fill-mode: both;
-    animation-iteration-count: 1;
-    animation-name: fadeInUp;
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-    width: 100%;
-
-    $incremental-delay: .25s;
-
-    // Loop through the items and add some delay
-    @for $i from 1 through 8 {
-      &:nth-child(#{$i}n+#{$i}) {
-       animation-delay: $incremental-delay * $i;
-      }
-    }
-
-    @include mq($from: double) {
-      width: 50%;
-    }
-
-    @include mq($from: triple) {
-      width: 33.3333%;
-    }
-
-    @include mq($from: quintuple) {
-      width: 25%;
-    }
-  }
-}
 
 //////////////////////////////////////////////////
 // additional screen shots on detail page
@@ -259,7 +69,7 @@
   position: relative;
   white-space: nowrap;
 
-  .portfolio__item {
+  .item {
     cursor: pointer;
     display: inline-block;
     height: 200px;
@@ -267,20 +77,6 @@
   }
 }
 
-//////////////////////////////////////
-// home page
-//////////////////////////////////////
-.home .portfolio__item > a {
-  padding-bottom: 100%;
-
-  @include mq($from: double) {
-    padding-bottom: 75%;
-  }
-
-  @include mq($from: triple) {
-    padding-bottom: 50%;
-  }
-}
 
 //////////////////////////////////////
 // progress bar graphs on detail page
@@ -288,23 +84,4 @@
 .portfolio__skills {
   background-color: palette(grey, lightest);
   margin-top: -6px;
-}
-
-//////////////////////////////////////
-// navigation links on detail page
-//////////////////////////////////////
-.portfolio__next-previous {
-  background-color: palette(grey, darkest);
-
-  svg {
-    fill: $white;
-  }
-
-  .title--header {
-    max-width: 100%;
-  }
-
-  .portfolio__item a {
-    padding-bottom: 50%;
-  }
 }

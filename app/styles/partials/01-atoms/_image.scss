@@ -35,6 +35,11 @@ figure {
   display: inline-block;
   fill: $body-color;
   height: .9em;
+  margin-right: .5em;
   vertical-align: calc(50% - .85em);
   width: .9em;
+}
+
+.inverse svg {
+  fill: $white;
 }

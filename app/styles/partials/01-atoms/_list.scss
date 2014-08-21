@@ -81,3 +81,20 @@ dd {
 dt {
   font-weight: bold;
 }
+
+// Horizontal description lists
+//
+// Defaults to being stacked without any of the below styles applied, until the
+// grid breakpoint is reached (default of ~768px).
+.dl-horizontal {
+  dt {
+    @extend %text-overflow;
+    clear: left;
+    float: left;
+    width: 5em;
+  }
+  dd {
+    @include clearfix(); // Clear the floated `dt` if an empty `dd` is present
+    margin-left: 5em;
+  }
+}

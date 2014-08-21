@@ -1,43 +1,30 @@
-<figure id="{{ post.name }}" class="portfolio__item portfolio__popup popup--inverse">
+<figure id="{{ post.name }}" class="item">
   <a href="{{ post.url }}">
-    <!-- <img src="images/portfolio/{{ post.name }}/thumb.{{ post.thumb-ext }}" alt="{{ post.title }} thumbnail"> -->
-    <img src="http://fillmurray.com/g/600/600" alt="{{ post.title }} thumbnail">
+    <img class="img-responsive" src="images/portfolio/{{ post.name }}/thumb.jpg" alt="{{ post.title }} thumbnail">
     <figcaption>
-      <h3 class="title--header">{{ post.title }}</h3>
-      <p>{{ post.excerpt }}</p>
+      <h2 class="title--meta">{{ post.date | date: "%Y" }} <b>{{ post.title }}</b></h2>
+      <div class="item__meta">
+        <dl class="dl-horizontal">
+          <dt><svg class="shape-camera svg-inline">
+              <use xlink:href="#shape-camera"/>
+            </svg> Role</dt>
+          <dd>{% if post.role %}{{ post.role }}{% else %}Contractor{% endif %}</dd>
+          <dt>{% if post.solo %}
+            <svg class="shape-user svg-inline">
+              <use xlink:href="#shape-user"/>
+            </svg>
+            {% else %}
+            <svg class="shape-users svg-inline">
+              <use xlink:href="#shape-users"/>
+            </svg>
+            {% endif %} Team</dt>
+          <dd>{% if post.solo %}Solo project{% else %}Team project{% endif %}</dd>
+          <dt><svg class="shape-tags svg-inline">
+            <use xlink:href="#shape-tags"/>
+          </svg> Tags</dt>
+          <dd>{{ post.tags | array_to_sentence_string }}</dd>
+        </dl>
+      </div>
     </figcaption>
   </a>
-  <div class="popup--container">
-    <input class="popup--input" id="{{ post.name }}-popup" type="checkbox">
-    <div class="popup" style="background-color: #{{ post.color-dark }}">
-      <h2 class="title--header">{{ post.date | date: "%Y" }} <b>{{ post.title }}</b><br><small>{% if post.role %}{{ post.role }}{% else %}Contractor{% endif %}</small></h2>
-      <span>
-        {% if post.solo %}
-        <svg class="shape-user svg-inline">
-          <use xlink:href="#shape-user"/>
-        </svg>
-        <span>Solo project</span>
-        {% else %}
-        <svg class="shape-users svg-inline">
-          <use xlink:href="#shape-users"/>
-        </svg>
-        <span>Team project</span>
-        {% endif %}
-      </span>
-      <span class="tags">
-        <svg class="shape-tags svg-inline">
-          <use xlink:href="#shape-tags"/>
-        </svg>
-        {{ post.tags | array_to_sentence_string }}
-      </span>
-    </div>
-    <label class="btn--clear popup--toggle" for="{{ post.name }}-popup">
-      <span class="popup--indicator">
-        <svg class="shape-plus svg-inline">
-          <use xlink:href="#shape-plus"/>
-        </svg>
-      </span>
-      <span class="title--inline-block">Details</span>
-    </label>
-  </div>
 </figure>

@@ -48,14 +48,22 @@
   }
 
   .sidebar {
-    background-color: $home-alt-color;
+    background-color: palette(grey, darkest);
 
     .portfolio-item {
       width: 95%;
+    }
+  }
 
-      @include mq($from: triple) {
-        width: 90%;
-      }
+  .item > a {
+    padding-bottom: 100%;
+
+    @include mq($from: double) {
+      padding-bottom: 75%;
+    }
+
+    @include mq($from: triple) {
+      padding-bottom: 50%;
     }
   }
 }
