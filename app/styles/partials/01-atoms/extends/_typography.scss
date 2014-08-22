@@ -22,18 +22,6 @@
   text-transform: lowercase;
 }
 
-%text-grey-background {
-  background-color: palette(grey, dark);
-  border: 2px solid palette(grey, dark);
-  border-radius: 2px;
-  color: #FFF;
-}
-
-%text-grey-background-hover {
-  background-color: palette(grey, darker);
-  border-color: palette(grey, darker);
-}
-
 %text-white-border {
   border: 1px solid $white;
   border-radius: 2px;

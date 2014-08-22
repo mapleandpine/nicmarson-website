@@ -4,9 +4,24 @@
 
 .zoom {
   display: block;
-  height: 0;
-  padding-bottom: 100%;
-  width: 100%;
+  overflow: hidden;
+  position: relative;
+
+  > a {
+    color: $white;
+    display: block;
+    height: 0;
+    padding-bottom: 100%;
+    width: 100%;
+
+    @include mq($from: double) {
+      padding-bottom: 75%;
+    }
+
+    @include mq($from: triple) {
+      padding-bottom: 50%;
+    }
+  }
 }
 
 .zoom-container {
@@ -32,13 +47,11 @@
 }
 
 .zoom-in {
-  font-size: 18px;
   height: 100%;
   opacity: 0;
   padding: 2.5rem;
   position: relative;
   transform: scale(1.5);
-  width: 100%;
 
   &::before {
     border: 1px solid $white;
@@ -57,8 +70,20 @@
 .zoom-image {
   display: block;
   min-height: 100%;
-  opacity: .65;
+  opacity: .85;
   transform: scale(1.12);
+  width: 100%;
+}
+
+.zoom-title {
+  @extend %text-block;
+  @extend %text-white-border;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+.zoom-excerpt {
+  font-size: 1.5rem;
 }
 
 // Hover effects

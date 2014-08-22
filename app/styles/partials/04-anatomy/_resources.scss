@@ -1,0 +1,39 @@
+.resources,
+.resources ::selection,
+.resources .ink {
+  background-color: $resources-bg-color;
+}
+
+.resources {
+  background-color: $resources-alt-color;
+  background-image: radial-gradient(farthest-corner at 0 0, $resources-bg-color 0%, transparent 100%);
+  background-size: 100% 100%;
+
+  .connect .phone small,
+  .connect .email small {
+    background-color: $resources-bg-color;
+
+    &::after {
+      border-top-color: $resources-bg-color;
+    }
+  }
+
+  .connect .phone:hover,
+  .connect .email:hover {
+    background-color: $resources-bg-color;
+  }
+
+  .nav a:focus,
+  .nav a:hover,
+  .nav a.active {
+    color: $resources-nav-hover;
+
+    svg {
+      fill: $resources-nav-hover;
+    }
+  }
+
+  .sidebar {
+    background-color: $resources-alt-color;
+  }
+}

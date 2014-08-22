@@ -54,16 +54,4 @@
       width: 95%;
     }
   }
-
-  .item > a {
-    padding-bottom: 100%;
-
-    @include mq($from: double) {
-      padding-bottom: 75%;
-    }
-
-    @include mq($from: triple) {
-      padding-bottom: 50%;
-    }
-  }
 }

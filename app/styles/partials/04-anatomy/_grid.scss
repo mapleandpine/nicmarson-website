@@ -83,10 +83,19 @@
   padding-left: 2rem;
   padding-right: 2rem;
 
-  &--default {
-    @extend .block;
-    padding-bottom: 1em;
-    padding-top: 1em;
+  &--small {
+    overflow: hidden;
+    padding: .75rem
+  }
+
+  &--medium {
+    overflow: hidden;
+    padding: 1.5rem;
+  }
+
+  &--large {
+    overflow: hidden;
+    padding: 2rem;
   }
 
   &--bottom {

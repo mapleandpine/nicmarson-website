@@ -45,17 +45,19 @@ class: portfolio portfolio-detail
 
   {% if page.next_in_category != nil %}
   <div class="group--one">
-    <figure id="{{page.next_in_category.name}}">
-      <a class="previous zoom" href="{{page.next_in_category.url}}">
+    <figure id="{{page.next_in_category.name}}" class="zoom">
+      <a class="previous" href="{{page.next_in_category.url}}">
         <img class="zoom-image img-responsive" src="/images/portfolio/{{page.next_in_category.name}}/{{page.next_in_category.name}}-browser.jpg" alt="{{ page.next_in_category.title }} thumbnail">
-        <figcaption class="center">
-          <b class="h4">Previous project</b>
-          <span class="title--header">
-            <svg class="shape-arrow-left svg-inline">
-              <use xlink:href="#shape-arrow-left"/>
-            </svg>
-            <i>{{ page.next_in_category.title }}</i>
-          </span>
+        <figcaption class="zoom-container">
+          <div class="center">
+            <b class="h4">Previous project</b>
+            <span class="zoom-title">
+              <svg class="shape-arrow-left svg-inline">
+                <use xlink:href="#shape-arrow-left"/>
+              </svg>
+              <i>{{ page.next_in_category.title }}</i>
+            </span>
+          </div>
         </figcaption>
       </a>
     </figure>
@@ -64,10 +66,10 @@ class: portfolio portfolio-detail
 
   {% if page.previous_in_category != nil %}
   <div class="group--one">
-    <section id="{{page.previous_in_category.name}}" class="item">
-      <a class="next" class="zoom" href="{{page.previous_in_category.url}}">
+    <section id="{{page.previous_in_category.name}}" class="zoom">
+      <a class="next" href="{{page.previous_in_category.url}}">
         <img src="/images/portfolio/{{page.previous_in_category.name}}/{{page.previous_in_category.name}}-browser.jpg" alt="{{ page.previous_in_category.title }} thumbnail">
-        <figcaption>
+        <figcaption class="zoom-container">
           <b class="h4">Next project</b>
           <span class="title--header">
             <i>{{ page.previous_in_category.title }}</i>

@@ -1,9 +1,9 @@
-<figure id="{{ post.name }}">
-  <a href="{{ post.url }}" class="zoom">
+<figure id="{{ post.name }}" class="zoom">
+  <a href="{{ post.url }}">
     <img class="zoom-image" src="images/portfolio/{{ post.name }}/thumb.jpg" alt="{{ post.title }} thumbnail">
-    <figcaption class="inverse zoom-container">
-      <h3 class="zoom-out title--header center">{{ post.title }}</h3>
-      <p class="zoom-in excerpt">{{ post.excerpt }}</p>
+    <figcaption class="zoom-container">
+      <h3 class="zoom-out zoom-title center">{{ post.title }}</h3>
+      <p class="zoom-in zoom-excerpt">{{ post.excerpt }}</p>
     </figcaption>
   </a>
 </figure>

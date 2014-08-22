@@ -3,6 +3,7 @@
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
+  display: block;
   font-kerning: normal;
   font-weight: $heading-weight;
   @extend %typecsset-vertical-rhythm;
@@ -55,7 +56,14 @@ h6, .h6 { font-size: $font-size-h6; }
 
   &--section {
     border-bottom: 1px solid;
+    font-family: $font-family-condensed;
+    font-weight: 400;
     padding-top: 1em;
+
+    span {
+      @extend %smallcaps;
+      color: $muted-color;
+    }
   }
 
   &--block {
@@ -94,11 +102,6 @@ h6, .h6 { font-size: $font-size-h6; }
       font-size: .75rem;
       font-weight: normal;
     }
-  }
-
-  &--meta {
-    @extend %text-block;
-    margin-bottom: 1em;
   }
 
   &--inline-block {
