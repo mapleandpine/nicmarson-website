@@ -1,26 +1,30 @@
 //////////////////////////////////////////////////
 // portfolio page thumbnails
 //////////////////////////////////////////////////
-.thumbs {
-  padding: 2rem;
+.thumbs .thumb {
+  animation-duration: .3s;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+  animation-name: fadeInUp;
+  opacity: 0;
+  padding-bottom: 1rem;
+  transform: translate3d(0, 100%, 0);
+  width: 100%;
 
-  .thumb {
-    animation-duration: .3s;
-    animation-fill-mode: both;
-    animation-iteration-count: 1;
-    animation-name: fadeInUp;
-    opacity: 0;
-    padding: .5rem;
-    transform: translate3d(0, 100%, 0);
-    width: 100%;
+  @include mq($from: triple) {
+    padding-right: 1rem;
+  }
 
-    $incremental-delay: .25s;
+  $incremental-delay: .25s;
 
-    // Loop through the items and add some delay
-    @for $i from 1 through 8 {
-      &:nth-child(#{$i}n+#{$i}) {
-       animation-delay: $incremental-delay * $i;
-      }
+  // Loop through the items and add some delay
+  @for $i from 1 through 8 {
+    &:nth-child(#{$i}n+#{$i}) {
+     animation-delay: $incremental-delay * $i;
     }
   }
+}
+
+.thumbs .group--one:nth-child(3n+3) {
+  padding-right: 0;
 }

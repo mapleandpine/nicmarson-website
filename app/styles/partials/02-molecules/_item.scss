@@ -3,88 +3,93 @@
 //////////////////////////////////////////////////
 .item {
   background-color: $white;
-  border-radius: 3px;
+  border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0,0,0,.33);
   display: block;
   font-family: $font-family-condensed;
   font-weight: 400;
+  margin-bottom: 1.5rem;
   overflow: hidden;
   position: relative;
+  @extend %transition-fast;
 
   @include mq($from: double) {
     flex-grow: 0;
     flex-shrink: 1;
     flex-basis: auto;
   }
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-radius: 0;
+    box-shadow: 0 0 3px rgba(0,0,0,.15)
+  }
+
+  &:hover .item-more,
+  &:focus .item-more,
+  &:active .item-more {
+    color: #c6a87b
+  }
+
+  a {
+    color: palette(orange);
+    display: block;
+  }
+
+  img {
+    @include img-responsive();
+  }
+
+  .aspect-ratio {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 100%;
+    width: 100%;
+  }
 }
 
-.item-category {
-  float:left;
-  margin:1rem .5rem .625rem .625rem;
-  width:1.875rem
-}
+.item-meta {
+  color: palette(grey, darker);
 
-.item-meta--entry {
-  padding:1rem
-}
+  svg {
+    fill: palette(grey);
+  }
 
-.item-desc {
-  color: #2D3138;
-  overflow:hidden;
-  border-top:1px solid rgba(0,0,0,0.0902);
-  padding:.75rem;
-}
-
-.item-desc--author {
-  color:#838d94
+  .block--small:nth-child(2n+2) {
+    border-top: 1px solid rgba(0,0,0,0.09);
+  }
 }
 
 .item-title {
-  color: #2D3138;
-  font-size: 1em;
-  line-height:1.5;
-  margin-bottom: 0;
+  color: palette(grey, darkest);
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: .0125em;
+  margin-bottom: .5em;
+
+  &--entry {
+    font-size: 1.125em;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
 }
 
-.item-title--entry {
-  font-size:1.125em;
-  line-height:1.5;
-  margin-bottom: 1rem;
-}
+.item-desc {
+  margin-bottom: .5em;
 
-.item-details {
-  color: #838D94;
-  line-height:1.1428571429
+  &--author {
+    color: palette(grey, dark);
+  }
 }
 
 .item-excerpt {
-  color: #2D3138;
-  line-height:1.7142857143;
-  margin-bottom:0
-}
+  line-height: 1.4;
+  margin-bottom: .5em;
 
-.item blockquote {
-  border:none;
-  margin:0;
-  padding:1rem
-}
-
-.item blockquote p:last-of-type {
-  margin-bottom:1em
-}
-
-.item blockquote cite {
-  margin-bottom:1rem
-}
-
-.item blockquote cite:before {
-  content:none
-}
-
-.item:hover,.item:focus,.item:active {
-  box-shadow:0 0 3px rgba(0,0,0,0.15)
-}
-
-.item:hover .item-more,.item:focus .item-more,.item:active .item-more {
-  color:#c6a87b
+  &--entry {
+    font-size: 18px;
+    font-weight: 300;
+  }
 }

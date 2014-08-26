@@ -42,6 +42,7 @@
 
   main {
     background-color: palette(grey, light);
+    border-radius: 8px 0 0 8px;
     box-shadow: 0 1px 3px rgba(0,0,0,.33) inset;
 
     > div {
@@ -52,30 +53,13 @@
       margin-left: $body-padding;
     }
   }
+
+  .thumbs {
+    padding: 2rem;
+  }
 }
 
 /*-----  End of Page specific colors  ------*/
-
-
-//////////////////////////////////////////////////
-// additional screen shots on detail page
-//////////////////////////////////////////////////
-.portfolio__screens {
-  background-color: palette(grey, lightest);
-  height: 200px;
-  font-size: 0;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  position: relative;
-  white-space: nowrap;
-
-  .item {
-    cursor: pointer;
-    display: inline-block;
-    height: 200px;
-    max-width: 400px;
-  }
-}
 
 
 //////////////////////////////////////

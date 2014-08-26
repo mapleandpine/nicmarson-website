@@ -69,10 +69,14 @@
 }
 
 .about__history {
-  background-color: palette(grey, lightest);
+  background-color: palette(grey, lighter);
 
   header {
-    background-color: palette(blue);
+    background-color: palette(grey, lighter);
+
+    .title--header {
+      color: palette(grey);
+    }
   }
 }
 

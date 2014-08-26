@@ -33,7 +33,22 @@
     }
   }
 
+  .item {
+
+    &:hover,
+    &:focus,
+    &:active {
+      box-shadow: 0 0 3px $resources-alt-color;
+    }
+  }
+
   .sidebar {
     background-color: $resources-alt-color;
+
+    .nav a:focus,
+    .nav a:hover,
+    .nav a.active {
+      color: $resources-alt-color;
+    }
   }
 }

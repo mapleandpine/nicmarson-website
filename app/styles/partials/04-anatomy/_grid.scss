@@ -21,13 +21,13 @@
   }
 }
 
-[class*="row--"] {
+.row {
   display: flex;
   flex-flow: row wrap;
   width: 100%;
 }
 
-[class*="group--"] {
+.group {
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
@@ -36,18 +36,8 @@
 
 .row--two {
 
-  @include mq($from: double) {
-    > .group--one {
-      width: 50%;
-    }
-  }
-
-  .row--two > .group--one {
+  > .group--one {
     @include mq($from: double) {
-      width: 100%;
-    }
-
-    @include mq($from: quadruple) {
       width: 50%;
     }
   }
@@ -55,9 +45,9 @@
 
 .row--three {
 
-  @include mq($from: double) {
-    > .group--one,
-    > .group--two {
+  > .group--one,
+  > .group--two {
+    @include mq($from: double) {
       width: 50%;
     }
   }
@@ -74,6 +64,51 @@
 
     > .group--two {
       width: 66.67%;
+    }
+  }
+}
+
+.row {
+  // styles for rows inside rows
+
+  .row--two > .group--one {
+    @include mq($from: double) {
+      width: 100%;
+    }
+
+    @include mq($from: quadruple) {
+      width: 50%;
+    }
+  }
+
+  .row--three > {
+
+    .group--one {
+      @include mq($from: double) {
+        width: 100%;
+      }
+
+      @include mq($from: triple) {
+        width: 50%;
+      }
+
+      @include mq($from: quadruple) {
+        width: 33.33%;
+      }
+    }
+
+    .group--two {
+      @include mq($from: double) {
+        width: 100%;
+      }
+
+      @include mq($from: triple) {
+        width: 50%;
+      }
+
+      @include mq($from: quadruple) {
+        width: 66.67%;
+      }
     }
   }
 }

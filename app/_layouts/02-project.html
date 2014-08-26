@@ -5,8 +5,8 @@ slug: portfolio
 class: portfolio portfolio-detail
 ---
 
-<section class="row--two">
-  <div class="group--one">
+<section class="row row--two">
+  <div class="group group--one">
     <div class="block--bottom">
       <h1 class="title">{{ page.project }}</h1>
       <p class="byline">
@@ -25,38 +25,34 @@ class: portfolio portfolio-detail
       </div>
     </div>
   </div>
-  <div class="group--one flex--centered">
-    <div class="flex__item--center">
-      <div class="device">
-        <div class="part frame"></div>
-        <div class="part base"></div>
+  <div class="group group--one">
+    <div class="device">
+      <div class="part frame">
         <div class="part screen">
-          <div class="img-fill screen-visible" style="background-image:url('/images/portfolio/{{ page.name }}/{{ page.name }}-browser.jpg')"></div>
-          <div class="img-fill touch-visible" style="background-image:url('/images/portfolio/{{ page.name }}/{{ page.name }}-mobile.jpg')"></div>
+          <img class="screen-visible" src="/images/portfolio/{{ page.name }}/{{ page.name }}-browser.jpg">
+          <img class="img-responsive touch-visible" src="/images/portfolio/{{ page.name }}/{{ page.name }}-mobile.jpg">
         </div>
       </div>
+      <div class="part base"></div>
     </div>
   </div>
-</article>
+</section>
 <!-- Load Skills and Additional Screens -->
 {{ content }}
 <!-- Previous and Next Projects -->
-<section class="row--two next-previous">
+<section class="row row--two next-previous">
 
   {% if page.next_in_category != nil %}
-  <div class="group--one">
+  <div class="group group--one">
     <figure id="{{page.next_in_category.name}}" class="zoom">
       <a class="previous" href="{{page.next_in_category.url}}">
         <img class="zoom-image img-responsive" src="/images/portfolio/{{page.next_in_category.name}}/{{page.next_in_category.name}}-browser.jpg" alt="{{ page.next_in_category.title }} thumbnail">
         <figcaption class="zoom-container">
           <div class="center">
-            <b class="h4">Previous project</b>
-            <span class="zoom-title">
-              <svg class="shape-arrow-left svg-inline">
+            <b class="h4"><svg class="shape-arrow-left svg-inline">
                 <use xlink:href="#shape-arrow-left"/>
-              </svg>
-              <i>{{ page.next_in_category.title }}</i>
-            </span>
+              </svg> Previous project</b>
+            <span class="zoom-title">{{ page.next_in_category.title }}</i></span>
           </div>
         </figcaption>
       </a>
@@ -65,16 +61,13 @@ class: portfolio portfolio-detail
   {% endif %}
 
   {% if page.previous_in_category != nil %}
-  <div class="group--one">
+  <div class="group group--one">
     <section id="{{page.previous_in_category.name}}" class="zoom">
       <a class="next" href="{{page.previous_in_category.url}}">
         <img src="/images/portfolio/{{page.previous_in_category.name}}/{{page.previous_in_category.name}}-browser.jpg" alt="{{ page.previous_in_category.title }} thumbnail">
         <figcaption class="zoom-container">
-          <b class="h4">Next project</b>
-          <span class="title--header">
-            <i>{{ page.previous_in_category.title }}</i>
-            <svg class="shape-arrow-right svg-inline"><use xlink:href="#shape-arrow-right"/></svg>
-          </span>
+          <b class="h4 next-text">Next project <svg class="shape-arrow-right svg-inline"><use xlink:href="#shape-arrow-right"/></svg></b>
+          <span class="title--header">{{ page.previous_in_category.title }}</span>
         </figcaption>
       </a>
     </section>

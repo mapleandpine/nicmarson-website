@@ -39,13 +39,25 @@ h6, .h6 { font-size: $font-size-h6; }
 
 .title {
   color: palette(grey, darkest);
-  font-size: $font-size-h1;
+  font-size: 3rem;
   font-weight: 900;
   line-height: 1.1;
   @extend %top-padding;
 
   @include mq($from: double) {
-    font-size: $font-size-title;
+    font-size: 4rem;
+  }
+
+  @include mq($from: triple) {
+    font-size: 5rem;
+  }
+
+  @include mq($from: quadruple) {
+    font-size: 6rem;
+  }
+
+  @include mq($from: quintuple) {
+    font-size: 7rem;
   }
 
   small {

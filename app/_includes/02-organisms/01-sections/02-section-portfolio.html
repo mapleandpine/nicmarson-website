@@ -1,28 +1,32 @@
 <figure id="{{ post.name }}" class="item">
-  <a href="{{ post.url }}">
-    <img class="item-image" src="images/portfolio/{{ post.name }}/thumb.jpg" alt="{{ post.title }} thumbnail">
-    <figcaption class="item-meta">
-      <h2 class="item-title">{{ post.date | date: "%Y" }} <b>{{ post.title }}</b></h2>
-      <dl class="item-details dl-horizontal">
-        <dt><svg class="shape-camera svg-inline">
-            <use xlink:href="#shape-camera"/>
-          </svg> Role</dt>
-        <dd>{% if post.role %}{{ post.role }}{% else %}Contractor{% endif %}</dd>
-        <dt>{% if post.solo %}
-          <svg class="shape-user svg-inline">
-            <use xlink:href="#shape-user"/>
-          </svg>
-          {% else %}
-          <svg class="shape-users svg-inline">
-            <use xlink:href="#shape-users"/>
-          </svg>
-          {% endif %} Team</dt>
-        <dd>{% if post.solo %}Solo project{% else %}Team project{% endif %}</dd>
-        <dt><svg class="shape-tags svg-inline">
-          <use xlink:href="#shape-tags"/>
-        </svg> Tags</dt>
-        <dd>{{ post.tags | array_to_sentence_string }}</dd>
-      </dl>
-    </figcaption>
+  <a class="aspect-ratio" href="{{ post.url }}">
+    <img class="item-image img-responsive" src="images/portfolio/{{ post.name }}/thumb.jpg" alt="{{ post.title }} thumbnail">
   </a>
+  <figcaption class="item-meta">
+    <div class="block--small">
+      <h2 class="item-title"><a href="{{ post.url }}">{{ post.title }} <span>{{ post.date | date: "%Y" }}</span></a></h2>
+      <div class="item-desc">
+        <svg class="shape-camera svg-inline">
+          <use xlink:href="#shape-camera"/>
+        </svg> {% if post.role %}{{ post.role }}{% else %}Contractor{% endif %}<br>
+        {% if post.solo %}
+        <svg class="shape-user svg-inline">
+          <use xlink:href="#shape-user"/>
+        </svg>
+        {% else %}
+        <svg class="shape-users svg-inline">
+          <use xlink:href="#shape-users"/>
+        </svg>
+        {% endif %} {% if post.solo %}Solo project{% else %}Team project{% endif %}
+      </div>
+    </div>
+    <div class="block--small">
+        <div class="item-excerpt">{{ post.excerpt }}</div>
+        <div class="item-desc muted">
+          <svg class="shape-tags svg-inline">
+            <use xlink:href="#shape-tags"/>
+          </svg> {{ post.tags | array_to_sentence_string }}
+        </div>
+    </div>
+  </figcaption>
 </figure>
