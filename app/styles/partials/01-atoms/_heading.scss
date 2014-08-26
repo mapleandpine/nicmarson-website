@@ -44,20 +44,16 @@ h6, .h6 { font-size: $font-size-h6; }
   line-height: 1.1;
   @extend %top-padding;
 
-  @include mq($from: double) {
+  @include mq($from: triple) {
     font-size: 4rem;
   }
 
-  @include mq($from: triple) {
+  @include mq($from: quadruple) {
     font-size: 5rem;
   }
 
-  @include mq($from: quadruple) {
-    font-size: 6rem;
-  }
-
   @include mq($from: quintuple) {
-    font-size: 7rem;
+    font-size: 6rem;
   }
 
   small {
@@ -67,6 +63,7 @@ h6, .h6 { font-size: $font-size-h6; }
   }
 
   &--section {
+    // title with full width underline
     border-bottom: 1px solid;
     font-family: $font-family-condensed;
     font-weight: 400;
@@ -79,6 +76,7 @@ h6, .h6 { font-size: $font-size-h6; }
   }
 
   &--block {
+    // title with one-third width stubby underline
     margin-bottom: 1em;
     padding-top: 2em;
 

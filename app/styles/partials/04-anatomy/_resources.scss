@@ -39,11 +39,23 @@
     &:focus,
     &:active {
       box-shadow: 0 0 3px $resources-alt-color;
+
+      .item-more {
+        color: palette(grass);
+      }
     }
+  }
+
+  .item-more {
+    color: palette(grass, dark);
   }
 
   .sidebar {
     background-color: $resources-alt-color;
+
+    .nav a {
+      text-transform: capitalize;
+    }
 
     .nav a:focus,
     .nav a:hover,

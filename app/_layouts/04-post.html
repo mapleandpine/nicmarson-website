@@ -1,42 +1,51 @@
 ---
 layout: 00-default
+slug: resources
+class: resources
 ---
-<div class="content">
-  <article class="post post-entry">
 
-    <!-- This loops through the paginated posts -->
-    <header class="post-header">
-      <h1>{{ page.title }}</h1>
-      <p class="byline">{{ page.date | date_to_string }}</p>
-    </header>
-    <div class="post-content">
-      {{ content }}
+<article class="row row--four">
+  <div class="group group--three">
+    <div class="block--bottom">
+      <div class="post post-entry">
+        <header class="post-header">
+          <h1 class="title">{{ page.title }}</h1>
+        </header>
+        <div class="post-content">
+          {{ content }}
+        </div>
+        <div class="row row--two pagination post-pagination">
+          {% if page.next_in_category != nil %}
+            <div class="group group--one">
+              <a href="{{page.previous_in_category.url}}" class="previous">
+                <span><svg class="shape-arrow-left svg-inline"><use xlink:href="#shape-arrow-left"/></svg> Older Post</span>
+                <span class="h5">{{ page.next_in_category.title }}</span>
+              </a>
+            </div>
+          {% endif %}
+          {% if page.previous_in_category != nil %}
+            <div class="group group--one">
+              <a href="{{page.next_in_category.url}}" class="next next-text">
+                <span>Newer Post <svg class="shape-arrow-right svg-inline"><use xlink:href="#shape-arrow-right"/></svg></span>
+                <span class="h5">{{ page.previous_in_category.title }}</span>
+              </a>
+            </div>
+          {% endif %}
+        </div>
+      </div>
     </div>
+  </div>
 
-    <!-- Pagination links -->
-    <div class="pagination">
-      {% if paginator.previous_page %}
-        <a href="/page{{ paginator.previous_page }}" class="previous">Previous</a>
-      {% else %}
-        <span class="previous">Previous</span>
-      {% endif %}
-      <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-      {% if paginator.next_page %}
-        <a href="/page{{ paginator.next_page }}" class="next">Next</a>
-      {% else %}
-        <span class="next ">Next</span>
-      {% endif %}
+  <div class="group group--one">
+    <div class="block--both">
+      <div class="post-back"><a href="/resources.html"><svg class="shape-arrow-left svg-inline">
+          <use xlink:href="#shape-arrow-left"/>
+        </svg> Back to Resources</a></div>
+      <div class="post post-meta">
+        <img class="post-avatar" src="https://secure.gravatar.com/avatar/8d6e9c07171508fa435faa35ae8a0ebc">
+        <div class="post-date">{{ site.time | date_to_long_string }}</div>
+        <div class="post-category">{{ page.categories | join: ', ' }}</div>
+      </div>
     </div>
-
-  </article>
-</div>
-
-
-<h1 class="category">{{ page.title }}</h1>
-<ul class="posts">
-{% for post in site.categories[page.category] %}
-  <div>{{ post.date | date_to_html_string }}</div>
-  <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-  <div class="categories">Filed under {{ post.categories | category_links }}</div>
-{% endfor %}
-</ul>
+  </div>
+</article>

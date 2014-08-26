@@ -1,5 +1,5 @@
 ---
-layout: 02-post
+layout: 04-post
 title:  7 Things You Didn't Know You Could Do with CSS
 date:   2014-05-05 14:55:06
 author: David Walsh

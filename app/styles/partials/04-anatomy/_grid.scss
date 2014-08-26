@@ -56,6 +56,10 @@
     > .group--one {
       width: 33.33%;
 
+      &--gutter {
+        width: calc(33.33% - 1rem);
+      }
+
       // prevent gaps in grid
       &:nth-child(3n + 2) {
         flex-grow: 1;
@@ -64,6 +68,33 @@
 
     > .group--two {
       width: 66.67%;
+
+      &--gutter {
+        width: calc(66.67% - 1rem);
+      }
+    }
+  }
+}
+
+.row--four {
+
+  @include mq($from: double) {
+    > .group--one {
+      width: 33.33%;
+    }
+
+    > .group--three {
+      width: 66.67%;
+    }
+  }
+
+  @include mq($from: triple) {
+    > .group--one {
+      width: 25%;
+    }
+
+    > .group--three {
+      width: 75%;
     }
   }
 }

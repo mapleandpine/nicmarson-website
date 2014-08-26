@@ -1,5 +1,5 @@
 ---
-layout: 02-post
+layout: 04-post
 title:  Project Naptha
 date:   2014-04-25 14:55:06
 url: http://projectnaptha.com

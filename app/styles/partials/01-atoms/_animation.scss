@@ -4,10 +4,10 @@
 
 // used on portfolio detail device screen
 @keyframes scroll {
-  0% { background-position: center 0; }
-  20% { background-position: center 20%; }
-  60% { background-position: center 50%; }
-  80% { background-position: center 100%; }
+  0% { top: 0; }
+  20% { top: -20%; }
+  60% { top: -50%; }
+  80% { top: -100%; }
 }
 
 @keyframes fadeInUp {

@@ -59,6 +59,14 @@
   }
 }
 
+.project-pagination {
+  background-color: palette(grey, darkest);
+
+  svg {
+    fill: $white;
+  }
+}
+
 /*-----  End of Page specific colors  ------*/
 
 

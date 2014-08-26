@@ -40,7 +40,7 @@ class: portfolio portfolio-detail
 <!-- Load Skills and Additional Screens -->
 {{ content }}
 <!-- Previous and Next Projects -->
-<section class="row row--two next-previous">
+<section class="row row--two pagination project-pagination">
 
   {% if page.next_in_category != nil %}
   <div class="group group--one">
@@ -62,15 +62,17 @@ class: portfolio portfolio-detail
 
   {% if page.previous_in_category != nil %}
   <div class="group group--one">
-    <section id="{{page.previous_in_category.name}}" class="zoom">
+    <figure id="{{page.previous_in_category.name}}" class="zoom">
       <a class="next" href="{{page.previous_in_category.url}}">
-        <img src="/images/portfolio/{{page.previous_in_category.name}}/{{page.previous_in_category.name}}-browser.jpg" alt="{{ page.previous_in_category.title }} thumbnail">
+        <img class="zoom-image img-responsive" src="/images/portfolio/{{page.previous_in_category.name}}/{{page.previous_in_category.name}}-browser.jpg" alt="{{ page.previous_in_category.title }} thumbnail">
         <figcaption class="zoom-container">
-          <b class="h4 next-text">Next project <svg class="shape-arrow-right svg-inline"><use xlink:href="#shape-arrow-right"/></svg></b>
-          <span class="title--header">{{ page.previous_in_category.title }}</span>
+          <div class="center">
+            <b class="h4 next-text">Next project <svg class="shape-arrow-right svg-inline"><use xlink:href="#shape-arrow-right"/></svg></b>
+            <span class="zoom-title">{{ page.previous_in_category.title }}</span>
+          </div>
         </figcaption>
       </a>
-    </section>
+    </figure>
   </div>
   {% endif %}
 

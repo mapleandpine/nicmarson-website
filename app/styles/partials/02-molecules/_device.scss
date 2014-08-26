@@ -52,6 +52,9 @@
     }
 
     img {
+      left: 0;
+      position: absolute;
+      top: 0;
       width: 100%;
     }
   }
@@ -92,6 +95,6 @@
 }
 
 // browser animation
-.part .img-fill {
+.device .screen img {
   animation: scroll 16s 1s cubic-bezier(.25, .1, .25, 1) infinite;
 }
