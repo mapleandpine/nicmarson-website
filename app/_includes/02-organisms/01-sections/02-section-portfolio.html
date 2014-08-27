@@ -1,6 +1,6 @@
 <figure id="{{ post.name }}" class="item">
   <a class="aspect-ratio" href="{{ post.url }}">
-    <img class="item-image img-responsive" src="images/portfolio/{{ post.name }}/thumb.jpg" alt="{{ post.title }} thumbnail">
+    <img class="item-image" src="images/portfolio/{{ post.name }}/thumb.jpg" alt="{{ post.title }} thumbnail">
   </a>
   <figcaption class="item-meta">
     <div class="block--small">
@@ -20,13 +20,21 @@
         {% endif %} {% if post.solo %}Solo project{% else %}Team project{% endif %}
       </div>
     </div>
-    <div class="block--small">
-        <div class="item-excerpt">{{ post.excerpt }}</div>
-        <div class="item-desc muted">
-          <svg class="shape-tags svg-inline">
-            <use xlink:href="#shape-tags"/>
-          </svg> {{ post.tags | array_to_sentence_string }}
+    <div class="popup--container">
+      <input class="popup--input" id="{{ post.name }}-popup" type="checkbox">
+      <div class="popup popup--fadeIn">
+        <div class="block--medium">
+          <div class="item-excerpt">{{ post.excerpt }}</div>
+          <div class="item-desc muted">
+            <svg class="shape-tags svg-inline">
+              <use xlink:href="#shape-tags"/>
+            </svg> {{ post.tags | array_to_sentence_string }}
+          </div>
         </div>
+      </div>
+      <div class="text-center">
+        <label class="btn--more popup--toggle" for="{{ post.name }}-popup">More</label>
+      </div>
     </div>
   </figcaption>
 </figure>

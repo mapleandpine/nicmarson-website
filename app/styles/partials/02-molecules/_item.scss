@@ -2,28 +2,18 @@
 // individual item listing with image and details
 //////////////////////////////////////////////////
 .item {
-  background-color: $white;
-  border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0,0,0,.33);
+  background-color: palette(grey, lightest);
   display: block;
   font-family: $font-family-condensed;
   font-weight: 400;
   margin-bottom: 1.5rem;
   overflow: hidden;
   position: relative;
-  @extend %transition-fast;
 
   @include mq($from: double) {
     flex-grow: 0;
     flex-shrink: 1;
     flex-basis: auto;
-  }
-
-  &:hover,
-  &:focus,
-  &:active {
-    border-radius: 0;
-    box-shadow: 0 0 3px rgba(0,0,0,.15)
   }
 
   a {
@@ -36,27 +26,16 @@
   }
 
   .aspect-ratio {
-    display: block;
-    height: 0;
-    overflow: hidden;
     padding-bottom: 100%;
-    width: 100%;
   }
 }
 
-.item-image {
-  border-bottom: 1px solid palette(grey);
-}
-
 .item-meta {
+  border-top: 1px solid palette(grey, lighter);
   color: palette(grey, darker);
 
   svg {
     fill: palette(grey);
-  }
-
-  .block--small:nth-child(2n+2) {
-    border-top: 1px solid rgba(0,0,0,0.09);
   }
 }
 

@@ -7,7 +7,12 @@
   @include centerer();
 }
 
-
+.aspect-ratio {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+}
 
 /**
  * Print styles.

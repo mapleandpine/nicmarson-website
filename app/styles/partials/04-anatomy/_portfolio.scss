@@ -41,9 +41,7 @@
 .portfolio-list {
 
   main {
-    background-color: palette(grey, light);
-    border-radius: 8px 0 0 8px;
-    box-shadow: 0 1px 3px rgba(0,0,0,.33) inset;
+    background-color: $white;
 
     @include mq($from: triple) {
       margin-left: $body-padding;

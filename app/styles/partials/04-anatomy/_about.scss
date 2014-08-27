@@ -38,29 +38,29 @@
   @extend %top-padding;
 
   .img-circle {
-    background-color: #e85545;
+    background-color: #e64b3b;
     flex-grow: 0;
     flex-shrink: 1;
     flex-basis: auto;
+    height: 280px;
     margin: auto;
-    min-width: 280px;
     position: relative;
     @extend %transition-fast;
-    width: 65%;
+    width: 280px;
 
-    @include mq($from: double) {
-      max-width: 480px;
-      width: 85%;
+    @include mq($from: triple) {
+      height: 480px;
+      width: 480px;
     }
     @include mq($from: quadruple) {
-      min-width: 480px;
-      width: 75%;
     }
   }
 
   img {
-    position: relative;
+    left: 0;
+    position: absolute;
     top: 5%;
+    width: 100%;
 
     @include mq($from: double) {
       animation: body-movement 16s cubic-bezier(.5, .2, .3, 1) infinite;

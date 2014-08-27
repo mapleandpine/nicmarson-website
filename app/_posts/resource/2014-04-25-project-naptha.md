@@ -6,7 +6,6 @@ url: http://projectnaptha.com
 categories:
 - blog
 - resource
-- tool
 - typography
 ---
 

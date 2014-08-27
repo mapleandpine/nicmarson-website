@@ -7,6 +7,7 @@ image: build-your-website.jpg
 thumb: build-your-website-thumb.jpg
 categories:
 - blog
+- writing
 ---
 
 Design, particularly web design, is about communication. When you design a website for a client you have a clear idea of their message. However, when you build something for yourself, the product itself is the message. Every detail communicates who you are as a designer. And if you have a hard time talking about yourself, then you'll have a harder time building something for yourself

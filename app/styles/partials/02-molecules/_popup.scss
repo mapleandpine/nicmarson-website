@@ -1,18 +1,23 @@
 .popup {
   animation-duration: .3s;
   animation-fill-mode: both;
+  background-color: $white;
   bottom: -10rem;
   box-shadow: 0 0 20px rgba(0,0,0,.2);
   display: block;
   opacity: 0;
   overflow-y: auto;
-  padding: 1rem;
   position: absolute;
-  transform-origin: left bottom;
-  transform: rotate3d(0, 0, 1, 45deg);
+
+
   @extend %transition-fast;
   width: 100%;
   will-change: opacity, transform, top;
+
+  &--rotateIn {
+    transform-origin: left bottom;
+    transform: rotate3d(0, 0, 1, 45deg);
+  }
 
   &--container {
     position: relative;
@@ -23,7 +28,12 @@
 
     &:checked {
 
-      ~ .popup {
+      ~ .popup--fadeIn {
+        animation-name: fadeInUp;
+        bottom: 0;
+      }
+
+      ~ .popup--rotateIn {
         animation-name: rotateInUpLeft;
         bottom: 0;
       }
@@ -32,10 +42,6 @@
         transform: rotate(45deg);
       }
     }
-  }
-
-  &--toggle {
-    color: $white;
   }
 
   &--indicator {
@@ -57,7 +63,6 @@
   &--text {
 
     .popup {
-      background-color: $white;
       padding: 3rem 3rem 5rem;
     }
 

@@ -4,6 +4,7 @@ title:  Boost your efficiency with a styleguide
 date:   2014-04-04 10:44:06
 categories:
 - blog
+- writing
 ---
 A styleguide provides a branded look and feel to anything you produce. However, a web page is affected by many factors, including different devices, browsers, and screen sizes. We need a more robust guide for describing web creations
 
