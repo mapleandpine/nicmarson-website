@@ -7,6 +7,8 @@ class: resources
 
 <article class="row row--three">
   <div class="group group--two">
+
+  <!-- http://stackoverflow.com/questions/19086284/jekyll-liquid-templating-how-to-group-blog-posts-by-year -->
   {% for post in site.categories['blog'] %}
     {% capture this_month %}{{ post.date | date: "%B" }} <span>{{ post.date | date: "%Y" }}</span>{% endcapture %}
     {% capture next_month %}{{ post.previous.date | date: "%B" }} <span>{{ post.previous.date | date: "%Y" }}</span>{% endcapture %}
@@ -15,37 +17,37 @@ class: resources
       <h2 class="title--section">{{ this_month }}</h2>
       <div class="row row--three thumbs">
     {% endif %}
-      <div class="group group--{% if post.categories contains 'resource' %}one--gutter{% else %}two--gutter{% endif %} thumb">
-        <figure class="item">
-          <a href="{{ post.url }}">
-            <img class="item-image" src="/images/post/{{ post.thumb }}">
-            {% if post.categories contains 'resource' %}
-            <figcaption class="item-meta">
-              <div class="block--small">
-                <h3 class="item-title">{{ post.title }}</h3>
-                <div class="item-details">{{ post.tagline }}</div>
-              </div>
-              <div class="block--small">
-                <div class="item-desc">Beautiful painting by Andy Luce</div>
-              </div>
-            </figcaption>
-            {% else %}
-            <figcaption class="item-meta">
-              <div class="block--medium">
-                <h3 class="item-title--entry">{{ post.title }}</h3>
-                <p class="item-excerpt">{{ post.excerpt | remove: '<p>' | remove: '</p>' }} &hellip; <span class="item-more"> Continue Reading</span></p>
-              </div>
-            </figcaption>
-            {% endif %}
-          </a>
-        </figure>
-      </div>
+        <div class="group group--{% if post.categories contains 'resource' %}one--gutter{% else %}two--gutter{% endif %} thumb">
+          <figure class="item">
+            <a href="{{ post.url }}">
+              <img class="item-image" src="/images/post/{{ post.thumb }}">
+              {% if post.categories contains 'resource' %}
+              <figcaption class="item-meta">
+                <div class="block--small">
+                  <h3 class="item-title">{{ post.title }}</h3>
+                  <div class="item-details">{{ post.tagline }}</div>
+                </div>
+                <div class="block--small">
+                  <div class="item-desc">Beautiful painting by Andy Luce</div>
+                </div>
+              </figcaption>
+              {% else %}
+              <figcaption class="item-meta">
+                <div class="block--medium">
+                  <h3 class="item-title--entry">{{ post.title }}</h3>
+                  <p class="item-excerpt">{{ post.excerpt | remove: '<p>' | remove: '</p>' }} &hellip; <span class="item-more"> Continue Reading</span></p>
+                </div>
+              </figcaption>
+              {% endif %}
+            </a>
+          </figure>
+        </div>
     {% if forloop.last %}
-      </div>
     {% else %}
-      </div>
+      {% if this_month != next_month %}
       <h2 class="title--section">{{ next_month }}</h2>
       <div class="row row--three thumbs">
+      {% endif %}
     {% endif %}
     </section>
   {% endfor %}

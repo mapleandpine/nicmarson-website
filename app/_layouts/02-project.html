@@ -29,8 +29,12 @@ class: portfolio portfolio-detail
     <div class="device">
       <div class="part frame">
         <div class="part screen">
-          <img class="screen-visible" src="/images/portfolio/{{ page.name }}/{{ page.name }}-browser.jpg">
-          <img class="img-responsive touch-visible" src="/images/portfolio/{{ page.name }}/{{ page.name }}-mobile.jpg">
+          <picture>
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source srcset="{{ site.url }}/images/portfolio/{{ page.name }}/{{ page.name }}-browser.jpg, {{ site.url }}/images/portfolio/{{ page.name }}/{{ page.name }}-browser.jpg 2x" media="(min-width: 1080px)">
+            <!--[if IE 9]></video><![endif]-->
+            <img srcset="{{ site.url }}/images/portfolio/{{ page.name }}/{{ page.name }}-mobile.jpg, {{ site.url }}/images/portfolio/{{ page.name }}/{{ page.name }}-mobile.jpg 2x" alt="{{ page.name }} home page">
+          </picture>
         </div>
       </div>
       <div class="part base"></div>

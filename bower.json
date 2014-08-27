@@ -8,7 +8,8 @@
     "eventEmitter": "~4.2.7",
     "imagesloaded": "~3.1.8",
     "Steady.js": "~1.1.0",
-    "morlock": "~0.2.5"
+    "morlock": "~0.2.5",
+    "picturefill": "~2.1.0"
   },
   "devDependencies": {}
 }

@@ -293,6 +293,76 @@ module.exports = function(grunt) {
       }
     },
 
+    // Create responsive image sizes
+    // http://www.andismith.com/grunt-responsive-images/
+    // http://dev.opera.com/articles/native-responsive-images/
+    responsive_images: {
+      options: {
+        sizes: [{
+          width: 320,
+          height: 240
+        },{
+          name: 'large',
+          width: 640
+        },{
+          name: "large",
+          width: 1024,
+          suffix: "_x2",
+          quality: 60
+        }]
+      },
+      files: [{
+        expand: true,
+        src: ['assets/**.{jpg,gif,png}'],
+        cwd: 'test/',
+        dest: 'tmp/'
+      }]
+    },
+
+    // Convert png to webp
+    // https://github.com/somerandomdude/grunt-webp
+    webp: {
+      files: {
+        //expand: true,
+        //cwd: 'path/to/source/images',
+        src: 'source/*.png',
+        dest: 'output/path/'
+      },
+      options: {
+        preset: 'photo',
+        verbose: true,
+        quality: 80,
+        alphaQuality: 80,
+        compressionMethod: 6,
+        segments: 4,
+        psnr: 42,
+        sns: 50,
+        filterStrength: 40,
+        filterSharpness: 3,
+        simpleFilter: true,
+        partitionLimit: 50,
+        analysisPass: 6,
+        multiThreading: true,
+        lowMemory: false,
+        alphaMethod: 0,
+        alphaFilter: 'best',
+        alphaCleanup: true,
+        noAlpha: false,
+        lossless: false
+      }
+    },
+
+    svgmin: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '<%= config.app %>/images',
+          src: '{,*/}*.svg',
+          dest: '<%= config.dist %>/images'
+        }]
+      }
+    },
+
     // Launches external apps, best to run manually
     imageoptim: {
       myPngs: {
@@ -310,17 +380,6 @@ module.exports = function(grunt) {
           quitAfter: true
         },
         src: ['<%= config.dist %>/images', '<%= config.app %>/images']
-      }
-    },
-
-    svgmin: {
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= config.app %>/images',
-          src: '{,*/}*.svg',
-          dest: '<%= config.dist %>/images'
-        }]
       }
     },
 
@@ -446,6 +505,12 @@ module.exports = function(grunt) {
       'connect:test'
     ]);
   });
+
+  grunt.registerTask('images', [
+    'responsive_images',
+    'webp',
+    'imageOptim'
+  ]);
 
   grunt.registerTask('build', [
     'clean:dist',
