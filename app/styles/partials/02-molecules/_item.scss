@@ -5,7 +5,7 @@
   background-color: palette(grey, lightest);
   display: block;
   font-family: $font-family-condensed;
-  font-weight: 400;
+  font-weight: 300;
   margin-bottom: 1.5rem;
   overflow: hidden;
   position: relative;
@@ -17,7 +17,7 @@
   }
 
   a {
-    color: palette(orange);
+    color: palette(grey, darker);
     display: block;
   }
 
@@ -42,6 +42,7 @@
 .item-title {
   color: palette(grey, darkest);
   font-size: 18px;
+  font-weight: 400;
   letter-spacing: .0125em;
   margin-bottom: .5em;
 

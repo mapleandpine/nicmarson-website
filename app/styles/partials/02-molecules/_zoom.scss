@@ -19,6 +19,7 @@
   }
 
   .aspect-ratio {
+    padding-bottom: 100%;
 
     @include mq($from: double) {
       padding-bottom: 75%;
@@ -90,7 +91,11 @@
 }
 
 .zoom-excerpt {
-  font-size: 1.5rem;
+  font-size: 1.125rem;
+
+  @include mq($from: triple) {
+    font-size: 1.5rem;
+  }
 }
 
 // Hover effects

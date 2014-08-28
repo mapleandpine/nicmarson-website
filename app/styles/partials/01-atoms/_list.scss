@@ -9,6 +9,8 @@ ol {
   list-style: none;
   margin-top: 0;
   margin-bottom: ($line-height-computed / 2);
+  // always align left even when default is center
+  text-align: left;
 
   ul,
   ol {

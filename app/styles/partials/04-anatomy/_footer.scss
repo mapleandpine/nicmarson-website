@@ -2,6 +2,17 @@ footer[role=contentinfo] {
   color: $footer-color;
   text-align: center;
 
+  p {
+    text-align: center;
+
+    &.sitecontact {
+
+      @include mq($from: double) {
+        text-align: right;
+      }
+    }
+  }
+
   .connect {
 
     @include mq($from: double) {
@@ -11,13 +22,22 @@ footer[role=contentinfo] {
     }
 
     a {
+      font-size: 20px;
 
       @include mq($from: double) {
-        font-size: 3vmin;
+        font-size: 18px;
       }
 
       @include mq($from: triple) {
-        font-size: 4vmin;
+        font-size: 20px;
+      }
+
+      @include mq($from: quadruple) {
+        font-size: 22px;
+      }
+
+      @include mq($from: quintuple) {
+        font-size: 24px;
       }
     }
 
@@ -45,10 +65,6 @@ footer[role=contentinfo] {
   font-size: 12px;
   margin-bottom: 0;
   padding: 1rem $body-padding;
-
-  @include mq($from: double) {
-    text-align: right;
-  }
 
   p {
     margin-bottom: 0;

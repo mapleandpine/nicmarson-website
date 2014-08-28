@@ -526,8 +526,7 @@ module.exports = function(grunt) {
     // 'rev',
     'usemin',
     'htmlmin',
-    'csscomb',
-    'uncss'
+    'csscomb'
   ]);
 
   grunt.registerTask('default', [

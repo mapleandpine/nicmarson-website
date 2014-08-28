@@ -4,6 +4,8 @@
 p {
   @extend %typecsset-vertical-rhythm;
   font-family: $text-font-family;
+  // always align left even when default is center
+  text-align: left;
 
   @if $typecsset-indented-paragraphs == true {
 
@@ -23,27 +25,26 @@ p {
   font-weight: 900;
   letter-spacing: .07em;
   margin-top: -.75rem;
+  text-align: center;
+
+  @include mq($from: double) {
+    text-align: left;
+  }
 }
 
 .lead {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 200;
   line-height: 1.4;
   margin-bottom: 2rem;
   margin-top: 2rem;
 
-
   @include mq($from: double) {
-    font-size: 24px;
     margin-bottom: 3rem;
     margin-top: 3rem;
   }
 
   @include mq($from: triple) {
-    font-size: 1.5rem;
-  }
-
-  @include mq($from: quadruple) {
     font-size: 1.5rem;
   }
 }

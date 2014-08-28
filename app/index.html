@@ -7,11 +7,11 @@ class: home
 
 <div class="row row--two">
   <section class="group group--one">
-    <div class="block">
+    <div class="block--bottom">
       <h1 class="title">Hi, my name is Nic Marson.</h1>
-      <p class="lead">I design and develop web experiences across all devices and browsers. I'm currently employed full-time at <a href="http://instrument.com">Instrument</a> and not looking for work.</p>
+      <p class="lead">I design and develop web experiences across all devices and browsers. I'm currently employed full-time at <a href="http://instrument.com" role="link">Instrument</a> and not looking for work.</p>
       <div class="block--medium block--well">
-        <p>In addition to being a Front-end Developer and UI Designer, I'm a father, paddler, home builder, and artist. <a href="about.html">Learn more about me.</a></p>
+        <p>In addition to being a Front-end Developer and UI Designer, I'm a father, paddler, home builder, and artist. <a href="about.html" role="link">Learn more about me.</a></p>
       </div>
     </div>
   </section>
@@ -25,6 +25,9 @@ class: home
         {% include 02-organisms/01-sections/03-section-portfolio-light.html %}
       {% endfor %}
     </div>
+    <footer>
+      <a href="portfolio.html" class="btn--block">View all projects</a>
+    </footer>
   {% endif %}
   </section>
 </div>

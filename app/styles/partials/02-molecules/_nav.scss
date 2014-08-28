@@ -8,7 +8,7 @@
 
   li {
     display: block;
-    margin-bottom: .25em;
+    margin-bottom: .5em;
     position: relative;
 
     @include mq($from: double) {
@@ -21,7 +21,7 @@
     border: 1px dotted rgba(255,255,255,.5);
     color: $nav-link-color;
     display: block;
-    padding: .5em .75em;
+    padding: .75em;
     position: relative;
     text-decoration: none;
     @extend %transition-fast;

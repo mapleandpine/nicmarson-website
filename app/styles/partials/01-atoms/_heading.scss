@@ -77,6 +77,8 @@ h6, .h6 { font-size: $font-size-h6; }
 
   &--block {
     // title with one-third width stubby underline
+    font-family: $font-family-condensed;
+    font-weight: 300;
     margin-bottom: 1em;
     padding-top: 2em;
 
@@ -95,6 +97,11 @@ h6, .h6 { font-size: $font-size-h6; }
       @include mq($from: double) {
         margin-left: 0;
       }
+    }
+
+    b {
+      @extend %smallcaps;
+      font-weight: 400;
     }
   }
 
@@ -117,6 +124,7 @@ h6, .h6 { font-size: $font-size-h6; }
   &--inline-block {
     @extend %smallcaps;
     display: inline-block;
+    font-family: $font-family-condensed;
     font-size: 1em;
     letter-spacing: .07em;
     padding: 0;

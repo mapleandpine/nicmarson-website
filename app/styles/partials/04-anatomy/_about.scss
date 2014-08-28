@@ -125,6 +125,11 @@
 
   p {
     font-family: $font-family-sans-serif;
+    text-align: center;
+
+    @include mq($from: double) {
+      text-align: left;
+    }
   }
 
   span {
@@ -147,6 +152,10 @@
     position: absolute;
     right: 0;
     top: 0;
+
+    @include mq($to: double) {
+      display: none;
+    }
   }
 
   // Big house

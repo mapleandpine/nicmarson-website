@@ -4,11 +4,6 @@
   background-color: $home-bg-color;
 }
 
-@keyframes homeBg {
-  0%, 100% { background-position: 0 0; }
-  50% { background-position: 100% 100%; }
-}
-
 .home {
   background-color: $home-alt-color;
   background-image: radial-gradient(farthest-corner at 0 0, $home-bg-color 0%, transparent 100%);
@@ -51,7 +46,9 @@
     background-color: palette(grey, darkest);
 
     .portfolio-item {
-      width: 93%;
+      @include mq($from: double) {
+        width: 93%;
+      }
     }
   }
 }

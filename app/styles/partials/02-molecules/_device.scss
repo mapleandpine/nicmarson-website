@@ -61,7 +61,7 @@
 
   .base {
     background: palette(grey, light);
-    border-radius: 100px;
+    border-radius: 5px;
     bottom: 12px;
     height: 36px;
     left: calc(50% - 18px);
@@ -69,7 +69,6 @@
     width: 36px;
 
     @include mq($from: double) {
-      border-radius: 100px;
       bottom: 15px;
       height: 18px;
       left: calc(50% - 25px);

@@ -3,30 +3,23 @@
 \*------------------------------------*/
 
 a {
-  color: $link-color;
   text-decoration: none;
-
-  &:visited {
-    color: $link-visited-color;
-  }
-
-  &:hover,
-  &:focus {
-    color: $link-hover-color;
-  }
 }
 
 a[role="link"] {
   border-bottom: 0.0625rem dotted $link-color;
+  color: $link-color;
 
   &:visited {
     border-bottom-color: $link-visited-color;
+    color: $link-visited-color;
   }
 
   &:hover,
   &:focus {
     border-bottom-color: $link-hover-color;
     border-bottom-style: solid;
+    color: $link-hover-color;
   }
 }
 
