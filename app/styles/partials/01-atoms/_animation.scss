@@ -114,25 +114,25 @@
 // used on profile image
 @keyframes body-movement {
   0%   {
-    transform: rotate(0deg) translate(0px, 0px);
+    transform: rotate(0deg);
   }
   20% {
-    transform: rotate(.5deg) translate(2px, 5px);
+    transform: rotate(.5deg);
   }
   35% {
-    transform: rotate(.2deg) translate(-2px, -2px);
+    transform: rotate(.2deg);
   }
   50% {
-    transform: rotate(0deg) translate(2px, 3px);
+    transform: rotate(0deg);
   }
   65% {
-    transform: rotate(-.5deg) translate(0px, 5px);
+    transform: rotate(-.5deg);
   }
   80% {
-    transform: rotate(-1.25deg) translate(-3px, 2px);
+    transform: rotate(-1.25deg);
   }
   100% {
-    transform: rotate(0deg) translate(0px, 0px);
+    transform: rotate(0deg);
   }
 }
 

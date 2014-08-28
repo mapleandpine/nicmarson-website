@@ -6,37 +6,27 @@ class: about
 ---
 
 <article>
-  <section class="row row--two">
+  <div class="row row--two">
     <div class="group group--one">
-      <div class="flex--column flex--centered about__img-circle">
-        <div class="img-circle">
-          <img src="/images/vector-me.png" alt="Illustration of Nicholas Marson">
-        </div>
-      </div>
-    </div>
-    <div class="group group--one">
-      <div class="block">
+      <div class="block--bottom">
         <h1 class="title">About Nic Marson</h1>
         <p class="lead">I am an advocate for a unified web experience on all devices. I specialize in <a href="http://bradfrostweb.com/blog/post/the-many-faces-of-adaptive-design/" class="external" role="link">adaptive design</a> for large websites, integrating User Experience data, and improving workplace efficiency.</p>
       </div>
     </div>
-  </section>
-  <section class="row row--two flex--right">
     <div class="group group--one">
-      <div class="block">
-        <h2 class="title--section">My background</h2>
+      <div class="block--top">
+        <div class="about__img-circle img-circle"></div>
       </div>
-      <div class="row row--two">
-        <div class="group group--one">
-          <div class="block">
-            <p>I began as an artist in my youth, putting to paper what I saw in the world and in my imagination. As I grew I developed an aptitude for math and science. After high school I went to Oregon State University to major in biology. Eventually I changed my major to graphic design where I found a perfect mix of my talents. In addition to the graphic design curriculum I also began learning web design.</p>
-          </div>
-        </div>
-        <div class="group group--one">
-          <div class="block--bottom">
-            <p>My first web projects took place at Oregon State back in 2001, but I wouldn't get back into the web business again until 2004 as a web master at InFocus. During this off time I was teaching myself to hand code HTML and CSS and discovered A List Apart and related sites to guide me. Years later I would attend An Event Apart and by putting new skills to use with some great agencies.</p>
-          </div>
-        </div>
+    </div>
+  </div>
+  <section class="block--large block--well">
+    <h2 class="title--section">My background</h2>
+    <div class="row row--two">
+      <div class="group group--one--gutter">
+        <p>I began as an artist in my youth, putting to paper what I saw in the world and in my imagination. As I grew I developed an aptitude for math and science. After high school I went to Oregon State University to major in biology. Eventually I changed my major to graphic design where I found a perfect mix of my talents. In addition to the graphic design curriculum I also began learning web design.</p>
+      </div>
+      <div class="group group--one--gutter">
+        <p>My first web projects took place at Oregon State back in 2001, but I wouldn't get back into the web business again until 2004 as a web master at InFocus. During this off time I was teaching myself to hand code HTML and CSS and discovered A List Apart and related sites to guide me. Years later I would attend An Event Apart and by putting new skills to use with some great agencies.</p>
       </div>
     </div>
   </section>
@@ -89,7 +79,7 @@ class: about
           </tr>
         </tbody>
       </table>
-      <p><a href="http://www.linkedin.com/in/nicmarson" class="btn--default social linkedin external img-fade">More at LinkedIn
+      <p><a href="http://www.linkedin.com/in/nicmarson" class="btn--default social linkedin external">More at LinkedIn
         <small class="tooltip--top">
           <svg class="shape-linkedin">
             <use xlink:href="#shape-linkedin"></use>
@@ -104,25 +94,23 @@ class: about
     <div class="block">
       <h3 class="title--block"><b>Fun</b> facts</h3>
       <div class="flex--column flex--centered">
-        <div class="tinyhouse row row--two">
-          <div class="group group--one">
-            <p><span class="year">In<br> 2013</span> <span>I designed</span> <span>and built</span> a <a href="http://portlandtinyhouse.com" class="external">tiny house</a> with my<br> partner, Natalie Perrin</p>
-          </div>
-          <div class="group group--one tinyhouse--graphic">
+        <div class="tinyhouse">
+          <p><span class="year">In<br> 2013</span> <span>I designed</span> <span>and built</span> a <a href="http://portlandtinyhouse.com" class="external">tiny house</a> with my<br> partner, Natalie Perrin</p>
+          <div class="tinyhouse--graphic">
             <svg class="shape-house">
-              <use xlink:href="#shape-house"/>
+              <use xlink:href="#shape-house"></use>
             </svg>
             <svg class="shape-home-roof">
-              <use xlink:href="#shape-home-roof"/>
+              <use xlink:href="#shape-home-roof"></use>
             </svg>
             <svg class="shape-home-walls">
-              <use xlink:href="#shape-home-walls"/>
+              <use xlink:href="#shape-home-walls"></use>
             </svg>
           </div>
         </div>
         <div class="bridgecity">
           <svg class="shape-bridge">
-            <use xlink:href="#shape-bridge"/>
+            <use xlink:href="#shape-bridge"></use>
           </svg>
           <p>I paddle <b>outrigger canoes</b> competitively with <a href="http://www.bridgecitypaddling.org/" class="external">Bridge city paddling club</a></p>
         </div>
@@ -135,13 +123,13 @@ class: about
     <div class="block--bottom">
       <h3 class="title--block"><b>Favorite</b> sites</h3>
       <svg class="shape-star">
-        <use xlink:href="#shape-star"/>
+        <use xlink:href="#shape-star"></use>
       </svg>
       <ul class="list-unstyled">
         <li><a href="http://www.sidebar.io/" class="external" role="link">Sidebar</a></li>
         <li><a href="http://codepen.io/" class="external" role="link">Codepen</a></li>
         <li><a href="http://css-tricks.com/" class="external" role="link">CSS-Tricks</a></li>
-        <li class="roomy"><a href="https://kippt.com/nicmarson" class="kippt external img-fade"><svg class="shape-arrow-right svg-inline"><use xlink:href="#shape-arrow-right"/></svg>
+        <li class="roomy"><a href="https://kippt.com/nicmarson" class="kippt external"><svg class="shape-arrow-right svg-inline"><use xlink:href="#shape-arrow-right"></use></svg>
         More at <span>Kippt</span></a></li>
       </ul>
     </div>
@@ -150,13 +138,13 @@ class: about
     <div class="block--bottom">
       <h3 class="title--block"><b>Twitter</b> users</h3>
       <svg class="shape-twitter">
-        <use xlink:href="#shape-twitter"/>
+        <use xlink:href="#shape-twitter"></use>
       </svg>
       <ul class="list-unstyled">
         <li><a href="https://twitter.com/chriscoyier" class="external" role="link">@chriscoyier</a></li>
         <li><a href="https://twitter.com/brad_frost" class="external" role="link">@brad_frost</a></li>
         <li><a href="http://css-tricks.com/" class="external" role="link">@George_Takei</a></li>
-        <li class="roomy"><a href="http://twitter.com/nicmarson" class="twitter external img-fade"><svg class="shape-arrow-right svg-inline"><use xlink:href="#shape-arrow-right"/></svg>
+        <li class="roomy"><a href="http://twitter.com/nicmarson" class="twitter external"><svg class="shape-arrow-right svg-inline"><use xlink:href="#shape-arrow-right"></use></svg>
         More at <span>Twitter</span></a></li>
       </ul>
     </div>
@@ -165,15 +153,15 @@ class: about
     <div class="block--bottom">
       <h3 class="title--block"><b>Web</b> projects</h3>
       <svg class="shape-github">
-        <use xlink:href="#shape-github"/>
+        <use xlink:href="#shape-github"></use>
       </svg>
       <ul class="list-unstyled">
         <li><a href="https://github.com/twbs" class="external" role="link">Bootstrap</a></li>
         <li><a href="https://github.com/yeoman" class="external" role="link">Yeoman</a></li>
         <li><a href="https://github.com/philipwalton/solved-by-flexbox" class="external" role="link">Solved by Flexbox</a></li>
-        <li class="roomy"><a href="https://github.com/nicmarson" class="github external img-fade"><svg class="shape-arrow-right svg-inline"><use xlink:href="#shape-arrow-right"/></svg>
+        <li class="roomy"><a href="https://github.com/nicmarson" class="github external"><svg class="shape-arrow-right svg-inline"><use xlink:href="#shape-arrow-right"></use></svg>
         More at <span>Github</span></a></li>
       </ul>
-    </div
+    </div>
   </section>
 </div>

@@ -35,44 +35,32 @@
 }
 
 .about__img-circle {
-  @extend %top-padding;
+  align-self: center;
+  animation: body-movement 16s cubic-bezier(.5, .2, .3, 1) infinite;
+  background-color: #e64b3b;
+  background-image: url(/images/vector-me.png);
+  background-size: 100%;
+  background-position: center 30px;
+  background-repeat: no-repeat;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  height: 280px;
+  margin: auto;
+  position: relative;
+  width: 280px;
+  will-change: transform;
 
-  .img-circle {
-    background-color: #e64b3b;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    height: 280px;
-    margin: auto;
-    position: relative;
-    @extend %transition-fast;
-    width: 280px;
-
-    @include mq($from: triple) {
-      height: 480px;
-      width: 480px;
-    }
-    @include mq($from: quadruple) {
-    }
-  }
-
-  img {
-    left: 0;
-    position: absolute;
-    top: 5%;
-    width: 100%;
-
-    @include mq($from: double) {
-      animation: body-movement 16s cubic-bezier(.5, .2, .3, 1) infinite;
-    }
+  @include mq($from: triple) {
+    background-position: center 50px;
+    height: 400px;
+    width: 400px;
   }
 }
 
 .about__history {
-  background-color: palette(grey, lighter);
 
   header {
-    background-color: palette(grey, lighter);
 
     .title--header {
       color: palette(grey);
@@ -156,7 +144,9 @@
   &--graphic {
     height: 200px;
     min-width: 160px;
-    position: relative;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 
   // Big house

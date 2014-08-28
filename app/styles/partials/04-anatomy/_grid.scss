@@ -236,6 +236,14 @@
     @extend %bottom-padding;
     @extend %top-padding;
   }
+
+  &--well {
+    background-color: palette(grey, lightest);
+
+    *:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 @include mq($from: double) {

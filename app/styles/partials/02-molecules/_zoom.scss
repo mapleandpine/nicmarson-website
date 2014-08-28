@@ -8,11 +8,17 @@
   position: relative;
 
   > a {
+    bottom: 0;
     color: $white;
     display: block;
-    height: 0;
-    padding-bottom: 100%;
-    width: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-indent: -999em;
+    top: 0;
+  }
+
+  .aspect-ratio {
 
     @include mq($from: double) {
       padding-bottom: 75%;
@@ -27,6 +33,7 @@
 .zoom-container {
   backface-visibility: hidden;
   bottom: 0;
+  cursor: pointer;
   left: 0;
   position: absolute;
   right: 0;

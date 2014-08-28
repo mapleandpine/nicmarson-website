@@ -30,12 +30,16 @@
 
 .btn--default {
   @extend .btn;
-  background-color: rgba(0,0,0,.1);
+  background-color: palette(grey);
   border-radius: r(default);
   color: $white;
 
+  &:visited {
+    color: $white;
+  }
+
   &:hover, &:active, &:focus {
-    background-color: rgba(0,0,0,.2);
+    background-color: palette(grey, darker);
     color: $white;
   }
 }

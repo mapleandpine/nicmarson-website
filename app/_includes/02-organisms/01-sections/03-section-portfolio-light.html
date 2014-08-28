@@ -1,9 +1,10 @@
 <figure id="{{ post.name }}" class="zoom">
-  <a href="{{ post.url }}">
+  <div class="aspect-ratio">
     <img class="zoom-image" src="images/portfolio/{{ post.name }}/thumb.jpg" alt="{{ post.title }} thumbnail">
-    <figcaption class="zoom-container">
-      <h3 class="zoom-out zoom-title center">{{ post.title }}</h3>
-      <p class="zoom-in zoom-excerpt">{{ post.excerpt }}</p>
-    </figcaption>
-  </a>
+  </div>
+  <figcaption class="zoom-container inverse">
+    <h3 class="zoom-out zoom-title center">{{ post.title }}</h3>
+    <p class="zoom-in zoom-excerpt">{{ post.excerpt }}</p>
+  </figcaption>
+  <a href="{{ post.url }}">View more</a>
 </figure>
