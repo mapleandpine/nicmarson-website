@@ -24,18 +24,15 @@ Front-end development and design for the local sock company, Sock It To Me. They
 
 I worked alongside the owner and office manager to guide me in the right direction. I used HTML, CSS, jQuery, and PHP to build the CS-Cart and WordPress templates.
 
-<section class="cf">
-  <span class="title--section"><b>Screen</b> captures</span>
-  <div class="grid grid--guttersLarge grid-wrap thumb-grid">
-    <div class="thumb grid-cell show-me animated">
-      <a href="#" class="fluidbox">
-        <img src="/images/portfolio/{{ page.name }}/{{ page.name }}-01.{{ page.img-ext }}" alt="{{ page.thumb-alt }}" class="img-responsive">
-      </a>
-    </div>
-    <div class="thumb grid-cell show-me animated">
-      <a href="#" class="fluidbox">
-        <img src="/images/portfolio/{{ page.name }}/{{ page.name }}-02.{{ page.img-ext }}" alt="{{ page.thumb-alt }}" class="img-responsive">
-      </a>
+<div class="row row--three thumbs block--large">
+  <div class="group group--one--gutter thumb">
+    <div class="item">
+        <img src="/images/portfolio/{{ page.name }}/{{ page.name }}-01.{{ page.img-ext }}" alt="{{ page.thumb-alt }}" class="item-image">
+      </div>
+  </div>
+  <div class="group group--one--gutter thumb">
+    <div class="item">
+        <img src="/images/portfolio/{{ page.name }}/{{ page.name }}-02.{{ page.img-ext }}" alt="{{ page.thumb-alt }}" class="item-image">
     </div>
   </div>
-</section>
+</div>

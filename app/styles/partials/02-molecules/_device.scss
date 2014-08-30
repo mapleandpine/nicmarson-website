@@ -91,9 +91,9 @@
       width: 28%;
     }
   }
-}
 
-// browser animation
-.device .screen img {
-  animation: scroll 16s 1s cubic-bezier(.25, .1, .25, 1) infinite;
+  // browser animation
+  &--scroll .screen img {
+    animation: scroll 16s 1s cubic-bezier(.25, .1, .25, 1) infinite;
+  }
 }

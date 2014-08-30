@@ -7,17 +7,6 @@
   overflow: hidden;
   position: relative;
 
-  > a {
-    bottom: 0;
-    color: $white;
-    display: block;
-    left: 0;
-    position: absolute;
-    right: 0;
-    text-indent: -999em;
-    top: 0;
-  }
-
   .aspect-ratio {
     padding-bottom: 100%;
 
@@ -39,6 +28,17 @@
   position: absolute;
   right: 0;
   top: 0;
+
+  > a {
+    bottom: 0;
+    color: $white;
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-indent: -999em;
+    top: 0;
+  }
 }
 
 // prepare transitions

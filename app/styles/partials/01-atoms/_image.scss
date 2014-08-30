@@ -33,6 +33,11 @@ figure {
   vertical-align: calc(50% - .85em);
   width: .9em;
 
+  &--end {
+    margin-left: .5em;
+    margin-right: 0;
+  }
+
   .inverse & {
     fill: $white;
   }

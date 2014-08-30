@@ -2,25 +2,29 @@
   box-sizing: content-box;
   border-radius: 3px;
   box-shadow: 1px 1px 10px 0 rgba(0,0,0, .05);
+  display: none;
   line-height: 1;
   position: absolute;
   white-space: nowrap;
   width: auto;
   z-index: z(dropdown);
 
-  &:after {
-    content: "";
+  @include mq($from: triple) {
     display: block;
-    height: 0;
-    position: absolute;
-    width: 0;
+
+    &:after {
+      content: "";
+      display: block;
+      height: 0;
+      position: absolute;
+      width: 0;
+    }
   }
 
   &--top {
     @extend .tooltip;
     @include centerer(absolute, horizontal);
     bottom: 10em;
-    display: block;
     font-size: 12px;
     left: -10000px;
     min-width: 7rem;
@@ -31,21 +35,25 @@
 
     $tooltip-arrow-size: 10px;
 
-    &:after {
-      @include centerer(absolute, horizontal);
-      border-right: $tooltip-arrow-size solid transparent;
-      border-left: $tooltip-arrow-size solid transparent;
-      border-top: $tooltip-arrow-size solid;
-      bottom: -$tooltip-arrow-size+1px;
-    }
-
-    span {
+    @include mq($from: triple) {
       display: block;
-    }
 
-    svg {
-      fill: $white;
-      width: 5rem;
+      &:after {
+        @include centerer(absolute, horizontal);
+        border-right: $tooltip-arrow-size solid transparent;
+        border-left: $tooltip-arrow-size solid transparent;
+        border-top: $tooltip-arrow-size solid;
+        bottom: -$tooltip-arrow-size+1px;
+      }
+
+      span {
+        display: block;
+      }
+
+      svg {
+        fill: $white;
+        width: 5rem;
+      }
     }
   }
 }

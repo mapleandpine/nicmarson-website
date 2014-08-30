@@ -62,12 +62,25 @@ h6, .h6 { font-size: $font-size-h6; }
     color: inherit;
   }
 
+  span {
+    color: $muted-color;
+    display: block;
+    font-family: $font-family-serif;
+    font-size: .5em;
+    font-style: italic;
+    font-weight: normal;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+  }
+
   &--section {
     // title with full width underline
-    border-bottom: 1px solid;
+    border-bottom: .16em solid;
     font-family: $font-family-condensed;
     font-weight: 400;
-    padding-top: 1em;
+    line-height: 1.625;
+    margin-bottom: 2rem;
+    padding-top: 3rem;
 
     span {
       @extend %smallcaps;
@@ -79,8 +92,8 @@ h6, .h6 { font-size: $font-size-h6; }
     // title with one-third width stubby underline
     font-family: $font-family-condensed;
     font-weight: 300;
-    margin-bottom: 1em;
-    padding-top: 2em;
+    margin-bottom: 2rem;
+    padding-top: 3rem;
 
     &::after {
       background-color: palette(grey, darker);

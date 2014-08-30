@@ -71,8 +71,9 @@
 .about__facts {
   background-color: palette(grey, darkest);
 
-  header {
-    background-color: palette(red);
+  p {
+    font-family: $font-family-sans-serif;
+    text-align: center;
   }
 }
 
@@ -124,9 +125,6 @@
   position: relative;
 
   p {
-    font-family: $font-family-sans-serif;
-    text-align: center;
-
     @include mq($from: double) {
       text-align: left;
     }

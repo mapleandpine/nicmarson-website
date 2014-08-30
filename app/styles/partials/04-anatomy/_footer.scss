@@ -22,22 +22,14 @@ footer[role=contentinfo] {
     }
 
     a {
-      font-size: 20px;
+      font-size: 1.25rem;
 
-      @include mq($from: double) {
-        font-size: 18px;
-      }
+      &:focus,
+      &:hover {
 
-      @include mq($from: triple) {
-        font-size: 20px;
-      }
-
-      @include mq($from: quadruple) {
-        font-size: 22px;
-      }
-
-      @include mq($from: quintuple) {
-        font-size: 24px;
+        .tooltip--top {
+          bottom: calc(2.5rem + 10px);
+        }
       }
     }
 
