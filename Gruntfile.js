@@ -296,7 +296,7 @@ module.exports = function(grunt) {
     // Create responsive image sizes
     // http://www.andismith.com/grunt-responsive-images/
     // http://dev.opera.com/articles/native-responsive-images/
-    responsive_images: {
+    responsiveImages: {
       options: {
         sizes: [{
           width: 320,
@@ -507,7 +507,7 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('images', [
-    'responsive_images',
+    'responsiveImages',
     'webp',
     'imageOptim'
   ]);

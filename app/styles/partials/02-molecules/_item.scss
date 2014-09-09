@@ -2,7 +2,7 @@
 // individual item listing with image and details
 //////////////////////////////////////////////////
 .item {
-  background-color: palette(grey, lightest);
+  background-color: $white;
   display: block;
   font-family: $font-family-condensed;
   font-weight: 300;
@@ -31,6 +31,7 @@
 }
 
 .item-meta {
+  background-color: palette(grey, lightest);
   border-top: 1px solid palette(grey, lighter);
   color: palette(grey, darker);
 
