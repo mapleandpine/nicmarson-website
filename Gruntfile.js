@@ -70,7 +70,7 @@ module.exports = function(grunt) {
         files: [
           '.jekyll/**/*.html',
           '.tmp/styles/{,*/}*.css',
-          '<%= config.app %>/images/{,*/}*'
+          '<%= config.app %>/images/**/*'
         ]
       }
     },
@@ -238,7 +238,7 @@ module.exports = function(grunt) {
           src: [
             '<%= config.dist %>/scripts/{,*/}*.js',
             '<%= config.dist %>/styles/{,*/}*.css',
-            '<%= config.dist %>/images/{,*/}*.*',
+            '<%= config.dist %>/images/**/*.*',
             '<%= config.dist %>/styles/fonts/{,*/}*.*',
             '<%= config.dist %>/*.{ico,png}'
           ]
@@ -414,7 +414,7 @@ module.exports = function(grunt) {
           dest: '<%= config.dist %>',
           src: [
             '.htaccess',
-            'images/{,*/}*.*', // everything in images
+            'images/**/*.*', // everything in images
             'styles/fonts/{,*/}*.*',
             '!**/_*{,/**}'
           ]
