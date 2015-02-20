@@ -139,7 +139,7 @@ module.exports = function(grunt) {
 
     jekyll: {
       options: {                          // Universal options
-        bundleExec: true,
+        // bundleExec: true,
         src : '<%= config.app %>'
       },
       dist: {

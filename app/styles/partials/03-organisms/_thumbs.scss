@@ -12,10 +12,7 @@
     animation-fill-mode: both;
     animation-iteration-count: 1;
     animation-name: fadeInUp;
-    opacity: 0;
     padding-bottom: 1rem;
-    transform: translate3d(0, 100%, 0);
-    @extend %transition-fast;
     width: 100%;
 
     $incremental-delay: .25s;
@@ -27,19 +24,13 @@
       }
     }
 
-    &:hover a.item {
-      opacity: 1;
-    }
-
     .item {
       box-shadow: 0 0 2px rgba(0,0,0,.5);
       padding: 2px;
-      transform: translate3d(0, 0, 0);
       @extend %transition-fast;
 
       &:hover {
         box-shadow: 0 2px 4px rgba(0,0,0,.4);
-        transform: translate3D(0, -2px, 0)
       }
     }
   }
