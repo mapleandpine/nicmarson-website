@@ -4,17 +4,16 @@
   --white: #fff;
   --black: #000;
 
-  --primaryColor: #699;
-  --secondaryColor: #d1ae45;
-  --accentColor: #d34a2b;
+  --primaryColor: #0971B2;
+  --secondaryColor: #00B233;
   --dangerColor: #e4003a;
 
   --bodyBackground: #fff;
   --modalBackground: #f5f5f5;
   --inverseBackground: #413f3b;
   --inverseMain: #d1ae45;
-  --mainColor: #2b2b2b;
-  --mainColorWeak: #6b6b6b;
+  --mainColor: #464646;
+  --mainColorWeak: #666;
   --linkColor: #111;
   --linkHover: #666;
 

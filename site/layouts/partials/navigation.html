@@ -1,13 +1,13 @@
 <header class="header container is-fluid" role="banner">
-  <nav class="navbar">
-    <div class="navbar-start">
-      <h1 class="navbar-brand">
-        <a class="navbar-item" href="{{ if .IsHome }}#page-top{{ else }}{{ .Site.BaseURL }}{{ end }}">Nic Marson</a>
+  <nav class="level">
+    <div class="level-left">
+      <h1 class="level-item">
+        <a class="brand" href="{{ if .IsHome }}#page-top{{ else }}{{ .Site.BaseURL }}{{ end }}">Nic Marson</a>
       </h1>
     </div>
-    <div class="navbar-end">
+    <div class="level-right">
       <a href="{{ if .IsHome }}#page-top{{ else }}{{ .Site.BaseURL }}{{ end }}" class="hide"></a>
-      <a class="navbar-item" href="#footer">Contact</a>
+      <a class="level-item" href="#footer">Contact</a>
     </div>
   </nav>
 </header>

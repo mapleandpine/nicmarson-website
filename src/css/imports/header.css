@@ -7,23 +7,23 @@
   z-index: 10;
 }
 
-@media screen and (min-width: 41.75em) {
+@media (--r-minM) {
   .header {
     padding-left: 2rem;
     padding-right: 2rem;
   }
 }
 
-.header .navbar {
-  align-items: center;
+.header .level {
   height: 100px;
 }
 
-.header .navbar-item {
+.header .level-item {
   font-size: 1.6rem;
 }
 
-.navbar-brand .navbar-item {
+.header .brand {
+  color: var(--mainColor);
   font-size: 2.4rem;
   font-weight: 900;
 }
