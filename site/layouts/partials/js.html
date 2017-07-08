@@ -1,0 +1,67 @@
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-ND36K8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-ND36K8');</script>
+<!-- Google+ -->
+<script type="text/javascript" async defer
+  src="https://apis.google.com/js/platform.js?publisherid=109108573200098857614">
+</script>
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Service",
+  "name" : "Maple and Pine",
+  "url" : "http://mapleandpine.design",
+  "logo": "http://mapleandpine.design/assets/img/identity/logo-black-circle.svg",
+  "contactPoint" : [
+    {
+      "@type" : "ContactPoint",
+      "email" : "hello@mapleandpine.co",
+      "contactType" : "contact",
+      "areaServed" : "US"
+    },
+    {
+      "@type" : "ContactPoint",
+      "email" : "sales@mapleandpine.co",
+      "contactType" : "sales",
+      "areaServed" : "US"
+    }
+  ],
+  "sameAs" : [
+    "https://twitter.com/maple_and_pine",
+    "https://plus.google.com/+mapleandpinedesign",
+    "https://www.facebook.com/mapleandpinedesign",
+    "https://www.linkedin.com/company/maple-and-pine",
+    "https://www.instagram.com/mapleandpinedesign/",
+    "https://www.pinterest.com/maple_and_pine"
+  ],
+  "serviceArea": [
+    {
+      "@type": "City",
+      "name": "Portland"
+    },
+    {
+      "@type": "State",
+      "name": "Oregon"
+    },
+    {
+      "@type": "Country",
+      "name": "United States"
+    }
+  ],
+  "openingHours": "Mo,Tu,We,Th,Fr 09:00-17:00",
+}
+</script>
+
+{{ "<!-- Custom Theme -->" | safeHTML }}
+<script src="app.js"></script>
+
+{{ template "_internal/google_analytics_async.html" . }}
+
+{{ if .Site.Params.analytics.piwik }}
+  {{ partial "_analytics/piwik.html" . }}
+{{ end }}

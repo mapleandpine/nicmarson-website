@@ -1,0 +1,58 @@
+//== Media queries
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Single
+$screen-1:                  320px;
+
+// Double - ( 640px + 48px )
+$screen-2:                  688px;
+
+// Triple - ( 960px + 48px )
+$screen-3:                  1008px;
+
+// Quadruple - ( 1280px + 48px )
+$screen-4:                  1328px;
+
+// Quintuple - ( 1600px + 48px )
+$screen-5:                  1648px;
+
+
+// == Breakpoint map
+//
+
+// To enable support for browsers that do not support @media queries,
+// (IE <= 8, Firefox <= 3, Opera <= 9) set $mq-responsive to false
+// Create a separate stylesheet served exclusively to these browsers,
+// meaning @media queries will be rasterized, relying on the cascade itself
+$mq-responsive: true;
+
+$mq-breakpoints: (
+  single:     $screen-1,
+  double:     $screen-2,
+  double-max: ($screen-3 - 1px),
+  triple:     $screen-3,
+  quadruple:  $screen-4,
+  quintuple:  $screen-5
+);
+
+
+// Media Query mixin
+// Usage:
+// .element {
+//   @include mq($from: single) {
+//     color: red;
+//   }
+//   @include mq($to: double) {
+//     color: blue;
+//   }
+//   @include mq(single, double) {
+//     color: green;
+//   }
+//   @include mq($from: double, $and: '(orientation: landscape)') {
+//     color: teal;
+//   }
+//   @include mq(950px) {
+//     color: hotpink;
+//   }
+// }

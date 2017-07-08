@@ -1,0 +1,29 @@
+/* Header */
+
+.header {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+  z-index: 10;
+}
+
+@media screen and (min-width: 41.75em) {
+  .header {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.header .navbar {
+  align-items: center;
+  height: 100px;
+}
+
+.header .navbar-item {
+  font-size: 1.6rem;
+}
+
+.navbar-brand .navbar-item {
+  font-size: 2.4rem;
+  font-weight: 900;
+}

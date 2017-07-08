@@ -1,0 +1,43 @@
+/* Icons */
+
+:root {
+  --icon: {
+    display: inline-block;
+    fill: currentColor;
+    position: relative;
+  };
+}
+
+[class*="i--"] {
+  @apply --icon;
+  height: 1em;
+  width: 1em;
+}
+
+.i--rocket {
+  width: 0.9419638309627771em;
+}
+
+.i--paper-plane {
+  width: 1.001953125em;
+}
+
+.i--pinterest {
+  width: 0.857421875em;
+}
+
+.i--github {
+  width: 0.9287109375em;
+}
+
+.i--twitter {
+  width: 0.9287109375em;
+}
+
+.i--google-plus {
+  width: 1.2861328125em;
+}
+
+.i--facebook {
+  width: 0.587890625em;
+}

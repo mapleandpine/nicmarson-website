@@ -1,0 +1,20 @@
+%transition-slow {
+  transition: all .75s cubic-bezier(.17,.67,.83,.67) 0s;
+}
+
+%transition-medium {
+  transition: all .5s cubic-bezier(.17,.67,.83,.67) 0s;
+}
+
+%transition-fast {
+  transition: all .25s cubic-bezier(.17,.67,.83,.67) 0s;
+}
+
+%transition-faster {
+  transition: all .15s cubic-bezier(.17,.67,.83,.67) 0s;
+}
+
+%transition-portfolio {
+  transition-duration: .2s;
+  transition-timing-function: cubic-bezier(.17,.67,.83,.67);
+}

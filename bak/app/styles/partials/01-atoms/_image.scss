@@ -1,0 +1,44 @@
+img {
+  vertical-align: middle;
+}
+
+// Figures
+//
+// We reset this here because previously Normalize had no `figure` margins. This
+// ensures we don't break anyone's use of the element.
+
+figure {
+  margin: 0;
+}
+
+.img-fill {
+  background-position: center top;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.img-circle {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.svg-inline {
+  display: inline-block;
+  height: .9em;
+  margin-right: .5em;
+  vertical-align: calc(50% - .85em);
+  width: .9em;
+
+  &--end {
+    margin-left: .5em;
+    margin-right: 0;
+  }
+
+  .inverse & {
+    fill: $white;
+  }
+}

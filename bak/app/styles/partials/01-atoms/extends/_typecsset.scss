@@ -1,0 +1,14 @@
+%typecsset-vertical-rhythm {
+  margin-bottom: $typecsset-magic-number;
+  margin-bottom: $typecsset-magic-ratio + rem;
+}
+
+%sass-margin-bottom {
+    margin-bottom:$base-spacing-unit;
+    margin-bottom:($base-spacing-unit / $typecsset-base-font-size)*1rem;
+
+    .islet &{
+        margin-bottom:$base-spacing-unit / 2;
+        margin-bottom:(($base-spacing-unit / $typecsset-base-font-size) / 2)*1rem;
+    }
+}

@@ -1,0 +1,32 @@
+// Media queries
+
+@function mq-px2em($px, $base-font-size: 16px) {
+    @if (unitless($px)) {
+        @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels for you";
+        @return mq-px2em($px + 0px); // That may fail.
+    } @else if (unit($px) == em) {
+        @return $px;
+    }
+    @return ($px / $base-font-size) * 1em;
+}
+
+@function mq-retrieve-breakpoint-width($name) {
+	@each $breakpoint in $mq-breakpoints {
+		$breakpoint-name:  nth($breakpoint, 1);
+		$breakpoint-width: nth($breakpoint, 2);
+
+		@if $name == $breakpoint-name {
+			@return $breakpoint-width;
+		}
+	}
+	@return 'Breakpoint #{$name} does not exist';
+}
+
+// Add a breakpoint
+// Usage: $mq-breakpoints: mq-add-breakpoint(tvscreen, 1920px);
+// Credit goes to Sam Richard (author of the `respond-to()` mixin)
+@function mq-add-breakpoint($name, $breakpoint) {
+  $breakpoint: $name $breakpoint;
+  $output: append($mq-breakpoints, $breakpoint, 'space');
+  @return $output;
+}

@@ -1,0 +1,167 @@
+// Found on the home page
+
+.banner {
+  position: relative;
+  z-index: 1;
+
+  p {
+    font-size: 1rem;
+    font-family: $font-family-serif;
+    line-height: 1.1;
+
+    @include breakpoint("medium") {
+      font-size: 1.25rem;
+    }
+
+    @include breakpoint("large") {
+      font-size: 1.5rem;
+    }
+  }
+
+  .img-src {
+    background-position: left top;
+  }
+
+  .img-bg {
+    height: 100vh;
+    max-height: 900px;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  .img-bg-content {
+    @include gradient-vertical-three-colors(rgba(0,0,0,0), rgba(0,0,0,.25), 50%, rgba(0,0,0,.15));
+    color: #FFF;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    right: 0;
+
+    @include breakpoint("medium") {
+      padding: 80px 0;
+
+      > .content {
+        padding-left: 0;
+      }
+
+      .frame {
+        border: 15px solid #FFF;
+        margin-bottom: 20px;
+        padding: 20px 30px 12px;
+        position: relative;
+        width: 39.2rem;
+      }
+
+      > .content {
+        padding-bottom: 0;
+        padding-top: 0;
+        position: relative;
+      }
+    }
+
+    @include breakpoint("large") {
+      .frame {
+        border-width: 20px;
+        width: 44.8rem;
+      }
+    }
+  }
+
+  .name {
+    font-size: 3rem;
+    font-weight: 900;
+    text-shadow: 0 0 20px rgba(1,1,1, .2);
+
+    @include breakpoint("medium") {
+      font-size: 7rem;
+    }
+
+    @include breakpoint("large") {
+      font-size: 8.5rem;
+      line-height: .85;
+    }
+
+    > span {
+      display: block;
+
+      &:first-child {
+        font-weight: 200;
+        letter-spacing: -.05em;
+        margin-bottom: 1rem;
+        margin-left: -.065em;
+
+        @include breakpoint("medium") {
+          font-size: 10rem;
+        }
+
+        @include breakpoint("large") {
+          font-size: 12.5rem;
+        }
+      }
+    }
+
+    // Fix some kerning issues
+    .char2,
+    .char3,
+    .char5 {
+      margin-left: .02em;
+    }
+    .char4 {
+      margin-left: .03em;
+    }
+  }
+
+  .byline {
+
+    @include breakpoint("medium") {
+      font-size: 1.5em;
+      position: absolute;
+      right: 40px;
+      text-align: right;
+      top: 35px;
+    }
+
+    @include breakpoint("large") {
+      font-size: 1.75em;
+    }
+
+    span {
+      display: block;
+      white-space: nowrap;
+    }
+
+    b {
+      font-size: 1.5em;
+      margin-right: .05em;
+    }
+  }
+
+  .more {
+    font-style: italic;
+
+    img {
+      border-radius: 100%;
+      margin-left: 5px;
+      opacity: .5;
+      @extend %transition-medium;
+    }
+
+    &:hover {
+      img {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.js .img-bg-content,
+.wf-loading .img-bg-content {
+  opacity: 0;
+}
+
+.wf-active .img-bg-content {
+  opacity: 1;
+}

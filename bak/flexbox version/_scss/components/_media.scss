@@ -1,0 +1,52 @@
+.media,
+.post-excerpt {
+  margin-bottom: 1.5rem;
+
+  @include breakpoint("medium") {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
+.media-figure,
+.post-footer {
+  @include breakpoint("medium") {
+    margin-right: 1.5rem;
+  }
+}
+
+.media-body,
+.post-content {
+  @include breakpoint("medium") {
+    flex: 1 0 0;
+  }
+
+  &, & :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.media--center {
+  @include breakpoint("medium") {
+    align-items: center;
+  }
+}
+
+.media--reverse {
+  & > .media-figure {
+    @include breakpoint("medium") {
+      order: 1;
+      margin: 0 0 0 1.5rem;
+    }
+  }
+}
+
+a.media {
+  @include breakpoint("small") {
+    display: block;
+
+    .media-figure {
+      margin-bottom: 1em;
+    }
+  }
+}

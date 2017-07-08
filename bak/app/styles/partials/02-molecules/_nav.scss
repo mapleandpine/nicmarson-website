@@ -1,0 +1,62 @@
+.nav {
+
+  ul,
+  ol {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: block;
+    margin-bottom: .5em;
+    position: relative;
+
+    @include mq($from: double) {
+      display: inline-block;
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    border: 1px dotted rgba(255,255,255,.5);
+    color: $nav-link-color;
+    display: block;
+    padding: .75em;
+    position: relative;
+    text-decoration: none;
+    @extend %transition-fast;
+    user-select: none;
+
+    @include mq($from: double) {
+      padding: .25em .75em;
+    }
+
+    &:visited {
+      color: $nav-link-visited-color;
+    }
+
+    &:focus,
+    &:hover,
+    &.active {
+      background-color: $white;
+      color: $nav-link-hover-color;
+
+      svg {
+        fill: $nav-link-hover-color;
+      }
+    }
+
+    svg {
+      fill: $nav-link-color;
+    }
+  }
+}
+
+.nav--list {
+
+  li {
+    display: block;
+    margin-bottom: .25em;
+    position: relative;
+  }
+}

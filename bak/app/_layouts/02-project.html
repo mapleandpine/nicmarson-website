@@ -1,0 +1,80 @@
+---
+layout: 00-default
+parent: portfolio
+slug: portfolio
+class: portfolio portfolio-detail
+---
+
+<section class="row row--two">
+  <div class="group group--one">
+    <div class="block--bottom">
+      <h1 class="title">{{ page.project }}</h1>
+      <p class="byline">
+        {{ page.date | date: "%Y" }}
+        {% if page.website %} | <a href="http://{{ page.website }}" class="external" role="link">{{ page.website }}</a>{% endif %}
+        {% if page.client %} | {{ page.client }}{% endif %}
+      </p>
+      <p class="lead">{{ page.excerpt }}</p>
+      <div class="popup--text popup--container">
+        <input class="popup--input" id="{{ page.name }}-popup" type="checkbox">
+        <div class="popup popup--rotateIn">{{ page.role-description }}</div>
+        <label class="btn--danger popup--toggle" for="{{ page.name }}-popup">
+          <span class="title--inline-block">My role</span>
+          {{ page.role }}
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="group group--one flex--centered">
+    <div class="device{% if page.scroll %} device--scroll{% endif %}">
+      <div class="part frame">
+        <div class="part screen">
+          <picture>
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source srcset="{{ site.url }}/images/portfolio/{{ page.name }}/{{ page.name }}-browser.jpg, {{ site.url }}/images/portfolio/{{ page.name }}/{{ page.name }}-browser.jpg 2x" media="(min-width: 1080px)">
+            <!--[if IE 9]></video><![endif]-->
+            <img srcset="{{ site.url }}/images/portfolio/{{ page.name }}/{{ page.name }}-mobile.jpg, {{ site.url }}/images/portfolio/{{ page.name }}/{{ page.name }}-mobile.jpg 2x" alt="{{ page.name }} home page">
+          </picture>
+        </div>
+      </div>
+      <div class="part base"></div>
+    </div>
+  </div>
+</section>
+<!-- Load Skills and Additional Screens -->
+{{ content }}
+<!-- Previous and Next Projects -->
+<div class="row row--two pagination project-pagination">
+  {% if page.next_in_category != nil %}
+  <div class="group group--one">
+    <figure id="{{page.next_in_category.name}}" class="zoom">
+      <div class="aspect-ratio">
+        <img class="zoom-image" src="/images/portfolio/{{page.next_in_category.name}}/{{page.next_in_category.name}}-thumb.jpg" alt="{{ page.next_in_category.title }} thumbnail">
+      </div>
+      <figcaption class="zoom-container inverse">
+        <div class="center">
+          <b class="h4"><svg class="shape-arrow-left svg-inline"><use xlink:href="#shape-arrow-left"></use></svg> Previous project</b>
+          <span class="zoom-title">{{ page.next_in_category.title }}</i></span>
+        </div>
+        <a href="{{page.next_in_category.url}}">View {{ page.next_in_category.title }}</a>
+      </figcaption>
+    </figure>
+  </div>
+  {% endif %}
+  {% if page.previous_in_category != nil %}
+  <div class="group group--one">
+    <figure id="{{page.previous_in_category.name}}" class="zoom">
+      <div class="aspect-ratio">
+        <img class="zoom-image" src="/images/portfolio/{{page.previous_in_category.name}}/{{page.previous_in_category.name}}-thumb.jpg" alt="{{ page.previous_in_category.title }} thumbnail">
+      </div>
+      <figcaption class="zoom-container inverse">
+        <div class="center">
+          <b class="h4 next-text">Next project <svg class="shape-arrow-right svg-inline svg-inline--end"><use xlink:href="#shape-arrow-right"></use></svg></b>
+          <span class="zoom-title">{{ page.previous_in_category.title }}</span>
+        </div>
+        <a href="{{page.previous_in_category.url}}">View {{ page.previous_in_category.title }}</a>
+      </figcaption>
+    </figure>
+  </div>
+  {% endif %}
+</div>

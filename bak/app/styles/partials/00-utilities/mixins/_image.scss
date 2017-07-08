@@ -1,0 +1,57 @@
+// Image Mixins
+// - Responsive image
+// - Retina image
+
+
+// Responsive image
+//
+// Keep images from scaling beyond the width of their parents.
+@mixin img-responsive($display: block) {
+  display: $display;
+  max-width: 100%; // Part 1: Set a maximum relative to the parent
+  height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
+}
+
+
+// Retina image
+//
+@mixin retina-image($filename, $background-size, $extension: png, $retina-filename: null, $retina-suffix: _2x, $asset-pipeline: $asset-pipeline) {
+  @if $asset-pipeline {
+    background-image: image-url("#{$filename}.#{$extension}");
+  }
+  @else {
+    background-image:       url("#{$filename}.#{$extension}");
+  }
+
+  @include hidpi {
+    @if $asset-pipeline {
+      @if $retina-filename {
+        background-image: image-url("#{$retina-filename}.#{$extension}");
+      }
+      @else {
+        background-image: image-url("#{$filename}#{$retina-suffix}.#{$extension}");
+      }
+    }
+
+    @else {
+      @if $retina-filename {
+        background-image: url("#{$retina-filename}.#{$extension}");
+      }
+      @else {
+        background-image: url("#{$filename}#{$retina-suffix}.#{$extension}");
+      }
+    }
+
+    background-size: $background-size;
+
+  }
+}
+
+
+@mixin imageReplace($width) {
+  background-repeat: no-repeat;
+  width: $width;
+  height: auto;
+  overflow: hidden;
+  padding-left: $width;
+}

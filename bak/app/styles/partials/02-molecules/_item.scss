@@ -1,0 +1,67 @@
+//////////////////////////////////////////////////
+// individual item listing with image and details
+//////////////////////////////////////////////////
+.item {
+  background-color: $white;
+  display: block;
+  font-family: $font-family-sans-serif;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  position: relative;
+
+  @include mq($from: double) {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+  }
+
+  a {
+    color: palette(grey, darker);
+    display: block;
+  }
+
+  img {
+    @include img-responsive();
+  }
+
+  .aspect-ratio {
+    padding-bottom: 100%;
+  }
+}
+
+.item-meta {
+  background-color: palette(grey, lightest);
+  border-top: 1px solid palette(grey, lighter);
+  color: palette(grey, darker);
+
+  svg {
+    fill: palette(grey);
+  }
+}
+
+.item-title {
+  color: palette(grey, darkest);
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: .0125em;
+  margin-bottom: .5em;
+
+  &--entry {
+    font-size: 24px;
+    margin-bottom: .75rem;
+  }
+}
+
+.item-desc {
+  margin-bottom: .5em;
+
+  &--author {
+    color: palette(grey, dark);
+  }
+}
+
+.item-excerpt {
+  font-size: 1rem;
+  margin-bottom: .5em;
+}

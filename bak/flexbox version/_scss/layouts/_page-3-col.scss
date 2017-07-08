@@ -1,0 +1,43 @@
+.page-3-col {
+
+  > .page-first {
+    order: 1;
+  }
+
+  > .page-second {
+    order: 3;
+  }
+
+  > .page-third {
+    order: 2;
+  }
+}
+
+@include breakpoint("medium") {
+
+  .page-3-col {
+    flex-direction: row;
+
+    /* stupid IE10 tweener syntax */
+    -ms-flex-preferred-size: auto;
+
+    > .page-first {
+      flex: 0 1 150px;
+      order: 1;
+    }
+
+    > .page-second {
+      order: 2;
+    }
+
+    > .page-third {
+      border-left: 1px solid rgba(1,1,1, .1);
+      flex: 0 1 200px;
+      order: 3;
+    }
+  }
+
+  .site-nav-closed .page-3-col > .page-first {
+    flex: 0 1 50px;
+  }
+}

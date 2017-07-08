@@ -1,0 +1,40 @@
+<figure id="{{ post.name }}" class="item">
+  <a class="aspect-ratio" href="{{ post.url }}">
+    <img class="item-image" src="images/portfolio/{{ post.name }}/thumb.jpg" alt="{{ post.title }} thumbnail">
+  </a>
+  <figcaption class="item-meta">
+    <div class="block--small">
+      <h2 class="item-title"><a href="{{ post.url }}">{{ post.title }} <span>{{ post.date | date: "%Y" }}</span></a></h2>
+      <div class="item-desc">
+        <svg class="shape-camera svg-inline">
+          <use xlink:href="#shape-camera"></use>
+        </svg> {% if post.role %}{{ post.role }}{% else %}Contractor{% endif %}<br>
+        {% if post.solo %}
+        <svg class="shape-user svg-inline">
+          <use xlink:href="#shape-user"></use>
+        </svg>
+        {% else %}
+        <svg class="shape-users svg-inline">
+          <use xlink:href="#shape-users"></use>
+        </svg>
+        {% endif %} {% if post.solo %}Solo project{% else %}Team project{% endif %}
+      </div>
+    </div>
+    <div class="popup--container">
+      <input class="popup--input" id="{{ post.name }}-popup" type="checkbox">
+      <div class="popup popup--fadeIn">
+        <div class="block--medium">
+          <div class="item-excerpt">{{ post.excerpt }}</div>
+          <div class="item-desc muted">
+            <svg class="shape-tags svg-inline">
+              <use xlink:href="#shape-tags"></use>
+            </svg> {{ post.tags | array_to_sentence_string }}
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <label class="btn--more popup--toggle" for="{{ post.name }}-popup">More</label>
+      </div>
+    </div>
+  </figcaption>
+</figure>

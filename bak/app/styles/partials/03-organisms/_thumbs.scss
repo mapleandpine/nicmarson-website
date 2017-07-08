@@ -1,0 +1,37 @@
+//////////////////////////////////////////////////
+// portfolio page thumbnails
+//////////////////////////////////////////////////
+.thumbs {
+
+  &:hover .thumb a.item {
+    opacity: .5;
+  }
+
+  .thumb {
+    animation-duration: .3s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-name: fadeInUp;
+    padding-bottom: 1rem;
+    width: 100%;
+
+    $incremental-delay: .25s;
+
+    // Loop through the items and add some delay
+    @for $i from 1 through 8 {
+      &:nth-child(#{$i}n+#{$i}) {
+       animation-delay: $incremental-delay * $i;
+      }
+    }
+
+    .item {
+      box-shadow: 0 0 2px rgba(0,0,0,.5);
+      padding: 2px;
+      @extend %transition-fast;
+
+      &:hover {
+        box-shadow: 0 2px 4px rgba(0,0,0,.4);
+      }
+    }
+  }
+}

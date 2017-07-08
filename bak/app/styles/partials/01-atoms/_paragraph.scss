@@ -1,0 +1,50 @@
+/*------------------------------------*\
+  #PARAGRAPHS
+\*------------------------------------*/
+p {
+  @extend %typecsset-vertical-rhythm;
+  font-family: $text-font-family;
+  // always align left even when default is center
+  text-align: left;
+
+  @if $typecsset-indented-paragraphs == true {
+
+    + p {
+      @include typecsset-space(text-indent);
+      margin-top: -$typecsset-magic-number;
+      margin-top: -$typecsset-magic-ratio + rem;
+    }
+  }
+}
+
+.byline {
+  @extend %smallcaps;
+  color: $muted-color;
+  font-family: $font-family-sans-serif;
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: .0125em;
+  margin-top: -.75rem;
+  text-align: center;
+
+  @include mq($from: double) {
+    text-align: left;
+  }
+}
+
+.lead {
+  font-size: 1.125rem;
+  font-weight: 200;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+
+  @include mq($from: double) {
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
+
+  @include mq($from: triple) {
+    font-size: 1.5rem;
+  }
+}

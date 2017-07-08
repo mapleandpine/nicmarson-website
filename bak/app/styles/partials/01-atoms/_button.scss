@@ -1,0 +1,83 @@
+.btn {
+  border: 0 none;
+  box-sizing: content-box;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $font-family-sans-serif;
+  letter-spacing: .0125em;
+  line-height: normal;
+  overflow: hidden;
+  padding: 1em 1.5em;
+  position: relative;
+  text-decoration: none;
+  @extend %transition-fast;
+  user-select: none;
+  white-space: nowrap;
+
+  @include mq($from: double) {
+    max-width: 99%;
+  }
+
+  // Button states
+  &:focus {
+    outline: thin dotted #666;
+    text-decoration: none;
+  }
+
+  &:hover, &:active, &:focus {
+    text-decoration: none; // override any link default styles
+  }
+}
+
+.btn--default {
+  @extend .btn;
+  background-color: palette(blue);
+  border-radius: r(default);
+  color: $white;
+
+  &:hover, &:active, &:focus {
+    background-color: palette(blue, dark);
+    color: $white;
+  }
+}
+
+.btn--block {
+  @extend .btn;
+  background-color: palette(blue);
+  color: $white;
+  display: block;
+}
+
+.btn--clear {
+  @extend .btn;
+  background-color: rgba(0,0,0,.5);
+}
+
+.btn--danger {
+  @extend .btn;
+  background-color: palette(red);
+  border-radius: r(default);
+  color: $white;
+
+  &:hover, &:active, &:focus {
+    background-color: palette(red, dark);
+  }
+
+  svg {
+    fill: $white;
+  }
+}
+
+.btn--more {
+  @extend .btn;
+  background-color: palette(grey, lightest);
+  border-left: 2px dotted palette(grey, lighter);
+  border-right: 2px dotted palette(grey, lighter);
+  color: palette(grey, darkest);
+  font-size: 12px;
+  padding: 2px 7px;
+
+  &:hover, &:active, &:focus {
+    background-color: palette(grey, lighter);
+  }
+}

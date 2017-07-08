@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#" itemscope itemtype="http://schema.org/Organization">
+<head>
+  <meta charset="utf-8">
+  <meta content="{{ .Description }}" name="description">
+  <meta content="index, follow" name="robots">
+  <meta content="origin" name="referrer">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <title>{{ .Title }}{{ if not .IsHome }} &middot; {{ .Site.Title }}{{ end }}</title>
+  <link rel="canonical" href="{{ .Permalink }}">
+  {{ if .RSSLink }}<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}" />{{ end }}
+  {{ partial "meta.html" . }}
+  <!-- Icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color"            content="#FFFFFF">
+  <link rel="icon" type="image/png"   href="images/favicons/favicon-16x16.png"   sizes="16x16" />
+  <link rel="icon" type="image/png"   href="images/favicons/favicon-32x32.png"   sizes="32x32" />
+  <link rel="icon" type="image/png"   href="images/favicons/favicon-96x96.png"   sizes="96x96" />
+  <link rel="icon" type="image/png"   href="images/favicons/favicon-128.png"     sizes="128x128" />
+  <link rel="icon" type="image/png"   href="images/favicons/favicon-196x196.png" sizes="196x196" />
+  <link rel="mask-icon"               href="images/favicons/favicon.svg"         color="#200c0b">
+  <link rel="manifest"                href="images/favicons/manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="white">
+  <meta name="apple-mobile-web-app-title" content="{{ .Title }}">
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/favicons/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="images/favicons/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicons/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/favicons/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicons/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/favicons/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicons/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/favicons/apple-touch-icon-152x152.png" />
+  <meta name="application-name"                content="{{ .Title }}">
+  <meta name="msapplication-tooltip"           content="{{ .Title }}">
+  <meta name="msapplication-config"            content="browserconfig.xml">
+  <meta name="msapplication-window"            content="width=1024;height=768">
+  <meta name="msapplication-starturl"          content="http://mapleandpine.design">
+  <meta name="msapplication-square70x70logo"   content="images/favicons/mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="images/favicons/mstile-150x150.png" />
+  <meta name="msapplication-square310x310logo" content="images/favicons/mstile-310x310.png" />
+  <meta name="msapplication-navbutton-color"   content="#200c0b">
+  <meta name="msapplication-TileColor"         content="#FFFFFF" />
+  <meta name="msapplication-TileImage"         content="images/favicons/mstile-144x144.png" />
+  <meta name="msapplication-wide310x150logo"   content="images/favicons/mstile-310x150.png" />
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="css/main.css" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900|Playfair+Display:900" rel="stylesheet">
+</head>

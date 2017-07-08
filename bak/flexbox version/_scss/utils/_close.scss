@@ -1,0 +1,35 @@
+// Close icon
+//
+// Use the generic close icon for dismissing content like modals and alerts.
+//
+// Markup: <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+//
+// Styleguide 1.11.1
+
+.close {
+  color: #333;
+  font-size: 48px;
+  float: right;
+  line-height: 1;
+  opacity: 20;
+  text-shadow: 0 1px 0 rgba(255,255,255,1);
+
+  &:hover,
+  &:focus {
+    color: #000;
+    cursor: pointer;
+    opacity: 40;
+    text-decoration: none;
+  }
+}
+
+// Additional properties for button version
+// iOS requires the button element instead of an anchor tag.
+// If you want the anchor version, it requires `href="#"`.
+button.close {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  -webkit-appearance: none;
+}

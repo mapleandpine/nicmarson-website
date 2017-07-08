@@ -1,0 +1,53 @@
+// Word wrap
+//
+// The word-wrap <abbr title="cascading style sheets">CSS</abbr> property is used to specify whether or not the browser may break lines within words in order to prevent overflow when an otherwise unbreakable string is too long to fit in its containing box.
+//
+// .breakword     - Break words at container width
+//
+// Markup: <div style="width:15em"><p class="{$modifiers}">ThisIsOneReallyLongWordThatWouldn'tNormallyBreak. This line will-break-at-hyphenates.</p></div>
+//
+// Styleguide 1.11.6
+
+.breakword {
+  word-wrap: break-word;
+}
+
+.normal-wrap {
+  word-wrap: normal;
+}
+
+.inherit-wrap {
+  word-wrap: auto;
+}
+
+
+// Alignment
+//
+// Easily realign text to components with text alignment classes.
+//
+// .text-left   - Left aligned text
+// .text-center - Center aligned text.
+// .text-right  - Right aligned text
+// .text-justify  - Justify text
+//
+// Markup: <p class="{$modifiers}">When zombies arrive, quickly fax judge Pat.</p>
+//
+// Styleguide 1.4.4
+
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+.text-justify        { text-align: justify; }
+
+.font-small {
+  @extend %font-small;
+}
+
+.font-large {
+  @extend %font-large;
+}
+
+.roomy {
+  margin-bottom: 1em;
+  margin-top: 1em;
+}

@@ -1,0 +1,73 @@
+/*============================================
+=            Page specific colors            =
+============================================*/
+
+.portfolio,
+.portfolio ::selection,
+.portfolio .ink {
+  background-color: $portfolio-bg-color;
+}
+
+.portfolio {
+  background-color: $portfolio-alt-color;
+  background-image: radial-gradient(farthest-corner at 0 0, $portfolio-bg-color 0%, transparent 100%);
+  background-size: 100% 100%;
+
+  .connect .phone small,
+  .connect .email small {
+    background-color: $portfolio-bg-color;
+
+    &::after {
+      border-top-color: $portfolio-bg-color;
+    }
+  }
+
+  .connect .phone:hover,
+  .connect .email:hover {
+    background-color: $portfolio-bg-color;
+  }
+
+  .nav a:focus,
+  .nav a:hover,
+  .nav a.active {
+    color: $portfolio-nav-hover;
+
+    svg {
+      fill: $portfolio-nav-hover;
+    }
+  }
+}
+
+.portfolio-list {
+
+  main {
+    background-color: $white;
+
+    @include mq($from: triple) {
+      margin-left: $body-padding;
+    }
+  }
+
+  .thumbs {
+    padding: 2rem;
+  }
+}
+
+.project-pagination {
+  background-color: palette(grey, darkest);
+
+  svg {
+    fill: $white;
+  }
+}
+
+/*-----  End of Page specific colors  ------*/
+
+
+//////////////////////////////////////
+// progress bar graphs on detail page
+//////////////////////////////////////
+.portfolio__skills {
+  background-color: palette(grey, lightest);
+  margin-top: -6px;
+}

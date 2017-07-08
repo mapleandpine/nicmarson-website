@@ -1,0 +1,126 @@
+.button,
+a[role="button"] {
+  transition: background-color 0.2s;
+  display: inline-block;
+  padding: 0.6em 1em;
+  background: $color-gray-light;
+  color: inherit;
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
+  font-weight: 300;
+  line-height: normal;
+  overflow: hidden;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  @include breakpoint("small") {
+    max-width: 99%;
+  }
+
+  &:focus {
+    outline: thin dotted #666;
+    text-decoration:none;
+  }
+
+  &:hover, &:active, &:focus {
+    border: 0;
+    background: lighten($color-gray-light, 10);
+    text-decoration:none;
+  }
+
+  &.button--primary {
+    background-color: $color-blue;
+    color: #fff;
+
+    &:hover, &:active, &:focus {
+      background-color: darken($color-blue, 10);
+    }
+  }
+
+  &.button--inverse {
+    background-color: rgba(255,255,255, .2);
+    border: 2px solid;
+    color: #fff;
+
+    &:hover, &:active, &:focus {
+      background-color: transparent;
+    }
+  }
+
+  &.button--wide {
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+  }
+
+  &.button--block {
+    display: block;
+    padding: 1em 1.5em;
+    text-align: center;
+  }
+}
+
+.nav-toggle {
+  background-color: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: block;
+  height: 32px;
+  position: relative;
+  width: 50px;
+
+  @include breakpoint("medium") {
+    display: none;
+  }
+
+  span {
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 13px;
+    width: 24px;
+    height: 3px;
+    margin-top: -2px;
+    font-size: 0px;
+    user-select: none;
+    transition: background-color 0.3s;
+
+    &:before,
+    &:after {
+      background: #fff;
+      content: '';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      transition: transform 0.3s;
+      width: 100%;
+    }
+
+    &:before {
+      transform: translateY(-280%);
+    }
+
+    &:after {
+      transform: translateY(280%);
+    }
+  }
+
+  &.active {
+
+    span {
+      background-color: transparent;
+
+      &:before {
+        -webkit-transform: translateY(0) rotate(45deg);
+        transform: translateY(0) rotate(45deg);
+      }
+
+      &:after {
+        -webkit-transform: translateY(0) rotate(-45deg);
+        transform: translateY(0) rotate(-45deg);
+      }
+    }
+  }
+}

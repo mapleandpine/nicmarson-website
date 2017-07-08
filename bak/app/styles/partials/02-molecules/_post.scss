@@ -1,0 +1,26 @@
+/* standard */
+.post-entry {
+
+}
+
+.post-meta,
+.post-pagination {
+  border-top: 1px solid palette(grey, light);
+  padding-top: 1.5rem;
+}
+
+.post-avatar {
+  margin-bottom: 1rem;
+}
+
+.post-back,
+.post-date,
+.post-category {
+  line-height: 1.5;
+  margin-bottom: .5rem;
+  white-space: nowrap;
+}
+
+.post-category {
+  text-transform: capitalize;
+}

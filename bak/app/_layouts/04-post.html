@@ -1,0 +1,51 @@
+---
+layout: 00-default
+slug: resources
+class: resources
+---
+
+<article class="row row--four">
+  <div class="group group--three">
+    <div class="block--bottom">
+      <div class="post post-entry">
+        <header class="post-header">
+          <h1 class="title">{{ page.title }}</h1>
+        </header>
+        <div class="post-content">
+          {{ content }}
+        </div>
+        <div class="row row--two pagination post-pagination">
+          {% if page.next_in_category != nil %}
+            <div class="group group--one">
+              <a href="{{page.previous_in_category.url}}" class="previous">
+                <span><svg class="shape-arrow-left svg-inline"><use xlink:href="#shape-arrow-left"/></svg> Older Post</span>
+                <span class="h5">{{ page.next_in_category.title }}</span>
+              </a>
+            </div>
+          {% endif %}
+          {% if page.previous_in_category != nil %}
+            <div class="group group--one">
+              <a href="{{page.next_in_category.url}}" class="next next-text">
+                <span>Newer Post <svg class="shape-arrow-right svg-inline"><use xlink:href="#shape-arrow-right"></use></svg></span>
+                <span class="h5">{{ page.previous_in_category.title }}</span>
+              </a>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="group group--one">
+    <div class="block--both">
+      <div class="post-back"><a href="/resources.html"><svg class="shape-arrow-left svg-inline">
+          <use xlink:href="#shape-arrow-left"></use>
+        </svg> Back to Resources</a></div>
+      <div class="post post-meta">
+        <img class="post-avatar" src="https://secure.gravatar.com/avatar/8d6e9c07171508fa435faa35ae8a0ebc">
+        <div class="post-date">{{ site.time | date_to_long_string }}</div>
+        <div class="post-category">{{ page.categories | join: ', ' }}</div>
+      </div>
+    </div>
+  </div>
+</article>

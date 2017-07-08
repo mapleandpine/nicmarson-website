@@ -1,0 +1,26 @@
+.page-flex {
+  clear: both;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.page-first {
+  order: -1;
+}
+
+.flex-item {
+  @extend %transition-fast;
+}
+
+.no-flexbox {
+  .flex-item {
+    display: block;
+    float: left;
+  }
+}
+
+.page-content {
+  flex: 1 1 0;
+  order: -1;
+}

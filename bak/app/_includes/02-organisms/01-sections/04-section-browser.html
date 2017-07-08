@@ -1,0 +1,58 @@
+<section class="section__browser">
+  <div class="browser-chrome">
+    <div class="browser-header">
+      <ul class="browser-buttons">
+        <li></li><li></li><li></li>
+      </ul>
+      <div class="browser-tab"><img src="{{ site.url }}/images/portfolio/{{ page.name }}/favicon.ico"><span>{{ page.img-alt }}</span><i class="close">&times;</i></div>
+    </div>
+    <div class="browser-window dark-bg" style="background-color: #{{ page.color-dark }}">
+      <div class="content">
+        <div class="service-graphic sg2">
+          <div class="screen monitor">
+            <div class="glass">
+              <div class="browser-chrome browser-chrome-mini">
+                <div class="browser-header"><ul class="browser-buttons"><li></li><li></li><li></li></ul><div class="browser-tab"></div></div>
+                <div class="browser-window">
+                  <div class="img-src" style="background-image:url('/images/portfolio/{{ page.name }}/{{ page.name }}-browser.jpg')"></div>
+                </div>
+              </div>
+            </div>
+            <div class="base"><div class="grey-shadow"></div><div class="foot top"></div><div class="foot bottom"></div></div>
+          </div>
+          <div class="laptop">
+            <div class="screen">
+              <div class="glass">
+                <div class="image">
+                  <div class="img-src" style="background-image:url('/images/portfolio/{{ page.name }}/{{ page.name }}-browser.jpg')"></div>
+                </div>
+              </div>
+            </div>
+            <div class="keyboard"></div>
+          </div>
+          {% if page.mobile %}
+          <div class="ipad">
+            <div class="screen">
+              <div class="glass">
+                <div class="image">
+                  <div class="img-src" style="background-image:url('/images/portfolio/{{ page.name }}/{{ page.name }}-mobile.jpg')"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="phone">
+            <div class="screen">
+              <div class="glass">
+                <div class="image">
+                  <div class="img-src" style="background-image:url('/images/portfolio/{{ page.name }}/{{ page.name }}-mobile.jpg')"></div>
+                </div>
+              </div>
+            </div>
+            <div class="shadow"></div>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,54 @@
+.home,
+.home ::selection,
+.home .ink {
+  background-color: $home-bg-color;
+}
+
+.home {
+  background-color: $home-alt-color;
+  background-image: radial-gradient(farthest-corner at 0 0, $home-bg-color 0%, transparent 100%);
+  background-size: 100% 100%;
+
+  // Resource intensive
+  // @include mq($from: triple) {
+  //   animation-duration: 20s;
+  //   animation-fill-mode: both;
+  //   animation-iteration-count: infinite;
+  //   animation-name: homeBg;
+  //   will-change: background-position;
+  // }
+
+  .connect .phone small,
+  .connect .email small {
+    background-color: $home-bg-color;
+
+    &::after {
+      border-top-color: $home-bg-color;
+    }
+  }
+
+  .connect .phone:hover,
+  .connect .email:hover {
+    background-color: $home-bg-color;
+  }
+
+  .nav a:focus,
+  .nav a:hover,
+  .nav a.active {
+    color: $home-nav-hover;
+
+    svg {
+      fill: $home-nav-hover;
+    }
+  }
+
+  .sidebar {
+    background-color: palette(grey, darkest);
+
+    .portfolio-item {
+      @include mq($from: double) {
+        width: 93%;
+      }
+    }
+  }
+}

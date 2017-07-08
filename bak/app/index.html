@@ -1,0 +1,33 @@
+---
+layout: 00-default
+title: Home
+slug: home
+class: home
+---
+
+<div class="row row--two">
+  <section class="group group--one">
+    <div class="block--bottom">
+      <h1 class="title">Hi, my name is Nic Marson.</h1>
+      <p class="lead">I design and develop web experiences across all devices and browsers. I'm currently employed full-time at <a href="http://instrument.com" role="link">Instrument</a> and not looking for work.</p>
+      <div class="block--medium block--well">
+        <p>In addition to being a Front-end Developer and UI Designer, I'm a father, paddler, home builder, and artist. <a href="about.html" role="link">Learn more about me.</a></p>
+      </div>
+    </div>
+  </section>
+  <section class="group group--one sidebar">
+  {% if page.slug == "home" %}
+    <header>
+      <h2 class="title--header">A few projects I've worked on</h2>
+    </header>
+    <div class="portfolio-item">
+      {% for post in site.categories['portfolio'] limit:3 %}
+        {% include 02-organisms/01-sections/03-section-portfolio-light.html %}
+      {% endfor %}
+    </div>
+    <footer>
+      <a href="portfolio.html" class="btn--block">View all projects</a>
+    </footer>
+  {% endif %}
+  </section>
+</div>

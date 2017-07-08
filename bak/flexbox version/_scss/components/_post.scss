@@ -1,0 +1,243 @@
+/* standard */
+.post {
+
+  .byline {
+    font-style: italic;
+  }
+
+  /* terminal */
+  pre.terminal {
+    border: 1px solid #000;
+    background-color: #333;
+    color: #FFF;
+  }
+
+  pre.terminal code {
+    background-color: #333;
+  }
+}
+
+.post-entry {
+  @include breakpoint("medium") {
+    p {
+      max-width: 30em;
+    }
+  }
+}
+
+.post-content {
+  color: #505050;
+  font-family: $font-family-serif;
+
+  @include breakpoint("medium") {
+    font-size: 1.375em;
+  }
+
+  p {
+    margin-bottom: 1.5em;
+  }
+
+  p:first-child {
+    font-size: 1.2em;
+  }
+}
+
+.post-full {
+  width: 100%;
+
+  @include breakpoint("medium") {
+    height: 100vh;
+  }
+
+  .content {
+    position: relative;
+
+    @include breakpoint("medium") {
+    }
+
+    @include breakpoint("large") {
+    }
+  }
+
+  .post-content {
+
+    @include breakpoint("medium") {
+      font-size: $font-size-large;
+    }
+  }
+
+  .title {
+    @include typecsset-font-size($typecsset-h2-size);
+
+    @include breakpoint("medium") {
+      @include typecsset-font-size($typecsset-h1-size);
+      margin-bottom: 3rem;
+      margin-left: -5rem;
+    }
+
+    @include breakpoint("large") {
+      font-size: 4em;
+      margin-left: -10rem;
+    }
+  }
+
+  footer {
+    color: rgba(0,0,0, .4);
+
+    @include breakpoint("medium") {
+      left: 0;
+      position: absolute;
+      text-align: center;
+      width: 4em;
+
+      span {
+        display: block;
+      }
+
+      .day {
+        line-height: .95;
+      }
+
+      .month {
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      .year {
+        line-height: 1;
+      }
+    }
+  }
+}
+
+@media (max-width: 740px) {
+  .post .slabtextdone .slabtext {
+    display: inline;
+    font-size: 1em !important;
+  }
+}
+
+.post-portfolio {
+
+  section {
+    position: relative;
+  }
+
+  .title {
+    line-height: 1.3;
+  }
+
+  .table-info td {
+    border-bottom: 8px solid $color-gray-light;
+    padding-bottom: 2rem;
+  }
+
+  .grid {
+    margin-bottom: 2rem;
+
+    @include breakpoint("large") {
+      margin-bottom: 3rem;
+    }
+  }
+
+  .pizza-pie {
+    margin-left: -3rem;
+    margin-top: -3rem;
+  }
+
+  .intro .pizza-toppings {
+    text-align: right;
+
+    @include breakpoint("large") {
+      font-size: 1.5em;
+    }
+  }
+
+  .breakdown {
+
+    .grid-cell {
+      position: relative;
+    }
+
+    .pizza-toppings {
+      @include breakpoint("medium") {
+        font-size: .85em;
+      }
+      @include breakpoint("large") {
+        font-size: 1em;
+      }
+    }
+  }
+
+  .pie-chart {
+    float: left;
+    margin-right: 40px;
+    width: 50%;
+  }
+}
+
+.post-banner {
+
+  @include breakpoint("medium") {
+
+    .content {
+      min-height: 550px;
+    }
+  }
+
+  .title {
+
+    @include breakpoint("medium") {
+      font-size: 4rem;
+      line-height: 1.2;
+      margin-left: -5rem;
+      width: 12em;
+    }
+
+    @include breakpoint("large") {
+      margin-left: -10rem;
+    }
+
+    span {
+      color: rgba(255,255,255, .5);
+      display: block;
+      font-size: 65%;
+    }
+  }
+
+  p {
+    @include breakpoint("medium") {
+      width: 24em;
+    }
+
+    @include breakpoint("large") {
+      width: 30%;
+    }
+  }
+}
+
+.posts {
+  list-style-type: none;
+  margin-left: 0;
+
+  li {
+    line-height: 1.75em;
+  }
+
+  span {
+    color: $color-muted;
+    font-family: $font-family-code;
+    font-size: 80%;
+    margin-right: 1em;
+  }
+
+  a.media {
+    background-color: rgba(255,255,255, .5);
+    padding: 1em;
+    transition: background-color .2s;
+
+    &:hover {
+      background-color: #FFF;
+    }
+  }
+}

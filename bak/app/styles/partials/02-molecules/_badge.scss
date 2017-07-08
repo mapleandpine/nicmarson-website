@@ -1,0 +1,36 @@
+//
+// Badges
+// --------------------------------------------------
+
+
+// Base class
+.badge {
+  border-radius: r(medium);
+  display: inline-block;
+  line-height: 1;
+  margin: 0 .35em;
+  min-width: 10px;
+  padding: 3px 7px;
+  font-size: 12px;
+  text-align: center;
+  vertical-align: baseline;
+  white-space: nowrap;
+
+  // Empty badges collapse automatically (not available in IE8)
+  &:empty {
+    display: none;
+  }
+
+  .inverse & {
+    border: 1px solid rgba(255,255,255,.8);
+  }
+}
+
+// Hover state, but only for links
+a.badge {
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
