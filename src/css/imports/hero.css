@@ -3,10 +3,21 @@
 .hero {
   background: #f3f3f3;
   display: flex;
-  padding-bottom: 130px;
-  padding-top: 70px;
+  padding-bottom: 3rem;
+  padding-top: 5rem;
   position: relative;
   width: 100%;
+
+  @media (--r-minM) {
+    min-height: 800px;
+    padding-bottom: 100px;
+    padding-top: 100px;
+  }
+
+  @media (--r-minL) {
+    padding-bottom: 130px;
+    padding-top: 130px;
+  }
 }
 
 .hero:after {
@@ -15,36 +26,21 @@
   left: 0;
   position: absolute;
   width: 100%;
-}
 
-@media (--r-minM) {
-  .hero {
-    min-height: 800px;
-    padding-bottom: 100px;
-    padding-top: 100px;
-  }
-  .hero:after {
+  @media (--r-minM) {
     bottom: 0;
     height: 100px;
   }
-}
 
-@media (--r-minL) {
-  .hero {
-    padding-bottom: 130px;
-    padding-top: 130px;
-  }
-  .hero:after {
+  @media (--r-minL) {
     height: 130px;
   }
 }
 
 .hero__media {
   display: none;
-}
 
-@media (--r-minM) {
-  .hero__media {
+  @media (--r-minM) {
     bottom: 0;
     display: block;
     height: 100%;
@@ -58,10 +54,8 @@
     width: 45%;
     z-index: 1;
   }
-}
 
-@media (--r-minL) {
-  .hero__media {
+  @media (--r-minL) {
     width: 42%;
   }
 }
@@ -79,24 +73,20 @@
 }
 
 .hero__content {
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   position: relative;
   z-index: 1;
-}
 
-@media (--r-minM) {
-  .hero__content {
+  @media (--r-minM) {
     margin-left: 50%;
     padding-left: 0;
     padding-right: 3rem;
     text-align: left;
     width: 50%;
   }
-}
 
-@media (--r-minL) {
-  .hero__content {
+  @media (--r-minL) {
     padding-right: 4rem;
   }
 }
@@ -113,17 +103,13 @@
   transform: translateX(50%);
   transition: opacity .45s ease,transform .5s ease;
   will-change: opacity,transform;
-}
 
-@media (--r-minM) {
-  .hero__header {
+  @media (--r-minM) {
     font-size: 4rem;
     margin: .25em -20px .25em -100px;
   }
-}
 
-@media (--r-minL) {
-  .hero__header {
+  @media (--r-minL) {
     font-size: 5rem;
     margin: 0 -60px 0 -80px;
   }
@@ -151,15 +137,8 @@
 
 .hero__meta:after {
   background: var(--dangerColor);
-  content: "";
-  display: block;
-  margin: 1rem auto;
-  height: 5px;
-  width: 4rem;
-}
 
-@media (--r-minM) {
-  .hero__meta:after {
+  @media (--r-minM) {
     margin: 1.5rem 0;
   }
 }

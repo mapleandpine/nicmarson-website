@@ -2,70 +2,32 @@
 
 .footer {
   background: var(--black);
+  border-bottom: 2px solid #fffc19;
   color: var(--white);
-  display: flex;
-  flex-wrap: wrap;
-  line-height: 1.5;
-  padding-bottom: 2rem;
-  padding-top: 2rem;
+  padding: 2rem;
+
   @media (--r-minS) {
-    padding-bottom: 6rem;
-    padding-top: 6rem;
+    padding: 6rem 0;
   }
 }
 
-.footer p {
-  margin-bottom: 0;
+.footer a {
+  color: #fffc19;
 }
 
-.footer_address {
-  order: 3;
-  width: 100%;
-  @media (--r-minS) {
-    order: 0;
-    width: 50%;
-  }
-}
-.footer_contact {
-  display: none;
-  @media (--r-minM) {
-    display: block;
-    order: 1;
-    width: 25%;
-  }
+.footer address,
+.footer .meta {
+  margin-bottom: 1.5rem;
 }
 
-.footer_links {
-  display: flex;
-  margin-bottom: 2rem;
-  order: 0;
-  width: 100%;
-  @media (--r-minS) {
-    order: 1;
-    width: 50%;
-  };
-  @media (--r-minM) {
-    width: 25%;
-  };
+.footer .list-item {
+  padding: 0 .5rem;
 }
 
-.footer_links ul {
-  margin-bottom: 1rem;
-  width: 50%;
+.footer .icon {
+  fill: var(--white);
 }
 
-.footer_social a {
-  display: block;
-  padding-left: 1.25rem;
-  position: relative;
-}
-
-.footer_social svg {
-  left: 0;
-  position: absolute;
-  top: 3px;
-}
-
-.copyright {
-  color: lighten(var(--inverseMain), 10);
+.footer .title.has-underline:after {
+  background: #fffc19;
 }

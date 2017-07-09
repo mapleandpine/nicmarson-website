@@ -164,6 +164,10 @@ a:hover {
   color: #363636;
 }
 
+address {
+  font-style: normal;
+}
+
 code {
   background-color: whitesmoke;
   color: #ff3860;

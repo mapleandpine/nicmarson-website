@@ -1,25 +1,20 @@
 /* Projects */
 
 .projectYear {
-  padding-bottom: 3rem;
-  padding-top: 3rem;
-}
+  padding: 3rem 2rem;
 
-@media (--r-minM) {
-  .projectYear {
-    padding-bottom: 6rem;
-    padding-top: 6rem;
+  @media (--r-minM) {
+    padding: 6rem 0;
   }
-}
 
-@media (--r-minL) {
-  .projectYear {
+  @media (--r-minL) {
     padding-bottom: 9rem;
     padding-top: 9rem;
   }
 }
 
 .projectYear__list {
+  margin-bottom: 1.5rem;
   padding: .1rem 0 .3rem;
 }
 
@@ -37,6 +32,9 @@
   filter: grayscale(0%);
 }
 
+.projectLink span {
+  color: var(--mainColorWeak);
+}
 .projectLink--1 {
   color: var(--primaryColor);
 }
@@ -55,4 +53,9 @@
 }
 .projectThumb--3 {
   border-top: 2px solid var(--dangerColor);
+}
+
+.agencyLink {
+  color: var(--mainColorWeak);
+  display: block;
 }

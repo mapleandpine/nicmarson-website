@@ -1,6 +1,6 @@
 {{ partial "head.html" . }}
 <body id="page-top" class="index">
-  {{ partial "navigation.html" . }}
+  {{ partial "header.html" . }}
 
 {{ if .Site.Params.hero.enable }}
   {{ partial "hero.html" . }}
@@ -11,10 +11,6 @@
 {{ end }}
 
   {{ partial "footer.html" . }}
-
-{{ if .Site.Params.projects.enable }}
-  {{ partial "modals.html" . }}
-{{ end }}
 
   {{ partial "js.html" . }}
 </body>

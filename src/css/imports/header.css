@@ -1,21 +1,16 @@
 /* Header */
 
 .header {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  border-top: 2px solid var(--dangerColor);
+  padding: 1rem;
   width: 100%;
   z-index: 10;
 }
 
-@media (--r-minM) {
-  .header {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-}
-
 .header .level {
-  height: 100px;
+  @media (--r-minM) {
+    height: 5rem;
+  }
 }
 
 .header .level-item {
