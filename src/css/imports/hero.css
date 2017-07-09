@@ -2,13 +2,17 @@
 
 .hero {
   background: #f3f3f3;
-  display: flex;
   padding-bottom: 3rem;
-  padding-top: 5rem;
+  padding-top: 3rem;
   position: relative;
   width: 100%;
 
+  @media (--r-minS) {
+    display: flex;
+  }
+
   @media (--r-minM) {
+    display: flex;
     min-height: 800px;
     padding-bottom: 100px;
     padding-top: 100px;
@@ -38,7 +42,7 @@
 }
 
 .hero__media {
-  display: none;
+  width: 100%;
 
   @media (--r-minM) {
     bottom: 0;
@@ -66,10 +70,18 @@
 }
 
 .hero__image {
-  bottom: 0;
-  max-height: 780px;
-  position: absolute;
-  right: 0;
+  max-height: 380px;
+  margin-bottom: 2rem;
+  padding: 0 2rem;
+
+  @media (--r-minM) {
+    bottom: 0;
+    margin-bottom: 0;
+    max-height: 780px;
+    padding: 0;
+    position: absolute;
+    right: 0;
+  }
 }
 
 .hero__content {

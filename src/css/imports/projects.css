@@ -4,13 +4,22 @@
   padding: 3rem 2rem;
 
   @media (--r-minM) {
-    padding: 6rem 0;
+    padding-bottom: 6rem;
+    padding-top: 6rem;
   }
 
   @media (--r-minL) {
-    padding-bottom: 9rem;
-    padding-top: 9rem;
+    padding-bottom: 8rem;
+    padding-top: 8rem;
   }
+}
+
+.projectYear__header {
+  font-family: var(--fontFamilyAccent);
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 4rem;
+  margin-top: -2rem;
 }
 
 .projectYear__list {
