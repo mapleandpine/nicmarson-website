@@ -15,6 +15,10 @@
   color: #fffc19;
 }
 
+.footer p {
+  max-width: 30em;
+}
+
 .footer address,
 .footer .meta {
   margin-bottom: 1.5rem;
