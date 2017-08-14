@@ -9,7 +9,7 @@
       {{ $url := printf "images/projects/%s" .img }}
       <img src="{{ $url }}" alt="{{ .title  | markdownify }} home page">
     </div>
-    <p>{{ .description | markdownify }}</p>
+    {{ .description | markdownify }}
     <dl class="mb2">
       <dt>{{ with $.Site.Params.projects.modal.date }}{{ . }}{{ end }}</dt>
       <dd>{{ .date }}</dd>
@@ -19,6 +19,6 @@
       <dd>{{ .category  | markdownify }}</dd>
     </dl>
     <div class="clear"></div>
-    <button type="button" class="btn--secondary" aria-label="Close (Press escape to close)" data-lity-close=""><i class="fa fa-times"></i> {{ with $.Site.Params.projects.modal.buttonText }}{{ . }}{{ end }}</button>
+    <button type="button" class="button" aria-label="Close (Press escape to close)" data-lity-close=""><i class="fa fa-times"></i> {{ with $.Site.Params.projects.modal.buttonText }}{{ . }}{{ end }}</button>
   </div>
 {{ end }}

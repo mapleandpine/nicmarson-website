@@ -1,17 +1,14 @@
 {{ partial "head.html" . }}
 <body id="page-top" class="index">
   {{ partial "header.html" . }}
-
-{{ if .Site.Params.hero.enable }}
+  {{ if .Site.Params.hero.enable }}
   {{ partial "hero.html" . }}
-{{ end }}
-
-{{ if .Site.Params.projects.enable }}
+  {{ end }}
+  {{ if .Site.Params.projects.enable }}
   <section id="projects">{{ partial "projects.html" . }}</section>
-{{ end }}
-
+  {{ end }}
   {{ partial "footer.html" . }}
-
+  {{ partial "modals.html" . }}
   {{ partial "js.html" . }}
 </body>
 </html>

@@ -2,10 +2,11 @@
 
 @import 'imports/variables.css';
 @import 'imports/bulma.css';
+@import 'imports/button.css';
 @import 'imports/utility.css';
 @import 'imports/grid.css';
 @import 'imports/projects.css';
 @import 'imports/hero.css';
-/*@import 'imports/modal.css';*/
+@import 'imports/modal.css';
 @import 'imports/footer.css';
 @import 'imports/header.css';

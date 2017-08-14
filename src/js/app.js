@@ -1,4 +1,4 @@
 'use strict';
 
-// require('jquery');
-// require('lity');
+require('jquery');
+require('lity');
