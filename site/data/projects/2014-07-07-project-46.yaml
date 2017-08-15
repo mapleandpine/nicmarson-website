@@ -1,0 +1,12 @@
+modalID: 46
+title: Dexcom - SweetSpot
+site: clarity.dexcom.com
+siteLink: "https://clarity.dexcom.com"
+subtitle: Your diabetes management application.
+date: July 2016
+img: dexcom/home.png
+client: ConnectiveDX
+clientLink: "http://www.isite.com"
+role: Design, Styles, Templates, JavaScript
+category: InVision, EmberJS, Stylus
+description: Upload glucose data from a Dexcom CGM device and then view the data in easy-to-read graphs. You can view trends, statistics and day-by-day data and then email them to your healthcare professional -- right from the Dexcom CLARITY® webpage.

@@ -29,6 +29,12 @@
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
+.lity-hide {
+  display: none;
+}
+.lity-active body {
+  overflow: hidden;
+}
 .lity-wrap {
   z-index: 9990;
   position: fixed;
@@ -43,7 +49,6 @@
   display: inline-block;
   height: 100%;
   vertical-align: middle;
-  margin-right: -0.25em;
 }
 .lity-loader {
   z-index: 9991;
@@ -83,19 +88,6 @@
 .lity-content > div {
   max-height: none !important;
   outline: none !important;
-  padding: 4rem 1rem;
-  @media (--r-minS) {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 800px;
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-}
-.modal-title {
-  font-weight: 900;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
 }
 .lity-loading .lity-content,
 .lity-closed .lity-content {
@@ -121,8 +113,8 @@
 .lity-close {
   z-index: 9994;
   position: absolute;
-  top: 25px;
-  right: 25px;
+  top: 2rem;
+  right: 2rem;
   width: 75px;
   height: 75px;
   background-color: transparent;
@@ -161,34 +153,61 @@
   background-color: var(--secondaryColor);
 }
 .lity-close:active {
-  top: 1px;
+  transform: translateY(6px);
 }
-/* Image */
-.lity-image img {
+
+/* Project Modal */
+
+.projectModal__header {
+  background-color: var(--white);
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+.projectModal__header .title {
+  font-family: var(--fontFamilyAccent);
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+.projectModal__content {
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+}
+.projectModal__image img {
   max-width: 100%;
   display: block;
   line-height: 0;
   border: 2rem solid var(--white);
 }
-.lity-content dl {
+.projectModal__list {
   display: inline-block;
+  margin-bottom: 1.5rem;
+  padding: .1rem 0 .3rem;
   text-align: left;
 }
-.lity-content dt {
-  float: left;
+.projectModal__list dt {
   clear: left;
+  float: left;
+  margin: 1rem 0 0;
+  text-align: right;
   width: 4em;
 }
-.lity-content dt::after {
+.projectModal__list dt:first-of-type {
+  margin-top: 0;
+}
+.projectModal__list dt::after {
   content: ":";
 }
-.lity-content dd {
+.projectModal__list dd {
   font-weight: bold;
-  margin: 0 0 0 5em;
+  margin: 1rem 0 0 5em;
 }
-.lity-hide {
-  display: none;
+.projectModal__list dd:first-of-type {
+  margin-top: 0;
 }
-.lity-active body {
-  overflow: hidden;
+.projectModal__close {
+  border-radius: 0;
+  margin-top: 4rem;
+  width: 100%;
 }

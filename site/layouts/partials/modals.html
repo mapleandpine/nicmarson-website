@@ -1,24 +1,41 @@
 {{ "<!-- Projects Modals -->" | safeHTML }}
 {{ range .Site.Data.projects }}
-  <div class="lity-hide" id="projectModal{{ .modalID }}" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="my3">
-      <h3 class="h2 modal-title">{{ .title  | markdownify }}</h3>
-      <p class="modal-subtitle">{{ .subtitle | markdownify }}</p>
+<div class="lity-hide" id="projectModal{{ .modalID }}" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="projectModal__header">
+    <div class="container">
+      <h1 class="title">{{ .title  | markdownify }}</h1>
+      <p class="subtitle">{{ .subtitle | markdownify }}</p>
     </div>
-    <div class="lity-image mb2">
-      {{ $url := printf "images/projects/%s" .img }}
-      <img src="{{ $url }}" alt="{{ .title  | markdownify }} home page">
-    </div>
-    {{ .description | markdownify }}
-    <dl class="mb2">
-      <dt>{{ with $.Site.Params.projects.modal.date }}{{ . }}{{ end }}</dt>
-      <dd>{{ .date }}</dd>
-      <dt>{{ with $.Site.Params.projects.modal.client }}{{ . | markdownify }}{{ end }}</dt>
-      <dd><a href="{{ .clientLink }}">{{ .client }}</a></dd>
-      <dt>{{ with $.Site.Params.projects.modal.category }}{{ . }}{{ end }}</dt>
-      <dd>{{ .category  | markdownify }}</dd>
-    </dl>
-    <div class="clear"></div>
-    <button type="button" class="button" aria-label="Close (Press escape to close)" data-lity-close=""><i class="fa fa-times"></i> {{ with $.Site.Params.projects.modal.buttonText }}{{ . }}{{ end }}</button>
   </div>
+  <div class="projectModal__content">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-one-third">
+          <dl class="projectModal__list">
+            <dt>{{ with $.Site.Params.projects.modal.date }}{{ . }}{{ end }}</dt>
+            <dd>{{ .date }}</dd>
+            <dt>{{ with $.Site.Params.projects.modal.site }}{{ . }}{{ end }}</dt>
+            <dd><a href="{{ .siteLink }}">{{ .site }}</a></dd>
+            <dt>{{ with $.Site.Params.projects.modal.client }}{{ . | markdownify }}{{ end }}</dt>
+            <dd><a href="{{ .clientLink }}">{{ .client }}</a></dd>
+            <dt>{{ with $.Site.Params.projects.modal.category }}{{ . }}{{ end }}</dt>
+            <dd>{{ .category  | markdownify }}</dd>
+            <dt>{{ with $.Site.Params.projects.modal.role }}{{ . }}{{ end }}</dt>
+            <dd>{{ .role }}</dd>
+          </dl>
+          <div class="projectModal__content content">
+            <p>{{ .description | markdownify }}</p>
+          </div>
+        </div>
+        <div class="column is-two-thirds">
+          <div class="projectModal__image">
+            {{ $url := printf "images/projects/%s" .img }}
+            <img src="{{ $url }}" alt="{{ .title  | markdownify }} home page">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button type="button" class="projectModal__close button is-dark is-medium" aria-label="Close (Press escape to close)" data-lity-close=""><i class="fa fa-times"></i> {{ with $.Site.Params.projects.modal.buttonText }}{{ . }}{{ end }}</button>
+</div>
 {{ end }}

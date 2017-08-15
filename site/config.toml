@@ -10,13 +10,13 @@ verboseLog = false
 googleAnalytics = ""
 
 [params]
-  Author = "Maple and Pine"
+  Author = "Nic Marson"
   disqusShortname = "nicmarson"
 
   # To provide some metadata for search engines feel free to add a few
   # information about you and your website.
-  name = "Maple and Pine"
-  description = "Maple and Pine is a Portland web development agency that builds custom websites and applications."
+  name = "Nic Marson"
+  description = "Nic Marson is a designer and developer living in Portland, Oregon."
 
   # 404 error customization
   [params.error404]
@@ -25,37 +25,16 @@ googleAnalytics = ""
 
   # Optional piwik tracking
   #[params.analytics.piwik]
-  #  URL = "https://stats.example.com"
+  #  URL = "https://stats.nicmarson.com"
   #  ID = "42"
-  #  # Track all subdomains with "*.example.com"
-  #  domain = "www.example.com"
+  #  # Track all subdomains with "*.nicmarson.com"
+  #  domain = "www.nicmarson.com"
   #  # Optional integrity check hash
   #  hash = "sha512-RfeD0pacGTqy9m7U6PgehQfS4cc7SIt+e+P+H5e848kEvB/RW84CUGO3O4O3LNbxjevym6KPUZ8muPsMrI8WIw=="
 
   # Navigation
   [params.navigation]
-    brand = "The Agency"
-    # Optional logo as brand stored in img/
-    #logo = "logo.svg"
-    services = "Services"
-    projects = "Projects"
-    contact = "Contact"
-
-    # Add custom links. Those can be pre- and postpended to the default menu above.
-    # Use the weight attribute to order your custom links. Uncomment the example
-    # below and replace the values with your own.
-
-    # prepended links
-    #[[menu.prepend]]
-    #  url = "http://gohugo.io"
-    #  name = "Hugo"
-    #  weight = 10
-
-    # postpended links
-    #[[menu.postpend]]
-    #  url = "http://gohugo.io"
-    #  name = "External link"
-    #  weight = 10
+    brand = "Nic Marson"
 
   # Hero section
   [params.hero]
@@ -68,9 +47,11 @@ googleAnalytics = ""
     title = "Past Projects"
 
     [params.projects.modal]
+      site = "Site"
       client = "Client"
       date = "Date"
-      category = "Category"
+      category = "Tech"
+      role = "Role"
       buttonText = "Close project"
 
   # Services section

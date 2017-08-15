@@ -1,9 +1,12 @@
 modalID: 52
 title: Ravel - The Key of Astrea
-subtitle: Lorem ipsum dolor sit amet consectetur.
-date: 2014-07-07
-img: tbg/tbg_home-ipad_pro.png
-client: Tech Buyer's Guru
-clientLink: "#"
-category: Drupal
-description: Treehouse is a free PSD web template built by [Mathavan Jaya](//www.behance.net/MathavanJaya). This is bright and spacious design perfect for people or startup companies looking to showcase their apps or other projects. <br><br>You can download the PSD template in this portfolio sample item at [FreebiesXpress.com](freebiesxpress.com/gallery/treehouse-free-psd-web-template/).
+site: www.ravelbook.com
+siteLink: "http://www.ravelbook.com/"
+subtitle: A science-fantasy adventure novel.
+date: July 2017
+img: ravel/home.png
+client: Maple and Pine
+clientLink: "http://www.mapleandpine.com"
+role: Content, Design, Styles, Templates, JavaScript
+category: HTML, SCSS, Email
+description: Jenny lives with a ghost named Sally. Her family is cursed, she suffers from hallucinations and schizophrenia, and no one has lived passed the age of thirty-nine. Days before her seventeeth birthday, with her mom in the hospital, and her fate determined, a mysterious puzzle arrives to change her destiny. A cryptic message suggests that these curses are symptoms of untapped powers. Jenny must solve a puzzle to join a space-faring corporation called Skalla Enterprises. She encounters giants and aliens, and people with powers over the physical world. A great destiny awaits her … if Jenny can survive the encounter.

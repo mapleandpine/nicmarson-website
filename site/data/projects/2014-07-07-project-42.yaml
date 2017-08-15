@@ -1,12 +1,12 @@
-modalID: 51
-title: Maple and Pine
-site: www.mapleandpine.com
-siteLink: "http://www.mapleandpine.com"
+modalID: 42
+title: Android
+site: www.android.com
+siteLink: "http://www.android.com"
 subtitle: Custom digital publishing and website development.
 date: July 2017
-img: mapleandpine/home.png
-client: Maple and Pine
-clientLink: "http://www.mapleandpine.com"
+img: android/home.png
+client: Instrument
+clientLink: "http://www.instrument.com"
 role: Content, Design, Styles, Templates, JavaScript
 category: Hugo, PostCSS
 description: We develop innovative web sites and web applications that are equally intuitive, attractive, and technically sound. We work with you to plan, build, and launch your website with a strategy for success.

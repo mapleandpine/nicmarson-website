@@ -27,9 +27,14 @@
   padding: .1rem 0 .3rem;
 }
 
+.projectYear__archive {
+  column-count: 2;
+}
+
 .projectThumb {
   display: block;
   margin-bottom: 1rem;
+  outline: none;
 }
 
 .projectThumb img {
@@ -57,11 +62,20 @@
 .projectThumb--1 {
   border-top: 2px solid var(--primaryColor);
 }
+.projectThumb--1:focus {
+  outline: 1px solid var(--primaryColor);
+}
 .projectThumb--2 {
   border-top: 2px solid var(--secondaryColor);
 }
+.projectThumb--2:focus {
+  outline: 1px solid var(--secondaryColor);
+}
 .projectThumb--3 {
   border-top: 2px solid var(--dangerColor);
+}
+.projectThumb--3:focus {
+  outline: 1px solid var(--dangerColor);
 }
 
 .agencyLink {
