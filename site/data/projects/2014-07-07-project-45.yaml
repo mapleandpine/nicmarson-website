@@ -2,11 +2,11 @@ modalID: 45
 title: PSE - Puget Sound Energy
 site: www.pse.com
 siteLink: "http://www.pse.com"
-subtitle: Custom digital publishing and website development.
+subtitle: Start, stop or move residential energy service.
 date: July 2017
 img: pse/home.png
 client: ConnectiveDX
 clientLink: "http://www.isite.com"
 role: Content, Design, Styles, Templates, JavaScript
-category: Hugo, PostCSS
-description: We develop innovative web sites and web applications that are equally intuitive, attractive, and technically sound. We work with you to plan, build, and launch your website with a strategy for success.
+category: Web Form
+description: A web form that guides the client through the process of starting, stopping, or moving their residential energy service.

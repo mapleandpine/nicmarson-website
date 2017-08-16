@@ -8,11 +8,7 @@
     {{ end }}
   </div>
 </header>
-<div class="content">
-  <div class="container">
-    {{ .Content }}
-  </div>
-</div>
+{{ .Content }}
 <aside class="pageList bg--alt">
   <div class="container content">
     {{ partial "menu-contextual.html" . }}

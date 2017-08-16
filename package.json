@@ -1,7 +1,7 @@
 {
   "name": "victor-hugo",
   "version": "1.0.0",
-  "description": "Victor Hugo is a Hugo boilerplate for creating truly epic websites!",
+  "description": "Nic Marson is a Designer and Developer living in Portland, Oregon",
   "main": "index.js",
   "scripts": {
     "hugo": "gulp hugo",

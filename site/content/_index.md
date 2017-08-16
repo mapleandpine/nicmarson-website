@@ -1,4 +1,4 @@
 ---
-title: "BookReview"
-description: "The easiest way to write a book review."
+title: "Nic Marson"
+description: "A designer and developer living in Portland, Oregon."
 ---

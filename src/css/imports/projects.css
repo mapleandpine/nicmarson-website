@@ -47,7 +47,9 @@
 }
 
 .projectTitle {
-  font-size: 1.25rem;
+  color: var(--mainColorWeak);
+  font-size: 1.2rem;
+  margin-top: 1rem;
 }
 
 .projectLink span {
@@ -80,6 +82,14 @@
 }
 .projectThumb--3:focus {
   outline: 1px solid var(--dangerColor);
+}
+
+.project__list dt {
+  font-weight: 700;
+}
+
+.project__content {
+  margin: 2rem 0;
 }
 
 .agencyLink {
