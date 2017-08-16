@@ -1,19 +1,21 @@
 {{ define "main" }}
-  <section class="section">
-    <div class="container">
-      <header>
-        <p>{{ humanize .Section | upper  }}</p>
-        <h1 class="title">{{ .Title }}</h1>
-        {{ with .Params.description }}
-        <p>{{ . }}</p>
-        {{ end }}
-      </header>
-      <div class="content">
-        {{ .Content }}
-      </div>
-    </article>
-    <aside>
-      {{ partial "menu-contextual.html" . }}
-    </aside>
+<header class="pageHeader bg--alt">
+  <div class="container">
+    <p class="heading">{{ humanize .Section | upper  }}</p>
+    <h1 class="title">{{ .Title }}</h1>
+    {{ with .Params.description }}
+    <p>{{ . }}</p>
+    {{ end }}
   </div>
+</header>
+<div class="content">
+  <div class="container">
+    {{ .Content }}
+  </div>
+</div>
+<aside class="pageList bg--alt">
+  <div class="container content">
+    {{ partial "menu-contextual.html" . }}
+  </div>
+</aside>
 {{ end }}
