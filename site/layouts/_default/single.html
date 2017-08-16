@@ -1,0 +1,19 @@
+{{ define "main" }}
+  <section class="section">
+    <div class="container">
+      <header>
+        <p>{{ humanize .Section | upper  }}</p>
+        <h1 class="title">{{ .Title }}</h1>
+        {{ with .Params.description }}
+        <p>{{ . }}</p>
+        {{ end }}
+      </header>
+      <div class="content">
+        {{ .Content }}
+      </div>
+    </article>
+    <aside>
+      {{ partial "menu-contextual.html" . }}
+    </aside>
+  </div>
+{{ end }}

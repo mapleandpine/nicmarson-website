@@ -1,10 +1,7 @@
 # Site settings
-baseurl = "https://www.nicmarson.com/"
-languageCode = "en-us"
 title = "Nic Marson"
-buildDrafts = true
-verbose = false
-verboseLog = false
+baseurl = "/"
+languageCode = "en-us"
 
 # Enter your tracking code to enable Google Analytics
 googleAnalytics = ""
@@ -53,96 +50,3 @@ googleAnalytics = ""
       category = "Tech"
       role = "Role"
       buttonText = "Close project"
-
-  # Services section
-  [params.services]
-    enable = true
-    title = "Web Services"
-
-  # Studio section
-  [params.studio]
-    enable = true
-    title = "Our Studio"
-
-  # Contact section
-  [params.contact]
-    enable = true
-    title = "Contact us"
-    subtitle  = "Lorem ipsum dolor sit amet consectetur."
-    buttonText = "Send message"
-
-    # Since this template is static, the contact form uses www.formspree.io as a
-    # proxy. The form makes a POST request to their servers to send the actual
-    # email. Visitors can send up to a 1000 emails each month for free.
-    #
-    # What you need to do for the setup?
-    #
-    # - set your email address under 'email' below
-    # - upload the generated site to your server
-    # - send a dummy email yourself to confirm your account
-    # - click the confirm link in the email from www.formspree.io
-    # - you're done. Happy mailing!
-
-    # It is possible to substitute formspring with other providers
-    # as an example the mailout plugin from caddy.
-    # Provide the post URL for the form and depending on the provider
-    # add some custom JS script to finish the implementation.
-    # postURL = "https://example.com/mailout/"
-
-    email = "hello@mapleandpine.co"
-
-    # Success and error message overwrite for async contact form
-    #thanks = "Thank you for awesomely contacting us."
-    #error = "Message could not be send. Please contact us at mail@example.com instead."
-
-    # 'warning' defines error messages for invalid inputs
-    [params.contact.form.name]
-      text = "Full name *"
-      warning = "Please enter your name."
-
-    [params.contact.form.email]
-      text = "Email address *"
-      warning = "Please enter your email address."
-
-    [params.contact.form.phone]
-      text = "Phone *"
-      warning = "Please enter your phone number."
-
-    [params.contact.form.company]
-      text = "Company/Organization *"
-      warning = "Please enter your company or organization."
-
-    [params.contact.form.message]
-      text = "Your Message *"
-      warning = "Please enter a message."
-
-      # Add optional form fields to identify contact forms
-      #[[params.contact.form.hidden]]
-      #  name = "someID"
-      #  value = "example.com"
-      #
-      #[[params.contact.form.hidden]]
-      # Special values for name such as "page" and "site" will be autofilled
-      #  name = "page"
-
-  # Footer section
-  [params.footer]
-    enable = true
-    copyright = "Published under the Apache License 2.0."
-
-    [[params.footer.quicklinks]]
-      text = "Projects"
-      link = "/"
-
-    [[params.footer.quicklinks]]
-      text = "Studio"
-      link = "studio.html"
-
-    [[params.footer.quicklinks]]
-      text = "Contact"
-      link = "contact.html"
-
-    [[params.footer.quicklinks]]
-      text = "Newsletter"
-      link = "newsletter.html"
-

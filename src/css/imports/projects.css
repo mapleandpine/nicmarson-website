@@ -46,6 +46,10 @@
   filter: grayscale(0%);
 }
 
+.projectTitle {
+  font-size: 1.25rem;
+}
+
 .projectLink span {
   color: var(--mainColorWeak);
 }
