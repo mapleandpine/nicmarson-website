@@ -2,11 +2,11 @@ modalID: 50
 title: KinderCare at Work
 site: www.kindercare.com/employer-sponsored-child-care
 siteLink: "http://www.kindercare.com/employer-sponsored-child-care"
-subtitle: Custom digital publishing and website development.
-date: July 2017
+subtitle: Child care benefits for the workplace.
+date: April 2017
 img: kindercare_at_work/home.png
 client: ConnectiveDX
 clientLink: "http://www.isite.com"
-role: Content, Design, Styles, Templates, JavaScript
-category: Hugo, PostCSS
-description: We develop innovative web sites and web applications that are equally intuitive, attractive, and technically sound. We work with you to plan, build, and launch your website with a strategy for success.
+role: Architect, UI Designer, Front-end Developer
+category: Gulp, SCSS, SVG, PHP, JavaScript, jQuery, Responsive, Sketch, Zeplin
+description: KinderCare Education at Work is a different kind of child care solutions partner. We’ve been caring for children for 45 years—and now, we’re the only nationwide child care provider with 1,375 nationally accredited centers. Our history, combined with our deep expertise gained from working with over 400 corporations, means you have a partner who knows what it takes to make a measurable difference in talent management strategies.

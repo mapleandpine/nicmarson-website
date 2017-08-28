@@ -1,12 +1,12 @@
 modalID: 47
 title: Spectrum Health
 site: www.spectrumhealth.com
-siteLink: "http://www.spectrumhealth.com"
-subtitle: Custom digital publishing and website development.
-date: July 2017
+siteLink: "http://www.spectrumhealth.org/"
+subtitle: West Michigan health care services.
+date: August 2016
 img: spectrum_health/home.png
 client: ConnectiveDX
 clientLink: "http://www.isite.com"
-role: Content, Design, Styles, Templates, JavaScript
-category: Hugo, PostCSS
-description: We develop innovative web sites and web applications that are equally intuitive, attractive, and technically sound. We work with you to plan, build, and launch your website with a strategy for success.
+role: Front-end Developer
+category: Gulp, SCSS, SVG, PHP, JavaScript, jQuery, Google Maps API, Responsive, Sketch
+description: Spectrum Health, based in Grand Rapids MI, is an integrated health system with teams of nationally recognized doctors and providers. Our facilities span over 13 counties throughout West Michigan.

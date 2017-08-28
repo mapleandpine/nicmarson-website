@@ -47,6 +47,16 @@ googleAnalytics = ""
       site = "Site"
       client = "Client"
       date = "Date"
-      category = "Tech"
+      category = "Skills"
       role = "Role"
       buttonText = "Close project"
+
+  # Roles:
+  # Strategist
+  # Architect
+  # Content
+  # UX Designer
+  # UI Designer
+  # UX/UI Designer
+  # Developer
+  # Full-stack Developer

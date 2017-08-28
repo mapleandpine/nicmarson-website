@@ -2,11 +2,11 @@ modalID: 43
 title: SETF
 site: www.setf.com
 siteLink: "http://www.setf.com"
-subtitle: Custom digital publishing and website development.
-date: July 2017
+subtitle: Manage your Toyota Finance account.
+date: April 2015
 img: setf/home.png
 client: ConnectiveDX
 clientLink: "http://www.isite.com"
-role: Content, Design, Styles, Templates, JavaScript
-category: Hugo, PostCSS
-description: We develop innovative web sites and web applications that are equally intuitive, attractive, and technically sound. We work with you to plan, build, and launch your website with a strategy for success.
+role: UI Designer, Front-end Developer
+category: Gulp, SCSS, SVG, PHP, JavaScript, jQuery, Responsive
+description: The official website of Southeast Toyota Finance where you can manage your Toyota Finance account, make payments, browse Toyota models and view limited time offers.

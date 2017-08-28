@@ -2,11 +2,11 @@ modalID: 49
 title: KinderCare - Content Hub
 site: www.kindercare.com/content-hub
 siteLink: "http://www.kindercare.com/content-hub"
-subtitle: Custom digital publishing and website development.
-date: July 2017
+subtitle: The KinderCare Blog
+date: January 2017
 img: kindercare_content_hub/home.png
 client: ConnectiveDX
 clientLink: "http://www.isite.com"
-role: Content, Design, Styles, Templates, JavaScript
-category: Hugo, PostCSS
-description: We develop innovative web sites and web applications that are equally intuitive, attractive, and technically sound. We work with you to plan, build, and launch your website with a strategy for success.
+role: Architect, UI Designer, Front-end Developer
+category: Gulp, SCSS, SVG, PHP, JavaScript, jQuery, Parallax, Lazy-Loading, Responsive, Sketch, Zeplin
+description: Read KinderCare’s take on child health, nutrition, safety, parenting, early childhood education and more. Join the discussion!

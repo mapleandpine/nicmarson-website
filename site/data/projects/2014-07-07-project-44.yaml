@@ -1,12 +1,12 @@
 modalID: 44
-title: BMC
+title: BMC Software
 site: www.bmc.com
 siteLink: "http://www.bmc.com"
-subtitle: Custom digital publishing and website development.
-date: July 2017
+subtitle: Enterprise-level IT solutions.
+date: December 2015
 img: bmc/home.png
 client: ConnectiveDX
 clientLink: "http://www.isite.com"
-role: Content, Design, Styles, Templates, JavaScript
-category: Hugo, PostCSS
-description: We develop innovative web sites and web applications that are equally intuitive, attractive, and technically sound. We work with you to plan, build, and launch your website with a strategy for success.
+role: UI Designer, Front-end Developer
+category: Gulp, SCSS, SVG, PHP, JavaScript, jQuery, Sketch, Responsive
+description: Transform your digital enterprise with BMC IT solutions. From mainframe to cloud to mobile, we’ll help you drive innovation and industrial efficiency.

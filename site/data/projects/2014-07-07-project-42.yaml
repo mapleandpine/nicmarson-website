@@ -2,11 +2,11 @@ modalID: 42
 title: Android
 site: www.android.com
 siteLink: "http://www.android.com"
-subtitle: Custom digital publishing and website development.
-date: July 2017
+subtitle: The official website for Android Lollipop
+date: December 2014
 img: android/home.png
 client: Instrument
 clientLink: "http://www.instrument.com"
-role: Content, Design, Styles, Templates, JavaScript
-category: Hugo, PostCSS
-description: We develop innovative web sites and web applications that are equally intuitive, attractive, and technically sound. We work with you to plan, build, and launch your website with a strategy for success.
+role: UI Designer, Front-end Developer
+category: Gulp, SCSS, SVG, PHP, JavaScript, jQuery, Sketch, Responsive
+description: See what's new with Android - from phones to watches and more. Visit the official site to explore and learn.

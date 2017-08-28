@@ -1,12 +1,12 @@
 modalID: 48
 title: Wells Fargo - Hands on Banking
 site: www.handsonbanking.org
-siteLink: "http://www.handsonbanking.org"
-subtitle: Custom digital publishing and website development.
-date: July 2017
+siteLink: "https://handsonbanking.org/"
+subtitle: All the tools you need to help you become financially savvy.
+date: February 2017
 img: handsonbanking/home.png
 client: ConnectiveDX
 clientLink: "http://www.isite.com"
-role: Content, Design, Styles, Templates, JavaScript
-category: Hugo, PostCSS
-description: We develop innovative web sites and web applications that are equally intuitive, attractive, and technically sound. We work with you to plan, build, and launch your website with a strategy for success.
+role: UI Designer, Front-end Developer
+category: Gulp, SCSS, SVG, PHP, JavaScript, jQuery, Responsive, Sketch
+description: The Hands on Banking® online learning center offers resources for anyone who wants to learn more about money management. Our financial articles can help you find answers to your questions, from budgeting tips to buying a home, to improving your credit. Our self-directed courses take you in depth to improve financial literacy at each stage of life. We also offer classroom resources for educators. Together, we’ll help you and your family take charge of your financial future.

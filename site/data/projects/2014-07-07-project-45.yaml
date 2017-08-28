@@ -3,10 +3,10 @@ title: PSE - Puget Sound Energy
 site: www.pse.com
 siteLink: "http://www.pse.com"
 subtitle: Start, stop or move residential energy service.
-date: July 2017
+date: March 2016
 img: pse/home.png
 client: ConnectiveDX
 clientLink: "http://www.isite.com"
-role: Content, Design, Styles, Templates, JavaScript
-category: Web Form
+role: Architect, UX/UI Designer, Front-end Developer
+category: Gulp, SCSS, SVG, PHP, JavaScript, jQuery, User interviews
 description: A web form that guides the client through the process of starting, stopping, or moving their residential energy service.
