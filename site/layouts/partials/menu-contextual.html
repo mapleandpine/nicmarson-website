@@ -7,15 +7,17 @@
 {{/* So we can only show this menu if there are one or more other entries  */}}
 {{ if ge $i 1 }}
 {{/* Return the section name, make it readable (humanize) and if there are 2 or more entries, make the section name plural (pluralize).  */}}
-<h3>{{ $i }} More {{ if ge $i 2 }}{{ .Section | humanize | pluralize }}{{ else }}{{ .Section | humanize }}{{end}}</h3>
-<ul>
-  {{ range $currentSection }}
-    <li>
-      {{/* If the URL returned is the same as the current URL dim it so we know that that's the page we're on. NOTE: Should probably use a more accessible way of displaying this. */}}
-      <a href="{{ .URL }}" class="{{ if eq $currentPageUrl .URL }}current{{end}}">
-        {{ .Title }}
-      </a>
-    </li>
+<div class="menu">
+  <h3 class="menu-label">{{ $i }} More {{ if ge $i 2 }}{{ .Section | humanize | pluralize }}{{ else }}{{ .Section | humanize }}{{end}}</h3>
+  <ul class="menu-list">
+    {{ range $currentSection }}
+      <li>
+        {{/* If the URL returned is the same as the current URL dim it so we know that that's the page we're on. NOTE: Should probably use a more accessible way of displaying this. */}}
+        <a href="{{ .URL }}" class="{{ if eq $currentPageUrl .URL }}current{{end}}">
+          {{ .Title }}
+        </a>
+      </li>
+    {{ end }}
+  </ul>
   {{ end }}
-</ul>
-{{ end }}
+</div>
